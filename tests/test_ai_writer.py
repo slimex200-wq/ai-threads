@@ -30,3 +30,19 @@ def test_parse_response_extracts_cards():
     assert result["cover_title"] == "AI Weekly"
     assert len(result["cards"]) == 1
     assert result["cards"][0]["title"] == "테스트 뉴스"
+
+def test_build_prompt_includes_selection_instruction():
+    articles = [
+        {"title": f"AI News {i}", "summary": f"Summary {i}", "source": "Test", "link": "https://example.com"}
+        for i in range(8)
+    ]
+    prompt = build_prompt(articles, select_count=4)
+    assert "가장 중요하고 흥미로운" in prompt
+    assert "4개" in prompt
+
+def test_build_prompt_without_selection():
+    articles = [
+        {"title": "AI News", "summary": "Summary", "source": "Test", "link": "https://example.com"}
+    ]
+    prompt = build_prompt(articles)
+    assert "AI News" in prompt
