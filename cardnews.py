@@ -127,11 +127,22 @@ def main():
     generated.append(path)
     print(f"  → 마무리: card-{closing_num:02d}.png")
 
-    # 캡션 저장
+    # 스레드 1: 캡션 (요약 + 해시태그)
     caption = content.get("caption", "")
     if caption:
         (output_dir / "caption.txt").write_text(caption, encoding="utf-8")
         print(f"  → 캡션: caption.txt")
+
+    # 스레드 2: 원문 링크 (타래용)
+    links = []
+    for card in content["cards"]:
+        link = card.get("link", "")
+        if link:
+            links.append(f"🔗 {link}")
+    if links:
+        links_text = "원문 링크:\n" + "\n".join(links)
+        (output_dir / "links.txt").write_text(links_text, encoding="utf-8")
+        print(f"  → 링크: links.txt")
 
     print(f"\n완료! {len(generated)}장의 카드뉴스가 생성되었습니다.")
     print(f"저장 위치: {output_dir}")
