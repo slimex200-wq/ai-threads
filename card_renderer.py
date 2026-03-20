@@ -120,6 +120,11 @@ def render_news_card(card_data, card_number, output_dir, total_cards=4):
     subtitle = card_data.get("subtitle", "")
     points = card_data.get("points", [])
 
+    thumbnail_b64 = card_data.get("thumbnail_b64")
+    thumbnail_html = ""
+    if thumbnail_b64:
+        thumbnail_html = f'<img class="thumbnail" src="data:image/png;base64,{thumbnail_b64}">'
+
     points_html = ""
     for p in points:
         points_html += f"""
@@ -166,6 +171,14 @@ body {
 }
 .header-source {
     font-size: 22px; color: #666; font-weight: 500;
+}
+.header-right {
+    display: flex; align-items: center; gap: 16px;
+}
+.thumbnail {
+    width: 120px; height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 .title {
     font-size: 68px; font-weight: 900;
@@ -216,7 +229,10 @@ body {
 <div class="top-line"></div>
 <div class="header">
     <span class="header-num">{num:02d} / {total_cards:02d}</span>
-    <span class="header-source">{source}</span>
+    <div class="header-right">
+        <span class="header-source">{source}</span>
+        {thumbnail_html}
+    </div>
 </div>
 <div class="title">{title}</div>
 <div class="subtitle">{subtitle}</div>
