@@ -1,3 +1,4 @@
+import shutil
 from pathlib import Path
 
 
@@ -18,9 +19,15 @@ def generate_gallery(output_dir, docs_dir):
         if not cards:
             continue
 
+        # 이미지를 docs/cards/ 안에 복사
+        cards_dest = docs_path / "cards" / date_dir.name
+        cards_dest.mkdir(parents=True, exist_ok=True)
+        for card in cards:
+            shutil.copy2(card, cards_dest / card.name)
+
         cards_html = ""
         for card in cards:
-            rel_path = f"../output/{date_dir.name}/{card.name}"
+            rel_path = f"cards/{date_dir.name}/{card.name}"
             cards_html += f"""
             <a href="{rel_path}" download="{card.name}" class="card-link" data-filename="{card.name}">
                 <img src="{rel_path}" alt="{card.name}" class="card-img">
