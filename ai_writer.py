@@ -1,4 +1,5 @@
 import json
+import re
 import anthropic
 from config import ANTHROPIC_API_KEY, MODEL
 
@@ -47,9 +48,15 @@ JSON 형식으로 응답해주세요:
 
 def parse_response(text):
     text = text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        text = text.rsplit("```", 1)[0]
+    # 마크다운 코드블록 추출
+    code_block = re.search(r"```(?:json)?\s*\n(.*?)```", text, re.DOTALL)
+    if code_block:
+        text = code_block.group(1).strip()
+    else:
+        # JSON 객체 직접 추출
+        match = re.search(r"\{.*\}", text, re.DOTALL)
+        if match:
+            text = match.group(0)
     return json.loads(text)
 
 def generate_card_content(articles, select_count=None):
