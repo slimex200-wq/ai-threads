@@ -45,13 +45,11 @@ def main():
     content = generate_card_content(filtered, select_count=args.count)
     print(f"  → {len(content['cards'])}개 카드 문구 생성 완료")
 
-    # Claude가 선별한 카드에 썸네일 매칭
-    filtered_by_source = {a.get("source", ""): a for a in filtered}
+    # Claude가 선별한 카드에 썸네일 매칭 (number 기반 → filtered 인덱스)
     for card in content["cards"]:
-        source = card.get("source", "")
-        matched = filtered_by_source.get(source)
-        if matched and matched.get("thumbnail_b64"):
-            card["thumbnail_b64"] = matched["thumbnail_b64"]
+        idx = card.get("number", 0) - 1
+        if 0 <= idx < len(filtered) and filtered[idx].get("thumbnail_b64"):
+            card["thumbnail_b64"] = filtered[idx]["thumbnail_b64"]
 
     # 5. 이미지 생성
     print("[5/5] 카드 이미지 생성 중...")
