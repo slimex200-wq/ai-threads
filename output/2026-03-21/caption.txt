@@ -1,0 +1,9 @@
+이번 주 AI 업계 핵심 이슈를 정리했습니다. 베조스의 1000억 달러 제조업 AI 펀드부터 2027년 봇 트래픽 인간 초과 전망까지, AI가 산업 전반을 재편하는 모습을 확인할 수 있습니다.
+
+원문 링크:
+🔗 https://techcrunch.com/2026/03/19/jeff-bezos-reportedly-wants-100-billion-to-buy-and-transform-old-manufacturing-firms-with-ai/
+🔗 https://techcrunch.com/2026/03/19/online-bot-traffic-will-exceed-human-traffic-by-2027-cloudflare-ceo-says/
+🔗 https://www.theverge.com/tech/896490/google-replace-news-headlines-in-search-canary-coal-mine-experiment
+🔗 https://techcrunch.com/2026/03/20/the-best-ai-investment-might-be-in-energy-tech/
+
+#AI #인공지능 #베조스 #구글 #제조업AI #봇트래픽 #에너지기술 #테크트렌드

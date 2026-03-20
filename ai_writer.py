@@ -10,6 +10,8 @@ def build_prompt(articles, select_count=None):
         articles_text += f"\n### Article {i}\n"
         articles_text += f"Title: {a['title']}\n"
         articles_text += f"Summary: {a['summary']}\n"
+        if a.get('body'):
+            articles_text += f"Body (excerpt): {a['body']}\n"
         articles_text += f"Source: {a['source']}\n"
         articles_text += f"Link: {a.get('link', '')}\n"
 
@@ -40,14 +42,21 @@ def build_prompt(articles, select_count=None):
 - source: 출처명
 - link: 원문 URL (기사의 Link 필드 그대로 사용)
 - keywords: 이 기사의 핵심 키워드 1~2개 (표지에 사용)
+- original_title: 원본 기사의 Title 필드를 그대로 복사 (이미지 매칭에 사용, 절대 수정 금지)
+
+## 추가 생성 항목:
+- cover_headline: 이번 회차의 핵심 트렌드를 담은 표지 헤드라인 (20자 이내, 한국어, 예: "AI가 제조업을 삼킨다")
+- trend_summary: 선별된 기사들을 관통하는 공통 트렌드 한 문장 (40자 이내)
+- caption: 인스타그램 캡션용 텍스트 (원문 링크 4개 포함, 해시태그 5~8개)
 
 JSON 형식으로 응답해주세요:
 {{
-  "cover_title": "AI Weekly",
+  "cover_headline": "표지 헤드라인",
   "cover_date": "{date.today().isoformat()}",
+  "trend_summary": "이번 주 AI 트렌드 한 줄 요약",
   "cards": [
     {{
-      "number": 1,
+      "number": 1, "original_title": "원문 기사 Title 그대로 복사",
       "title": "...",
       "subtitle": "...",
       "points": ["팩트1", "팩트2", "팩트3", "영향", "So What"],
@@ -57,7 +66,8 @@ JSON 형식으로 응답해주세요:
       "keywords": ["키워드1"]
     }}
   ],
-  "closing_message": "읽어주셔서 감사합니다"
+  "closing_message": "읽어주셔서 감사합니다",
+  "caption": "인스타 캡션 텍스트..."
 }}
 
 기사들:
@@ -82,9 +92,22 @@ def generate_card_content(articles, select_count=None):
 
     message = client.messages.create(
         model=MODEL,
-        max_tokens=2000,
+        max_tokens=3000,
         messages=[{"role": "user", "content": prompt}],
     )
 
     response_text = message.content[0].text
-    return parse_response(response_text)
+    try:
+        return parse_response(response_text)
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"[경고] JSON 파싱 실패, 재시도 중... ({e})")
+        message = client.messages.create(
+            model=MODEL,
+            max_tokens=3000,
+            messages=[
+                {"role": "user", "content": prompt},
+                {"role": "assistant", "content": response_text},
+                {"role": "user", "content": "JSON 형식이 올바르지 않습니다. 올바른 JSON으로 다시 응답해주세요."},
+            ],
+        )
+        return parse_response(message.content[0].text)

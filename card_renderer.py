@@ -46,22 +46,46 @@ def _render(html, css, filename, output_dir):
     return str(output_dir / filename)
 
 
-def render_cover(title, date_str, output_dir, total_cards=4, keywords=None):
-    css = COMMON_CSS + """
+def render_cover(title, date_str, output_dir, total_cards=4, keywords=None,
+                 vol_num=None, trend_summary="", banner_b64=None):
+    banner_css = ""
+    banner_html_block = ""
+    if banner_b64:
+        banner_css = """
+.cover-bg {
+    position: absolute; inset: 0;
+    z-index: 0;
+}
+.cover-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.cover-bg-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.85) 50%, #0a0a0a 100%);
+}
+"""
+        banner_html_block = f"""
+<div class="cover-bg">
+    <img src="data:image/jpeg;base64,{banner_b64}">
+    <div class="cover-bg-overlay"></div>
+</div>"""
+
+    css = COMMON_CSS + banner_css + """
 body {
     background: #0a0a0a;
     color: #fff;
     display: flex;
     flex-direction: column;
     padding: 100px;
-    padding-top: 280px;
+    padding-top: 200px;
     position: relative;
 }
 .glow {
     position: absolute;
     top: -120px; left: 50%; transform: translateX(-50%);
     width: 500px; height: 400px;
-    background: radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(59,130,246,0.06) 0%, transparent 70%);
     pointer-events: none;
 }
 .border {
@@ -69,25 +93,55 @@ body {
     border: 1px solid #2a2a2a;
     pointer-events: none;
 }
+.top-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 40px;
+    position: relative; z-index: 2;
+}
 .label {
     font-size: 22px; font-weight: 600;
     letter-spacing: 5px; color: #888;
-    margin-bottom: 28px;
+}
+.vol {
+    font-size: 20px; font-weight: 600;
+    color: #3B82F6; letter-spacing: 2px;
 }
 .title {
-    font-size: 110px; font-weight: 900;
-    line-height: 1.05; letter-spacing: -4px;
+    font-size: 80px; font-weight: 900;
+    line-height: 1.1; letter-spacing: -3px;
+    margin-bottom: 24px;
+    word-break: keep-all;
+    position: relative; z-index: 2;
+}
+.trend {
+    font-size: 26px; color: #888;
     margin-bottom: 20px;
+    font-weight: 400;
+    position: relative; z-index: 2;
 }
 .sep {
-    width: 50px; height: 1px;
-    background: #444; margin-bottom: 20px;
+    width: 50px; height: 2px;
+    background: #3B82F6; margin-bottom: 20px;
+    position: relative; z-index: 2;
 }
 .date {
-    font-size: 28px; color: #666; font-weight: 500;
+    font-size: 26px; color: #666; font-weight: 500;
+    position: relative; z-index: 2;
+}
+.keywords {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-top: 28px;
+    position: relative; z-index: 2;
+}
+.keyword {
+    font-size: 20px; color: #3B82F6;
+    padding: 8px 18px;
+    border: 1px solid #1E3A5F;
+    border-radius: 20px;
 }
 .bottom {
-    margin-top: auto;
+    position: fixed;
+    bottom: 40px; left: 100px; right: 100px;
     display: flex; justify-content: space-between; align-items: center;
 }
 .bottom-text { font-size: 24px; color: #555; }
@@ -97,27 +151,24 @@ body {
     display: flex; align-items: center; justify-content: center;
     font-size: 18px; color: #888;
 }
-.keywords {
-    display: flex; gap: 12px; flex-wrap: wrap;
-    margin-top: 32px;
-}
-.keyword {
-    font-size: 20px; color: #3B82F6;
-    padding: 8px 18px;
-    border: 1px solid #1E3A5F;
-    border-radius: 20px;
-}
 """
+    vol_html = f'<span class="vol">VOL.{vol_num:02d}</span>' if vol_num else ""
     keywords_html = ""
     if keywords:
         tags = "".join(f'<span class="keyword">#{k}</span>' for k in keywords)
         keywords_html = f'<div class="keywords">{tags}</div>'
+    trend_html = f'<div class="trend">{trend_summary}</div>' if trend_summary else ""
 
     html = f"""
+{banner_html_block}
 <div class="glow"></div>
 <div class="border"></div>
-<div class="label">AI WEEKLY</div>
-<div class="title">이번 주<br>AI 뉴스</div>
+<div class="top-bar">
+    <span class="label">AI WEEKLY</span>
+    {vol_html}
+</div>
+<div class="title">{title}</div>
+{trend_html}
 <div class="sep"></div>
 <div class="date">{date_str}</div>
 {keywords_html}
@@ -140,13 +191,14 @@ def render_news_card(card_data, card_number, output_dir, total_cards=4):
     insight = card_data.get("insight", "")
     link = card_data.get("link", "")
 
-    # 썸네일 → 상단 배너
-    thumbnail_b64 = card_data.get("thumbnail_b64")
+    # 배너 이미지 (banner_b64 우선, thumbnail_b64 폴백)
+    banner_b64 = card_data.get("banner_b64") or card_data.get("thumbnail_b64")
+    img_format = "jpeg" if card_data.get("banner_b64") else "png"
     banner_html = ""
-    if thumbnail_b64:
+    if banner_b64:
         banner_html = f"""
         <div class="banner">
-            <img src="data:image/png;base64,{thumbnail_b64}">
+            <img src="data:image/{img_format};base64,{banner_b64}">
             <div class="banner-overlay"></div>
             <div class="banner-meta">
                 <span class="banner-num">{num:02d} / {total_cards:02d}</span>
@@ -202,7 +254,7 @@ body {
 }
 .banner {
     position: relative;
-    width: 100%; height: 240px;
+    width: 100%; height: 300px;
     flex-shrink: 0;
     overflow: hidden;
 }
@@ -212,7 +264,7 @@ body {
 }
 .banner-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.85) 100%);
+    background: linear-gradient(180deg, rgba(10,15,30,0.15) 0%, rgba(10,10,10,0.88) 100%);
 }
 .banner-no-img {
     background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
@@ -229,7 +281,7 @@ body {
     font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 500;
 }
 .content {
-    padding: 36px 72px 0;
+    padding: 28px 72px 0;
 }
 .title {
     font-size: 58px; font-weight: 900;
@@ -367,6 +419,12 @@ body {
     border-radius: 28px;
     margin-top: 12px;
 }
+.cta-handle {
+    font-size: 26px; color: #3B82F6;
+    font-weight: 600;
+    margin-top: 16px;
+    letter-spacing: 1px;
+}
 """
     html = f"""
 <div class="border"></div>
@@ -375,8 +433,9 @@ body {
 <div class="sep"></div>
 <div class="brand">AI Weekly</div>
 <div class="cta">
-    <span class="cta-item">매일 AI 뉴스를 카드로 받아보세요</span>
+    <span class="cta-item">매일 오전 8시, AI 뉴스 업데이트</span>
     <span class="cta-highlight">팔로우 &amp; 저장</span>
+    <span class="cta-handle">@hype.boyo</span>
 </div>
 """
     return _render(html, css, f"card-{card_number:02d}.png", output_dir)

@@ -1,11 +1,21 @@
 import argparse
 import sys
+from pathlib import Path
 from config import DEFAULT_COUNT, get_output_dir, ANTHROPIC_API_KEY
 from rss_collector import collect_news
 from news_filter import filter_by_keywords
 from image_fetcher import fetch_all_thumbnails
 from ai_writer import generate_card_content
 from card_renderer import render_cover, render_news_card, render_closing
+
+
+def _get_volume_number(output_base):
+    """output 폴더 내 날짜 디렉토리 수로 회차 계산"""
+    base = Path(output_base) if output_base else Path("output")
+    if not base.exists():
+        return 1
+    date_dirs = [d for d in base.iterdir() if d.is_dir() and len(d.name) == 10]
+    return len(date_dirs) + 1
 
 
 def main():
@@ -34,38 +44,52 @@ def main():
         filtered = articles[:10]
     print(f"  → {len(filtered)}개 기사 통과")
 
-    # 3. 썸네일 이미지 수집
-    print("[3/5] 기사 썸네일 수집 중...")
+    # 3. 썸네일 + 배너 + 본문 수집
+    print("[3/5] 기사 이미지 및 본문 수집 중...")
     filtered = fetch_all_thumbnails(filtered)
-    thumb_count = sum(1 for a in filtered if a.get("thumbnail_b64"))
-    print(f"  → {thumb_count}개 썸네일 수집")
+    thumb_count = sum(1 for a in filtered if a.get("banner_b64"))
+    body_count = sum(1 for a in filtered if a.get("body"))
+    print(f"  → {thumb_count}개 이미지, {body_count}개 본문 수집")
 
     # 4. Claude API로 선별 + 카드 문구 생성
     print("[4/5] 카드 문구 생성 중... (Claude API)")
     content = generate_card_content(filtered, select_count=args.count)
     print(f"  → {len(content['cards'])}개 카드 문구 생성 완료")
 
-    # Claude가 선별한 카드에 썸네일 + 링크 매칭 (number 기반 → filtered 인덱스)
+    # Claude가 선별한 카드에 이미지 + 링크 매칭 (original_title 기반)
+    title_to_article = {a["title"]: a for a in filtered}
     for card in content["cards"]:
-        idx = card.get("number", 0) - 1
-        if 0 <= idx < len(filtered):
-            if filtered[idx].get("thumbnail_b64"):
-                card["thumbnail_b64"] = filtered[idx]["thumbnail_b64"]
-            if not card.get("link") and filtered[idx].get("link"):
-                card["link"] = filtered[idx]["link"]
+        matched = None
+        # 1차: original_title로 정확 매칭
+        orig_title = card.get("original_title", "")
+        if orig_title and orig_title in title_to_article:
+            matched = title_to_article[orig_title]
+        # 2차: number 기반 폴백
+        if not matched:
+            idx = card.get("number", 0) - 1
+            if 0 <= idx < len(filtered):
+                matched = filtered[idx]
+        if matched:
+            if matched.get("thumbnail_b64"):
+                card["thumbnail_b64"] = matched["thumbnail_b64"]
+            if matched.get("banner_b64"):
+                card["banner_b64"] = matched["banner_b64"]
+            if not card.get("link") and matched.get("link"):
+                card["link"] = matched["link"]
 
     # 5. 이미지 생성
     print("[5/5] 카드 이미지 생성 중...")
     output_dir = get_output_dir(args.output)
     generated = []
-
     total_cards = len(content["cards"])
+
+    # 회차 번호
+    vol_num = _get_volume_number(args.output)
 
     # 표지용 키워드 수집
     all_keywords = []
     for card in content["cards"]:
         all_keywords.extend(card.get("keywords", []))
-    # 중복 제거, 최대 4개
     seen = set()
     unique_keywords = []
     for kw in all_keywords:
@@ -74,7 +98,22 @@ def main():
             unique_keywords.append(kw)
     cover_keywords = unique_keywords[:4]
 
-    path = render_cover(content["cover_title"], content["cover_date"], output_dir, total_cards, keywords=cover_keywords)
+    # 표지: 동적 헤드라인 + 트렌드 서사
+    cover_headline = content.get("cover_headline", "이번 주 AI 뉴스")
+    trend_summary = content.get("trend_summary", "")
+
+    # 표지 배너: 첫 번째 카드의 배너 사용
+    cover_banner = None
+    for card in content["cards"]:
+        if card.get("banner_b64"):
+            cover_banner = card["banner_b64"]
+            break
+
+    path = render_cover(
+        cover_headline, content["cover_date"], output_dir, total_cards,
+        keywords=cover_keywords, vol_num=vol_num, trend_summary=trend_summary,
+        banner_b64=cover_banner,
+    )
     generated.append(path)
     print(f"  → 표지: card-01.png")
 
@@ -87,6 +126,12 @@ def main():
     path = render_closing(content["closing_message"], closing_num, output_dir, total_cards)
     generated.append(path)
     print(f"  → 마무리: card-{closing_num:02d}.png")
+
+    # 캡션 저장
+    caption = content.get("caption", "")
+    if caption:
+        (output_dir / "caption.txt").write_text(caption, encoding="utf-8")
+        print(f"  → 캡션: caption.txt")
 
     print(f"\n완료! {len(generated)}장의 카드뉴스가 생성되었습니다.")
     print(f"저장 위치: {output_dir}")
