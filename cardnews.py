@@ -1,6 +1,8 @@
 import argparse
 import json
+import re
 import sys
+from datetime import date, timedelta
 from pathlib import Path
 from config import DEFAULT_COUNT, get_output_dir, ANTHROPIC_API_KEY
 from rss_collector import collect_news
@@ -10,6 +12,7 @@ from ai_writer import generate_card_content
 from card_renderer import render_cover, render_news_card, render_closing
 
 HISTORY_DAYS = 3  # 최근 N일간 사용한 기사 중복 방지
+SIMILARITY_THRESHOLD = 0.35  # 제목 단어 겹침 비율 (35% 이상이면 중복)
 
 
 def _get_volume_number(output_base):
@@ -21,13 +24,43 @@ def _get_volume_number(output_base):
     return len(date_dirs) + 1
 
 
+def _extract_keywords(title):
+    """제목에서 비교용 핵심 단어 추출 (소문자, 2자 이상)"""
+    words = re.findall(r"[a-zA-Z가-힣0-9]+", title.lower())
+    # 불용어 제거
+    stopwords = {
+        "the", "a", "an", "is", "are", "was", "were", "in", "on", "at",
+        "to", "for", "of", "and", "or", "by", "with", "from", "that",
+        "this", "its", "it", "as", "be", "has", "have", "had", "will",
+        "says", "said", "new", "how", "what", "why", "can", "could",
+        "may", "about", "after", "before", "into", "over", "just",
+    }
+    return {w for w in words if len(w) >= 2 and w not in stopwords}
+
+
+def _is_similar(title, used_titles):
+    """새 기사 제목이 이전에 사용한 제목과 유사한지 판단"""
+    new_kw = _extract_keywords(title)
+    if not new_kw:
+        return False
+    for used_title in used_titles:
+        used_kw = _extract_keywords(used_title)
+        if not used_kw:
+            continue
+        overlap = new_kw & used_kw
+        # 둘 중 작은 집합 기준 겹침 비율
+        ratio = len(overlap) / min(len(new_kw), len(used_kw))
+        if ratio >= SIMILARITY_THRESHOLD:
+            return True
+    return False
+
+
 def _load_history(output_base):
-    """최근 HISTORY_DAYS일간 사용한 기사 링크 목록 로드"""
-    from datetime import date, timedelta
-    import re
+    """최근 HISTORY_DAYS일간 사용한 기사 링크 + 제목 로드"""
     base = Path(output_base) if output_base else Path("output")
     history_file = base / "history.json"
     used_links = set()
+    used_titles = []
 
     # 1차: history.json에서 로드
     if history_file.exists():
@@ -37,6 +70,7 @@ def _load_history(output_base):
             for entry in data:
                 if entry.get("date", "") >= cutoff:
                     used_links.update(entry.get("links", []))
+                    used_titles.extend(entry.get("titles", []))
         except (json.JSONDecodeError, KeyError):
             pass
 
@@ -53,12 +87,11 @@ def _load_history(output_base):
                         if match:
                             used_links.add(match.group(0))
 
-    return used_links
+    return used_links, used_titles
 
 
-def _save_history(output_base, links):
-    """오늘 사용한 기사 링크를 히스토리에 추가"""
-    from datetime import date
+def _save_history(output_base, links, titles):
+    """오늘 사용한 기사 링크 + 제목을 히스토리에 추가"""
     base = Path(output_base) if output_base else Path("output")
     history_file = base / "history.json"
     data = []
@@ -70,9 +103,8 @@ def _save_history(output_base, links):
     # 오늘 날짜 기존 엔트리 제거 후 추가
     today = date.today().isoformat()
     data = [e for e in data if e.get("date") != today]
-    data.append({"date": today, "links": links})
+    data.append({"date": today, "links": links, "titles": titles})
     # 오래된 엔트리 정리
-    from datetime import timedelta
     cutoff = (date.today() - timedelta(days=HISTORY_DAYS * 2)).isoformat()
     data = [e for e in data if e.get("date", "") >= cutoff]
     history_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -96,11 +128,18 @@ def main():
         sys.exit(1)
     print(f"  → {len(articles)}개 기사 수집")
 
-    # 1.5. 이전 사용 기사 중복 제거
-    used_links = _load_history(args.output)
-    if used_links:
+    # 1.5. 이전 사용 기사 중복 제거 (링크 + 제목 유사도)
+    used_links, used_titles = _load_history(args.output)
+    if used_links or used_titles:
         before = len(articles)
-        articles = [a for a in articles if a.get("link", "") not in used_links]
+        deduped = []
+        for a in articles:
+            if a.get("link", "") in used_links:
+                continue
+            if used_titles and _is_similar(a.get("title", ""), used_titles):
+                continue
+            deduped.append(a)
+        articles = deduped
         removed = before - len(articles)
         if removed:
             print(f"  → {removed}개 기존 기사 제외 (최근 {HISTORY_DAYS}일 중복)")
@@ -213,9 +252,10 @@ def main():
         (output_dir / "links.txt").write_text(links_text, encoding="utf-8")
         print(f"  → 링크: links.txt")
 
-    # 히스토리 저장 (사용된 기사 링크)
+    # 히스토리 저장 (사용된 기사 링크 + 원본 제목)
     used = [c.get("link", "") for c in content["cards"] if c.get("link")]
-    _save_history(args.output, used)
+    used_t = [c.get("original_title", "") for c in content["cards"] if c.get("original_title")]
+    _save_history(args.output, used, used_t)
 
     print(f"\n완료! {len(generated)}장의 카드뉴스가 생성되었습니다.")
     print(f"저장 위치: {output_dir}")

@@ -6,6 +6,12 @@
       "https://techcrunch.com/2026/03/19/online-bot-traffic-will-exceed-human-traffic-by-2027-cloudflare-ceo-says/",
       "https://www.theverge.com/tech/896490/google-replace-news-headlines-in-search-canary-coal-mine-experiment",
       "https://techcrunch.com/2026/03/20/the-best-ai-investment-might-be-in-energy-tech/"
+    ],
+    "titles": [
+      "What happened at Nvidia GTC: NemoClaw, robot Olaf, and a $1 trillion bet",
+      "Jeff Bezos reportedly wants $100 billion to buy and transform old manufacturing firms with AI",
+      "Online bot traffic will exceed human traffic by 2027, Cloudflare CEO says",
+      "The best AI investment might be in energy tech"
     ]
   },
   {
@@ -15,6 +21,12 @@
       "https://techcrunch.com/podcast/nvidia-has-an-openclaw-strategy-do-you/",
       "https://www.theverge.com/ai-artificial-intelligence/898055/trump-new-ai-policy-framework",
       "https://www.theverge.com/ai-artificial-intelligence/897528/meta-rogue-ai-agent-security-incident"
+    ],
+    "titles": [
+      "New court filing reveals Pentagon told Anthropic the two sides were 'nearly aligned' a week after Trump declared the relationship kaput",
+      "Nvidia has an OpenClaw strategy. Do you?",
+      "Trump's new AI policy framework",
+      "Meta rogue AI agent security incident"
     ]
   }
 ]
