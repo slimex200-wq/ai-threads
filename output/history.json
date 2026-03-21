@@ -17,16 +17,16 @@
   {
     "date": "2026-03-21",
     "links": [
-      "https://www.theverge.com/ai-artificial-intelligence/897778/openai-chatgpt-codex-atlas-browser-superapp",
-      "https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/",
-      "https://www.theverge.com/tech/897915/amazon-transformer-alexa-phone",
-      "https://www.technologyreview.com/2026/03/20/1134448/the-download-openai-building-fully-automated-researcher-psychedelic-drug-trial/"
+      "https://techcrunch.com/podcast/nvidia-has-an-openclaw-strategy-do-you/",
+      "https://www.theverge.com/ai-artificial-intelligence/897528/meta-rogue-ai-agent-security-incident",
+      "https://techcrunch.com/2026/03/20/trumps-ai-framework-targets-state-laws-shifts-child-safety-burden-to-parents/",
+      "https://www.theverge.com/tech/897243/adobe-firefly-ai-custom-models-image-public-beta"
     ],
     "titles": [
-      "OpenAI is planning a desktop 'superapp'",
-      "Microsoft rolls back some of its Copilot AI bloat on Windows",
-      "Amazon is making an Alexa phone",
-      "The Download: OpenAI is building a fully automated researcher, and a psychedelic trial blind spot"
+      "Nvidia has an OpenClaw strategy. Do you?",
+      "A rogue AI led to a serious security incident at Meta",
+      "Trump's AI framework targets state laws, shifts child safety burden to parents",
+      "Adobe's AI image generator can now be trained on your own art"
     ]
   }
 ]
