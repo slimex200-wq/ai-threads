@@ -110,47 +110,119 @@ def _save_history(output_base, links, titles):
     history_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _qa_check(content, output_dir):
-    """생성된 카드뉴스 품질 검증"""
-    import hashlib
-    issues = []
+MAX_QA_RETRIES = 1  # 치명적 이슈 시 최대 재생성 횟수
+
+
+def _match_images_to_cards(cards, filtered):
+    """카드에 이미지 + 링크 매칭 (original_title 기반, 퍼지 폴백)"""
+    title_to_article = {a["title"]: a for a in filtered}
+    for card in cards:
+        matched = None
+        # 1차: original_title로 정확 매칭
+        orig_title = card.get("original_title", "")
+        if orig_title and orig_title in title_to_article:
+            matched = title_to_article[orig_title]
+        # 2차: 퍼지 제목 매칭 (키워드 유사도 기반)
+        if not matched and orig_title:
+            best_score, best_article = 0, None
+            orig_kw = _extract_keywords(orig_title)
+            for a in filtered:
+                a_kw = _extract_keywords(a["title"])
+                if orig_kw and a_kw:
+                    overlap = len(orig_kw & a_kw) / min(len(orig_kw), len(a_kw))
+                    if overlap > best_score:
+                        best_score, best_article = overlap, a
+            if best_score >= 0.4:
+                matched = best_article
+        # 3차: link 기반 매칭
+        if not matched and card.get("link"):
+            for a in filtered:
+                if a.get("link") == card.get("link"):
+                    matched = a
+                    break
+        if matched:
+            if matched.get("thumbnail_b64"):
+                card["thumbnail_b64"] = matched["thumbnail_b64"]
+            if matched.get("banner_b64"):
+                card["banner_b64"] = matched["banner_b64"]
+            if not card.get("link") and matched.get("link"):
+                card["link"] = matched["link"]
+
+# 주간 표현 패턴 (Daily인데 Weekly 톤 사용 방지)
+_WEEKLY_PATTERN = re.compile(
+    r"한\s*주|이번\s*주|금주|주간|weekly|this\s*week|지난\s*주|격변의\s*한\s*주",
+    re.IGNORECASE,
+)
+
+
+def _qa_check_content(content, used_titles=None):
+    """콘텐츠 품질 검증 (렌더링 전) → (critical, warnings)"""
+    critical = []
+    warnings = []
     cards = content.get("cards", [])
 
     # 1. 카드 개수 검증
     if len(cards) < 2:
-        issues.append(f"카드 수 부족: {len(cards)}개 (최소 2개)")
+        critical.append(f"카드 수 부족: {len(cards)}개 (최소 2개)")
 
     # 2. 필수 필드 누락 체크
     for i, card in enumerate(cards, 1):
         if not card.get("title"):
-            issues.append(f"카드 {i}: 제목 누락")
+            critical.append(f"카드 {i}: 제목 누락")
         if not card.get("points") or len(card.get("points", [])) < 3:
-            issues.append(f"카드 {i}: 포인트 부족 ({len(card.get('points', []))}개)")
+            critical.append(f"카드 {i}: 포인트 부족 ({len(card.get('points', []))}개)")
         if not card.get("link"):
-            issues.append(f"카드 {i}: 원문 링크 누락")
+            warnings.append(f"카드 {i}: 원문 링크 누락")
 
     # 3. 카드 간 제목 중복 체크
     titles = [c.get("title", "") for c in cards]
     for i, t1 in enumerate(titles):
         for j, t2 in enumerate(titles):
             if i < j and t1 and t2 and _is_similar(t1, [t2]):
-                issues.append(f"카드 {i+1}·{j+1} 제목 유사: '{t1}' vs '{t2}'")
+                critical.append(f"카드 {i+1}·{j+1} 제목 유사: '{t1}' vs '{t2}'")
 
-    # 4. 이미지 파일 존재 + 중복 체크
+    # 4. 표지 필드 체크
+    if not content.get("cover_headline"):
+        critical.append("표지 헤드라인 누락")
+    if not content.get("trend_summary"):
+        warnings.append("트렌드 요약 누락")
+
+    # 5. Weekly 톤 감지 (AI Daily인데 주간 표현 사용)
+    for label, text in [
+        ("표지 헤드라인", content.get("cover_headline", "")),
+        ("트렌드 요약", content.get("trend_summary", "")),
+        ("캡션", content.get("caption", "")),
+    ]:
+        match = _WEEKLY_PATTERN.search(text)
+        if match:
+            critical.append(f"{label}에 주간 표현 감지: '{match.group()}' in '{text[:40]}'")
+
+    # 6. 이전 기사와 주제 중복 감지
+    if used_titles:
+        for i, card in enumerate(cards, 1):
+            orig = card.get("original_title", "")
+            if orig:
+                for ut in used_titles:
+                    if _is_similar(orig, [ut]):
+                        critical.append(
+                            f"카드 {i} '{card.get('title','')}': 이전 기사 '{ut[:30]}' 주제 중복"
+                        )
+                        break
+
+    return critical, warnings
+
+
+def _qa_check_images(output_dir):
+    """렌더링된 이미지 품질 검증 → warnings"""
+    import hashlib
+    warnings = []
     img_hashes = {}
     for f in sorted(output_dir.glob("card-*.png")):
         h = hashlib.md5(f.read_bytes()).hexdigest()
         if h in img_hashes:
-            issues.append(f"이미지 중복: {f.name} == {img_hashes[h]}")
+            warnings.append(f"이미지 중복: {f.name} == {img_hashes[h]}")
         img_hashes[h] = f.name
-
-    # 5. 표지 필드 체크
-    if not content.get("cover_headline"):
-        issues.append("표지 헤드라인 누락")
-    if not content.get("trend_summary"):
-        issues.append("트렌드 요약 누락")
-
-    return issues
+    return warnings
 
 
 def main():
@@ -202,47 +274,36 @@ def main():
     body_count = sum(1 for a in filtered if a.get("body"))
     print(f"  → {thumb_count}개 이미지, {body_count}개 본문 수집")
 
-    # 4. Claude API로 선별 + 카드 문구 생성
-    print("[4/5] 카드 문구 생성 중... (Claude API)")
+    # 4. Claude API로 선별 + 카드 문구 생성 (QA 게이트 포함)
+    print("[4/6] 카드 문구 생성 중... (Claude API)")
     content = generate_card_content(filtered, select_count=args.count, used_titles=used_titles)
     print(f"  → {len(content['cards'])}개 카드 문구 생성 완료")
 
-    # Claude가 선별한 카드에 이미지 + 링크 매칭 (original_title 기반)
-    title_to_article = {a["title"]: a for a in filtered}
-    for card in content["cards"]:
-        matched = None
-        # 1차: original_title로 정확 매칭
-        orig_title = card.get("original_title", "")
-        if orig_title and orig_title in title_to_article:
-            matched = title_to_article[orig_title]
-        # 2차: 퍼지 제목 매칭 (키워드 유사도 기반)
-        if not matched and orig_title:
-            best_score, best_article = 0, None
-            orig_kw = _extract_keywords(orig_title)
-            for a in filtered:
-                a_kw = _extract_keywords(a["title"])
-                if orig_kw and a_kw:
-                    overlap = len(orig_kw & a_kw) / min(len(orig_kw), len(a_kw))
-                    if overlap > best_score:
-                        best_score, best_article = overlap, a
-            if best_score >= 0.4:
-                matched = best_article
-        # 3차: link 기반 매칭
-        if not matched and card.get("link"):
-            for a in filtered:
-                if a.get("link") == card.get("link"):
-                    matched = a
-                    break
-        if matched:
-            if matched.get("thumbnail_b64"):
-                card["thumbnail_b64"] = matched["thumbnail_b64"]
-            if matched.get("banner_b64"):
-                card["banner_b64"] = matched["banner_b64"]
-            if not card.get("link") and matched.get("link"):
-                card["link"] = matched["link"]
+    # QA 사전 검증 + 자동 재생성
+    for retry in range(MAX_QA_RETRIES + 1):
+        print(f"\n[5/6] QA 사전 검증 중... (시도 {retry + 1}/{MAX_QA_RETRIES + 1})")
+        critical, warnings = _qa_check_content(content, used_titles=used_titles)
+        for w in warnings:
+            print(f"  ⚠ [경고] {w}")
+        if not critical:
+            print("  → 사전 검증 통과")
+            break
+        for c in critical:
+            print(f"  ✖ [치명] {c}")
+        if retry < MAX_QA_RETRIES:
+            print("  → 치명적 이슈 발견, 재생성 중...")
+            content = generate_card_content(
+                filtered, select_count=args.count, used_titles=used_titles
+            )
+            print(f"  → {len(content['cards'])}개 카드 문구 재생성 완료")
+        else:
+            print(f"  → 재시도 소진, {len(critical)}건 치명 이슈 포함 진행")
 
-    # 5. 이미지 생성
-    print("[5/5] 카드 이미지 생성 중...")
+    # Claude가 선별한 카드에 이미지 + 링크 매칭 (original_title 기반)
+    _match_images_to_cards(content["cards"], filtered)
+
+    # 6. 이미지 생성
+    print("[6/6] 카드 이미지 생성 중...")
     output_dir = get_output_dir(args.output)
     generated = []
     total_cards = len(content["cards"])
@@ -315,15 +376,15 @@ def main():
     used_t = [c.get("original_title", "") for c in content["cards"] if c.get("original_title")]
     _save_history(args.output, used, used_t)
 
-    # QA 검증
-    print("\n[QA] 카드 품질 검증 중...")
-    issues = _qa_check(content, output_dir)
-    if issues:
-        for issue in issues:
+    # QA 사후 검증 (이미지)
+    print("\n[QA] 이미지 품질 검증 중...")
+    img_issues = _qa_check_images(output_dir)
+    if img_issues:
+        for issue in img_issues:
             print(f"  ⚠ {issue}")
-        print(f"  → {len(issues)}건의 이슈 발견")
+        print(f"  → {len(img_issues)}건의 이미지 이슈 발견")
     else:
-        print("  → 모든 검증 통과")
+        print("  → 이미지 검증 통과")
 
     print(f"\n완료! {len(generated)}장의 카드뉴스가 생성되었습니다.")
     print(f"저장 위치: {output_dir}")
