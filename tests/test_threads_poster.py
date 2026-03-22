@@ -11,10 +11,9 @@ from threads_poster import (
     _should_retry_publish,
     check_url_accessible,
     create_carousel_container,
-    create_carousel_reply_container,
     create_image_container,
     create_text_container,
-    post_caption_carousel_links,
+    post_carousel_with_reply,
     publish_container,
 )
 
@@ -134,20 +133,6 @@ class TestCreateTextContainer:
         assert "reply_to_id" not in call_args[1]["params"]
 
 
-class TestCreateCarouselReplyContainer:
-    def test_success(self):
-        client = MagicMock()
-        client.post.return_value = _mock_response(200, {"id": "car_reply_1"})
-
-        result = create_carousel_reply_container(
-            client, "user1", "token1", ["img_1", "img_2"], reply_to_id="post_123"
-        )
-        assert result == "car_reply_1"
-
-        call_args = client.post.call_args
-        assert call_args[1]["params"]["media_type"] == "CAROUSEL"
-        assert call_args[1]["params"]["reply_to_id"] == "post_123"
-        assert call_args[1]["params"]["children"] == "img_1,img_2"
 
 
 class TestPublishContainer:
@@ -200,27 +185,25 @@ class TestCheckUrlAccessible:
         assert check_url_accessible("https://example.com/img.png") is False
 
 
-class TestPostCaptionCarouselLinks:
+class TestPostCarouselWithReply:
     @patch("threads_poster.time.sleep")
     @patch("threads_poster.httpx.Client")
-    def test_full_flow_with_links(self, mock_client_cls, mock_sleep):
+    def test_full_flow_with_reply(self, mock_client_cls, mock_sleep):
         mock_client = MagicMock()
         mock_client_cls.return_value.__enter__ = MagicMock(return_value=mock_client)
         mock_client_cls.return_value.__exit__ = MagicMock(return_value=False)
 
-        # caption container → publish caption → image containers → carousel reply → publish carousel → links container → publish links
+        # image containers → carousel container → publish carousel → reply container → publish reply
         mock_client.post.side_effect = [
-            _mock_response(200, {"id": "cap_c"}),     # caption container
-            _mock_response(200, {"id": "post_1"}),     # publish caption
-            _mock_response(200, {"id": "img_1"}),      # image 1
-            _mock_response(200, {"id": "img_2"}),      # image 2
-            _mock_response(200, {"id": "car_c"}),      # carousel reply container
-            _mock_response(200, {"id": "car_1"}),      # publish carousel
-            _mock_response(200, {"id": "link_c"}),     # links container
-            _mock_response(200, {"id": "link_1"}),     # publish links
+            _mock_response(200, {"id": "img_1"}),    # image 1
+            _mock_response(200, {"id": "img_2"}),    # image 2
+            _mock_response(200, {"id": "car_1"}),    # carousel
+            _mock_response(200, {"id": "post_1"}),   # publish carousel
+            _mock_response(200, {"id": "reply_c"}),  # reply container
+            _mock_response(200, {"id": "reply_1"}),  # publish reply
         ]
 
-        result = post_caption_carousel_links(
+        result = post_carousel_with_reply(
             access_token="token",
             user_id="user1",
             image_urls=["https://a.com/1.png", "https://a.com/2.png"],
@@ -229,26 +212,23 @@ class TestPostCaptionCarouselLinks:
         )
 
         assert result["post_id"] == "post_1"
-        assert result["carousel_id"] == "car_1"
-        assert result["links_reply_id"] == "link_1"
-        assert mock_client.post.call_count == 8
+        assert result["reply_id"] == "reply_1"
+        assert mock_client.post.call_count == 6
 
     @patch("threads_poster.time.sleep")
     @patch("threads_poster.httpx.Client")
-    def test_without_links(self, mock_client_cls, mock_sleep):
+    def test_without_reply(self, mock_client_cls, mock_sleep):
         mock_client = MagicMock()
         mock_client_cls.return_value.__enter__ = MagicMock(return_value=mock_client)
         mock_client_cls.return_value.__exit__ = MagicMock(return_value=False)
 
         mock_client.post.side_effect = [
-            _mock_response(200, {"id": "cap_c"}),     # caption container
-            _mock_response(200, {"id": "post_1"}),     # publish caption
-            _mock_response(200, {"id": "img_1"}),      # image 1
-            _mock_response(200, {"id": "car_c"}),      # carousel reply container
-            _mock_response(200, {"id": "car_1"}),      # publish carousel
+            _mock_response(200, {"id": "img_1"}),
+            _mock_response(200, {"id": "car_1"}),
+            _mock_response(200, {"id": "post_1"}),
         ]
 
-        result = post_caption_carousel_links(
+        result = post_carousel_with_reply(
             access_token="token",
             user_id="user1",
             image_urls=["https://a.com/1.png"],
@@ -257,6 +237,5 @@ class TestPostCaptionCarouselLinks:
         )
 
         assert result["post_id"] == "post_1"
-        assert result["carousel_id"] == "car_1"
-        assert result["links_reply_id"] is None
-        assert mock_client.post.call_count == 5
+        assert result["reply_id"] is None
+        assert mock_client.post.call_count == 3

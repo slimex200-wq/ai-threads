@@ -176,37 +176,27 @@ def wait_for_pages_deployment(base_url: str, image_path: str, max_wait: int = 12
     return False
 
 
-def post_caption_carousel_links(
+def post_carousel_with_reply(
     access_token: str,
     user_id: str,
     image_urls: list[str],
     caption: str,
     reply_text: str | None = None,
 ) -> dict:
-    """caption 텍스트 → 캐러셀 이미지 댓글 → 링크 댓글 순서로 포스팅.
+    """캐러셀 포스트 (caption + 이미지) + 링크 댓글.
 
     구조:
-        1) 텍스트 포스트 (caption)
-        2) 캐러셀 댓글 (이미지들)
-        3) 텍스트 댓글 (links)
+        1) 캐러셀 포스트 (caption 텍스트 + 이미지들 — 하나의 글)
+        2) 텍스트 댓글 (links)
 
     Returns:
-        {"post_id": str, "carousel_id": str, "links_reply_id": str | None}
+        {"post_id": str, "reply_id": str | None}
     """
     if len(image_urls) > MAX_CAROUSEL_ITEMS:
         image_urls = image_urls[:MAX_CAROUSEL_ITEMS]
 
     with httpx.Client(timeout=30.0) as client:
-        # 1. caption 텍스트 포스트
-        print("[Threads] caption 텍스트 포스트 생성 중...")
-        caption_container_id = create_text_container(
-            client, user_id, access_token, caption, reply_to_id=""
-        )
-        time.sleep(CONTAINER_WAIT_DELAY)
-        post_id = publish_container(client, user_id, access_token, caption_container_id)
-        print(f"  → caption 발행 완료: {post_id}")
-
-        # 2. 캐러셀 이미지 댓글
+        # 1. 각 이미지별 컨테이너 생성
         print(f"[Threads] 이미지 컨테이너 생성 중... ({len(image_urls)}장)")
         children_ids = []
         for i, url in enumerate(image_urls, 1):
@@ -214,30 +204,32 @@ def post_caption_carousel_links(
             children_ids.append(container_id)
             print(f"  → 이미지 {i}/{len(image_urls)}: {container_id}")
 
-        print("[Threads] 캐러셀 댓글 생성 중...")
+        # 2. 캐러셀 컨테이너 생성 (caption 포함)
+        print("[Threads] 캐러셀 포스트 생성 중...")
         time.sleep(CONTAINER_WAIT_DELAY)
-        carousel_container_id = create_carousel_reply_container(
-            client, user_id, access_token, children_ids, reply_to_id=post_id
+        carousel_id = create_carousel_container(
+            client, user_id, access_token, children_ids, caption
         )
-        print(f"  → 캐러셀 컨테이너: {carousel_container_id}")
+        print(f"  → 캐러셀: {carousel_id}")
 
+        # 3. 캐러셀 발행
         time.sleep(CONTAINER_WAIT_DELAY)
-        carousel_id = publish_container(client, user_id, access_token, carousel_container_id)
-        print(f"  → 캐러셀 댓글 발행 완료: {carousel_id}")
+        post_id = publish_container(client, user_id, access_token, carousel_id)
+        print(f"  → 발행 완료: {post_id}")
 
-        # 3. 링크 댓글
-        links_reply_id = None
+        # 4. 링크 댓글
+        reply_id = None
         if reply_text:
             print("[Threads] 링크 댓글 작성 중...")
             time.sleep(CONTAINER_WAIT_DELAY)
-            links_container_id = create_text_container(
+            reply_container_id = create_text_container(
                 client, user_id, access_token, reply_text, reply_to_id=post_id
             )
             time.sleep(CONTAINER_WAIT_DELAY)
-            links_reply_id = publish_container(client, user_id, access_token, links_container_id)
-            print(f"  → 링크 댓글 발행 완료: {links_reply_id}")
+            reply_id = publish_container(client, user_id, access_token, reply_container_id)
+            print(f"  → 링크 댓글 발행 완료: {reply_id}")
 
-    return {"post_id": post_id, "carousel_id": carousel_id, "links_reply_id": links_reply_id}
+    return {"post_id": post_id, "reply_id": reply_id}
 
 
 def main():
@@ -304,8 +296,8 @@ def main():
             sys.exit(1)
 
     # 포스팅
-    print(f"\n[Threads] 포스트 시작 (caption → 이미지 {len(image_urls)}장 → links)")
-    result = post_caption_carousel_links(
+    print(f"\n[Threads] 캐러셀 포스트 시작 ({len(image_urls)}장 + caption)")
+    result = post_carousel_with_reply(
         access_token=access_token,
         user_id=user_id,
         image_urls=image_urls,
@@ -314,10 +306,9 @@ def main():
     )
 
     print(f"\n[Threads] 완료!")
-    print(f"  → caption 포스트 ID: {result['post_id']}")
-    print(f"  → 캐러셀 댓글 ID: {result['carousel_id']}")
-    if result["links_reply_id"]:
-        print(f"  → 링크 댓글 ID: {result['links_reply_id']}")
+    print(f"  → 포스트 ID: {result['post_id']}")
+    if result["reply_id"]:
+        print(f"  → 링크 댓글 ID: {result['reply_id']}")
 
 
 if __name__ == "__main__":
