@@ -366,7 +366,26 @@ body {
     return _render(html, css, f"card-{card_number:02d}.png", output_dir)
 
 
+def _generate_qr_base64(url):
+    """URL을 QR 코드 이미지로 생성하여 base64 반환."""
+    import base64
+    import io
+    import qrcode
+
+    qr = qrcode.QRCode(version=1, box_size=10, border=2)
+    qr.add_data(url)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="white", back_color="#0a0a0a")
+    buffer = io.BytesIO()
+    img.save(buffer, format="PNG")
+    return base64.b64encode(buffer.getvalue()).decode()
+
+
+NEWSLETTER_URL = "https://aidaily247.beehiiv.com/"
+
+
 def render_closing(message, card_number, output_dir, total_cards=4):
+    qr_b64 = _generate_qr_base64(NEWSLETTER_URL)
     css = COMMON_CSS + """
 body {
     background: #0a0a0a;
@@ -393,37 +412,35 @@ body {
 .message {
     font-size: 72px; font-weight: 900;
     letter-spacing: -2px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .sep {
     width: 50px; height: 1px;
-    background: #333; margin-bottom: 24px;
+    background: #333; margin-bottom: 20px;
 }
 .brand {
     font-size: 24px; color: #444;
-    margin-bottom: 48px;
-}
-.cta {
-    display: flex; flex-direction: column;
-    gap: 14px; align-items: center;
+    margin-bottom: 32px;
 }
 .cta-item {
     font-size: 22px; color: #666;
     letter-spacing: 1px;
+    margin-bottom: 24px;
 }
-.cta-highlight {
+.qr-wrap {
+    margin-bottom: 24px;
+}
+.qr-wrap img {
+    width: 200px; height: 200px;
+    border-radius: 12px;
+}
+.cta-label {
     font-size: 24px; color: #3B82F6;
     font-weight: 600;
-    padding: 14px 40px;
-    border: 1.5px solid #3B82F6;
-    border-radius: 28px;
-    margin-top: 12px;
+    margin-bottom: 8px;
 }
-.cta-handle {
-    font-size: 26px; color: #3B82F6;
-    font-weight: 600;
-    margin-top: 16px;
-    letter-spacing: 1px;
+.cta-url {
+    font-size: 18px; color: #555;
 }
 """
     html = f"""
@@ -432,10 +449,11 @@ body {
 <div class="message">{message}</div>
 <div class="sep"></div>
 <div class="brand">AI Daily</div>
-<div class="cta">
-    <span class="cta-item">매일 아침, AI 뉴스를 놓치지 않는 방법</span>
-    <span class="cta-highlight">뉴스레터 무료 구독 →</span>
-    <span class="cta-handle">aidaily247.beehiiv.com</span>
+<div class="cta-item">매일 아침, AI 뉴스를 놓치지 않는 방법</div>
+<div class="qr-wrap">
+    <img src="data:image/png;base64,{qr_b64}" alt="QR">
 </div>
+<div class="cta-label">뉴스레터 무료 구독</div>
+<div class="cta-url">aidaily247.beehiiv.com</div>
 """
     return _render(html, css, f"card-{card_number:02d}.png", output_dir)
