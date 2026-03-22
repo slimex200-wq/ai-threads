@@ -433,9 +433,9 @@ body {
 <div class="sep"></div>
 <div class="brand">AI Daily</div>
 <div class="cta">
-    <span class="cta-item">매일 오전 8시, AI 뉴스 업데이트</span>
-    <span class="cta-highlight">팔로우 &amp; 저장</span>
-    <span class="cta-handle">@hype.boyo</span>
+    <span class="cta-item">매일 아침, AI 뉴스를 놓치지 않는 방법</span>
+    <span class="cta-highlight">뉴스레터 무료 구독 →</span>
+    <span class="cta-handle">aidaily247.beehiiv.com</span>
 </div>
 """
     return _render(html, css, f"card-{card_number:02d}.png", output_dir)
