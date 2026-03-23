@@ -2,7 +2,7 @@ name: Daily AI Card News
 
 on:
   schedule:
-    - cron: '0 15 * * *'
+    - cron: '0 23 * * *'
   workflow_dispatch:
 
 permissions:
