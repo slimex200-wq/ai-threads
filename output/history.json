@@ -73,5 +73,20 @@
       "앤트로픽, '클로드'에 화면 제어 기능 도입…\"AI가 컴퓨터 직접 조작\"",
       "Databricks bought two startups to underpin its new AI security product"
     ]
+  },
+  {
+    "date": "2026-03-25",
+    "links": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208357",
+      "https://techcrunch.com/2026/03/25/google-turboquant-ai-memory-compression-silicon-valley-pied-piper/",
+      "https://www.aitimes.com/news/articleView.html?idxno=208330",
+      "https://techcrunch.com/2026/03/25/the-ai-skills-gap-is-here-says-ai-company-and-power-users-are-pulling-ahead/"
+    ],
+    "titles": [
+      "메타, 자가 진화형 AI '하이퍼에이전트' 발표… \"배우는 방법까지 바꾼다\"",
+      "Google unveils TurboQuant, a new AI memory compression algorithm — and yes, the internet is calling it 'Pied Piper'",
+      "애플, AI 챗봇 '시리' WWDC서 공개...에이전트 업그레이드가 목표",
+      "The AI skills gap is here, says AI company, and power users are pulling ahead"
+    ]
   }
 ]
