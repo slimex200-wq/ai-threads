@@ -2,7 +2,7 @@ name: Daily AI Threads
 
 on:
   schedule:
-    - cron: '30 22,10 * * *'  # KST 07:30, 19:30
+    - cron: '0 22,0,2,4,6,8,10,12,14 * * *'  # KST 07~23시 2시간 간격
   workflow_dispatch:
 
 permissions:
