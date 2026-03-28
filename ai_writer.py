@@ -9,6 +9,7 @@ import re
 
 import anthropic
 from config import ANTHROPIC_API_KEY, MODEL
+from history import normalize_title
 
 
 def build_prompt(articles, used_titles=None):
@@ -144,8 +145,20 @@ def _parse_response(text):
     return json.loads(text)
 
 
+def _filter_used_articles(articles, used_titles):
+    """이미 포스팅한 기사를 후보에서 제거 (정규화 비교)."""
+    if not used_titles:
+        return articles
+    used_set = {normalize_title(t) for t in used_titles}
+    filtered = [a for a in articles if normalize_title(a.get("title", "")) not in used_set]
+    if not filtered:
+        return articles
+    return filtered
+
+
 def generate_post(articles, used_titles=None):
     """Threads 텍스트 포스트 생성."""
+    articles = _filter_used_articles(articles, used_titles)
     prompt = build_prompt(articles, used_titles)
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     message = client.messages.create(
