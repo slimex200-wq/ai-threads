@@ -87,10 +87,20 @@ def main():
 
     # 3. 포스트 생성
     print(f"\n[3/5] 바이럴 포스트 생성 중...")
+    from datetime import datetime
     from history import load_used_titles, save_title
     from ai_writer import generate_post
+    from performance_db import get_top_posts, get_bottom_posts, get_recent_topics
 
-    content = generate_post(filtered, used_titles=load_used_titles())
+    kst_hour = datetime.now().hour
+    content = generate_post(
+        filtered,
+        used_titles=load_used_titles(),
+        recent_topics=get_recent_topics(6),
+        hour=kst_hour,
+        top_posts=get_top_posts(3),
+        bottom_posts=get_bottom_posts(2),
+    )
 
     article = content.get("selected_article", {})
     print(f"  선택: {article.get('original_title', '?')}")
@@ -134,6 +144,12 @@ def main():
 
     if article.get("original_title"):
         save_title(article["original_title"])
+
+    # 성과 추적용 DB 저장
+    if result.get("post_id"):
+        from performance_db import save_post
+        save_post(result["post_id"], content, kst_hour)
+        print(f"  성과 추적 등록: {result['post_id']}")
 
     from telegram_notify import send_result
     send_result(result)

@@ -12,12 +12,16 @@ from config import ANTHROPIC_API_KEY, MODEL
 from history import normalize_title
 
 
-def build_prompt(articles, used_titles=None):
+def build_prompt(articles, used_titles=None, recent_topics=None, hour=None,
+                 top_posts=None, bottom_posts=None):
     """Threads 바이럴 텍스트 포스트 프롬프트."""
     articles_text = _format_articles(articles)
     history_instruction = _build_history_instruction(used_titles)
+    diversity_instruction = _build_diversity_instruction(recent_topics)
+    tone_instruction = _build_tone_instruction(hour)
+    examples_section = _build_examples_section(top_posts, bottom_posts)
 
-    return f"""{history_instruction}당신은 한국 AI/테크 커뮤니티에서 활동하는 인플루언서입니다.
+    return f"""{history_instruction}{diversity_instruction}{tone_instruction}당신은 한국 AI/테크 커뮤니티에서 활동하는 인플루언서입니다.
 아래 기사들 중 **가장 논쟁적이거나 흥미로운 1개**를 골라, Threads 텍스트 포스트를 작성하세요.
 
 ## 핵심 목표
@@ -106,8 +110,68 @@ JSON 형식으로 응답:
   "topic_tag": "AI 뉴스"
 }}
 
-기사들:
+{examples_section}기사들:
 {articles_text}"""
+
+
+def _build_diversity_instruction(recent_topics):
+    """최근 다룬 주제/회사 기반 다양성 지시."""
+    if not recent_topics:
+        return ""
+    topics_str = ", ".join(recent_topics)
+    return f"""
+## 주제 다양성 (필수)
+최근 포스팅한 회사/주제: {topics_str}
+위 회사/주제와 동일한 기사는 가능한 피해주세요. 다양한 주제를 다루는 것이 팔로워 유지에 중요합니다.
+"""
+
+
+def _build_tone_instruction(hour):
+    """시간대별 톤 조정 (KST 기준)."""
+    if hour is None:
+        return ""
+    if 6 <= hour < 12:
+        return """
+## 시간대 톤: 아침 (뉴스 중심)
+지금은 아침이라 출근길에 Threads를 보는 사람이 많음.
+팩트 중심의 "이거 알아?" 톤으로, 뉴스 속보 느낌이 효과적.
+"""
+    elif 12 <= hour < 18:
+        return """
+## 시간대 톤: 오후 (분석 중심)
+지금은 오후라 점심/휴식 시간에 보는 사람이 많음.
+"근데 이게 왜 중요하냐면" 식의 분석/해석 톤이 효과적.
+"""
+    else:
+        return """
+## 시간대 톤: 저녁/밤 (의견 중심)
+지금은 저녁/밤이라 여유롭게 스크롤하는 사람이 많음.
+도발적 의견 + 논쟁 유발 톤이 효과적. "솔직히 나는 이렇게 생각하는데..." 식.
+"""
+
+
+def _build_examples_section(top_posts, bottom_posts):
+    """성과 데이터 기반 few-shot 예시."""
+    if not top_posts and not bottom_posts:
+        return ""
+    lines = ["\n## 성과 기반 학습 (과거 실제 데이터)\n"]
+    if top_posts:
+        lines.append("### 높은 성과 포스트 (이런 스타일로 써주세요)")
+        for i, p in enumerate(top_posts, 1):
+            lines.append(
+                f"[Top {i}] 좋아요 {p.get('likes',0)} | 댓글 {p.get('replies',0)} | 조회 {p.get('views',0)}\n"
+                f"메인: {p.get('post_main','')}\n"
+                f"한마디: {p.get('reply_casual','')}"
+            )
+    if bottom_posts:
+        lines.append("\n### 낮은 성과 포스트 (이런 스타일은 피해주세요)")
+        for i, p in enumerate(bottom_posts, 1):
+            lines.append(
+                f"[Bottom {i}] 좋아요 {p.get('likes',0)} | 댓글 {p.get('replies',0)} | 조회 {p.get('views',0)}\n"
+                f"메인: {p.get('post_main','')}"
+            )
+    lines.append("")
+    return "\n".join(lines)
 
 
 def _format_articles(articles):
@@ -156,10 +220,12 @@ def _filter_used_articles(articles, used_titles):
     return filtered
 
 
-def generate_post(articles, used_titles=None):
+def generate_post(articles, used_titles=None, recent_topics=None, hour=None,
+                   top_posts=None, bottom_posts=None):
     """Threads 텍스트 포스트 생성."""
     articles = _filter_used_articles(articles, used_titles)
-    prompt = build_prompt(articles, used_titles)
+    prompt = build_prompt(articles, used_titles, recent_topics, hour,
+                          top_posts, bottom_posts)
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     message = client.messages.create(
         model=MODEL,
