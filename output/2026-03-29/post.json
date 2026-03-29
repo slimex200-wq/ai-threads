@@ -1,16 +1,16 @@
 {
   "selected_article": {
-    "original_title": "AI data center moratorium passed before 2027?",
-    "link": "https://polymarket.com/event/108522",
-    "reason": "AI 데이터센터 건설 중단법이라는 충격적 주제로 일반인도 이해하기 쉽고, AI 발전 vs 환경/안전 우려라는 뜨거운 찬반 논쟁을 불러일으킬 수 있음"
+    "original_title": "Why can't TikTok identify AI generated ads when I can?",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/900400/tiktok-ai-ads-labels-samsung-disclosure",
+    "reason": "틱톡이라는 대중적 플랫폼에서 AI 광고가 사용자를 속이고 있다는 문제제기로, 광고 투명성과 플랫폼 책임에 대한 논쟁을 유발할 수 있음"
   },
-  "post_main": "미국에서 AI 데이터센터 신규 건설을 아예 금지하는 법안이 통과될 확률이 베팅 시장에서 급상승하고 있다고 함 🤔\n\nPolymarket에서 '2027년 전 AI 데이터센터 건설 중단법 통과' 베팅이 활발해지는 중인데, 이유가 전력 소비와 환경 파괴 때문이래. 근데 이거 통과되면 오픈AI, 구글 같은 빅테크들이 AI 개발을 해외로 옮겨야 할 수도 있다는 얘기잖아?\n\n솔직히 이거 AI 발전에 제동 거는 게 맞다고 봐? 아니면 너무 과도한 규제야?",
-  "reply_explain": "쉽게 말하면 AI 학습용 컴퓨터 건물을 더 이상 짓지 못하게 하는 법이 생길 수도 있다는 얘기임. 요즘 AI 회사들이 엄청난 전기를 쓰면서 환경 문제가 커지고 있거든",
-  "reply_important": "이게 왜 중요하냐면 미국이 AI 경쟁에서 뒤처질 수 있다는 거야. 중국은 이런 규제 없이 마음껏 데이터센터 짓는데, 미국만 발목 잡히면 AI 패권 경쟁에서 질 수밖에 없잖아",
-  "reply_action": "지금 당장 주목해야 할 건 빅테크 주식 움직임이야. 만약 이 법안이 진짜 통과 조짐 보이면 엔비디아, 마이크로소프트 같은 주식들 급락할 가능성 높음",
-  "reply_counter": "근데 반대로 보면 이런 규제가 오히려 AI 기술 효율성을 높일 수도 있어. 무작정 큰 모델만 만들지 말고 적은 전력으로 똑똑한 AI 만드는 기술에 집중하게 될 테니까",
-  "reply_casual": "ㄹㅇ 이러다 AI 회사들 다 캐나다로 이사 갈 듯 ㅋㅋ 아니면 해상 데이터센터 만들거나",
+  "post_main": "틱톡이 AI로 만든 광고들을 전혀 구분 못하고 있다는데 일반인은 다 보인다는 ㅋㅋ\n\n전문가가 보니까 틱톡 피드에 AI 생성 광고가 넘쳐나는데도 플랫폼은 표시조차 안하고 있음. 삼성 같은 대기업도 AI 광고 쓰면서 공시 안하는 상황.\n\n솔직히 우리가 보는 광고 중에 얼마나 많은 게 AI인지도 모르고 속고 있는 거 아니야? 이거 플랫폼이 책임져야 하는 거야 개인이 알아서 구분해야 하는 거야?",
+  "reply_explain": "쉽게 말하면 틱톡에서 보는 광고들 중 상당수가 AI로 만든 가짜인데, 틱톡은 이걸 표시도 안하고 사용자들한테 알려주지도 않는다는 얘기임",
+  "reply_important": "이게 왜 중요하냐면 소비자들이 진짜 제품 리뷰인 줄 알고 AI 생성 광고를 보고 구매 결정을 내리고 있다는 거임. 광고 신뢰성 자체가 흔들리는 문제",
+  "reply_action": "지금 당장 틱톡에서 광고 볼 때 얼굴이나 배경이 너무 완벽하면 의심해보고, AI 표시 없는 의심스러운 광고는 신고 버튼 눌러야 함",
+  "reply_counter": "근데 반대로 보면 AI 광고도 결국 광고비 내고 올리는 거라 플랫폼 입장에서는 굳이 표시할 이유가 없을 수도... 사용자가 알아서 판단하라는 게 더 현실적일지도",
+  "reply_casual": "나도 요즘 틱톡 광고 보면서 '이거 진짜야?' 싶은 게 한두 개가 아닌데 ㅋㅋ",
   "topic_tag": "ai.threads",
-  "og_image": null,
-  "source_link": "https://polymarket.com/event/108522"
+  "og_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/Samsung-AI-video-promotion.jpg?quality=90&amp;strip=all&amp;crop=0,1.5826921155434,100,65.708980020247",
+  "source_link": "https://www.theverge.com/ai-artificial-intelligence/900400/tiktok-ai-ads-labels-samsung-disclosure"
 }
