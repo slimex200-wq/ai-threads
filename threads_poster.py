@@ -88,8 +88,12 @@ def post_thread(access_token, user_id, content, image_url=None, source_link=None
     result = {}
 
     with httpx.Client(timeout=30.0) as client:
-        # 메인 포스트
-        main_cid = _create_text(client, user_id, access_token, content["post_main"])
+        # 메인 포스트 (토픽 태그 추가)
+        main_text = content["post_main"]
+        topic_tag = content.get("topic_tag", "")
+        if topic_tag:
+            main_text = f"{main_text}\n\n{topic_tag}"
+        main_cid = _create_text(client, user_id, access_token, main_text)
         time.sleep(CONTAINER_WAIT_DELAY)
         post_id = _publish(client, user_id, access_token, main_cid)
         print(f"  메인 포스트: {post_id}")
