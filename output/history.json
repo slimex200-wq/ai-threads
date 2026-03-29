@@ -31,10 +31,12 @@
     "date": "2026-03-29",
     "titles": [
       "'리더십도 AI 시대 위한 전환 필요'...코카콜라·월마트 CEO, 퇴임 이유로 AI 들어",
-      "Why OpenAI killed Sora"
+      "Why OpenAI killed Sora",
+      "Stanford study outlines dangers of asking AI chatbots for personal advice"
     ],
     "urls": [
-      "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition"
+      "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition",
+      "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal advice/"
     ]
   }
 ]
