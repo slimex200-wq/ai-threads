@@ -1,12 +1,5 @@
 [
   {
-    "date": "2026-03-26",
-    "titles": [
-      "MS 임원진, 나델라의 'AI 혁신' 압박으로 줄줄이 퇴사",
-      "금융위, 'K-엔비디아' 대표로 리벨리온에 2500억 투자"
-    ]
-  },
-  {
     "date": "2026-03-27",
     "titles": [
       "오픈AI '소라' 포기하자 머스크 \"그록 동영상 생성에 박차 가할 것\"",
@@ -100,6 +93,15 @@
       "https://www.aitimes.com/news/articleView.html?idxno=208649",
       "https://www.aitimes.com/news/articleView.html?idxno=208654",
       "https://www.aitimes.com/news/articleView.html?idxno=208684"
+    ]
+  },
+  {
+    "date": "2026-04-02",
+    "titles": [
+      "MS, 클라우드 관련 영국 정부 두번째 조사 직면"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208688"
     ]
   }
 ]
