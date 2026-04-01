@@ -11,12 +11,13 @@ import anthropic
 from config import ANTHROPIC_API_KEY, MODEL
 
 
-def build_prompt(articles, used_titles=None):
+def build_prompt(articles, used_titles=None, engagement_patterns=None):
     """Threads 바이럴 텍스트 포스트 프롬프트."""
     articles_text = _format_articles(articles)
     history_instruction = _build_history_instruction(used_titles)
+    engagement_instruction = _build_engagement_instruction(engagement_patterns)
 
-    return f"""{history_instruction}
+    return f"""{history_instruction}{engagement_instruction}
 # ROLE
 한국 AI/테크 Threads 인플루언서. 반말+존댓말 자연스럽게 섞는 온라인 커뮤니티 톤.
 - "ㅋㅋ", "ㄹㅇ", "솔직히" 같은 구어체 OK
@@ -134,6 +135,44 @@ URL이 다르더라도 동일한 이벤트를 다룬 기사는 중복입니다.
 """
 
 
+def _build_engagement_instruction(patterns):
+    if not patterns:
+        return ""
+
+    top = patterns.get("top", [])
+    bottom = patterns.get("bottom", [])
+    avg = patterns.get("avg", {})
+
+    if not top:
+        return ""
+
+    lines = ["\n## 과거 포스트 성과 분석 (자가학습 데이터)"]
+    lines.append("아래 데이터를 참고하여 engagement가 높은 패턴을 따르고, 낮은 패턴은 피하라.\n")
+
+    lines.append("### 잘 된 포스트 (이 패턴을 따라라)")
+    for i, p in enumerate(top, 1):
+        lines.append(f"{i}. [{p['date']}] \"{p.get('title', '')[:50]}\"")
+        lines.append(f"   views={p.get('views',0)}, likes={p.get('likes',0)}, replies={p.get('replies',0)}, reposts={p.get('reposts',0)} (score={p.get('score',0)})")
+        if p.get("post_main"):
+            lines.append(f"   메인: {p['post_main'][:60]}...")
+        if p.get("reply_casual"):
+            lines.append(f"   한마디: {p['reply_casual'][:50]}...")
+
+    if bottom:
+        lines.append("\n### 안 된 포스트 (이 패턴을 피하라)")
+        for i, p in enumerate(bottom, 1):
+            lines.append(f"{i}. [{p['date']}] \"{p.get('title', '')[:50]}\"")
+            lines.append(f"   views={p.get('views',0)}, likes={p.get('likes',0)}, replies={p.get('replies',0)}, reposts={p.get('reposts',0)} (score={p.get('score',0)})")
+            if p.get("post_main"):
+                lines.append(f"   메인: {p['post_main'][:60]}...")
+
+    if avg:
+        lines.append(f"\n### 평균 수치")
+        lines.append(f"views={avg.get('views',0)}, likes={avg.get('likes',0)}, replies={avg.get('replies',0)}, reposts={avg.get('reposts',0)} (score={avg.get('score',0)})")
+
+    return "\n".join(lines) + "\n"
+
+
 def _parse_response(text):
     text = text.strip()
     code_block = re.search(r"```(?:json)?\s*\n(.*?)```", text, re.DOTALL)
@@ -146,9 +185,9 @@ def _parse_response(text):
     return json.loads(text)
 
 
-def generate_post(articles, used_titles=None):
+def generate_post(articles, used_titles=None, engagement_patterns=None):
     """Threads 텍스트 포스트 생성."""
-    prompt = build_prompt(articles, used_titles)
+    prompt = build_prompt(articles, used_titles, engagement_patterns)
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     message = client.messages.create(
         model=MODEL,

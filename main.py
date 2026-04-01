@@ -15,7 +15,7 @@ import argparse
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 import httpx
@@ -50,7 +50,19 @@ def fetch_og_image(url):
 def main():
     parser = argparse.ArgumentParser(description="AI Threads 바이럴 포스트")
     parser.add_argument("--dry-run", action="store_true", help="포스팅 없이 생성만")
+    parser.add_argument("--collect-engagement", action="store_true", help="engagement 수집만")
     args = parser.parse_args()
+
+    # --collect-engagement: engagement만 수집하고 종료
+    if args.collect_engagement:
+        from engagement_tracker import collect_all_engagement, save_engagement_history
+        entries = collect_all_engagement()
+        if entries:
+            save_engagement_history(entries)
+            print(f"[완료] {len(entries)}개 포스트 engagement 수집 완료")
+        else:
+            print("[정보] 수집할 engagement 데이터가 없습니다")
+        return
 
     if not ANTHROPIC_API_KEY:
         print("[에러] ANTHROPIC_API_KEY 미설정")
@@ -59,8 +71,24 @@ def main():
         print("[에러] THREADS_ACCESS_TOKEN 또는 THREADS_USER_ID 미설정")
         sys.exit(1)
 
+    # 0. 과거 포스트 engagement 수집 + 패턴 분석
+    engagement_patterns = None
+    try:
+        from engagement_tracker import collect_all_engagement, save_engagement_history, analyze_patterns, load_engagement_history
+        print("[0/6] 과거 포스트 engagement 수집 중...")
+        entries = collect_all_engagement()
+        if entries:
+            save_engagement_history(entries)
+            print(f"  {len(entries)}개 포스트 업데이트")
+        history = load_engagement_history()
+        if history:
+            engagement_patterns = analyze_patterns(history)
+            print(f"  패턴 분석 완료 (데이터 {len(history)}개)")
+    except Exception as e:
+        print(f"  engagement 수집 건너뜀: {e}")
+
     # 1. 멀티소스 수집
-    print("[1/5] 8개 소스에서 AI 뉴스 수집 중...")
+    print("\n[1/6] 8개 소스에서 AI 뉴스 수집 중...")
     from social_collector import collect_social
     from rss_collector import collect_news
 
@@ -80,7 +108,7 @@ def main():
         sys.exit(1)
 
     # 2. AI 키워드 필터링
-    print(f"\n[2/5] AI 관련 기사 필터링 중...")
+    print(f"\n[2/6] AI 관련 기사 필터링 중...")
     from news_filter import filter_by_keywords
     filtered = filter_by_keywords(articles, max_count=15) or articles[:15]
     print(f"  {len(filtered)}개 기사 통과")
@@ -100,10 +128,10 @@ def main():
     filtered.sort(key=lambda a: a.get("engagement", 0), reverse=True)
 
     # 3. 포스트 생성
-    print(f"\n[3/5] 바이럴 포스트 생성 중...")
+    print(f"\n[3/6] 바이럴 포스트 생성 중...")
     from ai_writer import generate_post
 
-    content = generate_post(filtered, used_titles=load_used_titles())
+    content = generate_post(filtered, used_titles=load_used_titles(), engagement_patterns=engagement_patterns)
 
     article = content.get("selected_article", {})
     print(f"  선택: {article.get('original_title', '?')}")
@@ -114,7 +142,7 @@ def main():
     # URL 공백 등 비정상 문자 인코딩
     parsed = urlparse(raw_link)
     source_link = urlunparse(parsed._replace(path=quote(parsed.path)))
-    print(f"\n[4/5] 원문 이미지 추출 중...")
+    print(f"\n[4/6] 원문 이미지 추출 중...")
     og_image = fetch_og_image(source_link)
     if og_image:
         print(f"  og:image 확인: {og_image[:80]}...")
@@ -137,7 +165,7 @@ def main():
         return
 
     # 5. Threads 포스팅
-    print(f"\n[5/5] Threads 포스팅 중...")
+    print(f"\n[5/6] Threads 포스팅 중...")
     from threads_poster import post_thread
 
     result = post_thread(
@@ -148,6 +176,13 @@ def main():
         source_link=source_link,
     )
     print(f"  포스팅 완료!")
+
+    # [6/6] post.json에 posting_result 저장
+    save_data["posting_result"] = result
+    save_data["posted_at"] = datetime.now().isoformat()
+    (out_dir / "post.json").write_text(
+        json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     if article.get("original_title"):
         save_title(article["original_title"], url=article.get("link", ""))

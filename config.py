@@ -25,6 +25,10 @@ THREADS_USER_ID = os.environ.get("THREADS_USER_ID", "")
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
+# Engagement tracking
+ENGAGEMENT_WEIGHTS = {"views": 0.1, "likes": 5, "replies": 10, "reposts": 8, "quotes": 8}
+ENGAGEMENT_DAYS = 7  # collect insights for posts within this many days
+
 # AI 키워드 필터링
 AI_KEYWORDS = [
     "ai", "artificial intelligence", "machine learning", "deep learning",
