@@ -22,5 +22,13 @@
     "reply_counter": "18071811851267688",
     "reply_casual": "17998100990867694"
   },
-  "posted_at": "2026-04-02T23:42:01.510137"
+  "posted_at": "2026-04-02T23:42:01.510137",
+  "engagement": {
+    "views": 154,
+    "likes": 3,
+    "replies": 6,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 90.4
+  }
 }

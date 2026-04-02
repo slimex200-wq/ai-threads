@@ -1,0 +1,27 @@
+{
+  "selected_article": {
+    "original_title": "AI data center moratorium passed before 2027?",
+    "link": "https://polymarket.com/event/108522",
+    "reason": "AI 데이터센터 건설 금지법이 통과될 가능성에 대한 베팅이 나오고 있어 극도로 논쟁적. 일반인도 환경오염, 전력 문제로 관심 높고, 찬반 의견이 극명하게 갈릴 주제"
+  },
+  "post_main": "미국에서 AI 데이터센터 건설 금지법이 2027년 전에 통과될 확률에 대해 베팅 시장이 열렸다는데... 🤔\n\n환경단체들은 \"AI 데이터센터가 전력 소비의 괴물이라며\" 건설 중단을 요구하고 있고, 반면 빅테크들은 \"AI 혁신을 막는다\"며 강력 반발 중이다.\n\n솔직히 이거 통과되면 구글, 메타, 오픈AI 다 타격받을 텐데... 여러분은 AI 발전 vs 환경보호 중 뭐가 더 중요하다고 생각해?",
+  "reply_explain": "쉽게 말하면 AI가 너무 전력을 많이 써서 환경 문제가 심각해지자, 아예 AI 데이터센터 건설을 법으로 막자는 얘기가 나오고 있다는 거임",
+  "reply_important": "이게 왜 중요하냐면 ChatGPT 한 번 쓸 때마다 구글 검색보다 10배 많은 전력을 소모한다고 하거든. 진짜 통과되면 AI 발전이 완전 브레이크 걸릴 수도",
+  "reply_action": "지금 당장은 AI 서비스 쓰는 패턴을 바꿔볼 필요가 있음. 불필요한 AI 사용은 줄이고, 친환경 AI 기업들 주목해봐야겠다",
+  "reply_counter": "근데 반대로 보면 이게 오히려 효율적인 AI 기술 개발을 촉진시킬 수도 있지 않을까? 전력 덜 쓰는 AI가 경쟁력이 될 테니까",
+  "reply_casual": "ㄹㅇ 이러다 AI 쓰려면 탄소배출권 사야 하는 시대 올 듯 ㅋㅋ",
+  "topic_tag": "ai.threads",
+  "og_image": null,
+  "video_url": null,
+  "source_link": "https://polymarket.com/event/108522",
+  "posting_result": {
+    "post_id": "17903741490402730",
+    "reply_explain": "18091976027328330",
+    "reply_important": "18400906735196431",
+    "reply_action": "17890132020329833",
+    "reply_counter": "18042937235535695",
+    "reply_casual": "18388280680083103",
+    "link_id": "18105530047722121"
+  },
+  "posted_at": "2026-04-03T01:33:36.956543"
+}

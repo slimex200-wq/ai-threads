@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-03-27",
-    "titles": [
-      "오픈AI '소라' 포기하자 머스크 \"그록 동영상 생성에 박차 가할 것\"",
-      "애플, '제미나이' 증류해 맞춤형 온디바이스 모델 개발",
-      "얀 르쿤, 월드 모델의 학습 난제 해결한 'LeWM' 공개",
-      "미 정부 '블랙리스트' 제동…법원, 앤트로픽 가처분 신청 인용",
-      "사카나 AI, AI 작성 논문이 사상 첫 '네이처'에 게재",
-      "MS, 비용 절감 위해 AI 제외한 부서 신규 채용 동결"
-    ]
-  },
-  {
     "date": "2026-03-28",
     "titles": [
       "네덜란드 법원, xAI '그록'의 성적 이미지 제작·배포 세계 최초 금지 명령",
@@ -108,6 +97,15 @@
       "https://www.aitimes.com/news/articleView.html?idxno=208716",
       "https://www.aitimes.com/news/articleView.html?idxno=208712",
       "https://www.aitimes.com/news/articleView.html?idxno=208729"
+    ]
+  },
+  {
+    "date": "2026-04-03",
+    "titles": [
+      "AI data center moratorium passed before 2027?"
+    ],
+    "urls": [
+      "https://polymarket.com/event/108522"
     ]
   }
 ]
