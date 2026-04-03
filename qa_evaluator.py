@@ -318,9 +318,19 @@ def evaluate(content: dict, *, skip_ai: bool = False, mode: str = "viral") -> QA
             suggestions=("AI 평가 실패로 규칙 검증만 수행됨",),
         )
 
-    overall = eval_result.get("overall", 0.0)
+    # AI 반환 overall 무시, 개별 점수로 직접 계산
     ai_issues = eval_result.get("critical_issues", [])
     suggestions = eval_result.get("suggestions", [])
+
+    if mode == "viral":
+        weights = {"hook_power": 0.3, "debate_potential": 0.3, "tone_authenticity": 0.2,
+                    "reply_coherence": 0.1, "rule_compliance": 0.1}
+    else:
+        weights = {"clarity": 0.3, "usefulness": 0.3, "accuracy": 0.2,
+                    "tone": 0.1, "structure": 0.1}
+
+    weighted_sum = sum(eval_result.get(k, 0) * w for k, w in weights.items())
+    overall = round(weighted_sum / 10, 2)  # 0~1 스케일
 
     all_issues = rule_issues + [f"[AI] {i}" for i in ai_issues if i]
     passed = overall >= QA_PASS_THRESHOLD and len(rule_issues) == 0
