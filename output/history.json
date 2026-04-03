@@ -1,15 +1,5 @@
 [
   {
-    "date": "2026-03-28",
-    "titles": [
-      "네덜란드 법원, xAI '그록'의 성적 이미지 제작·배포 세계 최초 금지 명령",
-      "앤트로픽, 사상 최강 모델 '클로드 미토스' 출시 임박",
-      "오픈AI, '챗GPT 광고' 6주 만에 매출 1500억 돌파",
-      "구글 '터보퀀트' 충격으로 메모리 시총 150조 증발...\"제2의 딥시크 사태인가\"",
-      "구글의 내부용 '에이전트 스미스' 인기 폭발...\"접근 제한할 정도\""
-    ]
-  },
-  {
     "date": "2026-03-29",
     "titles": [
       "'리더십도 AI 시대 위한 전환 필요'...코카콜라·월마트 CEO, 퇴임 이유로 AI 들어",
@@ -114,6 +104,15 @@
       "https://www.aitimes.com/news/articleView.html?idxno=208762",
       "https://www.aitimes.com/news/articleView.html?idxno=208779",
       "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs"
+    ]
+  },
+  {
+    "date": "2026-04-04",
+    "titles": [
+      "중국, 메타의 마누스 인수에 대해 부정 입장 발표...\"국제 거래, 법 준수해야\""
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208777"
     ]
   }
 ]

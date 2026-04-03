@@ -23,5 +23,13 @@
     "reply_casual": "18097586083855566",
     "link_id": "18099657137075426"
   },
-  "posted_at": "2026-04-03T23:15:03.226023"
+  "posted_at": "2026-04-03T23:15:03.226023",
+  "engagement": {
+    "views": 416,
+    "likes": 4,
+    "replies": 7,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 131.6
+  }
 }
