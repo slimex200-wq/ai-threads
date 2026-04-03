@@ -1,26 +1,27 @@
 {
   "selected_article": {
-    "original_title": "PSA: Anyone with a link can view your Granola notes by default",
-    "link": "https://www.theverge.com/ai-artificial-intelligence/906253/granola-note-links-ai-training-psa",
-    "reason": "AI 노트 앱이 사용자 데이터를 몰래 AI 학습에 사용한다는 프라이버시 논란. 많은 사람이 비슷한 앱을 쓰고 있어 직접적 위협감을 느낄 것이고, 개인정보 보호 vs 편의성에 대한 찬반 토론이 활발할 것"
+    "original_title": "앤트로픽 유출 파일서 AI를 위한 OS '콘웨이' 개발 확인",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=208762",
+    "reason": "앤트로픽의 내부 파일 유출로 발견된 비밀 프로젝트라는 점에서 충격적이고, '상시 실행되는 독립적 AI 시스템'이라는 개념이 일반인들에게 위협적으로 느껴질 수 있어 논쟁 유발 가능성이 높음"
   },
-  "post_main": "AI 노트앱 그라놀라가 완전 사기쳤네 ㅋㅋ \"노트는 비공개\"라고 해놓고, 링크 있으면 누구나 볼 수 있게 설정해뒀음. 더 황당한 건 내 노트 내용을 자기들 AI 학습에 몰래 쓰고 있었다는 거.\n\n옵트아웃 설정이 있긴 한데 기본값이 \"동의함\"이야. 솔직히 이런 식으로 데이터 빨아먹는 AI 회사들 진짜 많을 것 같은데... 여러분도 쓰고 있는 노트앱들 한번 확인해봐야 할듯.\n\n이거 개인정보 보호 vs AI 발전, 어느 쪽이 더 중요하다고 생각해?",
-  "reply_explain": "쉽게 말하면 공짜 AI 노트앱이 \"안전하다\"고 광고하면서 뒤에서는 내 메모를 남들이 볼 수 있게 하고 AI 학습 데이터로 팔아먹었다는 얘기임.",
-  "reply_important": "이게 왜 중요하냐면 요즘 AI 노트앱 쓰는 사람이 엄청 많은데, 회사 기밀이나 개인정보가 다 유출될 위험이 있다는 거지. 특히 개발자들은 코드까지 적으니까 더 위험함.",
-  "reply_action": "지금 당장 쓰고 있는 AI 앱들 프라이버시 설정 다 확인해봐야 함. 특히 노션AI, 클로드, 챗GPT 같은 것들 데이터 사용 정책 꼼꼼히 읽어보고 옵트아웃 설정 바꾸는 게 좋을듯.",
-  "reply_counter": "근데 반대로 보면 이런 데이터가 있어야 AI가 더 똑똑해지는 것도 맞음. 구글도 우리 검색 기록으로 서비스 개선하는 거랑 비슷한 논리인데... 무료로 쓰려면 어느 정도 댓가는 치러야 하는 거 아닌가?",
-  "reply_casual": "ㄹㅇ 공짜 치즈는 쥐덫에만 있다더니 이런 게 현실이구나 🤔",
+  "post_main": "앤트로픽이 몰래 개발 중인 '콘웨이'가 유출됐는데, 이거 그냥 AI가 아니라 AI를 위한 운영체제임. 단순 챗봇을 넘어서 스스로 계속 돌아가는 독립적인 AI 시스템이라고 하네.\n\n기존에는 우리가 질문하면 답하고 끝이었는데, 이제는 AI가 알아서 백그라운드에서 계속 돌아간다는 뜻. 마치 윈도우나 맥OS처럼 AI가 24시간 상시 가동되는 거지.\n\n솔직히 이거 편리할 거 같긴 한데... 좀 무섭지 않아? AI가 우리 모르게 계속 뭔가 하고 있다는 게?",
+  "reply_explain": "쉽게 말하면 지금까지 AI는 우리가 말 걸 때만 대답하는 '수동형'이었다면, 콘웨이는 스스로 판단해서 계속 일하는 '능동형' AI 운영체제라는 뜻이에요.",
+  "reply_important": "이게 왜 중요하냐면 AI가 사용자 없이도 독립적으로 작업을 수행할 수 있게 되면, 기존 업무 방식이 완전히 바뀔 수밖에 없거든요. 24시간 쉬지 않는 AI 동료가 생기는 셈.",
+  "reply_action": "지금 당장 주목해야 할 건 이런 상시 실행 AI가 어떤 권한을 갖게 될지예요. 내 컴퓨터에서 뭘 할 수 있는지, 어디까지 접근 가능한지 미리 체크해둬야 할 듯.",
+  "reply_counter": "근데 반대로 보면 이게 진짜 혁신일 수도 있어요. 내가 자는 동안 AI가 이메일 정리하고 일정 조율하고... 개인 비서가 24시간 일하는 셈이니까 오히려 좋을 수도?",
+  "reply_casual": "ㄹㅇ 앤트로픽이 이런 걸 몰래 만들고 있었다니 ㅋㅋ 유출 안 됐으면 언제 공개할 생각이었을까",
   "topic_tag": "ai.threads",
-  "og_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/granola-logo.png?quality=90&amp;strip=all&amp;crop=0%2C3.4613147178592%2C100%2C93.077370564282&amp;w=1200",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/208762_211066_3358.jpg",
   "video_url": null,
-  "source_link": "https://www.theverge.com/ai-artificial-intelligence/906253/granola-note-links-ai-training-psa",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=208762",
   "posting_result": {
-    "post_id": "17864600427535031",
-    "reply_explain": "17858930478625197",
-    "reply_important": "17938258236190189",
-    "reply_action": "17995061243764882",
-    "reply_counter": "18093992285111763",
-    "reply_casual": "17876071944438724"
+    "post_id": "17866953438606237",
+    "reply_explain": "17881579035503295",
+    "reply_important": "18111607024810462",
+    "reply_action": "18044931485742359",
+    "reply_counter": "18124751890592550",
+    "reply_casual": "18106927894883349",
+    "link_id": "17916609984145808"
   },
-  "posted_at": "2026-04-03T07:04:09.392165"
+  "posted_at": "2026-04-03T15:49:02.651790"
 }
