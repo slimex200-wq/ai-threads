@@ -9,6 +9,29 @@ PUBLISH_RETRY_DELAY = 3
 CONTAINER_WAIT_DELAY = 2
 REPLY_DELAY = 5
 
+REPLY_KEYS: dict[str, list[str]] = {
+    "viral": [
+        "reply_explain", "reply_important", "reply_action",
+        "reply_counter", "reply_casual",
+    ],
+    "informational": [
+        "reply_background", "reply_impact",
+        "reply_compare", "reply_summary",
+    ],
+}
+
+REPLY_LABELS: dict[str, str] = {
+    "reply_explain": "쉽게 말하면",
+    "reply_important": "왜 중요",
+    "reply_action": "뭘 해야",
+    "reply_counter": "반대 의견",
+    "reply_casual": "가벼운 한마디",
+    "reply_background": "배경",
+    "reply_impact": "영향",
+    "reply_compare": "비교",
+    "reply_summary": "정리",
+}
+
 
 def _is_retryable(response):
     if response.status_code >= 500:
@@ -105,17 +128,26 @@ def _post_reply(client, user_id, token, text, reply_to_id, label):
     return rid
 
 
-def post_thread(access_token, user_id, content, image_url=None, source_link=None, video_url=None):
+def post_thread(
+    access_token: str,
+    user_id: str,
+    content: dict,
+    image_url: str | None = None,
+    source_link: str | None = None,
+    video_url: str | None = None,
+    mode: str = "informational",
+) -> dict:
     """Threads 스레드 포스팅.
 
     구조:
-      메인 → 쉽게 말하면 → 왜 중요 → 뭘 해야 → 반대 의견 → 가벼운 한마디 → 미디어+링크
+      메인 → 모드별 대댓글 순서대로 → 미디어+링크
 
     Args:
         content: ai_writer.generate_post() 결과
         image_url: og:image URL (없으면 건너뜀)
         source_link: 원문 URL (없으면 건너뜀)
         video_url: 직접 비디오 URL (있으면 이미지 대신 비디오 포스팅)
+        mode: 대댓글 구성 모드 — "viral" 또는 "informational" (기본값)
 
     Returns:
         dict with post_id and reply IDs
@@ -131,15 +163,9 @@ def post_thread(access_token, user_id, content, image_url=None, source_link=None
         print(f"  메인 포스트: {post_id}")
         result["post_id"] = post_id
 
-        # 대댓글 순서대로
-        replies = [
-            ("reply_explain", "쉽게 말하면"),
-            ("reply_important", "왜 중요"),
-            ("reply_action", "뭘 해야"),
-            ("reply_counter", "반대 의견"),
-            ("reply_casual", "가벼운 한마디"),
-        ]
-        for key, label in replies:
+        # 대댓글 순서대로 (모드별)
+        for key in REPLY_KEYS.get(mode, REPLY_KEYS["informational"]):
+            label = REPLY_LABELS.get(key, key)
             rid = _post_reply(
                 client, user_id, access_token,
                 content.get(key, ""), post_id, label,
