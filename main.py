@@ -6,9 +6,13 @@
     └─ 대댓글 2: 가벼운 첫 댓글
     └─ 대댓글 3: 원문 이미지 + 링크
 
+Generator/Evaluator 패턴 적용:
+  ai_writer(Generator) → qa_evaluator(Evaluator) → 통과 시 포스팅
+  Ref: Anthropic "Harness Design for Long-Running Apps" (2026-03-24)
+
 Usage:
-    python main.py              # 수집 → 생성 → 포스팅
-    python main.py --dry-run    # 포스팅 없이 생성만
+    python main.py              # 수집 → 생성 → QA → 포스팅
+    python main.py --dry-run    # 포스팅 없이 생성+QA만
 """
 
 import argparse
@@ -155,7 +159,7 @@ def main():
     engagement_patterns = None
     try:
         from engagement_tracker import collect_all_engagement, save_engagement_history, analyze_patterns, load_engagement_history
-        print("[0/6] 과거 포스트 engagement 수집 중...")
+        print("[0/7] 과거 포스트 engagement 수집 중...")
         entries = collect_all_engagement()
         if entries:
             save_engagement_history(entries)
@@ -168,7 +172,7 @@ def main():
         print(f"  engagement 수집 건너뜀: {e}")
 
     # 1. 멀티소스 수집
-    print("\n[1/6] 8개 소스에서 AI 뉴스 수집 중...")
+    print("\n[1/7] 8개 소스에서 AI 뉴스 수집 중...")
     from social_collector import collect_social
     from rss_collector import collect_news
 
@@ -188,7 +192,7 @@ def main():
         sys.exit(1)
 
     # 2. AI 키워드 필터링
-    print(f"\n[2/6] AI 관련 기사 필터링 중...")
+    print(f"\n[2/7] AI 관련 기사 필터링 중...")
     from news_filter import filter_by_keywords
     filtered = filter_by_keywords(articles, max_count=15) or articles[:15]
     print(f"  {len(filtered)}개 기사 통과")
@@ -215,29 +219,67 @@ def main():
         force = is_last_run and posts_today == 0
 
         if not force:
-            print(f"\n[2.7/6] 포스팅 가치 판단 중...")
+            print(f"\n[2.7/7] 포스팅 가치 판단 중...")
             worthy, reason = evaluate_worthiness(filtered)
             if not worthy:
                 print(f"  [스킵] {reason}")
                 return
             print(f"  포스팅 진행: {reason}")
 
-    # 3. 포스트 생성
-    print(f"\n[3/6] 바이럴 포스트 생성 중...")
+    # 3. 포스트 생성 + QA 평가 (Generator/Evaluator 루프)
+    print(f"\n[3/7] 바이럴 포스트 생성 중...")
     from ai_writer import generate_post
+    from qa_evaluator import evaluate
 
-    content = generate_post(filtered, used_titles=load_used_titles(), engagement_patterns=engagement_patterns)
+    MAX_QA_RETRIES = 2
+    used = load_used_titles()
+    content = None
+    qa_feedback = None  # 첫 시도는 피드백 없이
 
-    article = content.get("selected_article", {})
-    print(f"  선택: {article.get('original_title', '?')}")
+    for attempt in range(1, MAX_QA_RETRIES + 1):
+        content = generate_post(
+            filtered,
+            used_titles=used,
+            engagement_patterns=engagement_patterns,
+            qa_feedback=qa_feedback,
+        )
 
-    # 4. og:image 추출
+        article = content.get("selected_article", {})
+        print(f"  선택: {article.get('original_title', '?')}")
+
+        # QA 평가 (별도 Claude 호출)
+        print(f"\n[4/7] QA 평가 중 (시도 {attempt}/{MAX_QA_RETRIES})...")
+        qa_result = evaluate(content)
+        print(f"  점수: {qa_result.score:.2f} | {'PASS' if qa_result.passed else 'FAIL'}")
+
+        if qa_result.issues:
+            for issue in qa_result.issues:
+                print(f"  - {issue}")
+
+        if qa_result.passed:
+            if qa_result.suggestions:
+                print(f"  제안: {', '.join(qa_result.suggestions[:2])}")
+            break
+
+        if attempt < MAX_QA_RETRIES:
+            # QA 피드백을 Generator에 전달하여 개선된 재생성
+            qa_feedback = {
+                "previous_post": content,
+                "issues": qa_result.issues,
+                "suggestions": qa_result.suggestions,
+                "score": qa_result.score,
+            }
+            print(f"  피드백 반영하여 재생성 중...")
+        else:
+            print(f"  [경고] QA {MAX_QA_RETRIES}회 실패, 마지막 결과로 진행")
+
+    # 5. og:image/video 추출
     from urllib.parse import quote, urlparse, urlunparse
     raw_link = article.get("link", "")
     # URL 공백 등 비정상 문자 인코딩
     parsed = urlparse(raw_link)
     source_link = urlunparse(parsed._replace(path=quote(parsed.path)))
-    print(f"\n[4/6] 원문 미디어 추출 중...")
+    print(f"\n[5/7] 원문 미디어 추출 중...")
     video_url = fetch_og_video(source_link)
     if video_url:
         print(f"  영상 발견: {video_url[:80]}...")
@@ -250,8 +292,15 @@ def main():
     # 저장
     out_dir = Path("output") / date.today().isoformat()
     out_dir.mkdir(parents=True, exist_ok=True)
-    save_data = {**content, "og_image": og_image, "video_url": video_url, "source_link": source_link}
-    (out_dir / "post.json").write_text(
+    post_json_path = out_dir / "post.json"
+    save_data = {
+        **content,
+        "og_image": og_image,
+        "video_url": video_url,
+        "source_link": source_link,
+        "qa_score": qa_result.score,
+    }
+    post_json_path.write_text(
         json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
@@ -262,8 +311,8 @@ def main():
         print("\n[dry-run] 포스팅 건너뜀")
         return
 
-    # 5. Threads 포스팅
-    print(f"\n[5/6] Threads 포스팅 중...")
+    # 6. Threads 포스팅
+    print(f"\n[6/7] Threads 포스팅 중...")
     from threads_poster import post_thread
 
     result = post_thread(
@@ -276,10 +325,10 @@ def main():
     )
     print(f"  포스팅 완료!")
 
-    # [6/6] post.json에 posting_result 저장
+    # [7/7] post.json에 posting_result 저장
     save_data["posting_result"] = result
     save_data["posted_at"] = datetime.now().isoformat()
-    (out_dir / "post.json").write_text(
+    post_json_path.write_text(
         json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 

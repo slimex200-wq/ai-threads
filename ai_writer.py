@@ -16,8 +16,10 @@ def build_prompt(articles, used_titles=None, engagement_patterns=None):
     articles_text = _format_articles(articles)
     history_instruction = _build_history_instruction(used_titles)
     engagement_instruction = _build_engagement_instruction(engagement_patterns)
+    performance_instruction = _build_performance_instruction()
 
     return f"""{history_instruction}{engagement_instruction}
+{performance_instruction}
 # ROLE
 한국 AI/테크 Threads 인플루언서. 반말+존댓말 자연스럽게 섞는 온라인 커뮤니티 톤.
 - "ㅋㅋ", "ㄹㅇ", "솔직히" 같은 구어체 OK
@@ -123,6 +125,45 @@ def _format_articles(articles):
     return text
 
 
+def _build_performance_instruction():
+    """과거 성과 데이터를 few-shot 예시로 프롬프트에 주입."""
+    try:
+        from performance_tracker import get_top_and_worst
+        result = get_top_and_worst(n=3)
+    except Exception:
+        return ""
+
+    if not result.top:
+        return ""
+
+    lines = ["\n## 과거 성과 데이터 (참고)"]
+    lines.append("아래는 실제 Threads 포스팅 성과 데이터다. 잘 된 패턴을 참고하고, 안 된 패턴은 피하라.")
+
+    if result.top:
+        lines.append("\n### TOP (높은 engagement)")
+        for post in result.top:
+            m = post.metrics
+            lines.append(
+                f"- [{post.posted_date}] 조회 {m.get('views', 0)} · "
+                f"댓글 {m.get('replies', 0)} · 좋아요 {m.get('likes', 0)} · "
+                f"engagement {post.engagement_rate:.4f}"
+            )
+            lines.append(f"  → {post.content_summary}")
+
+    if result.worst:
+        lines.append("\n### WORST (낮은 engagement)")
+        for post in result.worst:
+            m = post.metrics
+            lines.append(
+                f"- [{post.posted_date}] 조회 {m.get('views', 0)} · "
+                f"댓글 {m.get('replies', 0)} · 좋아요 {m.get('likes', 0)} · "
+                f"engagement {post.engagement_rate:.4f}"
+            )
+            lines.append(f"  → {post.content_summary}")
+
+    return "\n".join(lines)
+
+
 def _build_history_instruction(used_titles):
     if not used_titles:
         return ""
@@ -220,14 +261,34 @@ JSON으로만 응답:
         return True, "가치 판단 파싱 실패, 기본 포스팅 진행"
 
 
-def generate_post(articles, used_titles=None, engagement_patterns=None):
-    """Threads 텍스트 포스트 생성."""
+def generate_post(articles, used_titles=None, engagement_patterns=None, qa_feedback=None):
+    """Threads 텍스트 포스트 생성.
+
+    Args:
+        articles: 필터링된 기사 리스트
+        used_titles: 최근 사용한 기사 제목 (중복 방지)
+        engagement_patterns: engagement 분석 패턴 (자가학습)
+        qa_feedback: QA 실패 시 피드백 dict (issues, suggestions, previous_post)
+    """
     prompt = build_prompt(articles, used_titles, engagement_patterns)
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+    messages = [{"role": "user", "content": prompt}]
+
+    # QA 피드백이 있으면 이전 결과 + 피드백을 대화에 주입
+    if qa_feedback:
+        prev_json = json.dumps(qa_feedback["previous_post"], ensure_ascii=False, indent=2)
+        feedback_text = _build_qa_feedback(qa_feedback)
+        messages = [
+            {"role": "user", "content": prompt},
+            {"role": "assistant", "content": prev_json},
+            {"role": "user", "content": feedback_text},
+        ]
+
     message = client.messages.create(
         model=MODEL,
         max_tokens=2000,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
     )
     response_text = message.content[0].text
     try:
@@ -238,9 +299,34 @@ def generate_post(articles, used_titles=None, engagement_patterns=None):
             model=MODEL,
             max_tokens=2000,
             messages=[
-                {"role": "user", "content": prompt},
+                *messages,
                 {"role": "assistant", "content": response_text},
                 {"role": "user", "content": "JSON 형식이 올바르지 않습니다. 올바른 JSON으로 다시 응답해주세요."},
             ],
         )
         return _parse_response(message.content[0].text)
+
+
+def _build_qa_feedback(qa_feedback):
+    """QA 평가 결과를 Generator 재생성용 피드백 텍스트로 변환."""
+    lines = ["# QA 평가 결과: 불합격. 아래 피드백을 반영해서 다시 작성하라.\n"]
+
+    issues = qa_feedback.get("issues", ())
+    if issues:
+        lines.append("## 문제점 (반드시 수정)")
+        for issue in issues:
+            lines.append(f"- {issue}")
+
+    suggestions = qa_feedback.get("suggestions", ())
+    if suggestions:
+        lines.append("\n## 개선 제안")
+        for s in suggestions:
+            lines.append(f"- {s}")
+
+    score = qa_feedback.get("score", 0)
+    lines.append(f"\n## 점수: {score:.2f} / 1.00 (0.65 이상 필요)")
+    lines.append("\n같은 기사를 선택해도 좋지만, 글의 톤/구조/표현을 개선하라.")
+    lines.append("다른 기사가 더 바이럴 가능성이 높다면 기사 변경도 가능하다.")
+    lines.append("JSON으로만 응답하라.")
+
+    return "\n".join(lines)

@@ -13,6 +13,7 @@ env:
 
 jobs:
   post:
+    name: 포스트 생성 + 포스팅
     runs-on: ubuntu-latest
 
     steps:
@@ -29,16 +30,14 @@ jobs:
           mkdir -p ~/.claude/skills/last30days
           ln -s "$GITHUB_WORKSPACE/.last30days-skill/scripts" ~/.claude/skills/last30days/scripts
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install yt-dlp
-        run: pip install yt-dlp
-
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install yt-dlp
+          pip install -r requirements.txt
 
       - name: Run AI Threads
         env:
@@ -59,4 +58,34 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/
           git diff --staged --quiet || git commit -m "chore: $(date +%Y-%m-%d) 포스트"
+          git push
+
+  collect-insights:
+    name: 성과 데이터 수집
+    runs-on: ubuntu-latest
+    # 포스팅 job과 독립 실행 (이전 포스트들의 성과를 수집)
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect insights
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: python performance_tracker.py --days 7
+
+      - name: Commit performance data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || git pull --rebase origin master || true
+          git add output/performance.jsonl
+          git diff --staged --quiet || git commit -m "chore: $(date +%Y-%m-%d) 성과 수집"
           git push
