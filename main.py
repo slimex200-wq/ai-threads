@@ -1,30 +1,35 @@
-"""AI Threads — 8개 소스에서 트렌딩 AI 뉴스 1개를 골라 Threads 바이럴 포스트.
+"""AI Threads — 8개 소스에서 트렌딩 AI 뉴스 1개를 골라 Threads 포스트.
 
 포스팅 구조:
-  메인: 바이럴 후킹 (의견 + 질문)
-    └─ 대댓글 1: 분석 (의미/중요성/행동)
-    └─ 대댓글 2: 가벼운 첫 댓글
-    └─ 대댓글 3: 원문 이미지 + 링크
+  메인: 핵심 뉴스 + So What
+    └─ 대댓글: 모드별 reply 구조
+    └─ 마지막: 원문 미디어 + 링크
 
 Generator/Evaluator 패턴 적용:
   ai_writer(Generator) → qa_evaluator(Evaluator) → 통과 시 포스팅
   Ref: Anthropic "Harness Design for Long-Running Apps" (2026-03-24)
 
 Usage:
-    python main.py              # 수집 → 생성 → QA → 포스팅
-    python main.py --dry-run    # 포스팅 없이 생성+QA만
+    python main.py                        # 수집 → 생성 → QA → 포스팅 (기본: informational)
+    python main.py --mode viral           # 바이럴 모드
+    python main.py --dry-run              # 포스팅 없이 생성+QA만
+    python main.py --collect-engagement   # engagement 수집만
 """
 
 import argparse
 import json
 import re
+import signal
 import sys
 from datetime import date, datetime
 from pathlib import Path
 
 import httpx
 
-from config import ANTHROPIC_API_KEY, THREADS_ACCESS_TOKEN, THREADS_USER_ID, MAX_DAILY_POSTS, FORCE_POST_HOUR
+from config import (
+    ANTHROPIC_API_KEY, THREADS_ACCESS_TOKEN, THREADS_USER_ID,
+    MAX_DAILY_POSTS, FORCE_POST_HOUR, CONTENT_MODE, PIPELINE_TIMEOUT,
+)
 
 
 def count_posts_today():
@@ -125,10 +130,16 @@ def fetch_og_image(url):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="AI Threads 바이럴 포스트")
+    parser = argparse.ArgumentParser(description="AI Threads 포스트")
     parser.add_argument("--dry-run", action="store_true", help="포스팅 없이 생성만")
     parser.add_argument("--collect-engagement", action="store_true", help="engagement 수집만")
+    parser.add_argument("--mode", choices=["viral", "informational"], default=None,
+                        help="콘텐츠 모드 (기본: config.py CONTENT_MODE)")
     args = parser.parse_args()
+
+    # 모드 결정: CLI > config > default
+    mode = args.mode or CONTENT_MODE
+    print(f"[모드] {mode}")
 
     # --collect-engagement: engagement만 수집하고 종료
     if args.collect_engagement:
@@ -148,6 +159,19 @@ def main():
         print("[에러] THREADS_ACCESS_TOKEN 또는 THREADS_USER_ID 미설정")
         sys.exit(1)
 
+    # 파이프라인 타임아웃 (Unix only — GitHub Actions는 Linux)
+    if hasattr(signal, "SIGALRM"):
+        def _timeout_handler(signum, frame):
+            print(f"\n[타임아웃] 파이프라인 {PIPELINE_TIMEOUT}초 초과, 강제 종료")
+            try:
+                from telegram_notify import send_preview
+                send_preview({"post_main": f"[타임아웃] 파이프라인 {PIPELINE_TIMEOUT}초 초과"})
+            except Exception:
+                pass
+            sys.exit(1)
+        signal.signal(signal.SIGALRM, _timeout_handler)
+        signal.alarm(PIPELINE_TIMEOUT)
+
     # 스마트 스케줄러: 일일 포스팅 횟수 체크
     if not args.dry_run:
         posts_today = count_posts_today()
@@ -166,7 +190,7 @@ def main():
             print(f"  {len(entries)}개 포스트 업데이트")
         history = load_engagement_history()
         if history:
-            engagement_patterns = analyze_patterns(history)
+            engagement_patterns = analyze_patterns(history, mode=mode)
             print(f"  패턴 분석 완료 (데이터 {len(history)}개)")
     except Exception as e:
         print(f"  engagement 수집 건너뜀: {e}")
@@ -220,14 +244,14 @@ def main():
 
         if not force:
             print(f"\n[2.7/7] 포스팅 가치 판단 중...")
-            worthy, reason = evaluate_worthiness(filtered)
+            worthy, reason = evaluate_worthiness(filtered, mode=mode)
             if not worthy:
                 print(f"  [스킵] {reason}")
                 return
             print(f"  포스팅 진행: {reason}")
 
     # 3. 포스트 생성 + QA 평가 (Generator/Evaluator 루프)
-    print(f"\n[3/7] 바이럴 포스트 생성 중...")
+    print(f"\n[3/7] 포스트 생성 중 ({mode})...")
     from ai_writer import generate_post
     from qa_evaluator import evaluate
 
@@ -242,6 +266,7 @@ def main():
             used_titles=used,
             engagement_patterns=engagement_patterns,
             qa_feedback=qa_feedback,
+            mode=mode,
         )
 
         article = content.get("selected_article", {})
@@ -249,7 +274,7 @@ def main():
 
         # QA 평가 (별도 Claude 호출)
         print(f"\n[4/7] QA 평가 중 (시도 {attempt}/{MAX_QA_RETRIES})...")
-        qa_result = evaluate(content)
+        qa_result = evaluate(content, mode=mode)
         print(f"  점수: {qa_result.score:.2f} | {'PASS' if qa_result.passed else 'FAIL'}")
 
         if qa_result.issues:
@@ -262,7 +287,6 @@ def main():
             break
 
         if attempt < MAX_QA_RETRIES:
-            # QA 피드백을 Generator에 전달하여 개선된 재생성
             qa_feedback = {
                 "previous_post": content,
                 "issues": qa_result.issues,
@@ -271,12 +295,12 @@ def main():
             }
             print(f"  피드백 반영하여 재생성 중...")
         else:
-            print(f"  [경고] QA {MAX_QA_RETRIES}회 실패, 마지막 결과로 진행")
+            print(f"  [스킵] QA {MAX_QA_RETRIES}회 실패, 포스팅 건너뜀")
+            return
 
     # 5. og:image/video 추출
     from urllib.parse import quote, urlparse, urlunparse
     raw_link = article.get("link", "")
-    # URL 공백 등 비정상 문자 인코딩
     parsed = urlparse(raw_link)
     source_link = urlunparse(parsed._replace(path=quote(parsed.path)))
     print(f"\n[5/7] 원문 미디어 추출 중...")
@@ -295,6 +319,7 @@ def main():
     post_json_path = out_dir / "post.json"
     save_data = {
         **content,
+        "mode": mode,
         "og_image": og_image,
         "video_url": video_url,
         "source_link": source_link,
@@ -322,6 +347,7 @@ def main():
         image_url=og_image,
         source_link=source_link,
         video_url=video_url,
+        mode=mode,
     )
     print(f"  포스팅 완료!")
 
