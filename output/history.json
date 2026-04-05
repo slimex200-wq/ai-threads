@@ -1,25 +1,5 @@
 [
   {
-    "date": "2026-03-29",
-    "titles": [
-      "'리더십도 AI 시대 위한 전환 필요'...코카콜라·월마트 CEO, 퇴임 이유로 AI 들어",
-      "Why OpenAI killed Sora",
-      "Stanford study outlines dangers of asking AI chatbots for personal advice",
-      "AI data center moratorium passed before 2027?",
-      "Why can't TikTok identify AI generated ads when I can?",
-      "법률 AI 대표 하비, 16조 가치로  투자 유치...\"보조 넘어 에이전트로 진화\"",
-      "'AI 회의록' 그래놀라, 기업가치 2조 돌파...\"기업용으로 확장\""
-    ],
-    "urls": [
-      "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition",
-      "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal advice/",
-      "https://polymarket.com/event/108522",
-      "https://www.theverge.com/ai-artificial-intelligence/900400/tiktok-ai-ads-labels-samsung-disclosure",
-      "https://www.aitimes.com/news/articleView.html?idxno=208510",
-      "https://www.aitimes.com/news/articleView.html?idxno=208507"
-    ]
-  },
-  {
     "date": "2026-03-30",
     "titles": [
       "OpenAI announces it has achieved AGI before 2027?",
@@ -115,6 +95,15 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=208777",
       "https://www.aitimes.com/news/articleView.html?idxno=208760"
+    ]
+  },
+  {
+    "date": "2026-04-05",
+    "titles": [
+      "클로드 월 구독제로 '오픈클로' 못 쓴다...\"시스템에 과도한 부담\""
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208811"
     ]
   }
 ]
