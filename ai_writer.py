@@ -431,7 +431,8 @@ def generate_post(articles, used_titles=None, engagement_patterns=None,
     )
     response_text = message.content[0].text
     try:
-        return _parse_response(response_text)
+        result = _parse_response(response_text)
+        return _ensure_required_fields(result)
     except (json.JSONDecodeError, ValueError) as e:
         print(f"[경고] JSON 파싱 실패, 재시도 중... ({e})")
         message = client.messages.create(
@@ -443,7 +444,14 @@ def generate_post(articles, used_titles=None, engagement_patterns=None,
                 {"role": "user", "content": "JSON 형식이 올바르지 않습니다. 올바른 JSON으로 다시 응답해주세요."},
             ],
         )
-        return _parse_response(message.content[0].text)
+        return _ensure_required_fields(_parse_response(message.content[0].text))
+
+
+def _ensure_required_fields(content: dict) -> dict:
+    """LLM이 누락시키는 필수 필드를 강제 보정."""
+    if not content.get("topic_tag"):
+        content = {**content, "topic_tag": "ai.threads"}
+    return content
 
 
 def _build_qa_feedback(qa_feedback):

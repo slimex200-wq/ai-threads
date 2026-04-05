@@ -30,19 +30,19 @@ class QAResult:
 
 _CHAR_LIMITS_VIRAL: dict[str, tuple[int, int]] = {
     "post_main": (200, 350),
-    "reply_explain": (80, 150),
-    "reply_important": (80, 150),
-    "reply_action": (80, 150),
-    "reply_counter": (80, 150),
-    "reply_casual": (50, 100),
+    "reply_explain": (60, 150),
+    "reply_important": (60, 150),
+    "reply_action": (60, 150),
+    "reply_counter": (60, 150),
+    "reply_casual": (40, 100),
 }
 
 _CHAR_LIMITS_INFORMATIONAL: dict[str, tuple[int, int]] = {
     "post_main": (200, 400),
-    "reply_background": (100, 200),
-    "reply_impact": (100, 200),
-    "reply_compare": (100, 200),
-    "reply_summary": (80, 150),
+    "reply_background": (80, 200),
+    "reply_impact": (80, 200),
+    "reply_compare": (80, 200),
+    "reply_summary": (60, 150),
 }
 
 _REQUIRED_VIRAL: tuple[str, ...] = (
