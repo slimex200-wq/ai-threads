@@ -1,24 +1,5 @@
 [
   {
-    "date": "2026-03-30",
-    "titles": [
-      "OpenAI announces it has achieved AGI before 2027?",
-      "지푸, 초저가 코딩 모델 'GLM-5.1' 출시…'클로드 오퍼스 4.6'에 근접",
-      "[양현상 칼럼] 젠슨 황의 1,500조 호언장담, '지능형 육체'가 몰고 올 산업의 재편",
-      "Why OpenAI really shut down Sora",
-      "AI 트래픽, 사상 첫 인간 트래픽 추월 눈앞…에이전트 사용량 8000% 증가",
-      "아마존, AI 에이전트 자기 개선을 위한 범용 인프라 'A-이볼브' 발표"
-    ],
-    "urls": [
-      "https://polymarket.com/event/67081",
-      "https://www.aitimes.com/news/articleView.html?idxno=208504",
-      "https://www.aitimes.com/news/articleView.html?idxno=208487",
-      "https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/",
-      "https://www.aitimes.com/news/articleView.html?idxno=208575",
-      "https://www.aitimes.com/news/articleView.html?idxno=208524"
-    ]
-  },
-  {
     "date": "2026-03-31",
     "titles": [
       "클로드, 올해 유료 사용자 두배로 증가...미 국방부 갈등이 촉매",
@@ -106,6 +87,15 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=208811",
       "https://www.aitimes.com/news/articleView.html?idxno=208804"
+    ]
+  },
+  {
+    "date": "2026-04-06",
+    "titles": [
+      "넷플릭스, 물리 기반 AI 영상 모델 '보이드' 오픈소스 공개"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208815"
     ]
   }
 ]
