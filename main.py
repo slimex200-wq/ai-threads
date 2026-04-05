@@ -105,6 +105,70 @@ def _get_youtube_direct_url(youtube_url):
         return None
 
 
+def _download_and_upload_video(youtube_url: str) -> str | None:
+    """YouTube 영상을 다운로드 → Supabase Storage에 업로드 → 공개 URL 반환.
+
+    YouTube 임시 URL은 Threads 비동기 처리 중 만료될 수 있으므로
+    영구 URL이 필요함.
+    """
+    import subprocess
+    import tempfile
+    import os
+    from datetime import date as d
+
+    SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
+    SUPABASE_SERVICE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
+
+    if not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
+        print("  Supabase 미설정, 직접 URL 사용")
+        return _get_youtube_direct_url(youtube_url)
+
+    try:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            out_path = os.path.join(tmpdir, "promo.mp4")
+            result = subprocess.run(
+                ["yt-dlp", "-f", "mp4[height<=720]/best[ext=mp4][height<=720]",
+                 "-o", out_path, "--no-warnings", youtube_url],
+                capture_output=True, text=True, timeout=120,
+            )
+            if result.returncode != 0 or not os.path.exists(out_path):
+                print(f"  다운로드 실패: {result.stderr[:200]}")
+                return None
+
+            file_size = os.path.getsize(out_path)
+            if file_size > 50 * 1024 * 1024:  # 50MB 제한
+                print(f"  영상 너무 큼: {file_size // (1024*1024)}MB")
+                return None
+
+            # Supabase Storage 업로드
+            filename = f"promo-{d.today().isoformat()}.mp4"
+            upload_url = f"{SUPABASE_URL}/storage/v1/object/videos/{filename}"
+
+            with open(out_path, "rb") as f:
+                resp = httpx.put(
+                    upload_url,
+                    content=f.read(),
+                    headers={
+                        "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}",
+                        "Content-Type": "video/mp4",
+                        "x-upsert": "true",
+                    },
+                    timeout=60.0,
+                )
+
+            if resp.status_code >= 400:
+                print(f"  Supabase 업로드 실패: {resp.status_code} {resp.text[:200]}")
+                return None
+
+            public_url = f"{SUPABASE_URL}/storage/v1/object/public/videos/{filename}"
+            print(f"  Supabase 업로드 완료: {file_size // 1024}KB")
+            return public_url
+
+    except Exception as e:
+        print(f"  영상 다운로드/업로드 실패: {e}")
+        return None
+
+
 def search_promo_video(article_title: str) -> str | None:
     """기사 제목으로 YouTube에서 공식 홍보/데모 영상 검색.
 
@@ -144,7 +208,8 @@ def search_promo_video(article_title: str) -> str | None:
         candidates.sort(key=lambda x: x[0])
         _, best_id, best_title = candidates[0]
         print(f"  프로모 영상 발견: {best_title[:60]}... ({candidates[0][0]}초)")
-        return _get_youtube_direct_url(f"https://www.youtube.com/watch?v={best_id}")
+        yt_url = f"https://www.youtube.com/watch?v={best_id}"
+        return _download_and_upload_video(yt_url)
 
     except Exception as e:
         print(f"  프로모 영상 검색 실패: {e}")
