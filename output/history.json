@@ -1,41 +1,5 @@
 [
   {
-    "date": "2026-03-31",
-    "titles": [
-      "클로드, 올해 유료 사용자 두배로 증가...미 국방부 갈등이 촉매",
-      "15% of Americans say they'd be willing to work for an AI boss",
-      "15% of Americans say they'd be willing to work for an AI boss, according to new poll",
-      "As more Americans adopt AI tools, fewer say they can trust the results",
-      "제프 딘 \"데이터 고갈론 동의 안 해…비디오·합성 데이터가 스케일링의 새 연료\"",
-      "중국에서 실수로 '애플 인텔리전스' 잠시 공개"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208551",
-      "https://techcrunch.com/2026/03/30/ai-boss-supervisor-us-quinnipiac-poll/",
-      "https://techcrunch.com/2026/03/30/ai-work-boss-supervisor-us-quinnipiac-poll/",
-      "https://techcrunch.com/2026/03/30/ai-trust-adoption-poll-more-americans-adopt-tools-fewer-say-they-can-trust-the-results/",
-      "https://www.aitimes.com/news/articleView.html?idxno=208636",
-      "https://www.aitimes.com/news/articleView.html?idxno=208646"
-    ]
-  },
-  {
-    "date": "2026-04-01",
-    "titles": [
-      "위성 데이터센터 스타클라우드, 1.6조 기업 가치 달성",
-      "Yupp shuts down after raising $33M from a16z crypto's Chris Dixon",
-      "앤트로픽, 내부 실수로 '클로드 코드' 소스 코드 유출",
-      "엔비디아, AI 칩 생태계 확장 위해 경쟁사 마벨에 3조 투자",
-      "미국인 15% \"AI 상사 밑에서 일할 의향 있어\"...부정 인식이 더 늘어"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208643",
-      "https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/",
-      "https://www.aitimes.com/news/articleView.html?idxno=208649",
-      "https://www.aitimes.com/news/articleView.html?idxno=208654",
-      "https://www.aitimes.com/news/articleView.html?idxno=208684"
-    ]
-  },
-  {
     "date": "2026-04-02",
     "titles": [
       "MS, 클라우드 관련 영국 정부 두번째 조사 직면",
@@ -96,6 +60,15 @@
     ],
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=208815"
+    ]
+  },
+  {
+    "date": "2026-04-08",
+    "titles": [
+      "깃허브, 에이전트 접속 폭증으로 트래픽 급증·서비스 중단 사태 발생"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208951"
     ]
   }
 ]

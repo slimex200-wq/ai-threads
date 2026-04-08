@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-06",
+    "mode": "informational",
+    "title": "넷플릭스, 물리 기반 AI 영상 모델 '보이드' 오픈소스 공개",
+    "post_main": "넷플릭스가 영상에서 객체를 제거하는 AI 모델 '보이드'를 오픈소스로 풀었다. 무료로 쓸 수 있다.\n\n기존 도구들은 단순히 물체만 지우는데, 이건 그림자나 반사 같은 물리적 영향까",
+    "reply_casual": "",
+    "views": 226,
+    "likes": 3,
+    "replies": 5,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 87.6
+  },
+  {
     "date": "2026-04-04",
     "mode": "informational",
     "title": "구글, 동영상 편집 앱 '비드'에 아바타 조종 기능 추가",
