@@ -1,20 +1,5 @@
 [
   {
-    "date": "2026-04-02",
-    "titles": [
-      "MS, 클라우드 관련 영국 정부 두번째 조사 직면",
-      "구글, 유튜브서 아동용 'AI 슬롭' 제거 요구받아",
-      "오픈AI, 앤트로픽에 밀려 비상장 주식 거래 시장서 찬밥 신세",
-      "메타, 소셜미디어 추천 알고리즘 개선 위한 'MRS 리서치' 팀 구성"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208688",
-      "https://www.aitimes.com/news/articleView.html?idxno=208716",
-      "https://www.aitimes.com/news/articleView.html?idxno=208712",
-      "https://www.aitimes.com/news/articleView.html?idxno=208729"
-    ]
-  },
-  {
     "date": "2026-04-03",
     "titles": [
       "AI data center moratorium passed before 2027?",
@@ -71,6 +56,15 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=208951",
       "https://www.aitimes.com/news/articleView.html?idxno=208924"
+    ]
+  },
+  {
+    "date": "2026-04-09",
+    "titles": [
+      "메타, 스마트폰용 소형 비전 인코더 'EUPE' 출시"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=208966"
     ]
   }
 ]

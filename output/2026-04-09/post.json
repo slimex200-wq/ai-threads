@@ -1,0 +1,27 @@
+{
+  "selected_article": {
+    "original_title": "메타, 스마트폰용 소형 비전 인코더 'EUPE' 출시",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=208966",
+    "reason": "스마트폰에서 돌아가는 AI 비전 기술로 바이브코더들이 모바일 앱 개발할 때 실제로 활용할 수 있고, 엣지 디바이스 최적화는 현재 트렌드"
+  },
+  "post_main": "메타가 스마트폰에서 돌아가는 소형 AI 비전 모델 'EUPE'를 공개했다. 6일 온라인 아카이브에 올라온 연구다.\n\n기존 비전 AI는 성능 좋으려면 크기가 컸거든. 스마트폰 같은 제한된 환경에 넣으면 성능이 뚝 떨어졌다. EUPE는 작으면서도 객체 인식, 이미지 분류 같은 여러 비전 작업을 동시에 처리할 수 있다고 한다. 비전 인코더란 이미지를 AI가 이해할 수 있는 데이터로 바꿔주는 부품이다.\n\n모바일 앱에 AI 기능 넣을 때 서버 없이도 되는 시대가 온 건가?",
+  "reply_background": "이게 중요한 이유가 있다. 지금까지 스마트폰에서 AI 쓰려면 클라우드 서버로 데이터 보내서 처리하고 결과 받아오는 식이었거든. 느리고 인터넷 없으면 못 쓴다. 메타는 AR 글래스 같은 웨어러블 기기에도 쓸 계획이라고 밝혔다.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 모바일 개발 방식이다. 카메라 앱 만들 때 실시간 객체 인식이나 이미지 필터를 서버 없이 구현할 수 있게 된다. API 호출비도 안 나오고 오프라인에서도 작동하니까 사용자 경험이 훨씬 부드러워진다.",
+  "reply_compare": "구글은 MediaPipe, 애플은 Core ML로 온디바이스 AI를 밀고 있다. MediaPipe는 실시간 처리가 강하고, Core ML은 iOS 생태계 최적화가 장점이다. EUPE는 멀티태스킹이 특징인데, 하나의 모델로 여러 비전 작업을 동시 처리한다는 게 차별점이라고 한다.",
+  "reply_summary": "온디바이스 AI 경쟁이 본격화되고 있다. 개발자들이 서버 의존도를 줄이고 더 빠른 앱을 만들 수 있는 환경이 갖춰지는 중이다.",
+  "topic_tag": "ai.threads",
+  "mode": "informational",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/208966_211304_362.png",
+  "video_url": null,
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=208966",
+  "qa_score": 0.62,
+  "posting_result": {
+    "post_id": "18101381030488853",
+    "reply_background": "18087256057995730",
+    "reply_impact": "18096354572041316",
+    "reply_compare": "18074829689292521",
+    "reply_summary": "17849440167674221",
+    "link_id": "18352813129230893"
+  },
+  "posted_at": "2026-04-09T01:44:10.920311"
+}

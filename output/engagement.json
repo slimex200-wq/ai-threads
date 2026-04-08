@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-08",
+    "mode": "informational",
+    "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+    "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+    "reply_casual": "",
+    "views": 788,
+    "likes": 7,
+    "replies": 6,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 173.8
+  },
+  {
     "date": "2026-04-06",
     "mode": "informational",
     "title": "넷플릭스, 물리 기반 AI 영상 모델 '보이드' 오픈소스 공개",
