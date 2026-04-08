@@ -65,10 +65,12 @@
   {
     "date": "2026-04-08",
     "titles": [
-      "깃허브, 에이전트 접속 폭증으로 트래픽 급증·서비스 중단 사태 발생"
+      "깃허브, 에이전트 접속 폭증으로 트래픽 급증·서비스 중단 사태 발생",
+      "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감"
     ],
     "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208951"
+      "https://www.aitimes.com/news/articleView.html?idxno=208951",
+      "https://www.aitimes.com/news/articleView.html?idxno=208924"
     ]
   }
 ]
