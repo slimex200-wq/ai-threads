@@ -1,27 +1,27 @@
 {
   "selected_article": {
-    "original_title": "앤트로픽, 에이전트 개발·배포를 위한 '클로드 매니지드 에이전트' 공개",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=208979",
-    "reason": "바이브코더가 실제로 AI 에이전트를 쉽게 만들고 배포할 수 있는 도구가 나왔다는 점에서 실용성이 높음. 기존에는 복잡했던 에이전트 개발이 간단해진다는 것은 워크플로우 변화에 직접적 영향"
+    "original_title": "Gemini gets notebooks to help you organize projects",
+    "link": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+    "reason": "구글이 Gemini에 노트북 기능을 추가했는데, 이게 바이브코더들의 프로젝트 관리 방식을 바꿀 수 있는 실용적인 업데이트다. 파일과 대화 기록을 한곳에 모아서 컨텍스트로 활용할 수 있어서 코딩 프로젝트 관리에 직접적으로 도움이 된다."
   },
-  "post_main": "앤트로픽이 AI 에이전트 만드는 걸 API 몇 줄로 끝내주는 '클로드 매니지드 에이전트'를 베타로 풀었다.\n\n지금까지 에이전트 하나 띄우려면 보안 설정, 상태 관리, 권한 처리까지 직접 해야 했거든. 이제 앤트로픽이 인프라를 다 맡아주고, 개발자는 로직만 짜면 된다. 퍼플렉시티가 에이전트로 전환한 뒤 한 달 만에 매출 50% 늘었다는 소식이 나온 직후 타이밍.\n\n바이브코더 입장에서는 에이전트 진입장벽이 확 낮아진 건데, 문제는 모든 회사가 이런 도구를 쏟아내고 있다는 거다.",
-  "reply_background": "에이전트 시장이 지금 완전 과열이거든. 오픈AI는 스웜, 구글은 젬나이 에이전트, 이제 앤트로픽까지 매니지드 서비스로 뛰어들었다. 각자 '우리가 제일 쉽다'고 하는데, 결국 개발자 생태계 선점 경쟁인 셈.",
-  "reply_impact": "바이브코더 입장에서 달라지는 건 명확하다. 예전엔 에이전트 하나 만들려면 백엔드 개발자가 필요했는데, 이제 프론트엔드 개발자도 API 연결만으로 에이전트를 띄울 수 있다. 특히 클로드의 긴 컨텍스트 윈도우 때문에 복잡한 워크플로우 처리가 가능해진다는 게 포인트.",
-  "reply_compare": "오픈AI 스웜은 에이전트끼리 협업하는 게 강점이고, 구글은 워크스페이스 연동이 편하다. 앤트로픽은 그 중간인데 매니지드 서비스라는 차별점이 있다. 인프라 걱정 없이 바로 프로덕션에 올릴 수 있다는 건 실제 비즈니스에서는 큰 메리트.",
-  "reply_summary": "결국 에이전트 도구가 많아질수록 '뭘 만들 것인가'가 더 중요해진다. 기술적 진입장벽은 낮아졌으니 이제 아이디어 승부인 시대가 온 거 같다.",
+  "post_main": "구글이 Gemini에 '노트북' 기능을 추가했다. 프로젝트별로 파일, 대화 기록, 커스텀 지시사항을 한곳에 모을 수 있다.\n\n바이브코더 입장에서는 게임 체인저일 수 있거든. 그동안 AI 챗봇 쓸 때마다 프로젝트 맥락을 다시 설명해야 했는데, 이제 한번 세팅하면 계속 기억한다는 얘기다. 코드 리뷰나 디버깅할 때 매번 코드베이스 전체를 업로드할 필요가 없어진 셈이다.\n\n문제는 언제 한국에 풀리느냐는 건데, 구글 AI 기능은 항상 늦게 온다.",
+  "reply_background": "이게 갑자기 나온 게 아니거든. NotebookLM이 인기를 끌면서 구글이 그 개념을 Gemini에도 적용한 거다. ChatGPT는 GPT Store로, Claude는 Projects로 이미 비슷한 기능을 제공하고 있어서 구글도 따라잡기에 나선 상황.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 프로젝트 연속성이다. 지금까지는 새 대화 시작할 때마다 \"이 프로젝트는 React로 만든 웹앱이고...\"부터 설명해야 했는데, 노트북에 한번 정리하면 계속 그 맥락을 유지할 수 있다. 특히 장기 프로젝트나 팀 작업할 때 유용할 듯.",
+  "reply_compare": "ChatGPT Projects는 대화 중심이고, Claude Projects는 문서 중심이다. Gemini 노트북은 그 중간 지점을 노리는 것 같은데, 파일과 대화를 모두 컨텍스트로 활용할 수 있다는 게 특징이다. 다만 아직 초기 버전이라 실제 사용성은 써봐야 알 것 같다.",
+  "reply_summary": "결국 AI 툴들이 단발성 질문 답변에서 지속적인 워크플로우 파트너로 진화하고 있다는 신호. 바이브코딩도 점점 프로젝트 단위로 AI와 협업하는 방향으로 갈 것 같다.",
   "topic_tag": "ai.threads",
   "mode": "informational",
-  "og_image": "https://cdn.aitimes.com/news/photo/202604/208979_211316_3044.jpg",
+  "og_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK255_Google_Gemini_A.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200",
   "video_url": null,
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=208979",
-  "qa_score": 0.54,
+  "source_link": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+  "qa_score": 0.58,
   "posting_result": {
-    "post_id": "17944384194148785",
-    "reply_background": "18408972088182997",
-    "reply_impact": "18148568455472451",
-    "reply_compare": "18078253055618803",
-    "reply_summary": "18046957745523721",
-    "link_id": "18125186449599125"
+    "post_id": "18156447199399581",
+    "reply_background": "18568985773023837",
+    "reply_impact": "18043612283685441",
+    "reply_compare": "18312918694275598",
+    "reply_summary": "17865260064536280",
+    "link_id": "18099754385091090"
   },
-  "posted_at": "2026-04-09T13:16:19.191160"
+  "posted_at": "2026-04-09T15:58:34.431691"
 }
