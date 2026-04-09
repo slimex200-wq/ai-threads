@@ -22,5 +22,13 @@
     "reply_compare": "18097114322121742",
     "reply_summary": "17971820472032632"
   },
-  "posted_at": "2026-04-09T19:43:07.180330"
+  "posted_at": "2026-04-09T19:43:07.180330",
+  "engagement": {
+    "views": 36,
+    "likes": 1,
+    "replies": 4,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 48.6
+  }
 }

@@ -1,0 +1,27 @@
+{
+  "selected_article": {
+    "original_title": "지푸도 API 가격 인상...중국 AI 업계 '제값 받기' 확산",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=208981",
+    "reason": "바이브코더가 직접 사용하는 API 서비스의 가격 변화로, 코딩 비용에 직접적 영향을 주는 실용적 정보"
+  },
+  "post_main": "지푸 API가 8~17% 올랐다. 올해만 두 번째 인상.\n\n2월에 코딩 구독료를 30% 올린 데 이어 이번엔 클라우드 API 가격을 또 올렸거든. 중국 AI 업계 전반이 '공짜 시대 끝'을 선언하며 수익화에 나서고 있는 흐름이다. 특히 AI 에이전트 수요 급증으로 투자자들도 수익성을 요구하는 상황.\n\n문제는 다른 업체들도 줄줄이 따라갈 가능성이 높다는 거다.",
+  "reply_background": "이게 갑자기 나온 게 아니거든. 중국 AI 기업들이 그동안 시장 점유율 확보를 위해 덤핑 가격으로 서비스했는데, 이제 투자자들이 '언제까지 적자낼 거냐'고 압박하기 시작한 거다. 특히 AI 에이전트 개발 붐으로 API 사용량은 늘어나는데 수익은 안 나니까.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 비용 계산이다. 지금까지 저렴한 중국 API로 프로토타입 만들던 사람들은 예산을 다시 짜야 하고. 특히 개인 프로젝트나 스타트업은 API 선택 기준을 가성비에서 안정성 위주로 바꿔야 할 시점이 왔다.",
+  "reply_compare": "OpenAI는 이미 프리미엄 가격대, Anthropic도 비슷한 수준인데 중국 업체들만 저가 정책을 유지했었거든. 근데 지푸, 바이두, 알리바바 순으로 가격 인상이 확산되면서 '싼 대안'이 사라지고 있는 상황. 결국 글로벌 AI API 가격이 상향 평준화되는 흐름이다.",
+  "reply_summary": "정리하면 AI API 허니문 시대는 끝났다. 이제부터는 정말 필요한 기능에만 유료 API를 쓰고, 나머지는 오픈소스나 로컬 모델로 해결하는 게 합리적인 선택이다.",
+  "topic_tag": "ai.threads",
+  "mode": "informational",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/208981_211320_4832.jpg",
+  "video_url": null,
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=208981",
+  "qa_score": 0.67,
+  "posting_result": {
+    "post_id": "18132870190544873",
+    "reply_background": "17981063678823473",
+    "reply_impact": "18057810311468894",
+    "reply_compare": "18096639271848750",
+    "reply_summary": "18322100314270666",
+    "link_id": "18093656729160174"
+  },
+  "posted_at": "2026-04-10T00:10:20.182469"
+}
