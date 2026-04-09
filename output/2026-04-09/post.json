@@ -1,27 +1,26 @@
 {
   "selected_article": {
-    "original_title": "Gemini gets notebooks to help you organize projects",
-    "link": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
-    "reason": "구글이 Gemini에 노트북 기능을 추가했는데, 이게 바이브코더들의 프로젝트 관리 방식을 바꿀 수 있는 실용적인 업데이트다. 파일과 대화 기록을 한곳에 모아서 컨텍스트로 활용할 수 있어서 코딩 프로젝트 관리에 직접적으로 도움이 된다."
+    "original_title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209040",
+    "reason": "OpenAI 코덱스의 성장과 기업 시장 확대는 바이브코더들에게 직접적 영향을 주는 실용적 뉴스. 코딩 도구 선택과 시장 흐름 파악에 필요한 정보."
   },
-  "post_main": "구글이 Gemini에 '노트북' 기능을 추가했다. 프로젝트별로 파일, 대화 기록, 커스텀 지시사항을 한곳에 모을 수 있다.\n\n바이브코더 입장에서는 게임 체인저일 수 있거든. 그동안 AI 챗봇 쓸 때마다 프로젝트 맥락을 다시 설명해야 했는데, 이제 한번 세팅하면 계속 기억한다는 얘기다. 코드 리뷰나 디버깅할 때 매번 코드베이스 전체를 업로드할 필요가 없어진 셈이다.\n\n문제는 언제 한국에 풀리느냐는 건데, 구글 AI 기능은 항상 늦게 온다.",
-  "reply_background": "이게 갑자기 나온 게 아니거든. NotebookLM이 인기를 끌면서 구글이 그 개념을 Gemini에도 적용한 거다. ChatGPT는 GPT Store로, Claude는 Projects로 이미 비슷한 기능을 제공하고 있어서 구글도 따라잡기에 나선 상황.",
-  "reply_impact": "바이브코더 입장에서 달라지는 건 프로젝트 연속성이다. 지금까지는 새 대화 시작할 때마다 \"이 프로젝트는 React로 만든 웹앱이고...\"부터 설명해야 했는데, 노트북에 한번 정리하면 계속 그 맥락을 유지할 수 있다. 특히 장기 프로젝트나 팀 작업할 때 유용할 듯.",
-  "reply_compare": "ChatGPT Projects는 대화 중심이고, Claude Projects는 문서 중심이다. Gemini 노트북은 그 중간 지점을 노리는 것 같은데, 파일과 대화를 모두 컨텍스트로 활용할 수 있다는 게 특징이다. 다만 아직 초기 버전이라 실제 사용성은 써봐야 알 것 같다.",
-  "reply_summary": "결국 AI 툴들이 단발성 질문 답변에서 지속적인 워크플로우 파트너로 진화하고 있다는 신호. 바이브코딩도 점점 프로젝트 단위로 AI와 협업하는 방향으로 갈 것 같다.",
+  "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, OpenAI가 GPT-5.3 코덱스로 따라잡기 시작했다는 신호거든. 실제로 2월 출시 이후 기업들이 몰리고 있다는 게 숫자로 나온 거다. API는 분당 150억개 토큰을 처리 중이고, 2026년 말엔 소비자 시장과 기업 시장이 50:50까지 갈 전망.\n\n바이브코딩 도구 경쟁이 본격적으로 붙었는데, 결국 우리가 고를 선택지가 더 좋아진다는 얘기 아닐까?",
+  "reply_background": "이게 갑자기 나온 게 아니거든. 작년까지만 해도 Claude가 코딩에서 압도적이었는데, OpenAI가 GPT-5.3 코덱스를 내놓으면서 성능 격차를 좁히기 시작했다. 기업들이 '이제 OpenAI 코딩 도구도 쓸 만하다'고 판단하고 돌아오는 중이라는 게 이 수치의 배경.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 선택권이다. 그동안 코딩은 Claude, 채팅은 ChatGPT 이런 식으로 나뉘어 썼는데, 이제 OpenAI 생태계 안에서도 코딩이 제대로 되니까 구독료 통합이 가능해진다. 특히 기업에서 일하는 개발자들은 회사 계정 하나로 모든 걸 처리할 수 있게 되는 셈.",
+  "reply_compare": "Claude는 여전히 코드 이해력이 뛰어나고 긴 맥락 처리에 강하다. 하지만 코덱스는 OpenAI 생태계 통합이 장점이고, API 처리량도 압도적이다. Cursor는 에디터 특화, GitHub Copilot은 MS 통합형인데, 코덱스는 '범용 코딩 어시스턴트'로 포지셔닝하는 중. 각자 다른 방향으로 가고 있다.",
+  "reply_summary": "정리하면 코딩 AI 시장이 OpenAI vs Anthropic 구도로 재편되고 있다는 거다. 경쟁이 치열해질수록 성능도 좋아지고 가격도 합리적이 되니까, 바이브코더에겐 좋은 흐름이라고 본다.",
   "topic_tag": "ai.threads",
   "mode": "informational",
-  "og_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK255_Google_Gemini_A.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209040_211369_112.png",
   "video_url": null,
-  "source_link": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
-  "qa_score": 0.58,
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209040",
+  "qa_score": 0.47,
   "posting_result": {
-    "post_id": "18156447199399581",
-    "reply_background": "18568985773023837",
-    "reply_impact": "18043612283685441",
-    "reply_compare": "18312918694275598",
-    "reply_summary": "17865260064536280",
-    "link_id": "18099754385091090"
+    "post_id": "18147621451469244",
+    "reply_background": "18042614537595907",
+    "reply_impact": "17868553104502863",
+    "reply_compare": "18097114322121742",
+    "reply_summary": "17971820472032632"
   },
-  "posted_at": "2026-04-09T15:58:34.431691"
+  "posted_at": "2026-04-09T19:43:07.180330"
 }
