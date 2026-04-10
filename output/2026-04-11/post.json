@@ -1,0 +1,27 @@
+{
+  "selected_article": {
+    "original_title": "Anthropic temporarily banned OpenClaw's creator from accessing Claude",
+    "link": "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
+    "reason": "바이브코더들이 실제 사용하는 Claude API 접근과 써드파티 클라이언트 리스크에 대한 직접적인 실용 정보"
+  },
+  "post_main": "Anthropic이 OpenClaw 개발자를 Claude 접근 차단했다. API 가격 변경 직후에 일어난 일이거든.\n\nOpenClaw는 Claude를 터미널에서 쓸 수 있게 해주는 오픈소스 도구인데, 바이브코더들 사이에서 꽤 쓰이고 있었다. 문제는 써드파티 클라이언트를 만들면 언제든 이런 일이 생길 수 있다는 거다.\n\nClaude 쓰는 사람들한테는 경고등이 켜진 셈인데, 대안을 미리 준비해둬야 하는 상황 아닌가?",
+  "reply_background": "이게 갑자기 나온 게 아니거든. 지난주 Claude API 가격이 올랐는데, OpenClaw 사용자들한테 예상보다 높은 요금이 청구되기 시작했다. Anthropic 입장에서는 공식 클라이언트가 아닌 도구로 API를 대량 사용하는 패턴이 부담스러웠을 수 있고.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 하나. 써드파티 도구에만 의존하면 위험하다는 거다. OpenClaw 같은 편리한 CLI 도구를 쓰던 사람들은 갑자기 차단당하면 워크플로우가 멈춘다. 공식 웹이나 앱으로 돌아가거나 다른 도구를 찾아야 하는 상황.",
+  "reply_compare": "ChatGPT는 공식 CLI가 없어서 써드파티 의존도가 높고, Claude는 공식 앱은 있지만 CLI는 OpenClaw 같은 도구에 의존하는 상황이었다. Cursor나 VS Code 플러그인은 공식 지원이라 상대적으로 안전하지만, 독립 CLI 도구들은 항상 이런 리스크를 안고 있다.",
+  "reply_summary": "편의성과 안정성은 트레이드오프다. 써드파티 도구가 편하긴 하지만 언제든 막힐 수 있으니, 백업 플랜은 필수라고 본다.",
+  "topic_tag": "ai.threads",
+  "mode": "informational",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2026/04/ChatGPT-OpenClaw-Claude.jpg?resize=1200,800",
+  "video_url": null,
+  "source_link": "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
+  "qa_score": 0.49,
+  "posting_result": {
+    "post_id": "18083846333068542",
+    "reply_background": "17964740745080980",
+    "reply_impact": "18041611157771643",
+    "reply_compare": "17923614600283091",
+    "reply_summary": "17964918399051783",
+    "link_id": "18099642100826352"
+  },
+  "posted_at": "2026-04-11T07:06:17.855452"
+}

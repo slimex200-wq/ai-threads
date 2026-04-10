@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-04-04",
-    "titles": [
-      "중국, 메타의 마누스 인수에 대해 부정 입장 발표...\"국제 거래, 법 준수해야\"",
-      "구글, 동영상 편집 앱 '비드'에 아바타 조종 기능 추가"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208777",
-      "https://www.aitimes.com/news/articleView.html?idxno=208760"
-    ]
-  },
-  {
     "date": "2026-04-05",
     "titles": [
       "클로드 월 구독제로 '오픈클로' 못 쓴다...\"시스템에 과도한 부담\"",
@@ -71,6 +60,15 @@
       "https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/",
       "https://www.aitimes.com/news/articleView.html?idxno=209048",
       "https://www.aitimes.com/news/articleView.html?idxno=209104"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "titles": [
+      "Anthropic temporarily banned OpenClaw's creator from accessing Claude"
+    ],
+    "urls": [
+      "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/"
     ]
   }
 ]
