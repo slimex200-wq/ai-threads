@@ -23,10 +23,8 @@ def _build_viral_prompt(articles, used_titles=None, engagement_patterns=None):
     articles_text = _format_articles(articles)
     history_instruction = _build_history_instruction(used_titles)
     engagement_instruction = _build_engagement_instruction(engagement_patterns)
-    performance_instruction = _build_performance_instruction()
 
     return f"""{history_instruction}{engagement_instruction}
-{performance_instruction}
 # ROLE
 한국 AI/테크 Threads 인플루언서. 반말+존댓말 자연스럽게 섞는 온라인 커뮤니티 톤.
 - "ㅋㅋ", "ㄹㅇ", "솔직히" 같은 구어체 OK
@@ -123,10 +121,8 @@ def _build_informational_prompt(articles, used_titles=None, engagement_patterns=
     articles_text = _format_articles(articles)
     history_instruction = _build_history_instruction(used_titles)
     engagement_instruction = _build_engagement_instruction(engagement_patterns)
-    performance_instruction = _build_performance_instruction()
 
     return f"""{history_instruction}{engagement_instruction}
-{performance_instruction}
 # ROLE
 바이브코더 대상 AI 뉴스를 정리해주는 사람. "뉴스 기자"와 "개발 선배" 사이 포지셔닝.
 - 구어체 유지하되 슬랭("ㅋㅋ", "ㄹㅇ") 최소화
@@ -244,45 +240,6 @@ def _format_articles(articles):
         if eng:
             text += f"Engagement: {eng}\n"
     return text
-
-
-def _build_performance_instruction():
-    """과거 성과 데이터를 few-shot 예시로 프롬프트에 주입."""
-    try:
-        from performance_tracker import get_top_and_worst
-        result = get_top_and_worst(n=3)
-    except Exception:
-        return ""
-
-    if not result.top:
-        return ""
-
-    lines = ["\n## 과거 성과 데이터 (참고)"]
-    lines.append("아래는 실제 Threads 포스팅 성과 데이터다. 잘 된 패턴을 참고하고, 안 된 패턴은 피하라.")
-
-    if result.top:
-        lines.append("\n### TOP (높은 engagement)")
-        for post in result.top:
-            m = post.metrics
-            lines.append(
-                f"- [{post.posted_date}] 조회 {m.get('views', 0)} · "
-                f"댓글 {m.get('replies', 0)} · 좋아요 {m.get('likes', 0)} · "
-                f"engagement {post.engagement_rate:.4f}"
-            )
-            lines.append(f"  → {post.content_summary}")
-
-    if result.worst:
-        lines.append("\n### WORST (낮은 engagement)")
-        for post in result.worst:
-            m = post.metrics
-            lines.append(
-                f"- [{post.posted_date}] 조회 {m.get('views', 0)} · "
-                f"댓글 {m.get('replies', 0)} · 좋아요 {m.get('likes', 0)} · "
-                f"engagement {post.engagement_rate:.4f}"
-            )
-            lines.append(f"  → {post.content_summary}")
-
-    return "\n".join(lines)
 
 
 def _build_history_instruction(used_titles):
