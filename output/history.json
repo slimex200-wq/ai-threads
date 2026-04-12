@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-04-05",
-    "titles": [
-      "클로드 월 구독제로 '오픈클로' 못 쓴다...\"시스템에 과도한 부담\"",
-      "아르시, 추론 모델 '트리니티-라지-싱킹' 출시...에이전트 성능은 '클로드급'"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208811",
-      "https://www.aitimes.com/news/articleView.html?idxno=208804"
-    ]
-  },
-  {
     "date": "2026-04-06",
     "titles": [
       "넷플릭스, 물리 기반 AI 영상 모델 '보이드' 오픈소스 공개"
@@ -73,6 +62,15 @@
       "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
       "https://www.aitimes.com/news/articleView.html?idxno=209093",
       "https://www.aitimes.com/news/articleView.html?idxno=209109"
+    ]
+  },
+  {
+    "date": "2026-04-12",
+    "titles": [
+      "앤트로픽, '클로드 포 워드' 출시… MS 오피스서 '코파일럿'과 경쟁"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209123"
     ]
   }
 ]
