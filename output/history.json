@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-04-06",
-    "titles": [
-      "넷플릭스, 물리 기반 AI 영상 모델 '보이드' 오픈소스 공개"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208815"
-    ]
-  },
-  {
     "date": "2026-04-08",
     "titles": [
       "깃허브, 에이전트 접속 폭증으로 트래픽 급증·서비스 중단 사태 발생",
@@ -73,6 +64,15 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=209123",
       "https://www.theverge.com/column/910019/ai-coding-wars-openai-google-anthropic"
+    ]
+  },
+  {
+    "date": "2026-04-13",
+    "titles": [
+      "딥시크, 내몽골 데이터센터에 엔지니어 모집...자체 시설 구축 나서"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209126"
     ]
   }
 ]
