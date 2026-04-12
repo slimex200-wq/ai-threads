@@ -69,10 +69,12 @@
   {
     "date": "2026-04-13",
     "titles": [
-      "딥시크, 내몽골 데이터센터에 엔지니어 모집...자체 시설 구축 나서"
+      "딥시크, 내몽골 데이터센터에 엔지니어 모집...자체 시설 구축 나서",
+      "From LLMs to hallucinations, here's a simple guide to common AI terms"
     ],
     "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209126"
+      "https://www.aitimes.com/news/articleView.html?idxno=209126",
+      "https://techcrunch.com/2026/04/12/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/"
     ]
   }
 ]

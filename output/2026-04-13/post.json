@@ -1,27 +1,27 @@
 {
   "selected_article": {
-    "original_title": "딥시크, 내몽골 데이터센터에 엔지니어 모집...자체 시설 구축 나서",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=209126",
-    "reason": "딥시크 R1이 코딩 벤치마크에서 o1과 비등한 성능을 보이고 있는데, 이제 자체 인프라까지 확장하고 있다는 점이 바이브코더들에게 실질적 영향을 줄 수 있는 뉴스다. 중국 AI 모델의 성능과 접근성이 향상될 가능성이 높아진다."
+    "original_title": "From LLMs to hallucinations, here's a simple guide to common AI terms",
+    "link": "https://techcrunch.com/2026/04/12/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+    "reason": "바이브코더들이 AI 도구를 쓰면서 마주치는 전문 용어들을 정리한 가이드. 실제 코딩할 때 모델 선택이나 프롬프트 작성에 필요한 개념들을 명확히 이해할 수 있어 실용적이다."
   },
-  "post_main": "딥시크가 내몽골에 데이터센터 엔지니어를 모집하고 있다. 자체 인프라 구축에 나선 거다.\n\n그동안 항저우·베이징에서 AI 연구원만 뽑던 딥시크가 처음으로 하드웨어 운영 인력을 공개 모집했거든. 차세대 모델 출시 전에 대규모 컴퓨팅 자원을 자체 확보하려는 움직임이다. R1이 코딩에서 o1급 성능을 보여준 상황에서 인프라까지 갖추면 서비스 안정성이 크게 올라갈 수밖에 없다.\n\n중국 AI 모델이 성능뿐만 아니라 접근성에서도 경쟁력을 갖추게 되는 건데, 바이브코더들 입장에서는 선택지가 또 하나 늘어나는 셈이다.",
-  "reply_background": "이게 갑자기 나온 게 아니거든. R1 출시 후 글로벌 관심이 폭증하면서 서버 부하 문제가 계속 발생했다. 그동안은 클라우드 서비스에 의존했는데, 이제 직접 데이터센터를 운영해서 서비스 품질을 안정화하겠다는 전략이다.",
-  "reply_impact": "바이브코더 입장에서 달라지는 건 하나다. 딥시크의 접근성이 개선될 가능성이 높아진다는 거다. 자체 인프라를 갖추면 서버 다운 없이 안정적으로 쓸 수 있고, API 응답 속도도 빨라질 수 있거든. 특히 코딩 작업에서는 응답 지연이 치명적이니까.",
-  "reply_compare": "ChatGPT는 마이크로소프트 Azure 기반이고, Claude는 AWS와 구글 클라우드를 쓴다. 하지만 딥시크는 자체 데이터센터를 구축하는 방향인데, 이건 비용은 높지만 서비스 제어권을 완전히 가져갈 수 있다는 장점이 있다. 중국 내수 시장부터 안정화한 다음 글로벌 확장하는 전략으로 보인다.",
-  "reply_summary": "결국 경쟁이 치열해지면 사용자가 이득이다. R1 성능에 인프라 안정성까지 갖춰지면 진짜 대안이 될 수 있을 것 같다.",
+  "post_main": "테크크런치가 AI 용어 사전을 정리했다. 할루시네이션부터 LLM까지.\n\n바이브코딩 하다 보면 계속 나오는 단어들인데, 대충 아는 것과 정확히 아는 건 다르거든. 특히 '할루시네이션'을 그냥 '거짓말'로 이해하면 안 된다. AI가 학습 데이터에 없는 내용을 그럴듯하게 만들어내는 현상이라서, 코드 생성할 때도 존재하지 않는 함수나 라이브러리를 써버릴 수 있다.\n\n용어 정확히 알면 AI 도구 쓸 때 실수가 줄어든다.",
+  "reply_background": "AI 붐이 일면서 새로운 용어가 쏟아지고 있는데, 정작 현업에서 쓰는 사람들도 헷갈리는 경우가 많거든. 특히 기술 문서나 업데이트 노트 읽을 때 용어를 모르면 중요한 변화를 놓치기 쉽다.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 도구 선택의 정확도다. 'GPT-4는 파라미터가 많아서 무조건 좋다'가 아니라 '컨텍스트 윈도우가 넓어서 긴 코드 분석에 유리하다'는 식으로 구체적 기준을 갖게 된다. 프롬프트 엔지니어링할 때도 마찬가지고.",
+  "reply_compare": "ChatGPT 쓸 때는 'temperature' 설정이 중요하고, Claude는 'Constitutional AI' 때문에 안전한 코드를 선호하는 경향이 있다. Cursor는 'code completion'에 특화됐고. 각각의 특성을 용어로 정확히 이해하면 상황별로 최적 도구를 고를 수 있다.",
+  "reply_summary": "정리하면 용어 공부가 곧 도구 활용 능력이다. AI 시대에는 개발 스킬과 AI 리터러시가 둘 다 필요하다고 본다.",
   "topic_tag": "ai.threads",
   "mode": "informational",
-  "og_image": "https://cdn.aitimes.com/news/photo/202604/209126_211470_4737.jpg",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2025/03/GettyImages-ai-generated-eb728837-4a65-4ce4-b814-abd0c140d20c.jpg?w=1024",
   "video_url": null,
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209126",
-  "qa_score": 0.54,
+  "source_link": "https://techcrunch.com/2026/04/12/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+  "qa_score": 0.5,
   "posting_result": {
-    "post_id": "18073701092216720",
-    "reply_background": "18399682768151104",
-    "reply_impact": "18081264143575965",
-    "reply_compare": "18096846449082943",
-    "reply_summary": "18100779359317628",
-    "link_id": "18125253247581367"
+    "post_id": "17906042238225130",
+    "reply_background": "18002079284736675",
+    "reply_impact": "18577228744063951",
+    "reply_compare": "18079919993169930",
+    "reply_summary": "17980898174828503",
+    "link_id": "18064293449341013"
   },
-  "posted_at": "2026-04-13T01:02:33.641685"
+  "posted_at": "2026-04-13T07:01:46.558765"
 }
