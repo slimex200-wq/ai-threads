@@ -67,10 +67,12 @@
   {
     "date": "2026-04-12",
     "titles": [
-      "앤트로픽, '클로드 포 워드' 출시… MS 오피스서 '코파일럿'과 경쟁"
+      "앤트로픽, '클로드 포 워드' 출시… MS 오피스서 '코파일럿'과 경쟁",
+      "The AI code wars are heating up"
     ],
     "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209123"
+      "https://www.aitimes.com/news/articleView.html?idxno=209123",
+      "https://www.theverge.com/column/910019/ai-coding-wars-openai-google-anthropic"
     ]
   }
 ]

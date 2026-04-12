@@ -1,27 +1,27 @@
 {
   "selected_article": {
-    "original_title": "앤트로픽, '클로드 포 워드' 출시… MS 오피스서 '코파일럿'과 경쟁",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=209123",
-    "reason": "바이브코더들이 일상적으로 사용하는 MS Word에서 AI 코딩 도우미를 직접 쓸 수 있게 된 실용적 변화. 코파일럿과의 직접 경쟁 구도로 선택권이 늘어난 점이 중요"
+    "original_title": "The AI code wars are heating up",
+    "link": "https://www.theverge.com/column/910019/ai-coding-wars-openai-google-anthropic",
+    "reason": "바이브코더들에게 직접적으로 영향을 주는 AI 코딩 도구 전쟁에 대한 분석 기사로, 도구 선택과 워크플로우에 실질적 인사이트 제공"
   },
-  "post_main": "앤트로픽이 MS 워드 안에서 쓰는 '클로드 포 워드'를 베타로 풀었다. 무료.\n\n이제 워드 문서 작성하면서 클로드한테 코드 리뷰나 기술 문서 작성을 바로 시킬 수 있다는 뜻이거든. MS 코파일럿이 오피스를 독점하고 있었는데, 이제 같은 워드 안에서 두 AI를 비교하면서 쓸 수 있는 상황이 된 거다.\n\n바이브코더 입장에서는 선택권이 생긴 셈인데, 문제는 뭘 언제 써야 하느냐는 거다.",
-  "reply_background": "이게 갑자기 나온 게 아니거든. MS가 오피스 전체에 코파일럿을 박아넣고 월 30달러씩 받으면서 독점하고 있었는데, 앤트로픽이 정면승부를 걸어온 거다. 워드 플러그인 형태로 만들어서 기존 워크플로우를 건드리지 않고 들어온 전략.",
-  "reply_impact": "바이브코더 입장에서 달라지는 건 하나. 기술 문서나 README 작성할 때 선택지가 생겼다는 거다. 코파일럿은 오피스 생태계에 특화됐고, 클로드는 코딩 맥락을 더 잘 이해하니까 용도별로 나눠서 쓸 수 있게 됐다.",
-  "reply_compare": "코파일럿은 오피스 네이티브형. 엑셀, 파워포인트까지 연동되는 게 강점이다. 클로드 포 워드는 외부 플러그인형인데, 대신 긴 코드 분석이나 복잡한 기술 설명에서는 더 정확할 가능성이 높다. 둘 다 쓰면서 비교해보는 게 답인 상황.",
-  "reply_summary": "결국 AI 도구 경쟁이 치열해질수록 사용자가 이득. 하나에 종속되지 말고 상황별로 더 나은 걸 골라 쓰는 시대가 왔다고 본다.",
+  "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot 독주 체제였는데, 지금은 ChatGPT Code, Claude Code, Cursor, Gemini Code까지 각자 다른 접근법으로 시장을 나누고 있다. 문제는 바이브코더 입장에서 뭘 써야 할지 더 헷갈린다는 거다.\n\n경쟁이 치열해질수록 도구들이 전문화되고 있는데, 만능 도구는 없어지는 중이다.",
+  "reply_background": "이게 갑자기 벌어진 게 아니거든. GitHub Copilot이 시장을 열자 빅테크들이 우르르 뛰어든 건데, 각자 다른 전략을 택했다. OpenAI는 에이전트형, Google은 통합형, Anthropic은 협업형으로 차별화를 시도하는 중이다.",
+  "reply_impact": "바이브코더 입장에서 달라지는 건 도구 조합을 고민해야 한다는 거다. 프로젝트 초기엔 A, 디버깅할 땐 B, 리팩토링할 땐 C — 이런 식으로 용도별로 나눠 쓰는 게 더 효율적일 수 있다. 하나로 모든 걸 해결하려던 시대는 끝났다.",
+  "reply_compare": "ChatGPT Code는 자연어 소통이 강하고, Claude Code는 대용량 코드베이스 이해가 좋다. Cursor는 에디터 통합이 깊고, Gemini는 무료 티어가 넉넉하거든. 각자 장단점이 명확해서 올인하기보다 조합으로 쓰는 게 현실적이다.",
+  "reply_summary": "경쟁 붙으면 결국 사용자가 이득이지. 도구 하나에 의존하지 말고 여러 개 써보면서 자기 워크플로우에 맞는 조합을 찾는 게 맞다고 본다.",
   "topic_tag": "ai.threads",
   "mode": "informational",
-  "og_image": "https://cdn.aitimes.com/news/photo/202604/209123_211469_2247.png",
+  "og_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/268441_AI_CODING_RACE_CVIRGINIA.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200",
   "video_url": null,
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209123",
-  "qa_score": 0.54,
+  "source_link": "https://www.theverge.com/column/910019/ai-coding-wars-openai-google-anthropic",
+  "qa_score": 0.64,
   "posting_result": {
-    "post_id": "18021256859817928",
-    "reply_background": "18105971833912126",
-    "reply_impact": "18102345691938762",
-    "reply_compare": "18059013785459270",
-    "reply_summary": "18080496983573802",
-    "link_id": "17994350615943222"
+    "post_id": "18436374604137567",
+    "reply_background": "18077667824636859",
+    "reply_impact": "18404103487181679",
+    "reply_compare": "17921137020314807",
+    "reply_summary": "17861476977562382",
+    "link_id": "18406031626195674"
   },
-  "posted_at": "2026-04-12T13:31:42.879431"
+  "posted_at": "2026-04-12T23:11:43.380912"
 }
