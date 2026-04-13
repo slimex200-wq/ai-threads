@@ -1,0 +1,233 @@
+{
+  "selected_article": {
+    "original_title": "리퀴드 AI, '갤럭시 S25 울트라'에서 작동하는 450M VLM 출시",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209148",
+    "reason": "This article still offers the most concrete practical value - showing AI becoming truly portable. The technical details are specific enough to be useful for developers while accessible to general users."
+  },
+  "post_main": "리퀴드 AI가 스마트폰에서 돌아가는 초경량 AI 모델 'LFM2.5-VL-450M'을 공개했다. 4억5천만 매개변수 규모로 갤럭시 S25 울트라 같은 기기에서 클라우드 연결 없이 이미지와 영상을 실시간으로 이해한다. VLM은 사진 보고 텍스트로 설명해주는 비전-언어 모델이다. 진짜 오프라인 AI 시대 시작인 듯.",
+  "replies": [
+    "지금까지는 이런 기능 쓰려면 사진을 서버로 보내서 처리했는데, 이제는 기기 자체에서 바로 처리한다.",
+    "요리할 때 냉장고 재료 사진 찍으면 레시피 추천하고, 병원에서 의료진이 X레이 보면서 바로 소견 확인하고.",
+    "개인정보 유출 걱정 없고, 인터넷 끊겨도 작동한다. 다만 450M 파라미터라 복잡한 추론은 아직 한계가 있을 듯.",
+    "임베디드 장치에서도 돌아간다니까 IoT, 로봇, 자율주행까지 활용 범위가 엄청 넓다. 개발자들은 이제 엣지 AI 앱을 본격적으로 만들 수 있겠네."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "liquid AI smartphone VLM demo",
+    "reason": "A demo video showing the VLM running on a smartphone would clearly illustrate the practical benefit of on-device AI processing"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209148",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209148_211495_355.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "AI influencers are ‘everywhere’ at Coachella",
+      "summary": "Coachella kicked off on Friday, and as usual, it's the place to be for online influencers looking to show off their memorable experiences at the festival. A quick scroll through my social media feeds has already shown me many uncannily attractive figures in glitzy outfits, posing for perfectly staged photographs with celebrities. Only some of [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/911267/ai-influencers-coachella",
+      "source": "AI | The Verge",
+      "published": "2026-04-13T15:53:46-04:00",
+      "date": "2026-04-13",
+      "candidate_score": 8.076,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Can you live vicariously through content creators if they’re not actually alive? Can you live vicariously through content creators if they’re not actually alive? Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Coachella kicked off on Friday, and as usual, it’s the place to be for online influencers looking to show off their memorable experiences at the festival. A quick scroll through my social media feeds has already shown me many uncannily attractive figures in glitzy outfits, posing for perfectly staged photographs with celebrities. Only some of these content creators aren’t really there. They don’t even exist at all outside of our screens. They’re generated using AI tools. Faking Coachella attendance is nothing new — even real influencers have been doing so in recent years — but generative AI has now progressed to the point where it’s become much harder to pick these synthetic creators out amid the flood of real festival attendees. Some make little effort to hide that the “faces” of such social media accounts are entirely synthetic, tagging their bios and posts with disclosures that proudly identify the page’s personas as so-called “digital creators,” a term that obscures whether the pers"
+    },
+    {
+      "title": "Stanford report highlights growing disconnect between AI insiders and everyone else",
+      "summary": "Stanford’s latest AI Index shows a widening gap between experts and the public, with rising anxiety over jobs, healthcare, and the economy.",
+      "link": "https://techcrunch.com/2026/04/13/stanford-report-highlights-growing-disconnect-between-ai-insiders-and-everyone-else/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 13 Apr 2026 18:55:37 +0000",
+      "date": "2026-04-13",
+      "candidate_score": 8.076,
+      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . AI experts and the public’s opinion on the technology are increasingly diverging, according to Stanford University’s annual report on the AI industry, which was released Monday. In particular, the report noted a growing trend of anxiety around AI and, in the U.S., concerns about how the technology will impact key societal areas, such as jobs, medical care, and the economy. The report’s findings follow growing negative sentiment about AI, with Gen Z reportedly leading the way, according to a recent Gallup poll . The study found that young people were growing less hopeful and more angry about the technology, even though around half of the demographic was using AI either daily or weekly. For some working in tech, the AI backlash has come as a surprise. AI leaders have focused on managing the possibility of Artificial General Intelligence, or AGI — a theoretical form of AI superintelligence that could perform any task a human could do and think for itself. But everyday folks are more concerned about AI’s impact on their paycheck and whether or not their power bills will go up as energy-hungry data centers are built . tbh it's weird that parts of the tech industry are still shocked by ongoing anti-AI public narratives when the leaders of OpenAI and Anthropic are like \"if we do nothing this is going to suck for a lot of people\", what do you think the sentiment is going to be? Yes, I think a lot of AI leaders a"
+    },
+    {
+      "title": "리퀴드 AI, '갤럭시 S25 울트라'에서 작동하는 450M VLM 출시",
+      "summary": "'액체 신경망'으로 잘 알려진 리퀴드 AI가 엣지 환경에서 실시간으로 이미지와 영상을 이해하고 행동으로 이어질 수 있는 결과를 생성하는 멀티모달 AI 모델을 내놓았다. 실제 적용폭이 크게 확장됐다는 점에서 기대를 모으고 있다. 리퀴드 AI는 8일(현지시간) 클라우드 의존 없이 기기 자체에서 작동하는 초경량 비전-언어 모델(VLM) ‘LFM2.5-VL-450M’을 공개했다.4억5000만개 매개변수 규모로, 스마트폰과 임베디드 장치에서 직접 실행 가능한 수준의 성능과 기능을 갖춘 것이 특징이다.비전-언어 모델(VLM)은 이미지와 텍스트",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209148",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-13 18:38:47",
+      "date": "2026-04-13",
+      "candidate_score": 7.076
+    },
+    {
+      "title": "뉴엔AI , 과기부-NIA의 ‘K-AI 리더보드’에서 1위 등극",
+      "summary": "AI 트렌드 분석 전문 뉴엔AI(대표 배성환)는 미세조정 기술로 ‘K-AI 리더보드’ 1위를 차지했다고 13일 밝혔다. 과학기술정보통신부와 한국지능정보사회진흥원(NIA)은 지난해 12월 31일부터 언어모델 평가 체계 K-AI 리더보드의 시범 운영을 시작한다고 밝힌 바 있다. 이는 NIA가 구축한 평가 데이터를 활용해 대형언어모델(LLM)을 자유롭게 평가하고 성능을 경쟁할 수 있는 공개 플랫폼이다. 평가신청 페이지에서 AI 모델 정보를 기입하고 제출하면, 자동 평가 시스템이 차례로 평가를 진행한다. 과적합을 방지하기 위해 질문과 답변",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209186",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-13 18:29:33",
+      "date": "2026-04-13",
+      "candidate_score": 7.076
+    },
+    {
+      "title": "알리바바 '큐원', 전 세계 오픈소스 다운로드 50% 이상 차지...\"사실상 글로벌 표준\"",
+      "summary": "알리바바의 AI 모델 ‘큐원(Qwen)’ 패밀리가 글로벌 오픈소스 AI 생태계에서 압도적인 영향력을 구축한 것으로 나타났다. 미국 리서치 기관 인터커넥트 AI가 8일(현지시간) 발표한 보고서에 따르면, 큐원은 2026년 3월 기준 전체 오픈소스 모델 다운로드의 50% 이상을 차지하며 사실상 글로벌 표준으로 자리 잡았다.큐원은 허깅페이스에서 누적 10억건에 달하는 다운로드를 기록하며 메타의 '라마'와 '딥시크' 등 경쟁 모델을 크게 앞질렀다. 특히 2026년 2월 한달에만 1억5360만건의 다운로드를 기록해, 상위 8개 경쟁사의 합산",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209163",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-13 18:18:44",
+      "date": "2026-04-13",
+      "candidate_score": 7.076
+    },
+    {
+      "title": "백악관, '미소스' 보안 문제 해결 위한 TF 구성",
+      "summary": "미국 백악관이 차세대 AI 모델이 초래할 수 있는 사이버 보안 위협에 대응하기 위해 긴급 대응 체제에 돌입했다. 월스트리트 저널(WSJ)는 10일(현지시간) 백악관이 숀 케언크로스 국가 사이버 국장의 주도로 정부 부처를 소집, 핵심 인프라의 보안 취약점을 점검하고 AI를 활용한 공격에 대비한 방어 체계를 강화하는 작업을 진행 중이라고 보도했다.지난 주 열린 두건의 정부 주도 회의도 이에 따라 진행한 것으로 알려졌다.JD 밴스 부통령과 스콧 베선트 재무 장관은 주요 기술 기업 경영진과 회의를 열었다. 여기에는 정부로부터 '블랙 리스트",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209179",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-13 18:00:00",
+      "date": "2026-04-13",
+      "candidate_score": 7.076
+    },
+    {
+      "title": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
+      "summary": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
+      "source": "YouTube/IBM Technology",
+      "link": "https://www.youtube.com/watch?v=P8m5eHAyrFM",
+      "date": "2026-03-16",
+      "engagement": 116171,
+      "candidate_score": -1.918
+    },
+    {
+      "title": "Which company has the best AI model end of April?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off wi",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/290398",
+      "date": "2026-04-13",
+      "engagement": 0,
+      "candidate_score": -27.124
+    },
+    {
+      "title": "Which company has top AI model end of June? (Style Control On)",
+      "summary": "This market will resolve according to the company that owns the model with the highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Arena Score\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text set to default (style control on) will be used to",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/57704",
+      "date": "2026-04-13",
+      "engagement": 0,
+      "candidate_score": -27.124
+    },
+    {
+      "title": "Which company has the #1 AI model end of April? (Style Control On)",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena score (Style Control On) based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with s",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/290459",
+      "date": "2026-04-13",
+      "engagement": 0,
+      "candidate_score": -27.124
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      },
+      {
+        "date": "2026-04-12",
+        "mode": "informational",
+        "title": "The AI code wars are heating up",
+        "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot ",
+        "reply_casual": "",
+        "views": 264,
+        "likes": 4,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 144.4
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-06",
+        "mode": "informational",
+        "title": "넷플릭스, 물리 기반 AI 영상 모델 '보이드' 오픈소스 공개",
+        "post_main": "넷플릭스가 영상에서 객체를 제거하는 AI 모델 '보이드'를 오픈소스로 풀었다. 무료로 쓸 수 있다.\n\n기존 도구들은 단순히 물체만 지우는데, 이건 그림자나 반사 같은 물리적 영향까",
+        "reply_casual": "",
+        "views": 226,
+        "likes": 3,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 87.6
+      },
+      {
+        "date": "2026-04-11",
+        "mode": "informational",
+        "title": "알리바바, 화제의 영상 모델 '해피호스' 개발 확인...AI 조직 개편 후 첫 성과",
+        "post_main": "알리바바가 '해피호스 1.0' 개발했다고 공식 확인했다. 아티피셜 애널리시스 벤치마크에서 1위를 차지한 그 모델 맞다.\n\n텍스트-투-비디오는 '강아지가 눈밭에서 뛰어놀다' 같은 설",
+        "reply_casual": "",
+        "views": 156,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 65.6
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 370.9,
+      "likes": 3.0,
+      "replies": 5.7,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 110.4
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.81,
+    "issues": [
+      "[AI] Main post could better explain what 450M parameters means for performance",
+      "[AI] Missing specific technical implementation details that developers might want"
+    ],
+    "suggestions": [
+      "Add concrete performance metrics or benchmarks in reply 3",
+      "Include brief mention of hardware requirements beyond just Galaxy S25 Ultra",
+      "Consider adding a practical code example or API reference for developers",
+      "Strengthen the hook in main post - maybe lead with the revolutionary aspect"
+    ]
+  },
+  "posting_result": {
+    "post_id": "17863005864555029",
+    "reply_1": "18091676803911180",
+    "reply_2": "18089713187243172",
+    "reply_3": "18097276835059367",
+    "reply_4": "18090461477186896",
+    "link_id": "18416856412132083"
+  },
+  "posted_at": "2026-04-14T07:12:33.485350"
+}
