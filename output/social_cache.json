@@ -1,0 +1,191 @@
+{
+  "sources": {
+    "Bluesky": {
+      "last_refresh_at": "2026-04-13T14:11:58.167996+00:00",
+      "last_mode": "cold",
+      "items": []
+    },
+    "TruthSocial": {
+      "last_refresh_at": "2026-04-13T14:11:58.167996+00:00",
+      "last_mode": "cold",
+      "items": []
+    },
+    "Reddit": {
+      "last_refresh_at": "2026-04-13T14:11:58.167996+00:00",
+      "last_mode": "cold",
+      "items": []
+    },
+    "Instagram": {
+      "last_refresh_at": "2026-04-13T14:11:58.167996+00:00",
+      "last_mode": "cold",
+      "items": []
+    },
+    "TikTok": {
+      "last_refresh_at": "2026-04-13T14:11:58.167996+00:00",
+      "last_mode": "cold",
+      "items": []
+    },
+    "HN": {
+      "last_refresh_at": "2026-04-13T14:44:50.984972+00:00",
+      "last_mode": "hot",
+      "items": [
+        {
+          "title": "Half of planned US data center builds have been delayed or canceled",
+          "summary": "Half of planned US data center builds have been delayed or canceled",
+          "source": "HN",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers",
+          "date": "",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        }
+      ]
+    },
+    "Polymarket": {
+      "last_refresh_at": "2026-04-13T14:05:34.850988+00:00",
+      "last_mode": "cold",
+      "items": [
+        {
+          "title": "OpenAI announces it has achieved AGI before 2027?",
+          "summary": "This market will resolve to \"Yes\" if OpenAI or an official representative of the company announces that it has created an artificial general intelligence (AGI) by December 31, 2026 ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from OpenAI and/or its official representative, however a consensus of credible reporting will",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/67081",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "What will Trump post this week? (April 6 - April 12)",
+          "summary": "This market will resolve to \"Yes\" if @realDonaldTrump posts/truths the listed term between April 6, 2026, 12:00 AM ET and April 12, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, all text posted by the listed account in quote and reply posts/truths count toward a \"Yes\" resolution, but quoted posts/truths and reposts/reTruths will not count.\n\nText ",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/340266",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "What will Powell say during April Press Conference?",
+          "summary": "Jerome Powell is currently scheduled to give an FOMC Introductory Statement and press conference on April 29, 2026, at 2:30 PM ET. This market pertains to his Introductory Statement as well as the following Q&A session.\n\nThis market will resolve to \"Yes\" if Powell says the listed term during the FOMC Press Conference. Otherwise, this market will resolve to \"No\".\n\nAny usage of the word regardless o",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/340398",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "What will Karoline Leavitt say during the next White House press briefing?",
+          "summary": "This market will resolve to \"Yes\" if the acting White House Press Secretary says the listed term during the next White House press briefing they participate in. Otherwise, the market will resolve to \"No\".\n\nAny usage of the term regardless of context will count toward the resolution of this market.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regar",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/361756",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "AI data center moratorium passed before 2027?",
+          "summary": "This market will resolve to “Yes” if a bill erecting a qualifying moratorium that prohibits or suspends approvals for new AI data center construction or major expansions anywhere in the United States is passed into law by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying moratorium go into effect against the construction of any facility described in the leg",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/108522",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "FISA Section 702 reauthorized before it expires?",
+          "summary": "This market will resolve to \"Yes\" if legislation that reauthorizes FISA Title VII, including Section 702, is passed by both chambers of the U.S. Congress and signed into law by April 19, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nQualifying legislation includes Public Law 118-49.\n\nQualifying legislation may include joint resolutions and must pass both the House and the Senate",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/307821",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Which company has the best AI model end of April?",
+          "summary": "This market will resolve according to the company that owns the model that has the highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off wi",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/290398",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Which company has top AI model end of June? (Style Control On)",
+          "summary": "This market will resolve according to the company that owns the model with the highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Arena Score\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text set to default (style control on) will be used to",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/57704",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Which company has the #1 AI model end of April? (Style Control On)",
+          "summary": "This market will resolve according to the company that owns the model that has the highest arena score (Style Control On) based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with s",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/290459",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Which company has best AI model end of June?",
+          "summary": "This market will resolve according to the company which owns the model which has the highest arena score based off the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Arena Score\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text with the style control off will be used to",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/57705",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Which company has the third best AI model end of April?",
+          "summary": "This market will resolve according to the company that owns the model that has the third-highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control ",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/290435",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Tech Layoffs Up or Down in 20​26?",
+          "summary": "This market will resolve to \"Up\" if, according to Federal Reserve Economic Data (FRED), there are more layoffs in the information sector in 2026 than in 2025 (447,000 layoffs).\n\nThis market will resolve to \"Down\" if there are more layoffs in the information sector in 2025 than in 2026.\n\nThis market will resolve to 50-50 if the totals are the same in 2025 and 2026.\n\nIf not all relevant data points ",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/290152",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Tech Layoffs Up or Down in Q1, 20​26?",
+          "summary": "This market will resolve to \"Up\" if, according to Federal Reserve Economic Data (FRED), there are more layoffs in the information sector in Q1 2026 (Jan-Mar) than in Q4 (Oct-Dec) 2025 (115,000 layoffs).\n\nThis market will resolve to \"Down\" if there are more layoffs in the information sector in Q4 2025 than in Q1 2026.\n\nThis market will resolve to 50-50 if the two figures are the same.\n\nThe quarterl",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/290184",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        },
+        {
+          "title": "Largest Company end of April?",
+          "summary": "This market will resolve to the largest company in the world by market cap on April 30, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/242293",
+          "date": "2026-04-13",
+          "_score": 0,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        }
+      ]
+    },
+    "YouTube": {
+      "last_refresh_at": "2026-04-13T14:44:50.984972+00:00",
+      "last_mode": "hot",
+      "items": [
+        {
+          "title": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
+          "summary": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
+          "source": "YouTube/IBM Technology",
+          "link": "https://www.youtube.com/watch?v=P8m5eHAyrFM",
+          "date": "2026-03-16",
+          "_score": 116171,
+          "cached_at": "2026-04-13T14:05:34.850988+00:00"
+        }
+      ]
+    }
+  }
+}

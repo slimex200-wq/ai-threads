@@ -1,80 +1,95 @@
-"""텔레그램 프리뷰 알림 모듈."""
+"""Telegram preview/result notifications."""
+
+from __future__ import annotations
 
 import httpx
+
 from config import TELEGRAM_BOT_TOKEN as BOT_TOKEN, TELEGRAM_CHAT_ID as CHAT_ID
+from threads_poster import get_reply_sequence
 
 TELEGRAM_API = "https://api.telegram.org"
 
 
-def send_preview(content):
-    """생성된 포스트 프리뷰를 텔레그램으로 전송."""
+def send_preview(content: dict) -> bool:
     if not BOT_TOKEN or not CHAT_ID:
-        print("[텔레그램] BOT_TOKEN 또는 CHAT_ID 미설정, 알림 건너뜀")
+        print("[telegram] BOT_TOKEN or CHAT_ID missing, skipping preview")
         return False
     return _send_message(_format_text_preview(content))
 
 
-def send_result(result):
-    """포스팅 완료 결과를 텔레그램으로 전송."""
+def send_result(result: dict) -> bool:
     if not BOT_TOKEN or not CHAT_ID:
         return False
 
-    lines = ["[AI Threads 포스팅 완료]"]
-    for key, label in [
-        ("post_id", "메인"), ("reply_explain", "설명"),
-        ("reply_important", "중요성"), ("reply_action", "행동"),
-        ("reply_counter", "반대"), ("reply_casual", "한마디"),
-        ("link_id", "링크"),
-    ]:
-        if result.get(key):
-            lines.append(f"{label}: {result[key]}")
+    lines = ["[AI Threads post complete]"]
+    if result.get("post_id"):
+        lines.append(f"Main: {result['post_id']}")
+
+    for key, value in result.items():
+        if key in {"post_id", "link_id"}:
+            continue
+        if key.startswith("reply_") and value:
+            lines.append(f"{key}: {value}")
+
+    if result.get("link_id"):
+        lines.append(f"Media/link: {result['link_id']}")
 
     return _send_message("\n".join(lines))
 
 
-def _format_text_preview(content):
-    """텍스트 포스트 프리뷰 포맷."""
-    article = content.get("selected_article", {})
+def _format_text_preview(content: dict) -> str:
+    article = content.get("selected_article", {}) or {}
+    sequence = get_reply_sequence(content, mode=content.get("mode", "informational"))
+
     lines = [
-        "[AI Threads 프리뷰]",
+        "[AI Threads preview]",
         "",
-        f"기사: {article.get('original_title', '?')}",
-        f"선택 이유: {article.get('reason', '')}",
+        "Selected article",
+        f"- title: {article.get('original_title', '?')}",
+        f"- why: {article.get('reason', '')}",
+        f"- source link: {content.get('source_link', '')}",
         "",
-        "--- 메인 ---",
+        "Main post",
         content.get("post_main", ""),
-        "",
-        "--- 쉽게 말하면 ---",
-        content.get("reply_explain", ""),
-        "",
-        "--- 왜 중요 ---",
-        content.get("reply_important", ""),
-        "",
-        "--- 뭘 해야 ---",
-        content.get("reply_action", ""),
-        "",
-        "--- 반대 의견 ---",
-        content.get("reply_counter", ""),
-        "",
-        "--- 한마디 ---",
-        content.get("reply_casual", ""),
     ]
+
+    if sequence:
+        lines.append("")
+        lines.append("Replies")
+        for reply in sequence:
+            lines.extend([f"- {reply['label']}: {reply['text']}"])
+
+    media_plan = content.get("media_plan", {}) or {}
+    if content.get("video_url"):
+        lines.extend(["", f"Video: {content.get('video_url', '')}"])
+    if content.get("og_image"):
+        lines.extend(["", f"OG image: {content.get('og_image', '')}"])
+    if any(media_plan.get(key) for key in ("preferred_type", "search_query", "reason")):
+        lines.extend(
+            [
+                "",
+                "Media plan",
+                f"- type: {media_plan.get('preferred_type', 'none')}",
+                f"- query: {media_plan.get('search_query', '')}",
+                f"- reason: {media_plan.get('reason', '')}",
+            ]
+        )
+
     return "\n".join(lines)
 
 
-def _send_message(text):
-    """텔레그램 메시지 전송."""
+def _send_message(text: str) -> bool:
     try:
         with httpx.Client(timeout=10.0) as client:
-            resp = client.post(
+            response = client.post(
                 f"{TELEGRAM_API}/bot{BOT_TOKEN}/sendMessage",
                 json={"chat_id": CHAT_ID, "text": text},
             )
-            if resp.status_code == 200:
-                print("[텔레그램] 프리뷰 전송 완료")
+            if response.status_code == 200:
+                print("[telegram] notification sent")
                 return True
-            print(f"[텔레그램] 전송 실패: {resp.status_code} {resp.text[:200]}")
+            print(f"[telegram] send failed: {response.status_code} {response.text[:200]}")
             return False
-    except Exception as e:
-        print(f"[텔레그램] 전송 에러: {e}")
+    except Exception as exc:
+        print(f"[telegram] send error: {exc}")
         return False

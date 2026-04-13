@@ -1,74 +1,87 @@
-"""AI Threads — 8개 소스에서 트렌딩 AI 뉴스 1개를 골라 Threads 포스트.
+"""AI Threads pipeline.
 
-포스팅 구조:
-  메인: 핵심 뉴스 + So What
-    └─ 대댓글: 모드별 reply 구조
-    └─ 마지막: 원문 미디어 + 링크
-
-Generator/Evaluator 패턴 적용:
-  ai_writer(Generator) → qa_evaluator(Evaluator) → 통과 시 포스팅
-  Ref: Anthropic "Harness Design for Long-Running Apps" (2026-03-24)
-
-Usage:
-    python main.py                        # 수집 → 생성 → QA → 포스팅 (기본: informational)
-    python main.py --mode viral           # 바이럴 모드
-    python main.py --dry-run              # 포스팅 없이 생성+QA만
-    python main.py --collect-engagement   # engagement 수집만
+Flow:
+1. collect engagement history
+2. collect candidate articles
+3. filter / deduplicate / score
+4. generate freeform thread
+5. QA and optional rewrite
+6. attach related media
+7. post to Threads or dry-run
+8. save structured learning logs for future training
 """
+
+from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import signal
+import subprocess
 import sys
+import tempfile
 from datetime import date, datetime
 from pathlib import Path
 
 import httpx
 
 from config import (
-    ANTHROPIC_API_KEY, THREADS_ACCESS_TOKEN, THREADS_USER_ID,
-    MAX_DAILY_POSTS, FORCE_POST_HOUR, CONTENT_MODE, PIPELINE_TIMEOUT,
+    ANTHROPIC_API_KEY,
+    CONTENT_MODE,
+    FORCE_POST_HOUR,
+    MAX_DAILY_POSTS,
+    PIPELINE_TIMEOUT,
+    THREADS_ACCESS_TOKEN,
+    THREADS_USER_ID,
 )
+from candidate_ranking import score_candidate
+from media_helpers import build_content_with_media, normalize_source_link
 
 
-def count_posts_today():
-    """Count how many posts were actually published today."""
+def count_posts_today() -> int:
     today_dir = Path("output") / date.today().isoformat()
     if not today_dir.exists():
         return 0
+
     count = 0
-    for f in today_dir.glob("post*.json"):
+    for path in today_dir.glob("post*.json"):
         try:
-            data = json.loads(f.read_text(encoding="utf-8"))
+            data = json.loads(path.read_text(encoding="utf-8"))
             if data.get("posting_result"):
                 count += 1
         except Exception:
-            pass
+            continue
     return count
 
 
-def fetch_og_video(url):
-    """Extract og:video or detect YouTube URL from article page."""
+def fetch_og_video(url: str | None) -> str | None:
     if not url:
         return None
-    # Direct YouTube URL
+
     if "youtube.com/watch" in url or "youtu.be/" in url:
         return _get_youtube_direct_url(url)
+
     try:
-        resp = httpx.get(url, timeout=10.0, follow_redirects=True,
-                         headers={"User-Agent": "Mozilla/5.0"})
-        if resp.status_code != 200:
+        response = httpx.get(
+            url,
+            timeout=10.0,
+            follow_redirects=True,
+            headers={"User-Agent": "Mozilla/5.0"},
+        )
+        if response.status_code != 200:
             return None
-        # og:video meta tag
+
         match = re.search(
             r'<meta[^>]+property=["\']og:video["\'][^>]+content=["\']([^"\']+)["\']',
-            resp.text, re.IGNORECASE,
+            response.text,
+            re.IGNORECASE,
         )
         if not match:
             match = re.search(
                 r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video["\']',
-                resp.text, re.IGNORECASE,
+                response.text,
+                re.IGNORECASE,
             )
         if match:
             video_url = match.group(1)
@@ -76,401 +89,484 @@ def fetch_og_video(url):
                 return video_url
             if "youtube.com" in video_url or "youtu.be" in video_url:
                 return _get_youtube_direct_url(video_url)
-        # Embedded YouTube iframe
-        yt_match = re.search(
-            r'(?:youtube\.com/embed/|youtu\.be/)([\w-]+)', resp.text
-        )
-        if yt_match:
-            return _get_youtube_direct_url(f"https://www.youtube.com/watch?v={yt_match.group(1)}")
+
+        youtube_match = re.search(r'(?:youtube\.com/embed/|youtu\.be/)([\w-]+)', response.text)
+        if youtube_match:
+            return _get_youtube_direct_url(f"https://www.youtube.com/watch?v={youtube_match.group(1)}")
         return None
-    except Exception as e:
-        print(f"  og:video 추출 실패: {e}")
+    except Exception as exc:
+        print(f"  og:video extraction failed: {exc}")
         return None
 
 
-def _get_youtube_direct_url(youtube_url):
-    """Use yt-dlp to get direct video URL (mp4, <=60s for Threads)."""
-    import subprocess
+def _get_youtube_direct_url(youtube_url: str) -> str | None:
     try:
         result = subprocess.run(
-            ["yt-dlp", "--get-url", "-f", "mp4[duration<=60]/best[ext=mp4][duration<=60]/mp4/best[ext=mp4]", youtube_url],
-            capture_output=True, text=True, timeout=30,
+            [
+                "yt-dlp",
+                "--get-url",
+                "-f",
+                "mp4[duration<=60]/best[ext=mp4][duration<=60]/mp4/best[ext=mp4]",
+                youtube_url,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,
         )
         if result.returncode == 0 and result.stdout.strip():
-            url = result.stdout.strip().split("\n")[0]
-            return url
+            return result.stdout.strip().split("\n")[0]
         return None
-    except Exception as e:
-        print(f"  yt-dlp 실패: {e}")
+    except Exception as exc:
+        print(f"  yt-dlp direct-url lookup failed: {exc}")
         return None
 
 
 def _download_and_upload_video(youtube_url: str) -> str | None:
-    """YouTube 영상을 다운로드 → Supabase Storage에 업로드 → 공개 URL 반환.
+    supabase_url = os.environ.get("SUPABASE_URL", "")
+    supabase_service_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
 
-    YouTube 임시 URL은 Threads 비동기 처리 중 만료될 수 있으므로
-    영구 URL이 필요함.
-    """
-    import subprocess
-    import tempfile
-    import os
-    from datetime import date as d
-
-    SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
-    SUPABASE_SERVICE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
-
-    if not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
-        print("  Supabase 미설정, 직접 URL 사용")
+    if not supabase_url or not supabase_service_key:
+        print("  Supabase not configured, falling back to direct URL")
         return _get_youtube_direct_url(youtube_url)
 
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
             out_path = os.path.join(tmpdir, "promo.mp4")
             result = subprocess.run(
-                ["yt-dlp", "-f", "mp4[height<=720]/best[ext=mp4][height<=720]",
-                 "-o", out_path, "--no-warnings", youtube_url],
-                capture_output=True, text=True, timeout=120,
+                [
+                    "yt-dlp",
+                    "-f",
+                    "mp4[height<=720]/best[ext=mp4][height<=720]",
+                    "-o",
+                    out_path,
+                    "--no-warnings",
+                    youtube_url,
+                ],
+                capture_output=True,
+                text=True,
+                timeout=120,
             )
             if result.returncode != 0 or not os.path.exists(out_path):
-                print(f"  다운로드 실패: {result.stderr[:200]}")
+                print(f"  download failed: {result.stderr[:200]}")
                 return None
 
             file_size = os.path.getsize(out_path)
-            if file_size > 50 * 1024 * 1024:  # 50MB 제한
-                print(f"  영상 너무 큼: {file_size // (1024*1024)}MB")
+            if file_size > 50 * 1024 * 1024:
+                print(f"  video too large: {file_size // (1024 * 1024)}MB")
                 return None
 
-            # Supabase Storage 업로드
-            filename = f"promo-{d.today().isoformat()}.mp4"
-            upload_url = f"{SUPABASE_URL}/storage/v1/object/videos/{filename}"
+            filename = f"promo-{date.today().isoformat()}.mp4"
+            upload_url = f"{supabase_url}/storage/v1/object/videos/{filename}"
 
-            with open(out_path, "rb") as f:
-                resp = httpx.put(
+            with open(out_path, "rb") as handle:
+                response = httpx.put(
                     upload_url,
-                    content=f.read(),
+                    content=handle.read(),
                     headers={
-                        "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}",
+                        "Authorization": f"Bearer {supabase_service_key}",
                         "Content-Type": "video/mp4",
                         "x-upsert": "true",
                     },
                     timeout=60.0,
                 )
 
-            if resp.status_code >= 400:
-                print(f"  Supabase 업로드 실패: {resp.status_code} {resp.text[:200]}")
+            if response.status_code >= 400:
+                print(f"  Supabase upload failed: {response.status_code} {response.text[:200]}")
                 return None
 
-            public_url = f"{SUPABASE_URL}/storage/v1/object/public/videos/{filename}"
-            print(f"  Supabase 업로드 완료: {file_size // 1024}KB")
+            public_url = f"{supabase_url}/storage/v1/object/public/videos/{filename}"
+            print(f"  uploaded related video: {file_size // 1024}KB")
             return public_url
-
-    except Exception as e:
-        print(f"  영상 다운로드/업로드 실패: {e}")
+    except Exception as exc:
+        print(f"  promo video upload failed: {exc}")
         return None
 
 
-def _extract_product_name(title: str) -> str:
-    """기사 제목에서 영문 제품/서비스명 추출. 없으면 원문 반환."""
-    # 영문 단어 2개 이상 연속 (제품명 패턴: "GPT-4o", "Gemini CLI", "Claude Code")
-    matches = re.findall(r'[A-Za-z][\w.-]*(?:\s+[A-Za-z][\w.-]*)*', title)
-    # 가장 긴 영문 구절 선택 (제품명이 보통 가장 김)
-    if matches:
-        best = max(matches, key=len)
-        if len(best) >= 3:  # 최소 3글자
-            return best
-    return title
-
-
-def search_promo_video(article_title: str) -> str | None:
-    """기사 제목에서 제품명을 추출하여 YouTube에서 공식 프로모 영상 검색.
-
-    60초 이하 짧은 영상만 대상. 없으면 None 반환.
-    """
-    import subprocess
-
-    if not article_title:
+def search_promo_video(search_query: str) -> str | None:
+    if not search_query:
         return None
 
-    product = _extract_product_name(article_title)
-    query = f"{product} official"
-    print(f"  프로모 검색: {query}")
+    query = search_query.strip()
+    print(f"  searching related video: {query}")
 
     try:
-        # YouTube 검색 → 상위 5개 메타데이터 조회
         result = subprocess.run(
-            ["yt-dlp", f"ytsearch5:{query}",
-             "-j", "--no-download", "--no-warnings"],
-            capture_output=True, text=True, timeout=30,
+            ["yt-dlp", f"ytsearch5:{query}", "-j", "--no-download", "--no-warnings"],
+            capture_output=True,
+            text=True,
+            timeout=30,
         )
         if result.returncode != 0 or not result.stdout.strip():
             return None
 
-        # 60초 이하 영상 중 가장 짧은 것 선택 (프로모 영상은 보통 짧음)
-        candidates = []
+        candidates: list[tuple[int, str, str]] = []
         for line in result.stdout.strip().split("\n"):
             try:
                 info = json.loads(line)
-                duration = info.get("duration") or 999
-                vid = info.get("id", "")
-                if duration <= 60 and vid:
-                    candidates.append((duration, vid, info.get("title", "")))
             except (json.JSONDecodeError, ValueError):
                 continue
+
+            duration = info.get("duration") or 999
+            video_id = info.get("id", "")
+            title = info.get("title", "")
+            if duration <= 60 and video_id:
+                candidates.append((duration, video_id, title))
 
         if not candidates:
             return None
 
-        # 가장 짧은 영상 선택
-        candidates.sort(key=lambda x: x[0])
-        _, best_id, best_title = candidates[0]
-        print(f"  프로모 영상 발견: {best_title[:60]}... ({candidates[0][0]}초)")
-        yt_url = f"https://www.youtube.com/watch?v={best_id}"
-        return _download_and_upload_video(yt_url)
-
-    except Exception as e:
-        print(f"  프로모 영상 검색 실패: {e}")
+        candidates.sort(key=lambda item: item[0])
+        duration, best_id, best_title = candidates[0]
+        print(f"  found related short video: {best_title[:60]}... ({duration}s)")
+        return _download_and_upload_video(f"https://www.youtube.com/watch?v={best_id}")
+    except Exception as exc:
+        print(f"  related video search failed: {exc}")
         return None
 
 
-def fetch_og_image(url):
-    """URL에서 og:image 메타태그 추출."""
+def fetch_og_image(url: str | None) -> str | None:
     if not url:
         return None
     try:
-        resp = httpx.get(url, timeout=10.0, follow_redirects=True,
-                         headers={"User-Agent": "Mozilla/5.0"})
-        if resp.status_code != 200:
+        response = httpx.get(
+            url,
+            timeout=10.0,
+            follow_redirects=True,
+            headers={"User-Agent": "Mozilla/5.0"},
+        )
+        if response.status_code != 200:
             return None
+
         match = re.search(
             r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-            resp.text, re.IGNORECASE,
+            response.text,
+            re.IGNORECASE,
         )
         if not match:
             match = re.search(
                 r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-                resp.text, re.IGNORECASE,
+                response.text,
+                re.IGNORECASE,
             )
         return match.group(1) if match else None
-    except Exception as e:
-        print(f"  og:image 추출 실패: {e}")
+    except Exception as exc:
+        print(f"  og:image extraction failed: {exc}")
         return None
 
 
-def main():
-    parser = argparse.ArgumentParser(description="AI Threads 포스트")
-    parser.add_argument("--dry-run", action="store_true", help="포스팅 없이 생성만")
-    parser.add_argument("--collect-engagement", action="store_true", help="engagement 수집만")
-    parser.add_argument("--mode", choices=["viral", "informational"], default=None,
-                        help="콘텐츠 모드 (기본: config.py CONTENT_MODE)")
+def resolve_media_bundle(
+    article: dict,
+    media_plan: dict | None,
+    media_cache: dict[str, dict[str, str]],
+) -> dict[str, str]:
+    raw_link = article.get("link", "")
+    source_link = normalize_source_link(raw_link)
+    cache_key = source_link or article.get("original_title", "") or article.get("title", "")
+    if cache_key in media_cache:
+        return media_cache[cache_key]
+
+    media_plan = media_plan or {}
+    if media_plan.get("reason"):
+        print(f"  media rationale: {media_plan.get('reason')}")
+
+    video_url = fetch_og_video(source_link)
+    if video_url:
+        print(f"  found article video: {video_url[:80]}...")
+
+    og_image = fetch_og_image(source_link)
+    if og_image:
+        print(f"  found og:image: {og_image[:80]}...")
+
+    preferred_type = str(media_plan.get("preferred_type", "video")).lower()
+    search_query = str(media_plan.get("search_query", "")).strip() or article.get("original_title", "") or article.get("title", "")
+
+    if not video_url and preferred_type != "none":
+        video_url = search_promo_video(search_query)
+
+    if not video_url and not og_image:
+        print("  no related media found")
+
+    bundle = {
+        "source_link": source_link,
+        "og_image": og_image or "",
+        "video_url": video_url or "",
+    }
+    media_cache[cache_key] = bundle
+    return bundle
+
+
+def _build_learning_record(
+    *,
+    mode: str,
+    candidate_articles: list[dict],
+    engagement_patterns: dict | None,
+    content: dict,
+    qa_result,
+    source_date: str,
+    posted: bool,
+    posting_result: dict | None = None,
+) -> dict:
+    return {
+        "mode": mode,
+        "source_date": source_date,
+        "candidate_articles": candidate_articles,
+        "selected_article": content.get("selected_article", {}),
+        "engagement_patterns": engagement_patterns or {},
+        "content": content,
+        "qa": {
+            "passed": qa_result.passed,
+            "score": qa_result.score,
+            "issues": list(qa_result.issues),
+            "suggestions": list(qa_result.suggestions),
+        },
+        "media_plan": content.get("media_plan", {}),
+        "posted": posted,
+        "posting_result": posting_result or {},
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="AI Threads pipeline")
+    parser.add_argument("--dry-run", action="store_true", help="Generate and QA only, without posting")
+    parser.add_argument("--collect-engagement", action="store_true", help="Collect engagement only, then exit")
+    parser.add_argument(
+        "--export-sft",
+        default="",
+        help="Export accumulated learning records as SFT-style JSONL to the given path and exit",
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["viral", "informational"],
+        default=None,
+        help="Content mode (default comes from config.CONTENT_MODE)",
+    )
     args = parser.parse_args()
 
-    # 모드 결정: CLI > config > default
     mode = args.mode or CONTENT_MODE
-    print(f"[모드] {mode}")
+    print(f"[mode] {mode}")
 
-    # --collect-engagement: engagement만 수집하고 종료
+    if args.export_sft:
+        from learning_log import export_sft_examples
+
+        output_path = Path(args.export_sft)
+        examples = export_sft_examples(output_path=output_path, passed_only=True)
+        print(f"[export] wrote {len(examples)} SFT examples to {output_path}")
+        return
+
     if args.collect_engagement:
         from engagement_tracker import collect_all_engagement, save_engagement_history
+
         entries = collect_all_engagement()
         if entries:
             save_engagement_history(entries)
-            print(f"[완료] {len(entries)}개 포스트 engagement 수집 완료")
+            print(f"[done] collected engagement for {len(entries)} posts")
         else:
-            print("[정보] 수집할 engagement 데이터가 없습니다")
+            print("[info] no engagement data to collect")
         return
 
     if not ANTHROPIC_API_KEY:
-        print("[에러] ANTHROPIC_API_KEY 미설정")
-        sys.exit(1)
-    if not args.dry_run and (not THREADS_ACCESS_TOKEN or not THREADS_USER_ID):
-        print("[에러] THREADS_ACCESS_TOKEN 또는 THREADS_USER_ID 미설정")
+        print("[error] ANTHROPIC_API_KEY is missing")
         sys.exit(1)
 
-    # 파이프라인 타임아웃 (Unix only — GitHub Actions는 Linux)
+    if not args.dry_run and (not THREADS_ACCESS_TOKEN or not THREADS_USER_ID):
+        print("[error] THREADS_ACCESS_TOKEN or THREADS_USER_ID is missing")
+        sys.exit(1)
+
     if hasattr(signal, "SIGALRM"):
-        def _timeout_handler(signum, frame):
-            print(f"\n[타임아웃] 파이프라인 {PIPELINE_TIMEOUT}초 초과, 강제 종료")
+        def _timeout_handler(signum, frame):  # pragma: no cover - signal availability varies
+            print(f"\n[timeout] pipeline exceeded {PIPELINE_TIMEOUT}s")
             try:
                 from telegram_notify import send_preview
-                send_preview({"post_main": f"[타임아웃] 파이프라인 {PIPELINE_TIMEOUT}초 초과"})
+
+                send_preview({"post_main": f"[timeout] pipeline exceeded {PIPELINE_TIMEOUT}s", "mode": mode})
             except Exception:
                 pass
             sys.exit(1)
+
         signal.signal(signal.SIGALRM, _timeout_handler)
         signal.alarm(PIPELINE_TIMEOUT)
 
-    # 스마트 스케줄러: 일일 포스팅 횟수 체크
     if not args.dry_run:
         posts_today = count_posts_today()
         if posts_today >= MAX_DAILY_POSTS:
-            print(f"[스킵] 오늘 이미 {posts_today}회 포스팅 (최대 {MAX_DAILY_POSTS}회)")
+            print(f"[skip] already posted {posts_today} times today (limit={MAX_DAILY_POSTS})")
             return
 
-    # 0. 과거 포스트 engagement 수집 + 패턴 분석
     engagement_patterns = None
     try:
-        from engagement_tracker import collect_all_engagement, save_engagement_history, analyze_patterns, load_engagement_history
-        print("[0/7] 과거 포스트 engagement 수집 중...")
+        from engagement_tracker import (
+            analyze_patterns,
+            collect_all_engagement,
+            load_engagement_history,
+            save_engagement_history,
+        )
+
+        print("[0/7] collecting historical engagement...")
         entries = collect_all_engagement()
         if entries:
             save_engagement_history(entries)
-            print(f"  {len(entries)}개 포스트 업데이트")
+            print(f"  updated {len(entries)} posts")
         history = load_engagement_history()
         if history:
             engagement_patterns = analyze_patterns(history, mode=mode)
-            print(f"  패턴 분석 완료 (데이터 {len(history)}개)")
-    except Exception as e:
-        print(f"  engagement 수집 건너뜀: {e}")
+            print(f"  pattern analysis ready ({len(history)} rows)")
+    except Exception as exc:
+        print(f"  skipped engagement collection: {exc}")
 
-    # 1. 멀티소스 수집
-    print("\n[1/7] 8개 소스에서 AI 뉴스 수집 중...")
-    from social_collector import collect_social
+    print("\n[1/7] collecting AI news from multiple sources...")
     from rss_collector import collect_news
+    from social_collector import collect_social
 
-    articles = []
+    articles: list[dict] = []
     try:
-        articles = collect_social(max_count=30)
-    except Exception as e:
-        print(f"  소셜 수집 실패: {e}")
+        articles.extend(collect_social(max_count=30))
+    except Exception as exc:
+        print(f"  social collection failed: {exc}")
 
-    rss = collect_news(max_count=50)
-    if rss:
-        articles = articles + rss
-        print(f"  RSS {len(rss)}개 보충, 총 {len(articles)}개")
+    rss_articles = collect_news(max_count=50)
+    if rss_articles:
+        articles.extend(rss_articles)
+        print(f"  + RSS {len(rss_articles)} articles, total {len(articles)}")
 
     if not articles:
-        print("[에러] 뉴스를 수집하지 못했습니다.")
+        print("[error] could not collect any articles")
         sys.exit(1)
 
-    # 2. AI 키워드 필터링
-    print(f"\n[2/7] AI 관련 기사 필터링 중...")
+    print("\n[2/7] filtering AI-related candidates...")
     from news_filter import filter_by_keywords
-    filtered = filter_by_keywords(articles, max_count=15) or articles[:15]
-    print(f"  {len(filtered)}개 기사 통과")
 
-    # 2.5. 히스토리 기반 중복 제거 (AI 호출 전 프리필터)
-    from history import load_used_titles, save_title, filter_duplicates
+    filtered = filter_by_keywords(articles, max_count=15) or articles[:15]
+    print(f"  {len(filtered)} candidates after keyword filtering")
+
+    from history import filter_duplicates, load_used_titles, save_title
+
     before_dedup = len(filtered)
     filtered = filter_duplicates(filtered)
     if before_dedup != len(filtered):
-        print(f"  히스토리 중복 제거: {before_dedup} → {len(filtered)}개")
+        print(f"  removed {before_dedup - len(filtered)} recent duplicates")
 
     if not filtered:
-        print("[에러] 중복 제거 후 기사가 없습니다.")
+        print("[error] no candidates left after deduplication")
         sys.exit(1)
 
-    # engagement 높은 순 정렬 (AI가 상위 기사에 집중)
-    filtered.sort(key=lambda a: a.get("engagement", 0), reverse=True)
+    for article in filtered:
+        article["candidate_score"] = score_candidate(article)
+    filtered.sort(key=lambda article: article.get("candidate_score", 0), reverse=True)
 
-    # 2.7. 스마트 스케줄러: 포스팅 가치 판단
+    from article_enricher import enrich_articles
+
+    filtered = enrich_articles(filtered, max_articles=5)
+
     if not args.dry_run:
         from ai_writer import evaluate_worthiness
-        posts_today = count_posts_today()
-        is_last_run = datetime.now().hour >= FORCE_POST_HOUR
-        force = is_last_run and posts_today == 0
 
+        posts_today = count_posts_today()
+        force = datetime.now().hour >= FORCE_POST_HOUR and posts_today == 0
         if not force:
-            print(f"\n[2.7/7] 포스팅 가치 판단 중...")
+            print("\n[2.7/7] checking whether today is worth posting...")
             worthy, reason = evaluate_worthiness(filtered, mode=mode)
             if not worthy:
-                print(f"  [스킵] {reason}")
+                print(f"  [skip] {reason}")
                 return
-            print(f"  포스팅 진행: {reason}")
+            print(f"  posting approved: {reason}")
 
-    # 3. 포스트 생성 + QA 평가 (Generator/Evaluator 루프)
-    print(f"\n[3/7] 포스트 생성 중 ({mode})...")
+    print(f"\n[3/7] generating thread ({mode})...")
     from ai_writer import generate_post
     from qa_evaluator import evaluate
 
-    MAX_QA_RETRIES = 2
-    used = load_used_titles()
+    max_qa_retries = 3
+    used_titles = load_used_titles()
+    qa_feedback = None
     content = None
-    qa_feedback = None  # 첫 시도는 피드백 없이
+    qa_result = None
+    media_bundle = {"source_link": "", "og_image": "", "video_url": ""}
+    media_cache: dict[str, dict[str, str]] = {}
 
-    for attempt in range(1, MAX_QA_RETRIES + 1):
+    for attempt in range(1, max_qa_retries + 1):
         content = generate_post(
             filtered,
-            used_titles=used,
+            used_titles=used_titles,
             engagement_patterns=engagement_patterns,
             qa_feedback=qa_feedback,
             mode=mode,
         )
-
         article = content.get("selected_article", {})
-        print(f"  선택: {article.get('original_title', '?')}")
+        print(f"  selected: {article.get('original_title', '?')}")
 
-        # QA 평가 (별도 Claude 호출)
-        print(f"\n[4/7] QA 평가 중 (시도 {attempt}/{MAX_QA_RETRIES})...")
+        print("\n[3.5/7] resolving source link and related media...")
+        media_bundle = resolve_media_bundle(article, content.get("media_plan", {}), media_cache)
+        content = build_content_with_media(content, **media_bundle)
+
+        print(f"\n[4/7] QA evaluation ({attempt}/{max_qa_retries})...")
         qa_result = evaluate(content, mode=mode)
-        print(f"  점수: {qa_result.score:.2f} | {'PASS' if qa_result.passed else 'FAIL'}")
+        print(f"  score: {qa_result.score:.2f} | {'PASS' if qa_result.passed else 'FAIL'}")
 
         if qa_result.issues:
             for issue in qa_result.issues:
                 print(f"  - {issue}")
 
         if qa_result.passed:
-            if qa_result.suggestions:
-                print(f"  제안: {', '.join(qa_result.suggestions[:2])}")
             break
 
-        if attempt < MAX_QA_RETRIES:
+        if attempt < max_qa_retries:
             qa_feedback = {
                 "previous_post": content,
                 "issues": qa_result.issues,
                 "suggestions": qa_result.suggestions,
                 "score": qa_result.score,
             }
-            print(f"  피드백 반영하여 재생성 중...")
+            print("  regenerating with QA feedback...")
         else:
-            print(f"  [스킵] QA {MAX_QA_RETRIES}회 실패, 포스팅 건너뜀")
+            print(f"  [skip] QA failed {max_qa_retries} times")
             return
 
-    # 5. og:image/video 추출
-    from urllib.parse import quote, urlparse, urlunparse
-    raw_link = article.get("link", "")
-    parsed = urlparse(raw_link)
-    source_link = urlunparse(parsed._replace(path=quote(parsed.path)))
-    print(f"\n[5/7] 원문 미디어 추출 중...")
-    video_url = fetch_og_video(source_link)
-    if video_url:
-        print(f"  원문 영상 발견: {video_url[:80]}...")
-    og_image = fetch_og_image(source_link)
-    if og_image:
-        print(f"  og:image 확인: {og_image[:80]}...")
+    assert content is not None and qa_result is not None
+    article = content.get("selected_article", {})
+    source_link = media_bundle.get("source_link", content.get("source_link", ""))
+    og_image = media_bundle.get("og_image", content.get("og_image", ""))
+    video_url = media_bundle.get("video_url", content.get("video_url", ""))
 
-    # og:video 없으면 YouTube에서 공식 프로모 영상 검색
-    if not video_url:
-        article_title = article.get("original_title", "")
-        video_url = search_promo_video(article_title)
-
-    if not video_url and not og_image:
-        print(f"  미디어 없음")
-
-    # 저장
     out_dir = Path("output") / date.today().isoformat()
     out_dir.mkdir(parents=True, exist_ok=True)
     post_json_path = out_dir / "post.json"
+
     save_data = {
-        **content,
+        **build_content_with_media(content, source_link=source_link, og_image=og_image, video_url=video_url),
         "mode": mode,
-        "og_image": og_image,
-        "video_url": video_url,
-        "source_link": source_link,
-        "qa_score": qa_result.score,
+        "candidate_articles": filtered[:10],
+        "engagement_patterns": engagement_patterns or {},
+        "qa": {
+            "passed": qa_result.passed,
+            "score": qa_result.score,
+            "issues": list(qa_result.issues),
+            "suggestions": list(qa_result.suggestions),
+        },
     }
-    post_json_path.write_text(
-        json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    post_json_path.write_text(json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     from telegram_notify import send_preview
-    send_preview(content)
 
+    send_preview({**save_data, "mode": mode})
+
+    from learning_log import append_learning_record
+
+    source_date = date.today().isoformat()
     if args.dry_run:
-        print("\n[dry-run] 포스팅 건너뜀")
+        append_learning_record(
+            _build_learning_record(
+                mode=mode,
+                candidate_articles=filtered[:10],
+                engagement_patterns=engagement_patterns,
+                content=save_data,
+                qa_result=qa_result,
+                source_date=source_date,
+                posted=False,
+            )
+        )
+        print("\n[dry-run] skipping Threads post")
         return
 
-    # 6. Threads 포스팅
-    print(f"\n[6/7] Threads 포스팅 중...")
+    print("\n[6/7] posting to Threads...")
     from threads_poster import post_thread
 
     result = post_thread(
@@ -482,19 +578,30 @@ def main():
         video_url=video_url,
         mode=mode,
     )
-    print(f"  포스팅 완료!")
+    print("  post complete")
 
-    # [7/7] post.json에 posting_result 저장
     save_data["posting_result"] = result
     save_data["posted_at"] = datetime.now().isoformat()
-    post_json_path.write_text(
-        json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    post_json_path.write_text(json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if article.get("original_title"):
         save_title(article["original_title"], url=article.get("link", ""))
 
+    append_learning_record(
+        _build_learning_record(
+            mode=mode,
+            candidate_articles=filtered[:10],
+            engagement_patterns=engagement_patterns,
+            content=save_data,
+            qa_result=qa_result,
+            source_date=source_date,
+            posted=True,
+            posting_result=result,
+        )
+    )
+
     from telegram_notify import send_result
+
     send_result(result)
 
 

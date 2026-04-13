@@ -42,6 +42,7 @@ jobs:
       - name: Run AI Threads
         env:
           CONTENT_MODE: informational
+          THREADS_LLM_BACKEND: anthropic_api
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}

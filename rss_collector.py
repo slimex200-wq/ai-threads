@@ -58,6 +58,7 @@ def collect_news(feeds=None, max_count=50, max_age_hours=MAX_AGE_HOURS):
                     "link": entry.get("link", ""),
                     "source": feed.feed.get("title", feed_url),
                     "published": entry.get("published", ""),
+                    "date": pub_dt.strftime("%Y-%m-%d"),
                     "_pub_ts": pub_ts,
                 }
                 all_articles.append(article)

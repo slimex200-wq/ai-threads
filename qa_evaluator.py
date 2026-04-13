@@ -1,229 +1,196 @@
-"""독립 QA 평가자 — Generator/Evaluator 패턴.
+"""Quality evaluation for generated Threads posts.
 
-생성된 포스트를 별도 Claude 호출로 평가.
-생성자(ai_writer)와 분리된 회의적 평가자 역할.
-
-Ref: Anthropic "Harness Design for Long-Running Apps" (2026-03-24)
+The new evaluator supports both:
+- freeform `replies[]`
+- legacy `reply_*` slot structures
 """
 
 from __future__ import annotations
 
 import json
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+from typing import Any
 
-import anthropic
-from config import ANTHROPIC_API_KEY, MODEL
+from llm_backend import request_structured_json
 
 
 @dataclass(frozen=True)
 class QAResult:
-    """QA 평가 결과."""
-
     passed: bool
-    score: float  # 0.0 ~ 1.0
+    score: float
     issues: tuple[str, ...] = ()
     suggestions: tuple[str, ...] = ()
 
 
-# --- 규칙 기반 검증 (빠르고 저렴) ---
-
-_CHAR_LIMITS_VIRAL: dict[str, tuple[int, int]] = {
-    "post_main": (200, 350),
-    "reply_explain": (60, 150),
-    "reply_important": (60, 150),
-    "reply_action": (60, 150),
-    "reply_counter": (60, 150),
-    "reply_casual": (40, 100),
+_LEGACY_REPLY_KEYS = {
+    "viral": [
+        "reply_explain",
+        "reply_important",
+        "reply_action",
+        "reply_counter",
+        "reply_casual",
+    ],
+    "informational": [
+        "reply_background",
+        "reply_impact",
+        "reply_compare",
+        "reply_summary",
+    ],
 }
 
-_CHAR_LIMITS_INFORMATIONAL: dict[str, tuple[int, int]] = {
-    "post_main": (200, 400),
-    "reply_background": (80, 200),
-    "reply_impact": (80, 200),
-    "reply_compare": (80, 200),
-    "reply_summary": (60, 150),
+_POST_MAIN_LIMITS = {
+    "viral": (180, 380),
+    "informational": (160, 450),
 }
 
-_REQUIRED_VIRAL: tuple[str, ...] = (
-    "post_main", "reply_explain", "reply_important",
-    "reply_action", "reply_counter", "reply_casual",
-    "selected_article", "topic_tag",
-)
+_REPLY_LIMITS = {
+    "viral": (40, 180),
+    "informational": (50, 220),
+}
 
-_REQUIRED_INFORMATIONAL: tuple[str, ...] = (
-    "post_main", "reply_background", "reply_impact",
-    "reply_compare", "reply_summary",
-    "selected_article", "topic_tag",
-)
-
-_BANNED_PATTERNS: tuple[str, ...] = (
-    "#",            # 해시태그
-    "http://",      # 외부 링크
-    "https://",     # 외부 링크
+_BANNED_PATTERNS = (
+    "#",
+    "http://",
+    "https://",
     "카드뉴스",
     "자세한 내용은",
-    "정리했습니다",
 )
 
+QA_PASS_THRESHOLD = 0.55
 
-def _check_rules(content: dict, mode: str = "viral") -> list[str]:
-    """규칙 기반 검증. 위반 사항 리스트 반환.
 
-    Args:
-        content: 생성된 포스트 딕셔너리
-        mode: "viral" 또는 "informational"
-    """
+def _extract_replies(content: dict[str, Any], mode: str) -> list[str]:
+    replies = content.get("replies")
+    if isinstance(replies, list):
+        return [str(item).strip() for item in replies if str(item).strip()]
+
+    extracted: list[str] = []
+    for key in _LEGACY_REPLY_KEYS.get(mode, _LEGACY_REPLY_KEYS["informational"]):
+        value = str(content.get(key, "")).strip()
+        if value:
+            extracted.append(value)
+    return extracted
+
+
+def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[str]:
     issues: list[str] = []
 
-    char_limits = _CHAR_LIMITS_VIRAL if mode == "viral" else _CHAR_LIMITS_INFORMATIONAL
-    required = _REQUIRED_VIRAL if mode == "viral" else _REQUIRED_INFORMATIONAL
+    post_main = str(content.get("post_main", "")).strip()
+    replies = _extract_replies(content, mode)
+    selected_article = content.get("selected_article", {})
 
-    # 필수 필드 존재
-    for key in required:
-        if key not in content or not content[key]:
-            issues.append(f"필수 필드 누락: {key}")
+    if not post_main:
+        issues.append("missing required field: post_main")
 
-    # 글자수 검증
-    for key, (lo, hi) in char_limits.items():
-        text = content.get(key, "")
-        length = len(text)
-        if length < lo:
-            issues.append(f"{key}: {length}자 (최소 {lo}자 미달)")
-        elif length > hi:
-            issues.append(f"{key}: {length}자 (최대 {hi}자 초과)")
+    post_lo, post_hi = _POST_MAIN_LIMITS.get(mode, _POST_MAIN_LIMITS["informational"])
+    if post_main:
+        if len(post_main) < post_lo:
+            issues.append(f"post_main too short ({len(post_main)} < {post_lo})")
+        elif len(post_main) > post_hi:
+            issues.append(f"post_main too long ({len(post_main)} > {post_hi})")
 
-    # 금지 패턴 (char_limits의 reply 키들 대상)
-    for key in char_limits:
-        text = content.get(key, "")
-        for pattern in _BANNED_PATTERNS:
-            if pattern in text:
-                issues.append(f"{key}에 금지 패턴 포함: '{pattern}'")
+    if not replies:
+        issues.append("replies must contain at least one non-empty item")
+    elif len(replies) > 5:
+        issues.append("replies must contain at most five items")
 
-    # topic_tag 고정값 확인
+    reply_lo, reply_hi = _REPLY_LIMITS.get(mode, _REPLY_LIMITS["informational"])
+    for index, reply in enumerate(replies, start=1):
+        if len(reply) < reply_lo:
+            issues.append(f"reply {index} too short ({len(reply)} < {reply_lo})")
+        elif len(reply) > reply_hi:
+            issues.append(f"reply {index} too long ({len(reply)} > {reply_hi})")
+
+    if not isinstance(selected_article, dict):
+        issues.append("selected_article must be an object")
+        selected_article = {}
+
+    for key in ("original_title", "link", "reason"):
+        if not str(selected_article.get(key, "")).strip():
+            issues.append(f"selected_article.{key} is required")
+
     if content.get("topic_tag") != "ai.threads":
-        issues.append(f"topic_tag가 'ai.threads'가 아님: {content.get('topic_tag')}")
+        issues.append("topic_tag must be 'ai.threads'")
 
-    # post_main 질문 유도 — viral 전용
-    if mode == "viral":
-        post_main = content.get("post_main", "")
-        if post_main and "?" not in post_main:
-            issues.append("post_main이 질문으로 끝나지 않음 (댓글 유도 부족)")
-
-    # selected_article 필수 하위 필드
-    article = content.get("selected_article", {})
-    if isinstance(article, dict):
-        for sub_key in ("original_title", "link", "reason"):
-            if not article.get(sub_key):
-                issues.append(f"selected_article.{sub_key} 누락")
+    texts_to_check = [post_main, *replies]
+    for text_name, text in [("post_main", post_main), *[(f"reply {i}", r) for i, r in enumerate(replies, start=1)]]:
+        for pattern in _BANNED_PATTERNS:
+            if pattern and pattern in text:
+                issues.append(f"{text_name} contains banned pattern: {pattern}")
 
     return issues
 
 
-# --- AI 기반 평가 (회의적 별도 Claude 호출) ---
+_EVAL_PROMPT = """
+You are evaluating a Korean Threads draft for quality.
 
-_EVAL_PROMPT_VIRAL = """# ROLE
-너는 Threads 바이럴 콘텐츠 전문 QA 심사관이다.
-생성된 포스트를 **회의적으로** 평가하라. 관대하지 마라.
+Audience:
+- developers
+- beginners
+- vibe coders
 
-# TASK
-아래 포스트를 5가지 기준으로 0~10점 평가하라.
+Score 0-10 on:
+1. clarity
+2. usefulness
+3. accuracy
+4. shareability
+5. thread_flow
 
-## 평가 기준
-1. **hook_power** (0~10): 첫 2줄만 보고 "더 보기"를 누를까? 도발적이고 구체적인가?
-2. **debate_potential** (0~10): 댓글에서 찬반이 갈릴까? "이건 좀..." 하고 의견 쓸 만큼?
-3. **tone_authenticity** (0~10): 진짜 사람이 쓴 것 같은가? 봇/보도자료 냄새 없는가?
-4. **reply_coherence** (0~10): 5개 대댓글이 자연스럽게 이어지는가? 반복/모순 없는가?
-5. **rule_compliance** (0~10): 해시태그, 링크, "카드뉴스" 등 금지 패턴 없는가?
+Rubric:
+- clarity: easy to follow, no jargon wall
+- usefulness: gives a practical takeaway
+- accuracy: grounded in the selected article, not exaggerated
+- shareability: makes someone want to share or follow
+- thread_flow: replies feel like a coherent chain, not random fragments
 
-## 심사 원칙
-- 6점 이하는 "실패" 수준이다. 기준이 높아야 한다.
-- "그럭저럭 괜찮다"는 7점이다. 8점부터가 "좋다".
-- 10점은 거의 없다.
-- 의심스러우면 낮게 준다.
-
-## 포스트 내용
-```
-메인: {post_main}
-
-대댓글1 (설명): {reply_explain}
-대댓글2 (중요성): {reply_important}
-대댓글3 (행동): {reply_action}
-대댓글4 (반론): {reply_counter}
-대댓글5 (가벼움): {reply_casual}
-```
-
-## 선택된 기사
-제목: {article_title}
-이유: {article_reason}
-
-# FORMAT
-JSON으로만 응답. 다른 텍스트 없이.
-{{
-  "hook_power": 0,
-  "debate_potential": 0,
-  "tone_authenticity": 0,
-  "reply_coherence": 0,
-  "rule_compliance": 0,
-  "overall": 0.0,
-  "critical_issues": ["있으면 적기"],
-  "suggestions": ["개선 제안"]
-}}
-overall = 5개 점수의 가중 평균 (hook_power 30%, debate_potential 30%, tone 20%, coherence 10%, compliance 10%) / 10
-"""
-
-_EVAL_PROMPT_INFORMATIONAL = """# ROLE
-너는 바이브코더 대상 AI 뉴스 콘텐츠 QA 심사관이다.
-정보성 포스트를 **회의적으로** 평가하라. 관대하지 마라.
-
-# TASK
-아래 포스트를 5가지 기준으로 0~10점 평가하라.
-
-## 평가 기준
-1. **clarity** (0~10): 코딩 입문자가 읽고 이해할 수 있는가? 전문용어에 설명 없이 넘어가진 않는가?
-2. **usefulness** (0~10): 바이브코더가 실제로 써먹을 수 있는 정보인가? "그래서 나한테 뭐가 달라지는데?"에 답하는가?
-3. **accuracy** (0~10): 팩트가 정확하고 과장이 없는가? 클릭베이트 냄새 없는가?
-4. **tone** (0~10): 자연스러운 구어체인가? 보도자료/번역투 아닌가? 종결어미가 단조롭지 않은가?
-5. **structure** (0~10): 메인→배경→영향→비교→정리 흐름이 논리적인가? 각 파트가 제 역할을 하는가?
-
-## 심사 원칙
-- 6점 이하는 "실패" 수준이다. 기준이 높아야 한다.
-- "그럭저럭 괜찮다"는 7점이다. 8점부터가 "좋다".
-- 10점은 거의 없다.
-- 의심스러우면 낮게 준다.
-
-## 포스트 내용
-```
-메인: {post_main}
-
-배경: {reply_background}
-영향: {reply_impact}
-비교: {reply_compare}
-정리: {reply_summary}
-```
-
-## 선택된 기사
-제목: {article_title}
-이유: {article_reason}
-
-# FORMAT
-JSON으로만 응답. 다른 텍스트 없이.
+Return JSON only:
 {{
   "clarity": 0,
   "usefulness": 0,
   "accuracy": 0,
-  "tone": 0,
-  "structure": 0,
-  "overall": 0.0,
-  "critical_issues": ["있으면 적기"],
-  "suggestions": ["개선 제안"]
+  "shareability": 0,
+  "thread_flow": 0,
+  "critical_issues": ["..."],
+  "suggestions": ["..."]
 }}
-overall = 5개 점수의 가중 평균 (clarity 30%, usefulness 30%, accuracy 20%, tone 10%, structure 10%) / 10
-"""
+
+Selected article:
+Title: {article_title}
+Reason: {article_reason}
+
+Main post:
+{post_main}
+
+Replies:
+{replies_text}
+""".strip()
+
+EVAL_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "clarity": {"type": "number"},
+        "usefulness": {"type": "number"},
+        "accuracy": {"type": "number"},
+        "shareability": {"type": "number"},
+        "thread_flow": {"type": "number"},
+        "critical_issues": {"type": "array", "items": {"type": "string"}},
+        "suggestions": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": [
+        "clarity",
+        "usefulness",
+        "accuracy",
+        "shareability",
+        "thread_flow",
+        "critical_issues",
+        "suggestions",
+    ],
+    "additionalProperties": True,
+}
 
 
-def _parse_eval_json(text: str) -> dict:
-    """평가 응답에서 JSON 추출."""
+def _parse_eval_json(text: str) -> dict[str, Any]:
     text = text.strip()
     code_block = re.search(r"```(?:json)?\s*\n(.*?)```", text, re.DOTALL)
     if code_block:
@@ -235,66 +202,29 @@ def _parse_eval_json(text: str) -> dict:
     return json.loads(text)
 
 
-def _evaluate_with_ai(content: dict, mode: str = "viral") -> dict:
-    """별도 Claude 호출로 포스트 품질 평가."""
-    article = content.get("selected_article", {})
-    if mode == "informational":
-        prompt = _EVAL_PROMPT_INFORMATIONAL.format(
-            post_main=content.get("post_main", ""),
-            reply_background=content.get("reply_background", ""),
-            reply_impact=content.get("reply_impact", ""),
-            reply_compare=content.get("reply_compare", ""),
-            reply_summary=content.get("reply_summary", ""),
-            article_title=article.get("original_title", ""),
-            article_reason=article.get("reason", ""),
-        )
-    else:
-        prompt = _EVAL_PROMPT_VIRAL.format(
-            post_main=content.get("post_main", ""),
-            reply_explain=content.get("reply_explain", ""),
-            reply_important=content.get("reply_important", ""),
-            reply_action=content.get("reply_action", ""),
-            reply_counter=content.get("reply_counter", ""),
-            reply_casual=content.get("reply_casual", ""),
-            article_title=article.get("original_title", ""),
-            article_reason=article.get("reason", ""),
-        )
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    message = client.messages.create(
-        model=MODEL,
-        max_tokens=1000,
-        messages=[{"role": "user", "content": prompt}],
+def _evaluate_with_ai(content: dict[str, Any], mode: str = "informational") -> dict[str, Any]:
+    replies = _extract_replies(content, mode)
+    article = content.get("selected_article", {}) or {}
+    replies_text = "\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1))
+    prompt = _EVAL_PROMPT.format(
+        article_title=article.get("original_title", ""),
+        article_reason=article.get("reason", ""),
+        post_main=content.get("post_main", ""),
+        replies_text=replies_text or "(no replies)",
     )
-    return _parse_eval_json(message.content[0].text)
+
+    return request_structured_json(
+        [{"role": "user", "content": prompt}],
+        schema=EVAL_SCHEMA,
+        max_tokens=900,
+    )
 
 
-# --- 통합 평가 ---
-
-QA_PASS_THRESHOLD = 0.45  # overall 0.45 이상이면 통과 (0.65에서 하향 — AI 평가가 지나치게 엄격)
-
-
-def evaluate(content: dict, *, skip_ai: bool = False, mode: str = "viral") -> QAResult:
-    """생성된 포스트를 규칙 + AI로 평가.
-
-    Args:
-        content: ai_writer.generate_post() 반환값
-        skip_ai: True면 규칙 검증만 (비용 절약, 테스트용)
-        mode: "viral" 또는 "informational"
-
-    Returns:
-        QAResult with pass/fail, score, issues, suggestions
-    """
-    # 1단계: 규칙 기반 (무료, 즉시)
+def evaluate(content: dict[str, Any], *, skip_ai: bool = False, mode: str = "informational") -> QAResult:
     rule_issues = _check_rules(content, mode=mode)
 
-    # 규칙 위반이 3개 이상이면 AI 호출 없이 바로 실패
-    if len(rule_issues) >= 3:
-        return QAResult(
-            passed=False,
-            score=0.0,
-            issues=tuple(rule_issues),
-            suggestions=("규칙 위반이 너무 많아 AI 평가 생략",),
-        )
+    if len(rule_issues) >= 3 and skip_ai:
+        return QAResult(passed=False, score=0.0, issues=tuple(rule_issues))
 
     if skip_ai:
         passed = len(rule_issues) == 0
@@ -304,40 +234,35 @@ def evaluate(content: dict, *, skip_ai: bool = False, mode: str = "viral") -> QA
             issues=tuple(rule_issues),
         )
 
-    # 2단계: AI 기반 (회의적 별도 호출)
     try:
         eval_result = _evaluate_with_ai(content, mode=mode)
-    except Exception as e:
-        # AI 평가 실패 시 규칙 검증만으로 판단
-        print(f"  [QA] AI 평가 실패, 규칙만 적용: {e}")
+    except Exception as exc:
         passed = len(rule_issues) == 0
         return QAResult(
             passed=passed,
             score=0.5 if passed else 0.2,
             issues=tuple(rule_issues),
-            suggestions=("AI 평가 실패로 규칙 검증만 수행됨",),
+            suggestions=(f"AI evaluation failed: {exc}",),
         )
 
-    # AI 반환 overall 무시, 개별 점수로 직접 계산
-    ai_issues = eval_result.get("critical_issues", [])
-    suggestions = eval_result.get("suggestions", [])
+    weights = {
+        "clarity": 0.25,
+        "usefulness": 0.30,
+        "accuracy": 0.20,
+        "shareability": 0.15,
+        "thread_flow": 0.10,
+    }
+    weighted_sum = sum(float(eval_result.get(key, 0)) * weight for key, weight in weights.items())
+    overall = round(weighted_sum / 10, 2)
 
-    if mode == "viral":
-        weights = {"hook_power": 0.3, "debate_potential": 0.3, "tone_authenticity": 0.2,
-                    "reply_coherence": 0.1, "rule_compliance": 0.1}
-    else:
-        weights = {"clarity": 0.3, "usefulness": 0.3, "accuracy": 0.2,
-                    "tone": 0.1, "structure": 0.1}
-
-    weighted_sum = sum(eval_result.get(k, 0) * w for k, w in weights.items())
-    overall = round(weighted_sum / 10, 2)  # 0~1 스케일
-
-    all_issues = rule_issues + [f"[AI] {i}" for i in ai_issues if i]
+    ai_issues = [f"[AI] {issue}" for issue in eval_result.get("critical_issues", []) if issue]
+    suggestions = tuple(str(item) for item in eval_result.get("suggestions", []) if item)
+    issues = tuple(rule_issues + ai_issues)
     passed = overall >= QA_PASS_THRESHOLD and len(rule_issues) == 0
 
     return QAResult(
         passed=passed,
-        score=round(overall, 2),
-        issues=tuple(all_issues),
-        suggestions=tuple(s for s in suggestions if s),
+        score=overall,
+        issues=issues,
+        suggestions=suggestions,
     )
