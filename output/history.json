@@ -1,16 +1,5 @@
 [
   {
-    "date": "2026-04-08",
-    "titles": [
-      "깃허브, 에이전트 접속 폭증으로 트래픽 급증·서비스 중단 사태 발생",
-      "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208951",
-      "https://www.aitimes.com/news/articleView.html?idxno=208924"
-    ]
-  },
-  {
     "date": "2026-04-09",
     "titles": [
       "메타, 스마트폰용 소형 비전 인코더 'EUPE' 출시",
@@ -88,6 +77,15 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=209148",
       "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "titles": [
+      "컴퓨팅 수요 폭발로 GPU 비용 대폭 상승...두달 만에 50% 올라"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209243"
     ]
   }
 ]

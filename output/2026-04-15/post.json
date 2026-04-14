@@ -1,0 +1,232 @@
+{
+  "selected_article": {
+    "original_title": "컴퓨팅 수요 폭발로 GPU 비용 대폭 상승...두달 만에 50% 올라",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209243",
+    "reason": "This article addresses a critical practical issue that directly affects developers and businesses using AI. The 50% increase in two months is a concrete, shocking statistic that makes for highly shareable content with immediate practical implications."
+  },
+  "post_main": "GPU 비용이 두 달 만에 50% 폭등했다. 에이전트형 AI 때문이다. 단순 챗봇과 달리 코딩, 일정관리, 업무처리를 자율적으로 하는 AI들이 훨씬 많은 연산을 요구하거든. AI 스타트업들은 서비스 장애, 제품 출시 지연까지 겪고 있다고. 이제 AI 프로젝트 예산 짤 때 컴퓨팅 비용부터 확인해야 할 듯.",
+  "replies": [
+    "챗봇은 질문-답변 한 번이면 끝이지만, 에이전트는 계속 생각하고 판단하고 실행해야 한다. 연산량이 몇 배는 차이난다.",
+    "특히 코딩 에이전트들이 문제다. 코드 짜고 테스트하고 디버깅하는 과정에서 GPU를 계속 물고 늘어진다.",
+    "개인 개발자라면 로컬 모델이나 더 저렴한 API 찾아보고, 기업이라면 컴퓨팅 비용 예산을 2배로 잡는 게 안전할 듯.",
+    "언제까지 오를지 모르겠다. 에이전트 AI가 본격 확산되는 중이라 당분간은 공급 부족 상태 지속될 것 같다."
+  ],
+  "media_plan": {
+    "preferred_type": "image",
+    "search_query": "GPU cost increase chart 2026",
+    "reason": "A visual showing the 50% price spike would make the impact more tangible and highly shareable on social media"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209243",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209243_211600_562.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "국내 AI 도입률·정책 최상위 평가...투자·인재·데이터센터는 미흡",
+      "summary": "스탠포드대학교의 인간 중심 AI 연구소(HAI)가 발표한 'AI 인덱스 2026' 보고서에서 한국이 파운데이션 모델과 정부 정책, AI 특허 등에서 우수한 성과를 기록했다. 반면, 민간 투자와 인재, 데이터센터 등에서는 상위권에 끼지 못했다. HAI의 보고서에 따르면, 국내는 지난해 출시된 '주목할 만한 AI 모델'에 5개를 올려 세계 3위를 차지했다. 이는 전년의 4위에서 한 계단 상승한 것이다.그러나 1위인 미국의 50개, 2위인 중국의 30개와는 차이가 있다. 또 5개 모델 중 4개가 LG AI연구원 모델이다.인구 10만명당",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209249",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 19:15:13",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "메타, 저커버그 대신할 'AI 페르소나' 개발 중",
+      "summary": "마크 저커버그 메타 CEO가 자신을 본뜬 AI 페르소나 개발에 착수했다.파이낸셜 타임스는 13일(현지시간) 복수의 소식통을 인용, 메타가 실시간 상호작용이 가능한 사실적인 3D AI 캐릭터를 개발 중이며 그중에서도 ‘AI 저커버그’ 프로젝트를 우선순위로 두고 있다고 전했다.이 캐릭터는 직원들과 대화하며 피드백하는 역할이 목표로, 저커버그 CEO의 말투와 사고방식, 공개 발언, 최근 경영 전략까지 학습해 실제와 유사한 소통 경험을 제공하는 '디지털 분신'에 가깝다.특히 저커버그 CEO는 직접 AI 캐릭터의 훈련과 테스트에 참여 중인",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209218",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 18:58:45",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "알트먼 화염병 공격 용의자, 타 AI 기업 CEO도 목표로 삼아",
+      "summary": "오픈AI CEO 샘 알트먼의 자택을 겨냥한 화염병 공격 사건이 단순 범행을 넘어, AI에 대한 극단적 반감에 따른 계획적 범죄일 가능성이 제기되고 있다. 알트먼 CE#O 말고도 다른 AI 기업 CEO가 타깃으로 언급된 것이다.13일(현지시간) 비즈니스 인사이더에 따르면, 미국 연방 수사당국(FBI)은 용의자 다니엘 모레노-가마가 사건 당시 ‘반 AI’ 내용을 담은 문서를 소지하고 있었다고 밝혔다.이 문서에는 '타깃'으로 알트먼 CEO를 포함한 주요 AI 기업 CEO와 투자자들의 이름과 주소가 적혀 있었던 것으로 확인됐다.FBI가 제",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209209",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 18:49:13",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "MS, '오픈클로'와 유사한 기업용 에이전트 개발 중...\"24시간 상시 작동 목표\"",
+      "summary": "마이크로소프트(MS)가 ‘코파일럿’을 대대적으로 개편, 자율형 AI 에이전트 기능을 강화하는 것으로 알려졌다. 기업 시장에서 경쟁력을 확보하려는 의도다.디 인포메이션은 13일(현지시간) MS가 ‘오픈클로’와 유사한 형태의 AI 에이전트를 개발하기 위한 전담 조직을 신설했다고 보도했다.이 프로젝트는 기업용 소프트웨어 환경에서 24시간 사용자 대신 업무를 수행하는 ‘상시 작동(always-on)’ AI를 목표로 한다. 관련 조직은 기업용 애플리케이션인 MS 365 전반에서 작동하는 자율형 에이전트를 테스트 중이다.오픈클로는 컴퓨터를 인",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209220",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 18:38:07",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "컴퓨팅 수요 폭발로 GPU 비용 대폭 상승...두달 만에 50% 올라",
+      "summary": "AI 산업의 급성장이 핵심 자원인 컴퓨팅 파워 부족이라는 새로운 병목에 직면하고 있다. 수요가 폭발적으로 증가하면서 서비스 장애, 가격 상승, 제품 출시 지연 등 다양한 문제가 동시에 나타나고 있다.13일(현지시간) 월스트리트 저널(WSJ)에 따르면, 최근 AI 업계에서는 ‘에이전트형 AI’ 확산이 수요 급증의 핵심 요인으로 꼽혔다. 자율적으로 코딩, 일정 관리, 업무 처리 등을 수행하는 AI 도구가 빠르게 퍼지며, 단순 챗봇을 넘어 훨씬 많은 연산 자원이 필요해졌기 때문이다.엔지니어이자 투자자인 벤 풀라디안은 “세상에 부족한 것은",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209243",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 18:27:03",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "메타, 구글 제치고 디지털 광고 수익 세계 1위 달성 전망",
+      "summary": "메타가 글로벌 디지털 광고 시장에서 처음으로 구글을 제치고 1위에 오를 것으로 전망됐다. AI 기반 광고 성과 개선과 숏폼 콘텐츠 ‘릴스(Reels)’의 성장세가 판도를 바꾸고 있다는 분석이다.시장조사 전문 이마케터는 13일(현지시간) 메타의 2026년 순 광고 매출이 2434억6000만달러(약 360조원)로, 구글의 2395억4000만달러(약 355조원)를 근소하게 앞설 것으로 예상했다.이는 트래픽 유입과 콘텐츠 확보를 위한 마케팅 비용 등을 제외한 ‘순 매출’ 기준이다.메타의 광고 사업은 최근 몇년간 가파른 성장세를 보이고 있다",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209213",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 17:59:44",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "중국 정부 지원 스텝펀, IPO 위해 해외 사업부 정리 예정",
+      "summary": "중국 AI 스타트업들이 홍콩 증시 상장을 추진하는 과정에서 기존 해외 법인 구조를 재편하는 움직임이 커지고 있다. 중국 당국이 자산과 사업은 중국 내에 두고 지배구조는 역외에 두는 ‘레드칩(red-chip)’ 구조에 대한 규제를 강화하면서, 기업들이 상장 전략을 수정하는 것이다.13일(현지시간) 로이터에 따르면, 상하이의 AI 기업 스텝펀은 홍콩 기업공개(IPO)를 추진하기 위해 해외 법인 구조를 해체하는 작업에 착수한 것으로 알려졌다.그동안 세금 회피 지역에 설립된 케이맨제도 법인을 중심으로 한 구조를 활용해왔지만, 이를 중국 내",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209248",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 17:55:00",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "오픈AI, 직원들에 B2B 사업 독려...\"AWS 파트너십 성과 거둬·앤트로픽은 매출 부풀려\"",
+      "summary": "오픈AI가 직원들에게 아마존과의 새로운 파트너십으로 기업용 AI 시장에서 빠르게 성장하고 있다고 밝혔다. 동시에 앤트로픽이 매출 부풀리기를 했다고 지적하는 등 내부 독려에 나섰다.CNBC에 따르면, 데니즈 드레서 오픈AI 최고 매출책임자(CRO)는 13일(현지시간) 사내 메모를 통해 아마존과의 협력을 핵심 성장 동력으로 강조하며 기업 고객 공략 전략을 본격화하겠다는 의지를 밝혔다.그는 메모에서 “마이크로소프트(MS)와의 파트너십은 우리의 성공에 큰 도움이 됐지만, 동시에 기업 고객이 실제로 사용하는 환경에서는 다소 제약이 있었다”라",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209210",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-14 17:42:52",
+      "date": "2026-04-14",
+      "candidate_score": 7.304
+    },
+    {
+      "title": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
+      "summary": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
+      "source": "YouTube/IBM Technology",
+      "link": "https://www.youtube.com/watch?v=P8m5eHAyrFM",
+      "date": "2026-03-16",
+      "engagement": 116171,
+      "candidate_score": -1.918
+    },
+    {
+      "title": "Which company has the best AI model end of April?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off wi",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/290398",
+      "date": "2026-04-13",
+      "engagement": 0,
+      "candidate_score": -27.896
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      },
+      {
+        "date": "2026-04-12",
+        "mode": "informational",
+        "title": "The AI code wars are heating up",
+        "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot ",
+        "reply_casual": "",
+        "views": 264,
+        "likes": 4,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 144.4
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-11",
+        "mode": "informational",
+        "title": "알리바바, 화제의 영상 모델 '해피호스' 개발 확인...AI 조직 개편 후 첫 성과",
+        "post_main": "알리바바가 '해피호스 1.0' 개발했다고 공식 확인했다. 아티피셜 애널리시스 벤치마크에서 1위를 차지한 그 모델 맞다.\n\n텍스트-투-비디오는 '강아지가 눈밭에서 뛰어놀다' 같은 설",
+        "reply_casual": "",
+        "views": 156,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 65.6
+      },
+      {
+        "date": "2026-04-14",
+        "mode": "informational",
+        "title": "OpenAI has bought AI personal finance startup Hiro",
+        "post_main": "OpenAI가 개인 금융 계획 스타트업 '히로(Hiro)'를 인수했다. 히로는 AI로 개인 재정 시뮬레이션을 해주는 서비스였는데, 이제 ChatGPT에 금융 플래닝 기능이 들어올 ",
+        "reply_preview": "히로는 작년에 출시됐는데, 급여·부채·생활비를 입력하면 다양한 시나리오를 시뮬레이션해줬다. 금융 계산 정확도 검증 기능도 있었고.",
+        "reply_count": 3,
+        "views": 123,
+        "likes": 2,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 62.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 339.9,
+      "likes": 2.9,
+      "replies": 5.5,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 104.4
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.84,
+    "issues": [
+      "[AI] Main post could benefit from mentioning specific examples or companies affected",
+      "[AI] Reply 3 could provide more concrete alternatives or specific cost-saving strategies"
+    ],
+    "suggestions": [
+      "Add specific examples of affected AI startups or services in the main post",
+      "Include actual price ranges or percentages in reply 3 for budget planning",
+      "Consider adding a reply about potential timeline for when costs might stabilize",
+      "Mention specific local model alternatives or cost-effective APIs in reply 3"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18097841969085362",
+    "reply_1": "18076690139180890",
+    "reply_2": "18191019490365957",
+    "reply_3": "17886155496496355",
+    "reply_4": "18006650189902997",
+    "link_id": "18111789010809545"
+  },
+  "posted_at": "2026-04-15T01:44:09.537844"
+}
