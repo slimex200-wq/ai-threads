@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-15",
+    "mode": "informational",
+    "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+    "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+    "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+    "reply_count": 3,
+    "views": 73,
+    "likes": 1,
+    "replies": 4,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 52.3
+  },
+  {
     "date": "2026-04-14",
     "mode": "informational",
     "title": "OpenAI has bought AI personal finance startup Hiro",
