@@ -1,20 +1,5 @@
 [
   {
-    "date": "2026-04-09",
-    "titles": [
-      "메타, 스마트폰용 소형 비전 인코더 'EUPE' 출시",
-      "앤트로픽, 에이전트 개발·배포를 위한 '클로드 매니지드 에이전트' 공개",
-      "Gemini gets notebooks to help you organize projects",
-      "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\""
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208966",
-      "https://www.aitimes.com/news/articleView.html?idxno=208979",
-      "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
-      "https://www.aitimes.com/news/articleView.html?idxno=209040"
-    ]
-  },
-  {
     "date": "2026-04-10",
     "titles": [
       "지푸도 API 가격 인상...중국 AI 업계 '제값 받기' 확산",
@@ -90,6 +75,15 @@
       "https://www.aitimes.com/news/articleView.html?idxno=209243",
       "https://www.aitimes.com/news/articleView.html?idxno=209260",
       "https://www.aitimes.com/news/articleView.html?idxno=209296"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "titles": [
+      "Google rolls out a native Gemini app for Mac"
+    ],
+    "urls": [
+      "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac"
     ]
   }
 ]

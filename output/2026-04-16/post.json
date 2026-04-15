@@ -1,0 +1,235 @@
+{
+  "selected_article": {
+    "original_title": "Google rolls out a native Gemini app for Mac",
+    "link": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac",
+    "reason": "This is still the most practical choice - Mac users can immediately download and use this tool, making it highly actionable and shareable content."
+  },
+  "post_main": "구글이 맥용 제미나이 네이티브 앱을 출시했다. Option + Space로 어디서나 떠오르는 채팅창을 띄울 수 있고, 현재 보고 있는 화면을 공유해서 질문할 수 있다. 브라우저 탭 전환 없이 바로 AI에게 물어볼 수 있게 된 거다. 코딩 중 에러 화면 공유하거나 엑셀 데이터 분석 요청할 때 정말 편할 듯.",
+  "replies": [
+    "화면 공유 전에는 시스템 정보 접근 권한을 허용해야 한다. 개인정보 보호 측면에서 주의할 점이긴 하다.",
+    "ChatGPT 맥 앱, 클로드 맥 앱에 이어 구글도 데스크톱 AI 경쟁에 본격 뛰어들었다. 이제 브라우저 없이도 AI 쓰는 게 당연해지겠다.",
+    "맥 앱스토어에서 바로 다운로드 가능하다. 설치하고 Option + Space 단축키부터 익혀두면 업무 효율이 확실히 올라갈 것 같다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "Google Gemini Mac app demo Option Space",
+    "reason": "Users need to see the actual floating chat interface and screen sharing workflow to understand the practical benefits"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2026/01/google-gemini-jagmeet-singh-techcrunch.jpg?resize=1200,800",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+      "summary": "OpenAI has expanded the capabilities of its agent-building toolkit, as agentic AI continues to grow in popularity.",
+      "link": "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 19:28:36 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 11.676,
+      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . Agentic AI is the tech industry’s newest success story, and companies like OpenAI and Anthropic are racing to give enterprises the tools they need to create these automated little helpers. To that end, OpenAI has now updated its agents software development toolkit (SDK) , introducing a number of new features designed to help businesses create their own agents that run on the backs of OpenAI’s models. The SDK’s new capabilities include a sandboxing ability, which allows the agents to operate in controlled computer environments. This is important because running agents in a totally unsupervised fashion can be risky due to their occasionally unpredictable nature. With the sandbox integration, agents can work in a siloed capacity within a particular workspace, accessing files and code only for particular operations, while otherwise protecting the system’s overall integrity. Relatedly, the new version of the SDK also provides developers with an in-distribution harness for frontier models that will allow those agents to work with files and approved tools within a workspace, the company said. (In agent development, the “harness” is a term that refers to the other components of an agent besides the model that it’s running on. An in-distribution harness often allows companies to both deploy and test the agents running on frontier models, which are considered to be the most advanced, general-purpose models availab"
+    },
+    {
+      "title": "Google launches a Gemini AI app on Mac",
+      "summary": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your [&#8230;]",
+      "link": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
+      "source": "AI | The Verge",
+      "published": "2026-04-15T14:10:15-04:00",
+      "date": "2026-04-15",
+      "candidate_score": 11.676,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. You can access Gemini from anywhere on your desktop, as well as share your windows. You can access Gemini from anywhere on your desktop, as well as share your windows. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your window, you’ll need to give Gemini permission to access your system’s information before sharing your window. From there, the AI assistant will pull information from what you’re looking at to help answer your question. It looks a bit like Apple’s upgraded version of Spotlight , which you can now use to perform actions on your device, as well as access AI models like OpenAI’s ChatGPT. The new app puts Google in the running to compete with Anthropic , OpenAI , and Perplexity, all of which want their chatbots to become the go-to AI model on desktop devices. But ChatGPT and Anthropic’s Claude app for Mac takes things a step further than Gemini, as they come with features that allow thei"
+    },
+    {
+      "title": "Hightouch reaches $100M ARR fueled by marketing tools powered by AI",
+      "summary": "The startup says it grew its ARR by $70 million in just 20 months after launching an AI agent platform for marketers.",
+      "link": "https://techcrunch.com/2026/04/15/hightouch-reaches-100m-arr-fueled-by-marketing-tools-powered-by-ai/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 18:55:12 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 9.876,
+      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . Historically, marketers relied on designers and other creative professionals to develop images and videos for personalized online ad campaigns. In late 2024, seven-year-old startup Hightouch launched an AI-powered service that allows marketing professionals to create custom content for brands such as Domino’s, Chime, PetSmart, and Spotify without involving brand design teams or ad agencies. The offering has been highly successful. Since introducing its AI product 20 months ago, Hightouch has added $70 million in annualized recurring revenue (ARR), it tells TechCrunch, bringing the startup to a total of $100 million in ARR. “Before GenAI, it was impossible for someone without many, many years of design skills to create consumer-level assets,” said Kashish Gupta, Hightouch’s co-CEO. The company is also led by co-CEO Tejas Manohar, a former engineering manager at Segment, a customer data platform acquired by Twilio for $3.2 billion in 2020. However, Hightouch’s approach goes beyond what standard AI models can do on their own. Hightouch says that many brands initially attempted to generate ad campaigns using general foundational models — broad AI systems that power tools like chatbots but lack knowledge of specific brands — only to find the resulting images and videos failed to meet “on-brand” standards. “Foundation models didn’t know about specific consumer brands, whether it was colors or fonts, tone, or a"
+    },
+    {
+      "title": "LinkedIn data shows AI isn’t to blame for hiring decline… yet",
+      "summary": "LinkedIn says hiring is down 20% since 2022, but blames higher interest rates — not AI — for the slowdown.",
+      "link": "https://techcrunch.com/2026/04/15/linkedin-data-shows-ai-isnt-to-blame-for-hiring-decline-yet/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 18:51:54 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 9.876,
+      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . LinkedIn’s Blake Lawit, the chief global affairs and legal officer of the Microsoft-owned professional networking site, confirmed in an interview at the Semafor World Economy summit this week that the company’s data shows a decline in hiring of around 20% since 2022. However, he pushed back at the idea that AI was to blame. “At LinkedIn… we have an economic graph which is over a billion members. We’ve got companies, jobs, skills. It’s really an amazing real-time view of what’s happening in the labor market. And we’ve looked — because everyone wants to know the answer to this question: Is AI impacting jobs right now? We’ve looked and, honestly, we haven’t seen it,” he said during his interview. Instead, the executive suggested that the decline in hiring was more closely tied to a rise in interest rates. “We have not seen the sort of impacts that you would expect to see in areas that everyone is talking about AI… like industries, whether or not it’s customer support, or administrative, or marketing — all these places that if we were seeing impacts [from] AI that’s where it would be,” Lawit continued. “Yes, hiring’s down, but not down more,” he added. Lawit also noted that LinkedIn’s data didn’t indicate that the decline in hiring of college-aged young adults getting their first jobs was “down more,” either, when compared with people who were in the middle of or later in their careers. Still, he didn’t rule"
+    },
+    {
+      "title": "Trump’s posting even more AI-generated Trump-Jesus fan art",
+      "summary": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mean the great beyond, like Heaven, maybe.) If you've found your way to this newsletter from the wild, annual subscriptions are currently 50 percent off. That's $30 a year for [&#8230;]",
+      "link": "https://www.theverge.com/column/912627/trump-jesus-ai-whcd-penguin-meme",
+      "source": "AI | The Verge",
+      "published": "2026-04-15T15:50:31-04:00",
+      "date": "2026-04-15",
+      "candidate_score": 8.076,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Plus: what Werner Herzog thinks of the Trump penguin meme. Plus: what Werner Herzog thinks of the Trump penguin meme. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Hello and welcome to Regulator , a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mean the great beyond, like Heaven, maybe.) If you’ve found your way to this newsletter from the wild, annual subscriptions are currently 50 percent off . That’s $30 a year for access to an entire newsroom full of reporting about technology and how it’s eating society alive — not just in politics! (I will also accept confidential tips at tina.nguyen+tips@theverge.com .) Of all the things that would have fractured the religious right’s alliance with Donald Trump , it would be him posting an AI-generated image of himself styled as Jesus Christ, healing the sick and surrounded by heavenly angels — only hours after attacking Pope Leo XIV , no less. (As conservative commentator Rod Dreher , who attended JD Vance’s Catholic baptism, told The Wall Street Journal : “Not saying Trump is the Antichrist. But he’s radiating the spirit of Antichrist, no question.”) This time, it wasn’t the White Ho"
+    },
+    {
+      "title": "AI learning app Gizmo levels up with 13M users and a $22M investment",
+      "summary": "Gizmo, an AI-powered learning platform, has attracted more than 13 million users and just secured $22 million in Series A funding.",
+      "link": "https://techcrunch.com/2026/04/15/ai-learning-app-gizmo-levels-up-with-13m-users-and-a-22m-investment/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 18:38:10 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 8.076
+    },
+    {
+      "title": "Can AI judge journalism? A Thiel-backed startup says yes, even if it risks chilling whistleblowers",
+      "summary": "Objection, a Thiel-backed startup, aims to use AI to judge journalism, letting users pay to challenge stories. Critics warn it could chill whistleblowers and reshape how media accountability works.",
+      "link": "https://techcrunch.com/2026/04/15/can-ai-judge-journalism-a-thiel-backed-startup-says-yes-even-if-it-risks-chilling-whistleblowers/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 18:33:20 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 8.076
+    },
+    {
+      "title": "Google rolls out a native Gemini app for Mac",
+      "summary": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.",
+      "link": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 18:22:13 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 8.076
+    },
+    {
+      "title": "자신의 ‘AI 페르소나’를 만들고 있다? 마크 저커버그가 개발하고 있는 것",
+      "summary": "AI타임스 조예주 기자 joyejuoffice@aitimes.com",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209304",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 06:55:00",
+      "date": "2026-04-16",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "앤트로픽, '클로드' 기업 요금제 변경...\"사용량에 따라 추가 요금 부과\"",
+      "summary": "앤트로픽이 ‘클로드’의 기업용 요금 체계를 사용량 기반으로 전환, AI 사용량이 많은 기업들의 비용 부담이 크게 늘어날 전망이다.앤트로픽은 14일(현지시간) 디 인포메이션을 통해 기업용 서비스인 ‘클로드 엔터프라이즈(Claude Enterprise)’ 요금 체계를 개편해, 기존 사용자당 고정 구독료 외에 실제 AI 사용량(컴퓨팅 소비량)에 따라 추가 과금을 적용하기로 했다고 보도했다.기존에는 사용자당 월 200달러를 지불하면 일정량의 토큰 사용이 포함된 패키지를 이용할 수 있었지만, 이제는 기본 월 20달러에 실제 사용량만큼 추가",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209261",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-15 18:30:00",
+      "date": "2026-04-15",
+      "candidate_score": 7.076
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      },
+      {
+        "date": "2026-04-12",
+        "mode": "informational",
+        "title": "The AI code wars are heating up",
+        "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot ",
+        "reply_casual": "",
+        "views": 264,
+        "likes": 4,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 144.4
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-14",
+        "mode": "informational",
+        "title": "OpenAI has bought AI personal finance startup Hiro",
+        "post_main": "OpenAI가 개인 금융 계획 스타트업 '히로(Hiro)'를 인수했다. 히로는 AI로 개인 재정 시뮬레이션을 해주는 서비스였는데, 이제 ChatGPT에 금융 플래닝 기능이 들어올 ",
+        "reply_preview": "히로는 작년에 출시됐는데, 급여·부채·생활비를 입력하면 다양한 시나리오를 시뮬레이션해줬다. 금융 계산 정확도 검증 기능도 있었고.",
+        "reply_count": 3,
+        "views": 123,
+        "likes": 2,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 62.3
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 310.2,
+      "likes": 2.7,
+      "replies": 5.3,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 98.6
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.82,
+    "issues": [
+      "[AI] Reply 1이 본문과 연결성이 약함 - 갑자기 권한 문제를 언급하여 흐름이 끊김",
+      "[AI] Reply 2에서 '본격 뛰어들었다'는 표현이 다소 과장될 수 있음"
+    ],
+    "suggestions": [
+      "Reply 1을 '화면 공유 기능이 핵심인데, 설치 후 시스템 권한 설정도 함께 해야 한다'와 같이 더 자연스럽게 연결",
+      "Reply 2와 3의 순서를 바꿔서 실용적인 정보(다운로드 방법)를 먼저 제공하고 시장 분석을 나중에",
+      "각 reply에서 개발자/코더 관점의 구체적 사용 사례를 더 추가 (예: 디버깅, 코드 리뷰 등)"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18101244832780231",
+    "reply_1": "18091983568934447",
+    "reply_2": "18358311991224251",
+    "reply_3": "17958935520102446",
+    "link_id": "17922037305302837"
+  },
+  "posted_at": "2026-04-16T07:12:29.033457"
+}
