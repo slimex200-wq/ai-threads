@@ -1,35 +1,89 @@
 {
   "selected_article": {
-    "original_title": "컴퓨팅 수요 폭발로 GPU 비용 대폭 상승...두달 만에 50% 올라",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=209243",
-    "reason": "This article addresses a critical practical issue that directly affects developers and businesses using AI. The 50% increase in two months is a concrete, shocking statistic that makes for highly shareable content with immediate practical implications."
+    "original_title": "앤트로픽, '오퍼스 4.7' 이르면 이번 주 출시...AI 디자인 도구도 추가",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209260",
+    "reason": "This article still offers the most concrete, actionable information with immediate practical impact for developers and designers. The design automation tools represent a significant workflow change that's worth sharing."
   },
-  "post_main": "GPU 비용이 두 달 만에 50% 폭등했다. 에이전트형 AI 때문이다. 단순 챗봇과 달리 코딩, 일정관리, 업무처리를 자율적으로 하는 AI들이 훨씬 많은 연산을 요구하거든. AI 스타트업들은 서비스 장애, 제품 출시 지연까지 겪고 있다고. 이제 AI 프로젝트 예산 짤 때 컴퓨팅 비용부터 확인해야 할 듯.",
+  "post_main": "앤트로픽이 이번 주 '클로드 오퍼스 4.7'과 함께 웹사이트·프레젠테이션 자동 제작 AI 도구를 출시한다. 기존 클로드와 달리 디자인 작업을 직접 처리할 수 있게 된다는 뜻이다. 플래그십 모델이지만 최상위는 아니라고 하니, 더 강력한 '미소스'를 염두에 둔 단계별 출시 전략으로 보인다.",
   "replies": [
-    "챗봇은 질문-답변 한 번이면 끝이지만, 에이전트는 계속 생각하고 판단하고 실행해야 한다. 연산량이 몇 배는 차이난다.",
-    "특히 코딩 에이전트들이 문제다. 코드 짜고 테스트하고 디버깅하는 과정에서 GPU를 계속 물고 늘어진다.",
-    "개인 개발자라면 로컬 모델이나 더 저렴한 API 찾아보고, 기업이라면 컴퓨팅 비용 예산을 2배로 잡는 게 안전할 듯.",
-    "언제까지 오를지 모르겠다. 에이전트 AI가 본격 확산되는 중이라 당분간은 공급 부족 상태 지속될 것 같다."
+    "가장 주목할 부분은 웹사이트와 PPT 자동 생성 기능이다. 기획서 하나 던져주면 완성된 프레젠테이션이 나온다면 업무 방식이 완전히 바뀔 것 같다.",
+    "그런데 '플래그십이지만 최상위 아님'이라는 표현이 흥미롭다. 더 강력한 미소스는 보안 우려로 제한 테스트 중이라고 하니, 성능 조절해서 내놓는 셈이네.",
+    "디자인 도구 개발하시는 분들은 이번 출시를 주목해볼 만하다. 클로드가 직접 디자인까지 처리하면 기존 워크플로우 도구들과의 경쟁 구도가 바뀔 수도 있거든."
   ],
   "media_plan": {
-    "preferred_type": "image",
-    "search_query": "GPU cost increase chart 2026",
-    "reason": "A visual showing the 50% price spike would make the impact more tangible and highly shareable on social media"
+    "preferred_type": "video",
+    "search_query": "Claude Opus website design demo",
+    "reason": "A demo video showing the AI creating websites or presentations would be highly engaging and help users understand the practical workflow implications"
   },
   "topic_tag": "ai.threads",
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209243",
-  "og_image": "https://cdn.aitimes.com/news/photo/202604/209243_211600_562.jpg",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209260",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209260_211623_2647.jpg",
   "video_url": "",
   "mode": "informational",
   "candidate_articles": [
     {
-      "title": "국내 AI 도입률·정책 최상위 평가...투자·인재·데이터센터는 미흡",
+      "title": "Anthropic’s rise is giving some OpenAI investors second thoughts",
+      "summary": "One investor who has backed both companies told the FT that justifying OpenAI's recent round required assuming an IPO valuation of $1.2 trillion or more — making Anthropic's current $380 billion valuation look like the relative bargain.",
+      "link": "https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 15 Apr 2026 02:31:04 +0000",
+      "date": "2026-04-15",
+      "candidate_score": 8.814,
+      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . OpenAI’s $852 billion valuation is facing skepticism from some of its own investors as the company scrambles to reorient itself around enterprise customers and fend off Anthropic, according to the Financial Times . Anthropic’s annualized revenue jumped from $9 billion at the end of 2025 to $30 billion by the end of March, driven largely by demand for its coding tools. One investor who has backed both companies told the FT that justifying OpenAI’s round required assuming an IPO valuation of $1.2 trillion or more — making Anthropic’s current $380 billion valuation look like the relative bargain. The secondary market tells a similar story right now, where demand for Anthropic shares has grown nearly insatiable while OpenAI shares are trading at a discount . Altman has been here before. During his tenure leading Y Combinator, aggressive valuation inflation left some portfolio companies financially stranded while others proved worth every penny and then some. OpenAI CFO Sarah Friar pushed back, telling the FT that the company’s $122 billion raise — the largest private fundraising in history — was evidence of continued investor confidence. Not everyone is persuaded. Jai Das, president of investment firm Sapphire Ventures (who has no stake in either company) told the FT he saw OpenAI as “the Netscape of AI,” a reference to the once-dominant browser that was overtaken by Microsoft and eventually absorbed by AOL."
+    },
+    {
+      "title": "업스테이지, 1800억 시리즈C 1차 클로징…”국내 생성 AI 기업 첫 유니콘”",
+      "summary": "업스테이지(대표 김성훈)가 1800억원 규모의 시리즈C 1차 투자를 마무리했다고 15일 밝혔다. 이번 투자 유치를 통해 기업 가치 1조원 이상을 인정받으며 국내 생성 AI 기업 최초로 유니콘 반열에 올랐다.이번 라운드는 실리콘 밸리의 벤처캐피털(VC) 사제파트너스가 리드 투자자로 참여했다. 사제파트너스는 전 라운드에 걸쳐 후속 투자를 이어온 초기 투자자로, 업스테이지의 기술과 실적 성장에 대한 신뢰를 재확인했다고 전했다. ▲프리미어파트너스 ▲신한벤처투자 ▲미래에셋벤처투자 ▲KB증권 ▲인터베스트 등 주요 기관 투자자들이 후속 투자에",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209274",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-15 13:24:05",
+      "date": "2026-04-15",
+      "candidate_score": 7.814
+    },
+    {
+      "title": "앤트로픽, ‘오퍼스 4.7’ 이르면 이번 주 출시...AI 디자인 도구도 추가",
+      "summary": "‘클로드 오퍼스 4.7(Claude Opus 4.7)’의 출시가 임박한 것으로 알려졌다.디 인포메이션은 14일(현지시간) 관계자를 인용, 앤트로픽이 차세대 모델 오퍼스 4.7과 함께 웹사이트와 프레젠테이션 제작을 자동화하는 새로운 AI 도구 출시를 준비 중이라고 보도했다.이르면 이번 주 공개될 가능성이 있는 클로드 오퍼스 4.7은 앤트로픽의 최신 플래그십 모델 계열이지만, 현재 기준 최상위 모델은 아닌 것으로 전해졌다.앤트로픽은 이미 ‘클로드 미소스’를 일부 파트너와 테스트 중이다. 강력한 성능으로 보안 악용 여지가 있어 출시를 포",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209260",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-15 13:05:24",
+      "date": "2026-04-15",
+      "candidate_score": 7.814
+    },
+    {
+      "title": "오픈AI, '미소스'에 맞설 'GPT-5.4-사이버' 공개...신청 통해 배포 확대",
+      "summary": "오픈AI가 앤트로픽의 '미소스'에 대응해 새로운 첨단 사이버보안 모델을 공개했다. 'GPT-5.4-사이버(Cyber)'라는 이 모델은 신청을 통해 일부 사용자들에게 접근을 허용할 예정이다.오픈AI는 14일(현지시간) 공식 블로그를 통해 소프트웨어 취약점을 찾아내 기업이 이를 수정할 수 있도록 돕는 GPT-5.4-사이버를 출시했다고 발표했다.이는 지난 2월 발표한 ‘사이버보안을 위한 신뢰할 수 있는 접근(TAC)’에 따른 것으로, 이번 모델은 현재 가장 뛰어난 성능을 갖춘 'GPT-5.4'를 사이버보안 작업에 최적화해 미세 조정한 버",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209252",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-15 07:28:28",
+      "date": "2026-04-15",
+      "candidate_score": 7.814
+    },
+    {
+      "title": "과기부, '미소스' 사이버보안 회의 소집...통신 3사·네이버 등 참여",
+      "summary": "과학기술정보통신부(장관 배경훈)는 최근 앤트로픽과 오픈AI의 AI 모델 사이버보안 활용 프로젝트를 출범한 것과 관련, 긴급 현안 점검 회의 등을 개최했다고 14일 밝혔다. 최근 앤트로픽과 오픈AI는 각각 최신 모델 '미소스'를 활용한 '프로젝트 글라스윙'과 'GPT-5.3-코덱스' 기반 ‘사이버보안을 위한 신뢰할 수 있는 접근(Trusted Access for Cyber)’을 발족했다. 이로 인해 미국 정부는 물론, 영국과 캐나다 등이 주요 금융 기관 및 기술 기업과 대책 마련에 나섰다.이에 청와대 국가안보실에서는 민관군 주관 부처",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209251",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-15 05:56:24",
+      "date": "2026-04-15",
+      "candidate_score": 7.814
+    },
+    {
+      "title": "Anthropic co-founder confirms the company briefed the Trump administration on Mythos",
+      "summary": "In an interview at the Semafor World Economy summit this week, Anthropic co-founder Jack Clark explained why the company was still engaged with the U.S. government while simultaneously suing them.",
+      "link": "https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Tue, 14 Apr 2026 18:09:12 +0000",
+      "date": "2026-04-14",
+      "candidate_score": 7.814
+    },
+    {
+      "title": "스탠포드, 국내 AI 도입률·정책 최상위 평가...투자·인재·인프라는 미흡",
       "summary": "스탠포드대학교의 인간 중심 AI 연구소(HAI)가 발표한 'AI 인덱스 2026' 보고서에서 한국이 파운데이션 모델과 정부 정책, AI 특허 등에서 우수한 성과를 기록했다. 반면, 민간 투자와 인재, 데이터센터 등에서는 상위권에 끼지 못했다. HAI의 보고서에 따르면, 국내는 지난해 출시된 '주목할 만한 AI 모델'에 5개를 올려 세계 3위를 차지했다. 이는 전년의 4위에서 한 계단 상승한 것이다.그러나 1위인 미국의 50개, 2위인 중국의 30개와는 차이가 있다. 또 5개 모델 중 4개가 LG AI연구원 모델이다.인구 10만명당",
       "link": "https://www.aitimes.com/news/articleView.html?idxno=209249",
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-14 19:15:13",
       "date": "2026-04-14",
-      "candidate_score": 7.304
+      "candidate_score": 6.814
     },
     {
       "title": "메타, 저커버그 대신할 'AI 페르소나' 개발 중",
@@ -38,7 +92,7 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-14 18:58:45",
       "date": "2026-04-14",
-      "candidate_score": 7.304
+      "candidate_score": 6.814
     },
     {
       "title": "알트먼 화염병 공격 용의자, 타 AI 기업 CEO도 목표로 삼아",
@@ -47,70 +101,16 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-14 18:49:13",
       "date": "2026-04-14",
-      "candidate_score": 7.304
+      "candidate_score": 6.814
     },
     {
-      "title": "MS, '오픈클로'와 유사한 기업용 에이전트 개발 중...\"24시간 상시 작동 목표\"",
+      "title": "MS, '오픈클로'와 유사한 기업용 에이전트 개발 중...\"24시간 작동 목표\"",
       "summary": "마이크로소프트(MS)가 ‘코파일럿’을 대대적으로 개편, 자율형 AI 에이전트 기능을 강화하는 것으로 알려졌다. 기업 시장에서 경쟁력을 확보하려는 의도다.디 인포메이션은 13일(현지시간) MS가 ‘오픈클로’와 유사한 형태의 AI 에이전트를 개발하기 위한 전담 조직을 신설했다고 보도했다.이 프로젝트는 기업용 소프트웨어 환경에서 24시간 사용자 대신 업무를 수행하는 ‘상시 작동(always-on)’ AI를 목표로 한다. 관련 조직은 기업용 애플리케이션인 MS 365 전반에서 작동하는 자율형 에이전트를 테스트 중이다.오픈클로는 컴퓨터를 인",
       "link": "https://www.aitimes.com/news/articleView.html?idxno=209220",
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-14 18:38:07",
       "date": "2026-04-14",
-      "candidate_score": 7.304
-    },
-    {
-      "title": "컴퓨팅 수요 폭발로 GPU 비용 대폭 상승...두달 만에 50% 올라",
-      "summary": "AI 산업의 급성장이 핵심 자원인 컴퓨팅 파워 부족이라는 새로운 병목에 직면하고 있다. 수요가 폭발적으로 증가하면서 서비스 장애, 가격 상승, 제품 출시 지연 등 다양한 문제가 동시에 나타나고 있다.13일(현지시간) 월스트리트 저널(WSJ)에 따르면, 최근 AI 업계에서는 ‘에이전트형 AI’ 확산이 수요 급증의 핵심 요인으로 꼽혔다. 자율적으로 코딩, 일정 관리, 업무 처리 등을 수행하는 AI 도구가 빠르게 퍼지며, 단순 챗봇을 넘어 훨씬 많은 연산 자원이 필요해졌기 때문이다.엔지니어이자 투자자인 벤 풀라디안은 “세상에 부족한 것은",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209243",
-      "source": "AI타임스 - 전체기사",
-      "published": "2026-04-14 18:27:03",
-      "date": "2026-04-14",
-      "candidate_score": 7.304
-    },
-    {
-      "title": "메타, 구글 제치고 디지털 광고 수익 세계 1위 달성 전망",
-      "summary": "메타가 글로벌 디지털 광고 시장에서 처음으로 구글을 제치고 1위에 오를 것으로 전망됐다. AI 기반 광고 성과 개선과 숏폼 콘텐츠 ‘릴스(Reels)’의 성장세가 판도를 바꾸고 있다는 분석이다.시장조사 전문 이마케터는 13일(현지시간) 메타의 2026년 순 광고 매출이 2434억6000만달러(약 360조원)로, 구글의 2395억4000만달러(약 355조원)를 근소하게 앞설 것으로 예상했다.이는 트래픽 유입과 콘텐츠 확보를 위한 마케팅 비용 등을 제외한 ‘순 매출’ 기준이다.메타의 광고 사업은 최근 몇년간 가파른 성장세를 보이고 있다",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209213",
-      "source": "AI타임스 - 전체기사",
-      "published": "2026-04-14 17:59:44",
-      "date": "2026-04-14",
-      "candidate_score": 7.304
-    },
-    {
-      "title": "중국 정부 지원 스텝펀, IPO 위해 해외 사업부 정리 예정",
-      "summary": "중국 AI 스타트업들이 홍콩 증시 상장을 추진하는 과정에서 기존 해외 법인 구조를 재편하는 움직임이 커지고 있다. 중국 당국이 자산과 사업은 중국 내에 두고 지배구조는 역외에 두는 ‘레드칩(red-chip)’ 구조에 대한 규제를 강화하면서, 기업들이 상장 전략을 수정하는 것이다.13일(현지시간) 로이터에 따르면, 상하이의 AI 기업 스텝펀은 홍콩 기업공개(IPO)를 추진하기 위해 해외 법인 구조를 해체하는 작업에 착수한 것으로 알려졌다.그동안 세금 회피 지역에 설립된 케이맨제도 법인을 중심으로 한 구조를 활용해왔지만, 이를 중국 내",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209248",
-      "source": "AI타임스 - 전체기사",
-      "published": "2026-04-14 17:55:00",
-      "date": "2026-04-14",
-      "candidate_score": 7.304
-    },
-    {
-      "title": "오픈AI, 직원들에 B2B 사업 독려...\"AWS 파트너십 성과 거둬·앤트로픽은 매출 부풀려\"",
-      "summary": "오픈AI가 직원들에게 아마존과의 새로운 파트너십으로 기업용 AI 시장에서 빠르게 성장하고 있다고 밝혔다. 동시에 앤트로픽이 매출 부풀리기를 했다고 지적하는 등 내부 독려에 나섰다.CNBC에 따르면, 데니즈 드레서 오픈AI 최고 매출책임자(CRO)는 13일(현지시간) 사내 메모를 통해 아마존과의 협력을 핵심 성장 동력으로 강조하며 기업 고객 공략 전략을 본격화하겠다는 의지를 밝혔다.그는 메모에서 “마이크로소프트(MS)와의 파트너십은 우리의 성공에 큰 도움이 됐지만, 동시에 기업 고객이 실제로 사용하는 환경에서는 다소 제약이 있었다”라",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209210",
-      "source": "AI타임스 - 전체기사",
-      "published": "2026-04-14 17:42:52",
-      "date": "2026-04-14",
-      "candidate_score": 7.304
-    },
-    {
-      "title": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
-      "summary": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
-      "source": "YouTube/IBM Technology",
-      "link": "https://www.youtube.com/watch?v=P8m5eHAyrFM",
-      "date": "2026-03-16",
-      "engagement": 116171,
-      "candidate_score": -1.918
-    },
-    {
-      "title": "Which company has the best AI model end of April?",
-      "summary": "This market will resolve according to the company that owns the model that has the highest arena score based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on April 30, 2026, 12:00 PM ET.\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off wi",
-      "source": "Polymarket",
-      "link": "https://polymarket.com/event/290398",
-      "date": "2026-04-13",
-      "engagement": 0,
-      "candidate_score": -27.896
+      "candidate_score": 6.814
     }
   ],
   "engagement_patterns": {
@@ -208,25 +208,24 @@
   },
   "qa": {
     "passed": true,
-    "score": 0.84,
+    "score": 0.75,
     "issues": [
-      "[AI] Main post could benefit from mentioning specific examples or companies affected",
-      "[AI] Reply 3 could provide more concrete alternatives or specific cost-saving strategies"
+      "[AI] Main post lacks specific details about what makes this different from existing AI tools",
+      "[AI] Could benefit from more concrete examples of potential use cases"
     ],
     "suggestions": [
-      "Add specific examples of affected AI startups or services in the main post",
-      "Include actual price ranges or percentages in reply 3 for budget planning",
-      "Consider adding a reply about potential timeline for when costs might stabilize",
-      "Mention specific local model alternatives or cost-effective APIs in reply 3"
+      "Add a brief comparison with existing design AI tools to highlight uniqueness",
+      "Include specific workflow examples (e.g., 'text prompt → complete website in X minutes')",
+      "Consider adding a reply about potential limitations or concerns developers should be aware of",
+      "The audience includes beginners - could add a simple explanation of what 'flagship but not top-tier' means in practical terms"
     ]
   },
   "posting_result": {
-    "post_id": "18097841969085362",
-    "reply_1": "18076690139180890",
-    "reply_2": "18191019490365957",
-    "reply_3": "17886155496496355",
-    "reply_4": "18006650189902997",
-    "link_id": "18111789010809545"
+    "post_id": "17920851267337764",
+    "reply_1": "17934203934083266",
+    "reply_2": "18140848021446163",
+    "reply_3": "17964118776062534",
+    "link_id": "18088885133252167"
   },
-  "posted_at": "2026-04-15T01:44:09.537844"
+  "posted_at": "2026-04-15T13:30:01.004274"
 }
