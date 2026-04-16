@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-16",
+    "mode": "informational",
+    "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+    "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+    "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+    "reply_count": 4,
+    "views": 36,
+    "likes": 1,
+    "replies": 5,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 58.6
+  },
+  {
     "date": "2026-04-15",
     "mode": "informational",
     "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
