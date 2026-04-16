@@ -1,32 +1,32 @@
 {
   "sources": {
     "Bluesky": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "warm",
       "items": []
     },
     "TruthSocial": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "warm",
       "items": []
     },
     "Reddit": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "warm",
       "items": []
     },
     "Instagram": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "warm",
       "items": []
     },
     "TikTok": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "warm",
       "items": []
     },
     "HN": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "hot",
       "items": [
         {
@@ -41,7 +41,7 @@
       ]
     },
     "Polymarket": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "warm",
       "items": [
         {
@@ -49,69 +49,132 @@
           "summary": "This market will resolve to \"Yes\" if OpenAI or an official representative of the company announces that it has created an artificial general intelligence (AGI) by December 31, 2026 ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from OpenAI and/or its official representative, however a consensus of credible reporting will",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/67081",
-          "date": "2026-04-15",
+          "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
         },
         {
           "title": "What will Trump post this week? (April 6 - April 12)",
           "summary": "This market will resolve to \"Yes\" if @realDonaldTrump posts/truths the listed term between April 6, 2026, 12:00 AM ET and April 12, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, all text posted by the listed account in quote and reply posts/truths count toward a \"Yes\" resolution, but quoted posts/truths and reposts/reTruths will not count.\n\nText ",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/340266",
-          "date": "2026-04-15",
+          "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
         },
         {
           "title": "What will Powell say during April Press Conference?",
           "summary": "Jerome Powell is currently scheduled to give an FOMC Introductory Statement and press conference on April 29, 2026, at 2:30 PM ET. This market pertains to his Introductory Statement as well as the following Q&A session.\n\nThis market will resolve to \"Yes\" if Powell says the listed term during the FOMC Press Conference. Otherwise, this market will resolve to \"No\".\n\nAny usage of the word regardless o",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/340398",
-          "date": "2026-04-15",
+          "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
-        },
-        {
-          "title": "What will Karoline Leavitt say during the next White House press briefing?",
-          "summary": "This market will resolve to \"Yes\" if the acting White House Press Secretary says the listed term during the next White House press briefing they participate in. Otherwise, the market will resolve to \"No\".\n\nAny usage of the term regardless of context will count toward the resolution of this market.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regar",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/361756",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
         },
         {
           "title": "FISA Section 702 reauthorized before it expires?",
           "summary": "This market will resolve to \"Yes\" if legislation that reauthorizes FISA Title VII, including Section 702, is passed by both chambers of the U.S. Congress and signed into law by April 19, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nQualifying legislation includes Public Law 118-49.\n\nQualifying legislation may include joint resolutions and must pass both the House and the Senate",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/307821",
-          "date": "2026-04-15",
+          "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
         },
         {
           "title": "What will King Charles say during the joint meeting of Congress on April 28? ",
           "summary": "King Charles is scheduled to participate in a joint meeting of Congress on April 28, 2026. (https://www.washingtonpost.com/politics/2026/04/01/king-charles-joint-meeting-congress/). \n\nThis market will resolve to \"Yes\" if King Charles says the listed term during the joint meeting of Congress scheduled for April 28, 2026. Otherwise, the market will resolve to \"No\".\n\nPlural and possessive forms of th",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/354090",
-          "date": "2026-04-15",
+          "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
         },
         {
           "title": "Trump announces end of military operations against Iran by ...?",
           "summary": "This market will resolve to \"Yes\" if President Trump, the US government, or the military publicly and officially announce that their military operations against Iran, initiated on February 28, 2026, have concluded by the listed date. Otherwise, this market will resolve to “No”.\n\nQualifying statements must clearly indicate that the operation has ended. Informal announcements, statements from unname",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/236992",
-          "date": "2026-04-15",
+          "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
         },
         {
           "title": "Trump announces US x Iran ceasefire end by...?",
           "summary": "On April 7–8, 2026, the United States and Iran agreed to a temporary two-week ceasefire aimed at halting direct hostilities and de-escalating the ongoing conflict.\n\nThis market will resolve to \"Yes\" if President Trump, the US government, or the US military publicly and officially announces that the ceasefire between the United States and Iran has ended or is no longer in effect by the specified da",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/355299",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "What will be said during the PGL Bucharest 2026 Grand Final?",
+          "summary": "The PGL Bucharest 2026 Grand Final is scheduled for April 11, 2026.\n\nThis market will resolve to \"Yes\" if the listed term is mentioned by anyone during the official English broadcast of the PGL Bucharest 2026 Grand Finals. Otherwise, this market will resolve to \"No\".\n\nMentions of the term originating from in-game audio—even in-game characters, the in-game announcer, or player voice comms—will also",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/350616",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "What will Trump say during Fox Business interview on April 15?",
+          "summary": "Donald Trump is scheduled to participate in an interview with Maria Bartiromo on April 15, 2026. (https://www.youtube.com/watch?v=wmwVQMWTqD0&start=2027). \n\nThis market will resolve to \"Yes\" if Donald Trump says the listed term during the Fox Business interview scheduled for April 15, 2026. Otherwise, the market will resolve to \"No\".\n\nPlural and possessive forms of the listed term will count towar",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/376050",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "What will Trump say in April?",
+          "summary": "This market will resolve to “Yes” if Donald Trump mentions the listed term between April 1, 2026, 12:00 AM ET and April 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regardless of context; however, other forms will NOT count.\n\nInstances where the term is used in a compound word wil",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/315285",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "Trump announces US x Iran ceasefire broken by...?",
+          "summary": "On April 7–8, 2026, the United States and Iran agreed to a temporary two-week ceasefire aimed at halting direct hostilities and de-escalating the ongoing conflict.\n\nThis market will resolve to \"Yes\" if President Trump, the US government, or the US military publicly and officially announces that the ceasefire between the United States and Iran has been broken or violated by either the United States",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/358303",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "Trump announces US blockade of Hormuz lifted by...?",
+          "summary": "On April 12, 2026, President Donald Trump announced that the United States will blockade the Strait of Hormuz. You can read more about that here: https://www.nbcnews.com/world/iran/live-blog/live-updates-us-iran-fail-reach-deal-peace-talks-day-negotiations-rcna315918.\n\nThis market will resolve to \"Yes\" if President Trump, the US government, or the US military publicly and officially announces the ",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/372242",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "What will Trump say this week? (April 19)",
+          "summary": "This market will resolve to “Yes” if Donald Trump mentions the listed term between April 13, 2026, 12:00 AM ET and April 19, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regardless of context; however, other forms will NOT count.\n\nInstances where the term is used in a compound word wi",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/364858",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "What will NATO Secretary General say during meeting with Prime Minister of Czechia? ",
+          "summary": "NATO Secretary General Mark Rutte is scheduled to participate in a meeting with Prime Minister of Czechia Andrej Babiš on April 16, 2026, 4:35PM ET (https://www.nato.int/en/news-and-events/events/media-advisories/2026/04/15/nato-secretary-general-to-visit-czechia). \n\nThis market will resolve to \"Yes\" if Mark Rutte says the listed term during the meeting with the Prime Minister of Czechia scheduled",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/382843",
+          "date": "2026-04-16",
+          "_score": 0,
+          "cached_at": "2026-04-16T04:35:34.223060+00:00"
+        },
+        {
+          "title": "What will Karoline Leavitt say during the next White House press briefing?",
+          "summary": "This market will resolve to \"Yes\" if the acting White House Press Secretary says the listed term during the next White House press briefing they participate in. Otherwise, the market will resolve to \"No\".\n\nAny usage of the term regardless of context will count toward the resolution of this market.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regar",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/361756",
           "date": "2026-04-15",
           "_score": 0,
           "cached_at": "2026-04-15T22:10:16.486308+00:00"
@@ -126,15 +189,6 @@
           "cached_at": "2026-04-15T04:27:40.860855+00:00"
         },
         {
-          "title": "What will be said during the PGL Bucharest 2026 Grand Final?",
-          "summary": "The PGL Bucharest 2026 Grand Final is scheduled for April 11, 2026.\n\nThis market will resolve to \"Yes\" if the listed term is mentioned by anyone during the official English broadcast of the PGL Bucharest 2026 Grand Finals. Otherwise, this market will resolve to \"No\".\n\nMentions of the term originating from in-game audio—even in-game characters, the in-game announcer, or player voice comms—will also",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/350616",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
-        },
-        {
           "title": "What will Trump post this week? (April 13 - April 19)",
           "summary": "This market will resolve to \"Yes\" if @realDonaldTrump posts/truths the listed term between April 13, 2026, 12:00 AM ET and April 19, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, all text posted by the listed account in quote and reply posts/truths count toward a \"Yes\" resolution, but quoted posts/truths and reposts/reTruths will not count.\n\nText",
           "source": "Polymarket",
@@ -142,15 +196,6 @@
           "date": "2026-04-15",
           "_score": 0,
           "cached_at": "2026-04-15T10:43:46.022826+00:00"
-        },
-        {
-          "title": "What will Trump say during Fox Business interview on April 15?",
-          "summary": "Donald Trump is scheduled to participate in an interview with Maria Bartiromo on April 15, 2026. (https://www.youtube.com/watch?v=wmwVQMWTqD0&start=2027). \n\nThis market will resolve to \"Yes\" if Donald Trump says the listed term during the Fox Business interview scheduled for April 15, 2026. Otherwise, the market will resolve to \"No\".\n\nPlural and possessive forms of the listed term will count towar",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/376050",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
         },
         {
           "title": "Trump out as President by April 30?",
@@ -162,28 +207,10 @@
           "cached_at": "2026-04-15T22:10:16.486308+00:00"
         },
         {
-          "title": "What will Trump say in April?",
-          "summary": "This market will resolve to “Yes” if Donald Trump mentions the listed term between April 1, 2026, 12:00 AM ET and April 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regardless of context; however, other forms will NOT count.\n\nInstances where the term is used in a compound word wil",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/315285",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T04:27:40.860855+00:00"
-        },
-        {
           "title": "AI data center moratorium passed before 2027?",
           "summary": "This market will resolve to “Yes” if a bill erecting a qualifying moratorium that prohibits or suspends approvals for new AI data center construction or major expansions anywhere in the United States is passed into law by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying moratorium go into effect against the construction of any facility described in the leg",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/108522",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T10:43:46.022826+00:00"
-        },
-        {
-          "title": "Trump announces US x Iran ceasefire broken by...?",
-          "summary": "On April 7–8, 2026, the United States and Iran agreed to a temporary two-week ceasefire aimed at halting direct hostilities and de-escalating the ongoing conflict.\n\nThis market will resolve to \"Yes\" if President Trump, the US government, or the US military publicly and officially announces that the ceasefire between the United States and Iran has been broken or violated by either the United States",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/358303",
           "date": "2026-04-15",
           "_score": 0,
           "cached_at": "2026-04-15T10:43:46.022826+00:00"
@@ -196,50 +223,13 @@
           "date": "2026-04-15",
           "_score": 0,
           "cached_at": "2026-04-15T10:43:46.022826+00:00"
-        },
-        {
-          "title": "Trump announces US blockade of Hormuz lifted by...?",
-          "summary": "On April 12, 2026, President Donald Trump announced that the United States will blockade the Strait of Hormuz. You can read more about that here: https://www.nbcnews.com/world/iran/live-blog/live-updates-us-iran-fail-reach-deal-peace-talks-day-negotiations-rcna315918.\n\nThis market will resolve to \"Yes\" if President Trump, the US government, or the US military publicly and officially announces the ",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/372242",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
-        },
-        {
-          "title": "What will Trump say this week? (April 19)",
-          "summary": "This market will resolve to “Yes” if Donald Trump mentions the listed term between April 13, 2026, 12:00 AM ET and April 19, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nPlural and possessive forms of the listed term will count toward the resolution of this market regardless of context; however, other forms will NOT count.\n\nInstances where the term is used in a compound word wi",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/364858",
-          "date": "2026-04-15",
-          "_score": 0,
-          "cached_at": "2026-04-15T22:10:16.486308+00:00"
-        },
-        {
-          "title": "What will Trump say during dinner with Dutch royals on April 13? ",
-          "summary": "Donald Trump is scheduled to participate in a dinner with the King and Queen of the Netherlands at 7:45PM ET on April 13, 2026. (https://rollcall.com/factbase/trump/calendar/). \n\nThis market will resolve to \"Yes\" if Donald Trump says the listed term during the dinner scheduled for April 13, 2026 at 7:45PM ET. Otherwise, the market will resolve to \"No\".\n\nPlural and possessive forms of the listed te",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/375219",
-          "date": "2026-04-14",
-          "_score": 0,
-          "cached_at": "2026-04-14T04:27:53.454057+00:00"
         }
       ]
     },
     "YouTube": {
-      "last_refresh_at": "2026-04-15T22:10:16.486308+00:00",
+      "last_refresh_at": "2026-04-16T04:35:34.223060+00:00",
       "last_mode": "hot",
-      "items": [
-        {
-          "title": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
-          "summary": "What Is Llama.cpp? The LLM Inference Engine for Local AI",
-          "source": "YouTube/IBM Technology",
-          "link": "https://www.youtube.com/watch?v=P8m5eHAyrFM",
-          "date": "2026-03-16",
-          "_score": 116171,
-          "cached_at": "2026-04-13T14:05:34.850988+00:00"
-        }
-      ]
+      "items": []
     }
   }
 }
