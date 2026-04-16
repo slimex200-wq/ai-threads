@@ -1,22 +1,5 @@
 [
   {
-    "date": "2026-04-10",
-    "titles": [
-      "지푸도 API 가격 인상...중국 AI 업계 '제값 받기' 확산",
-      "구글, 제미나이에 '노트북' 기능 탑재...'노트북LM'과 실시간 동기화",
-      "ChatGPT finally offers $100/month Pro plan",
-      "오픈AI, 월 100달러 '프로' 요금제 출시...앤트로픽과 '코딩 전쟁' 선언",
-      "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=208981",
-      "https://www.aitimes.com/news/articleView.html?idxno=209014",
-      "https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/",
-      "https://www.aitimes.com/news/articleView.html?idxno=209048",
-      "https://www.aitimes.com/news/articleView.html?idxno=209104"
-    ]
-  },
-  {
     "date": "2026-04-11",
     "titles": [
       "Anthropic temporarily banned OpenClaw's creator from accessing Claude",
@@ -86,6 +69,15 @@
     "urls": [
       "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac",
       "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/"
+    ]
+  },
+  {
+    "date": "2026-04-17",
+    "titles": [
+      "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 '루틴' 공개"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209352"
     ]
   }
 ]

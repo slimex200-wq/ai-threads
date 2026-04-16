@@ -1,0 +1,233 @@
+{
+  "selected_article": {
+    "original_title": "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 '루틴' 공개",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209352",
+    "reason": "Still the most actionable content for developers with clear practical implications for workflow automation"
+  },
+  "post_main": "앤트로픽이 클로드 코드에 '루틴' 기능을 새로 추가했다. 클로드 코드는 앤트로픽의 개발자용 AI 도구인데, 이제 반복 작업을 자동화할 수 있게 됐다. 한번 설정하면 프롬프트, 코드 저장소, 외부 연동을 기반으로 시간대별/일간/주간 또는 API 트리거로 자동 실행된다. 크론잡 같은 스케줄링을 AI가 대신 처리하는 개념이다.",
+  "replies": [
+    "클로드 코드 자체는 claude.ai에서 접근할 수 있는 코딩 전용 인터페이스다. 기존 클로드 채팅과 달리 코드 작성/실행에 최적화되어 있다.",
+    "루틴으로 할 수 있는 일: 매일 깃허브 이슈 정리, 주간 리포트 생성, 특정 이벤트 발생시 슬랙 알림, 데이터 백업 자동화 등이 가능하다고 한다.",
+    "다만 아직 연구 프리뷰 단계라 기능 제한이 있을 수 있다. 크론잡 대비 장점은 자연어로 설정 가능하다는 점, 단점은 외부 의존성이다.",
+    "반복 업무가 많은 개발자라면 claude.ai에서 클로드 코드 → 루틴 메뉴 확인해보자. 간단한 자동화부터 시작하면 좋을 것 같다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "Claude Code routines setup interface",
+    "reason": "The setup interface and configuration options would help users understand how to actually implement the automation"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209352",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209352_211746_1738.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
+      "summary": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong, it's diagnosing how the entire tech stack operates now that AI is a part of it.",
+      "link": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 16 Apr 2026 16:15:00 +0000",
+      "date": "2026-04-16",
+      "candidate_score": 10.095,
+      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . The role of observability tools has evolved once again. While the market for solutions to ensure tech systems’ reliability has grown over the years, the center of gravity has steadily shifted from “track everything” to “control complexity and costs.” Meanwhile, the rapid influx and adoption of AI agents within enterprises have only added a brand new category of workload that needs to be observed. InsightFinder AI , a startup based on 15 years of academic research, is no stranger to this problem. The company has been using machine learning to monitor, identify, and proactively fix IT infrastructure issues since 2016 , and is now attacking today’s AI model reliability issue with an AI agent solution that can do everything from detection and diagnosis to remediation and prevention. The company, founded by CEO Helen Gu, a computer science professor at North Carolina State University who previously worked at IBM and Google, recently raised $15 million in a Series B round led by Yu Galaxy, TechCrunch has exclusively learned. According to Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong; it’s diagnosing how the entire tech stack operates now that AI is a part of it. “In order to diagnose these AI model problems, you need to actually monitor and analyze the data, the model, and the infrastructure together,” Gu told TechCrunch. “It’s not always a mod"
+    },
+    {
+      "title": "오픈AI, '하네스·샌드박스' 포함한 에이전트 구축용 SDK 업데이트",
+      "summary": "오픈AI가 개발자들이 안전하고 효율적으로 AI 에이전트를 구축할 수 있도록 에이전트 개발 도구인 ‘에이전트 SDK(Agents SDK)’를 대폭 업데이트했다.오픈AI는 15일(현지시간) 에이전트 SDK에 '하네스(harness) 구조’와 ‘샌드박스 실행 환경’을 도입했다고 밝혔다.새롭게 강화된 에이전트 SDK의 핵심은 ‘모델 네이티브 하네스’ 구조다. SDK가 제공하는 하네스에 모델을 얹기만 하면 바로 안전한 에이전트 서비스가 가능해진다는 것이다.이를 통해 에이전트는 컴퓨터 환경 내에서 파일을 탐색하고, 명령을 실행하며, 코드를 수",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209332",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 18:57:50",
+      "date": "2026-04-16",
+      "candidate_score": 9.095
+    },
+    {
+      "title": "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 ‘루틴’ 공개",
+      "summary": "앤트로픽이 개발자용 AI 도구 ‘클로드 코드(Claude Code)’에 반복 자동화 기능을 새롭게 도입했다.앤트로픽은 14일(현지시간) 클로드 코드가 일정에 맞춰 반복 실행되도록 설정할 수 있는 기능 ‘루틴(Routines)’을 연구 프리뷰 형태로 공개했다.루틴은 한번 설정해 두면 프롬프트와 코드 저장소(repo), 외부 연동(connectors) 등을 기반으로 자동 실행되는 AI 워크플로우다.사용자는 특정 작업을 정의한 뒤 실행 주기(시간 단위, 일간, 주간)나 API 호출, 이벤트 트리거 등에 따라 자동으로 작동하도록 구성할 수",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209352",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 18:50:42",
+      "date": "2026-04-16",
+      "candidate_score": 9.095
+    },
+    {
+      "title": "구글, 표현력 강화한 차세대 음성 모델 '제미나이 3.1 플래시 TTS' 출시",
+      "summary": "구글이 표현력과 제어력을 대폭 강화한 차세대 음성 합성 모델을 선보였다.구글은 15일(현지시간) 차세대 텍스트 음성 변환(Text-to-Speech) 모델 ‘제미나이 3.1 플래시 TTS(Gemini 3.1 Flash TTS)’를 공개했다. 이 모델은 개발자와 기업, 일반 사용자 모두에게 차례로 서비스된다.개발자는 제미나이 API와 구글 AI 스튜디오를 통해 프리뷰 형태로 사용할 수 있으며, 기업 고객은 버텍스 AI에서 접근 가능하다. 협업 도구인 구글 '비드(Vids)'를 통해 워크스페이스 사용자에게도 기능이 제공된다.가장 큰 특",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209335",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 18:44:53",
+      "date": "2026-04-16",
+      "candidate_score": 9.095
+    },
+    {
+      "title": "바이트댄스, 미국 제외 전 세계에 동영상 모델 ‘시댄스 2.0’ 출시",
+      "summary": "바이트댄스가 차세대 AI 영상 생성 모델 ‘시댄스 2.0(Seedance 2.0)’을 전 세계로 확대 출시했다. 다만 저작권 논란이 불거진 미국 시장은 이번 서비스 대상에서 제외됐다.바이트댄스는 15일(현지시간) 시댄스 2.0을 100개 이상의 국가 및 지역에서 기업 고객을 대상으로 제공한다고 밝혔다.이 모델은 API 형태로 제공되며, 인도, 캐나다, 영국, 호주 등 주요 시장에서 사용할 수 있다.그러나 미국은 서비스 목록에서 빠졌으며, 앞으로 출시 계획 역시 공개되지 않았다.Dreamina Seedance 2.0 is now li",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209345",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 16:38:20",
+      "date": "2026-04-16",
+      "candidate_score": 9.095
+    },
+    {
+      "title": "구글, 맥OS용 '제미나이' 앱 출시...데스크톱 AI 앱 경쟁 합류",
+      "summary": "구글이 데스크톱 전반에 걸쳐 AI 기능을 확대 적용하며, 사용자 작업 환경 전반을 AI 중심으로 재편하는 데 속도를 내고 있다.구글은 15일(현지시간) ‘제미나이(Gemini)’의 맥OS 전용 네이티브 앱을 출시했다.이번에 공개된 제미나이 맥OS 앱은 ‘상시 접근성’이 핵심이다.사용자는 단축키(Option + Space)를 통해 언제 어디서든 AI를 호출할 수 있으며, 별도의 창 전환 없이 현재 작업 화면 위에서 바로 도움받을 수 있다. 이는 기존처럼 여러 창을 오가며 작업해야 했던 비효율을 줄이고, 업무 흐름을 유지하는 데 초점을",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209325",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 19:13:38",
+      "date": "2026-04-16",
+      "candidate_score": 7.295
+    },
+    {
+      "title": "어도비, 크리에이티브 도구 통합 '에이전트' 출시...'클로드' 등 타사 챗봇에서도 사용",
+      "summary": "어도비가 자사의 다양한 크리에이티브 도구를 챗봇 하나로 통합 운영하는 ‘에이전트형 AI’ 전략을 추진한다. 나아가 이를 '클로드'와 같은 인기 챗봇에 연결하기로 했다.어도비는 15일(현지시간) 하나의 대화형 인터페이스에서 이미지·영상 제작 전 과정을 자동으로 수행하는 ‘파이어플라이 AI 어시스턴트(Firefly AI Assistant)’를 공개했다.이번에 공개된 파이어플라이 AI 어시스턴트는 사용자가 원하는 결과를 자연어로 설명하면, AI가 이를 바탕으로 작업 흐름을 설계하고 실행하는 것이 핵심이다.포토샵, 프리미어 프로, 일러스트",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209346",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 18:38:29",
+      "date": "2026-04-16",
+      "candidate_score": 7.295
+    },
+    {
+      "title": "미국 법원, AI 채팅 내용 법정 증거로 채택...\"챗봇에 비밀 털어놓으면 위험\"",
+      "summary": "AI 챗봇에 털어놓은 비밀이 법정에서 자신을 겨누는 ‘칼날’이 돼 돌아왔다. 미국 법원이 AI와의 대화 기록을 법정 증거로 인정하면서, 법조계와 산업계에 비상이 걸렸다.로이터에 따르면, 뉴욕 연방법원의 제드 라코프 판사는 지난 2월 사기 혐의로 기소된 대체 자산 운용사 베네피센트의 브래들리 헤프너 창립자에게 앤트로픽의 '클로드'와 나눈 대화 기록 31건을 검찰에 제출하라고 명령했다.피고인은 챗봇과의 대화가 변호사와의 상담을 위해 작성된 것이라며 '변호사-의뢰인 비밀유지 특권'을 주장했다. 미국 법률에 따르면, 사람들이 변호사와 나누",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209365",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 18:00:00",
+      "date": "2026-04-16",
+      "candidate_score": 7.295
+    },
+    {
+      "title": "혜움, 업스테이지 국가대표 AI 컨소시엄 신규 참여…’금융 서비스 확산’ 담당",
+      "summary": "혜움(대표 옥형석)은 업스테이지 컨소시엄을 통해 정부 ‘독자 AI 파운데이션 모델 개발 프로젝트’에 합류, 소상공인·중소기업 대상 에이전틱 AI 실증 및 확산에 나선다고 16일 밝혔다.과학기술정보통신부가 추진하는 국가 AI 경쟁력 강화 사업인 ‘독자 AI 파운데이션 모델 개발 프로젝트’에서는 지난 2월, 업스테이지를 포함한 4개 컨소시엄이 2단계 진출팀으로 선정됐다. 이로써 현재 업스테이지 컨소시엄에는 ▲노타 ▲래블업 ▲플리토 ▲금융결제원 ▲로앤컴퍼니 ▲마키나락스 ▲뷰노 ▲데이원컴퍼니 ▲올거나이즈 ▲서강대학교 산학협력단 ▲한국과학기",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209367",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 17:55:00",
+      "date": "2026-04-16",
+      "candidate_score": 7.295
+    },
+    {
+      "title": "[게시판] 텔레픽스, AI 큐브위성으로 이란 공습 피해 현장 포착 등 단신",
+      "summary": "■ 우주 AI 종합 솔루션 전문 텔레픽스(TelePIX, 대표 조성익)는 AI 큐브위성 블루본(BlueBON)으로 촬영한 위성영상을 분석한 결과, 이란 테헤란 인근 메흐라바드(Mehrabad) 공항이 공습으로 최소 4대 이상의 항공기가 파괴된 정황을 확인했다고 밝혔다. 이번 분석에는 텔레픽스의 위성데이터 분석 특화 에이전틱 AI 솔루션 '샛챗(SatCHAT)'이 활용됐으며, AI 위성 분석만으로 현장 접근이 불가능한 지역의 피해 상황을 신속하게 식별했다고 전했다. ■ 네이버(대표 최수연)는 온라인 사업자의 AI 활용 역량을 비즈니스",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209368",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-16 17:50:00",
+      "date": "2026-04-16",
+      "candidate_score": 7.295
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      },
+      {
+        "date": "2026-04-12",
+        "mode": "informational",
+        "title": "The AI code wars are heating up",
+        "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot ",
+        "reply_casual": "",
+        "views": 264,
+        "likes": 4,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 144.4
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 282.8,
+      "likes": 2.5,
+      "replies": 5.3,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 94.6
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.81,
+    "issues": [
+      "[AI] Reply 3의 '외부 의존성' 단점 언급이 모호함 - 구체적으로 어떤 의존성인지 명확하지 않음"
+    ],
+    "suggestions": [
+      "Reply 4에서 실제 설정 과정의 간단한 예시나 스크린샷 언급 추가",
+      "기존 자동화 도구(GitHub Actions, Jenkins 등)와의 차별점을 더 구체적으로 설명",
+      "루틴 기능의 현재 제한사항이나 요금 정보 언급 고려",
+      "개발자들이 바로 시도해볼 수 있는 starter 루틴 예시 1-2개 추가"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18139524139510691",
+    "reply_1": "18104616310733606",
+    "reply_2": "18181040659346963",
+    "reply_3": "18093540728177461",
+    "reply_4": "17886314559496148",
+    "link_id": "18078997169199959"
+  },
+  "posted_at": "2026-04-17T01:57:27.313403"
+}

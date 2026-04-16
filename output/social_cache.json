@@ -1,32 +1,32 @@
 {
   "sources": {
     "Bluesky": {
-      "last_refresh_at": "2026-04-16T10:45:52.529355+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "warm",
       "items": []
     },
     "TruthSocial": {
-      "last_refresh_at": "2026-04-16T10:45:52.529355+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "warm",
       "items": []
     },
     "Reddit": {
-      "last_refresh_at": "2026-04-16T10:45:52.529355+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "warm",
       "items": []
     },
     "Instagram": {
-      "last_refresh_at": "2026-04-16T10:45:52.529355+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "warm",
       "items": []
     },
     "TikTok": {
-      "last_refresh_at": "2026-04-16T10:45:52.529355+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "warm",
       "items": []
     },
     "HN": {
-      "last_refresh_at": "2026-04-16T15:12:48.153717+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "hot",
       "items": [
         {
@@ -41,7 +41,7 @@
       ]
     },
     "Polymarket": {
-      "last_refresh_at": "2026-04-16T10:45:52.529355+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "warm",
       "items": [
         {
@@ -51,7 +51,7 @@
           "link": "https://polymarket.com/event/67081",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will Trump post this week? (April 6 - April 12)",
@@ -60,7 +60,7 @@
           "link": "https://polymarket.com/event/340266",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will Powell say during April Press Conference?",
@@ -69,7 +69,7 @@
           "link": "https://polymarket.com/event/340398",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "FISA Section 702 reauthorized before it expires?",
@@ -78,7 +78,7 @@
           "link": "https://polymarket.com/event/307821",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will King Charles say during the joint meeting of Congress on April 28? ",
@@ -87,7 +87,7 @@
           "link": "https://polymarket.com/event/354090",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "Trump announces end of military operations against Iran by ...?",
@@ -96,7 +96,7 @@
           "link": "https://polymarket.com/event/236992",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "Trump announces US x Iran ceasefire end by...?",
@@ -105,7 +105,7 @@
           "link": "https://polymarket.com/event/355299",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will be said during the PGL Bucharest 2026 Grand Final?",
@@ -114,7 +114,7 @@
           "link": "https://polymarket.com/event/350616",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will Trump say during Fox Business interview on April 15?",
@@ -123,7 +123,7 @@
           "link": "https://polymarket.com/event/376050",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will Trump say in April?",
@@ -132,7 +132,7 @@
           "link": "https://polymarket.com/event/315285",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "Trump announces US x Iran ceasefire broken by...?",
@@ -150,7 +150,7 @@
           "link": "https://polymarket.com/event/372242",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will Trump say this week? (April 19)",
@@ -159,16 +159,16 @@
           "link": "https://polymarket.com/event/364858",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will NATO Secretary General say during meeting with Prime Minister of Czechia? ",
-          "summary": "NATO Secretary General Mark Rutte is scheduled to participate in a meeting with Prime Minister of Czechia Andrej Babiš on April 16, 2026, 4:35PM ET (https://www.nato.int/en/news-and-events/events/media-advisories/2026/04/15/nato-secretary-general-to-visit-czechia). \n\nThis market will resolve to \"Yes\" if Mark Rutte says the listed term during the meeting with the Prime Minister of Czechia scheduled",
+          "summary": "NATO Secretary General Mark Rutte is scheduled to participate in a meeting with Prime Minister of Czechia Andrej Babiš on April 16, 2026, 12:35 ET (https://www.nato.int/en/news-and-events/events/media-advisories/2026/04/15/nato-secretary-general-to-visit-czechia). \n\nThis market will resolve to \"Yes\" if Mark Rutte says the listed term during the meeting with the Prime Minister of Czechia scheduled ",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/382843",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "Will Trump visit China by...?",
@@ -177,7 +177,7 @@
           "link": "https://polymarket.com/event/46859",
           "date": "2026-04-16",
           "_score": 0,
-          "cached_at": "2026-04-16T10:45:52.529355+00:00"
+          "cached_at": "2026-04-16T16:54:39.558978+00:00"
         },
         {
           "title": "What will Karoline Leavitt say during the next White House press briefing?",
@@ -227,7 +227,7 @@
       ]
     },
     "YouTube": {
-      "last_refresh_at": "2026-04-16T15:12:48.153717+00:00",
+      "last_refresh_at": "2026-04-16T16:54:39.558978+00:00",
       "last_mode": "hot",
       "items": []
     }
