@@ -1,117 +1,118 @@
 {
   "selected_article": {
-    "original_title": "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 '루틴' 공개",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=209352",
-    "reason": "Still the most actionable content for developers with clear practical implications for workflow automation"
+    "original_title": "오픈AI, 생명과학 연구를 위한 AI 모델 'GPT-로절린드' 출시",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209384",
+    "reason": "구체적인 모델명과 실제 활용 분야가 명확하게 제시된 기사다. 생명과학 특화 AI라는 새로운 영역으로 개발자들에게 새로운 활용 가능성을 제시하고, DNA 구조 발견자의 이름을 딴 모델명도 흥미롭다. 신약 개발이라는 실용적 활용처가 구체적이다."
   },
-  "post_main": "앤트로픽이 클로드 코드에 '루틴' 기능을 새로 추가했다. 클로드 코드는 앤트로픽의 개발자용 AI 도구인데, 이제 반복 작업을 자동화할 수 있게 됐다. 한번 설정하면 프롬프트, 코드 저장소, 외부 연동을 기반으로 시간대별/일간/주간 또는 API 트리거로 자동 실행된다. 크론잡 같은 스케줄링을 AI가 대신 처리하는 개념이다.",
+  "post_main": "오픈AI가 생명과학 전용 AI 모델 'GPT-로절린드'를 출시했다. DNA 구조 발견에 기여한 과학자 로절린드 프랭클린의 이름을 따왔다. 가설 생성부터 실험 설계, 데이터 분석까지 수행한다. 생화학, 유전체학, 신약 개발, 전임상 연구 등에서 인간 연구자와 협업하는 'AI 연구 파트너'로 설계됐다.",
   "replies": [
-    "클로드 코드 자체는 claude.ai에서 접근할 수 있는 코딩 전용 인터페이스다. 기존 클로드 채팅과 달리 코드 작성/실행에 최적화되어 있다.",
-    "루틴으로 할 수 있는 일: 매일 깃허브 이슈 정리, 주간 리포트 생성, 특정 이벤트 발생시 슬랙 알림, 데이터 백업 자동화 등이 가능하다고 한다.",
-    "다만 아직 연구 프리뷰 단계라 기능 제한이 있을 수 있다. 크론잡 대비 장점은 자연어로 설정 가능하다는 점, 단점은 외부 의존성이다.",
-    "반복 업무가 많은 개발자라면 claude.ai에서 클로드 코드 → 루틴 메뉴 확인해보자. 간단한 자동화부터 시작하면 좋을 것 같다."
+    "일반 GPT와 달리 생명과학에 특화된 지식과 추론 능력을 갖췄다. 복잡한 생물학적 데이터를 이해하고 해석할 수 있다.",
+    "신약 개발 패러다임이 바뀔 수 있겠다. 연구 가설 검증이나 실험 설계에서 AI가 실질적 도움을 줄 수 있을 것 같다.",
+    "바이오테크 스타트업이나 제약회사에서 활용도가 높을 것 같다. 연구 속도를 크게 단축시킬 수 있을 듯.",
+    "AI가 이제 특정 전문 분야로 깊이 들어가고 있다. 의료, 법무, 금융에 이어 생명과학까지 전용 모델이 나오고 있거든."
   ],
   "media_plan": {
-    "preferred_type": "video",
-    "search_query": "Claude Code routines setup interface",
-    "reason": "The setup interface and configuration options would help users understand how to actually implement the automation"
+    "preferred_type": "image",
+    "search_query": "GPT Rosalind OpenAI life sciences AI",
+    "reason": "생명과학 연구 과정이나 DNA 구조 분석 등을 시각적으로 보여주는 이미지가 있다면 독자들이 이 AI 모델의 활용 분야를 더 쉽게 이해할 수 있을 것"
   },
   "topic_tag": "ai.threads",
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209352",
-  "og_image": "https://cdn.aitimes.com/news/photo/202604/209352_211746_1738.jpg",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209384",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209384_211764_734.png",
   "video_url": "",
   "mode": "informational",
   "candidate_articles": [
     {
-      "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
-      "summary": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong, it's diagnosing how the entire tech stack operates now that AI is a part of it.",
-      "link": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
+      "title": "Luma launches AI-powered production studio with faith-focused Wonder Project",
+      "summary": "The studio's first project will be about Moses and star Academy Award-winner Ben Kingsley, to be released this spring on Prime Video.",
+      "link": "https://techcrunch.com/2026/04/16/luma-launches-ai-powered-production-studio-with-faith-focused-wonder-project/",
       "source": "AI News & Artificial Intelligence | TechCrunch",
-      "published": "Thu, 16 Apr 2026 16:15:00 +0000",
+      "published": "Thu, 16 Apr 2026 21:58:08 +0000",
       "date": "2026-04-16",
-      "candidate_score": 10.095,
-      "details": "The first StrictlyVC of 2026 hits San Francisco. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . The role of observability tools has evolved once again. While the market for solutions to ensure tech systems’ reliability has grown over the years, the center of gravity has steadily shifted from “track everything” to “control complexity and costs.” Meanwhile, the rapid influx and adoption of AI agents within enterprises have only added a brand new category of workload that needs to be observed. InsightFinder AI , a startup based on 15 years of academic research, is no stranger to this problem. The company has been using machine learning to monitor, identify, and proactively fix IT infrastructure issues since 2016 , and is now attacking today’s AI model reliability issue with an AI agent solution that can do everything from detection and diagnosis to remediation and prevention. The company, founded by CEO Helen Gu, a computer science professor at North Carolina State University who previously worked at IBM and Google, recently raised $15 million in a Series B round led by Yu Galaxy, TechCrunch has exclusively learned. According to Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong; it’s diagnosing how the entire tech stack operates now that AI is a part of it. “In order to diagnose these AI model problems, you need to actually monitor and analyze the data, the model, and the infrastructure together,” Gu told TechCrunch. “It’s not always a mod"
+      "candidate_score": 15.011,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . AI video generation startup Luma has launched Innovative Dreams, a production company built in partnership with Wonder Project, a streaming service that produces religious films and TV on Amazon Prime. The tie-up’s first show will be called “The Old Stories: Moses,” starring British actor Ben Kingsley and set to launch this spring on Prime Video. “Innovative Dreams is a production services company where seasoned filmmakers from director Jon Erwin’s team and Luma’s creative technologists work with great studios and filmmakers to help them realize ambitious ideas,” Luma said Thursday in a social media post . The company envisages creative teams collaborating in real time with Luma Agents to make changes to sets, props, and lighting, as well as bring in footage of human actors. Luma Agents are the company’s recently launched tools designed to handle end-to-end creative work across text, image, video, and audio. “This is a significant improvement over the current virtual production and performance capture processes where things come together only in post,” Luma’s post said. “This is the leverage of AI — not just faster or cheaper, but better than what came before.” Luma isn’t the only startup to move from tooling to production. AI startup Higgsfield last week launched an original series , starting with a 10-minute sci-fi episode, and London-based creative studio Wonder Studios is working on a documentary wi"
     },
     {
-      "title": "오픈AI, '하네스·샌드박스' 포함한 에이전트 구축용 SDK 업데이트",
-      "summary": "오픈AI가 개발자들이 안전하고 효율적으로 AI 에이전트를 구축할 수 있도록 에이전트 개발 도구인 ‘에이전트 SDK(Agents SDK)’를 대폭 업데이트했다.오픈AI는 15일(현지시간) 에이전트 SDK에 '하네스(harness) 구조’와 ‘샌드박스 실행 환경’을 도입했다고 밝혔다.새롭게 강화된 에이전트 SDK의 핵심은 ‘모델 네이티브 하네스’ 구조다. SDK가 제공하는 하네스에 모델을 얹기만 하면 바로 안전한 에이전트 서비스가 가능해진다는 것이다.이를 통해 에이전트는 컴퓨터 환경 내에서 파일을 탐색하고, 명령을 실행하며, 코드를 수",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209332",
-      "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 18:57:50",
+      "title": "Upscale AI in talks to raise at $2B valuation, says report",
+      "summary": "AI infrastructure company Upscale AI is reportedly in talks to raise its third funding round since launching just seven months ago.",
+      "link": "https://techcrunch.com/2026/04/16/upscale-ai-in-talks-to-raise-at-2b-valuation-says-report/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 16 Apr 2026 20:41:13 +0000",
       "date": "2026-04-16",
-      "candidate_score": 9.095
+      "candidate_score": 9.611,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . AI infrastructure company Upscale AI is reportedly in talks to nab its third funding round since launching just seven months ago, according to Bloomberg . This latest round — which aims to raise around $180 million to $200 million — would value the company at about $2 billion. The company announced a $200 million Series A in January and a $100 million seed round in September, when it first launched. Investors in the company include Tiger Global Management, Xora Innovation, and Premji Invest. Notably, Upscale AI has yet to release a product. However, it’s said to focus on building custom chips and on the infrastructure to enable them to communicate effectively. The company is betting on a full-stack solution and open standards as being the future of scalable AI infrastructure. The rumored valuation and raise are part of the startup playbook in this age of AI, where companies grow fast and valuations grow faster, but the hope for the next big thing outpaces it all. StrictlyVC kicks off the year in SF. Get in the room for unfiltered fireside chats with industry leaders, insider VC insights, and high-value connections that actually move the needle. Tickets are limited. Subscribe for the industry’s biggest tech news Every weekday and Sunday, you can get the best of TechCrunch’s coverage. TechCrunch Mobility is your destination for transportation news and insight. Startups are the core of TechCrunch, so get o"
     },
     {
-      "title": "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 ‘루틴’ 공개",
-      "summary": "앤트로픽이 개발자용 AI 도구 ‘클로드 코드(Claude Code)’에 반복 자동화 기능을 새롭게 도입했다.앤트로픽은 14일(현지시간) 클로드 코드가 일정에 맞춰 반복 실행되도록 설정할 수 있는 기능 ‘루틴(Routines)’을 연구 프리뷰 형태로 공개했다.루틴은 한번 설정해 두면 프롬프트와 코드 저장소(repo), 외부 연동(connectors) 등을 기반으로 자동 실행되는 AI 워크플로우다.사용자는 특정 작업을 정의한 뒤 실행 주기(시간 단위, 일간, 주간)나 API 호출, 이벤트 트리거 등에 따라 자동으로 작동하도록 구성할 수",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209352",
+      "title": "삼성전자, 스마트싱스에 AI로 가족 챙기는 ‘패밀리 케어’ 추가",
+      "summary": "삼성전자는 글로벌 스마트홈 플랫폼 스마트싱스(SmartThings) 업데이트를 진행, ‘패밀리 케어’ 서비스 신규 기능을 대폭 추가했다고 17일 밝혔다.페밀리 케어는 부모님 등 떨어져 사는 가족의 일상을 돌볼 수 있도록 돕는 서비스다. 스마트싱스로 집안의 다양한 가전 및 모바일 기기를 연동해 따로 사는 가족의 활동 알림, 복약∙통원 등 일정 알림, 위치 기반 알림 등을 제공한다. 이번 업데이트에서는 갤럭시 모바일 기기 개인 맞춤형 AI 브리핑 서비스인 ‘나우 브리프’에 스마트싱스 주요 기능을 연동한 것이 핵심이다. TV와 패밀리허브",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209396",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 18:50:42",
-      "date": "2026-04-16",
-      "candidate_score": 9.095
+      "published": "2026-04-17 13:14:04",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "구글, 표현력 강화한 차세대 음성 모델 '제미나이 3.1 플래시 TTS' 출시",
-      "summary": "구글이 표현력과 제어력을 대폭 강화한 차세대 음성 합성 모델을 선보였다.구글은 15일(현지시간) 차세대 텍스트 음성 변환(Text-to-Speech) 모델 ‘제미나이 3.1 플래시 TTS(Gemini 3.1 Flash TTS)’를 공개했다. 이 모델은 개발자와 기업, 일반 사용자 모두에게 차례로 서비스된다.개발자는 제미나이 API와 구글 AI 스튜디오를 통해 프리뷰 형태로 사용할 수 있으며, 기업 고객은 버텍스 AI에서 접근 가능하다. 협업 도구인 구글 '비드(Vids)'를 통해 워크스페이스 사용자에게도 기능이 제공된다.가장 큰 특",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209335",
+      "title": "해피사이언스 축제, AI 주제로 개최… 인공지능게임협회 체험부스 참여",
+      "summary": "한국인공지능게임협회는 국립과천과학관에서 진행하는 '2026년 제18회 해피사이언스 축제'에 참여하여 인공지능과 게임을 결합한 체험형 콘텐츠를 선보인다고 17일 밝혔다.4월18~19일 야외 체험부스를 운영하며 관람객이 직접 참여할 수 있는 다양한 프로그램을 구성했다.이번 부스에서는 실무 중심 IT·콘텐츠 교육을 운영하는 전문 교육기관인 MBC아카데미컴퓨터교육센터 교육생이 개발한 ‘미생물 배양 실험실 VR 시뮬레이션 게임’과 생성 AI 기반 콘텐츠 제작기업 버스에잇의 바이브코딩 게임 개발 체험이 운영된다.MBC아카데미컴퓨터교육센터는 게",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209397",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 18:44:53",
-      "date": "2026-04-16",
-      "candidate_score": 9.095
+      "published": "2026-04-17 13:10:28",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "바이트댄스, 미국 제외 전 세계에 동영상 모델 ‘시댄스 2.0’ 출시",
-      "summary": "바이트댄스가 차세대 AI 영상 생성 모델 ‘시댄스 2.0(Seedance 2.0)’을 전 세계로 확대 출시했다. 다만 저작권 논란이 불거진 미국 시장은 이번 서비스 대상에서 제외됐다.바이트댄스는 15일(현지시간) 시댄스 2.0을 100개 이상의 국가 및 지역에서 기업 고객을 대상으로 제공한다고 밝혔다.이 모델은 API 형태로 제공되며, 인도, 캐나다, 영국, 호주 등 주요 시장에서 사용할 수 있다.그러나 미국은 서비스 목록에서 빠졌으며, 앞으로 출시 계획 역시 공개되지 않았다.Dreamina Seedance 2.0 is now li",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209345",
+      "title": "“교육비 무료에 210만원 수당까지”...광양, AI·스마트팩토리 실무 인재 키운다",
+      "summary": "광양시가 지역 청년 구직자의 취업역량 강화를 위해 AI 기반 자동화 실무교육자 추가모집에 나섰다.광양만권HRD센터는 광양 AX 실증 프로젝트 지능형 자동화 교육 참여자를 모집한다고 16일 밝혔다.지역 산업현장에서 요구되는 스마트팩토리 자동화와 AI·데이터 활용 역량을 동시에 키우려는 의도다. 실습 프로젝트 중심으로, 지역 구직자를 첨단 제조와 AI 자동화 흐름에 연결하려는 것으로 해석된다.교육 과정은 스마트팩토리 자동화 과정과 AI·데이터 과정 가운데 하나를 선택하는 방식으로 운영된다. 스마트팩토리 자동화 과정은 PLC, 센서, H",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209353",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 16:38:20",
-      "date": "2026-04-16",
-      "candidate_score": 9.095
+      "published": "2026-04-17 13:00:02",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "구글, 맥OS용 '제미나이' 앱 출시...데스크톱 AI 앱 경쟁 합류",
-      "summary": "구글이 데스크톱 전반에 걸쳐 AI 기능을 확대 적용하며, 사용자 작업 환경 전반을 AI 중심으로 재편하는 데 속도를 내고 있다.구글은 15일(현지시간) ‘제미나이(Gemini)’의 맥OS 전용 네이티브 앱을 출시했다.이번에 공개된 제미나이 맥OS 앱은 ‘상시 접근성’이 핵심이다.사용자는 단축키(Option + Space)를 통해 언제 어디서든 AI를 호출할 수 있으며, 별도의 창 전환 없이 현재 작업 화면 위에서 바로 도움받을 수 있다. 이는 기존처럼 여러 창을 오가며 작업해야 했던 비효율을 줄이고, 업무 흐름을 유지하는 데 초점을",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209325",
+      "title": "목포, AI 역량 강화로 공공 행정 ‘디지털 혁신’ 가속화",
+      "summary": "목포시가 공공행정의 디지털 전환 속도를 높이기 위해 직원 대상 AI 실무 교육에 나섰다고 16일 밝혔다.목포는 13일 시청에서 전 직원을 대상으로 2026년 직원 AI 행정역량 강화 교육을 실시했다. 이번 교육은 급변하는 디지털 환경에 대응하고 공공행정에서 AI를 실제 업무에 활용할 수 있는 역량을 높이기 위해 마련됐다.단순한 기술 소개에 그치지 않고 행정 현장에서 바로 적용할 수 있는 실습 중심으로 구성됐다는 점이 특징이다. 목포는 AI를 행정 효율과 시민 서비스 품질을 높이려 한다.교육에는 직원 약 160명이 참석했다. 프로그램",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209348",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 19:13:38",
-      "date": "2026-04-16",
-      "candidate_score": 7.295
+      "published": "2026-04-17 12:57:19",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "어도비, 크리에이티브 도구 통합 '에이전트' 출시...'클로드' 등 타사 챗봇에서도 사용",
-      "summary": "어도비가 자사의 다양한 크리에이티브 도구를 챗봇 하나로 통합 운영하는 ‘에이전트형 AI’ 전략을 추진한다. 나아가 이를 '클로드'와 같은 인기 챗봇에 연결하기로 했다.어도비는 15일(현지시간) 하나의 대화형 인터페이스에서 이미지·영상 제작 전 과정을 자동으로 수행하는 ‘파이어플라이 AI 어시스턴트(Firefly AI Assistant)’를 공개했다.이번에 공개된 파이어플라이 AI 어시스턴트는 사용자가 원하는 결과를 자연어로 설명하면, AI가 이를 바탕으로 작업 흐름을 설계하고 실행하는 것이 핵심이다.포토샵, 프리미어 프로, 일러스트",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209346",
+      "title": "국가AI전략위, '미소스' 맞서 보안특별위원회 가동",
+      "summary": "국가인공지능전략위원회(위원장 이재명 대통령)는 보안특별위원회 제1차 정례회의를 개최했다고 16일 밝혔다.이번 회의는 앤트로픽의 새로운 보안 위협으로 '클로드 미소스'에 따른 것이다. 특히, 금융 분야에서 이용자 불편을 초래하고 새로운 공격 경로로 악용될 수 있다는 의견이 제기되고 있다. 이에 따라 보안특위는 과학기술정보통신부, 금융위원회 등 관계 부처와 협력해 미소스 동향을 긴급 점검하고, 금융 분야 설치형 보안 소프트웨어(SW) 단계적 철폐 계획도 논의했다고 전했다. 특히, 미소스의 성능 및 위협 수준, 국내 대응역량 및 기업,",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209395",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 18:38:29",
-      "date": "2026-04-16",
-      "candidate_score": 7.295
+      "published": "2026-04-17 12:54:03",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "미국 법원, AI 채팅 내용 법정 증거로 채택...\"챗봇에 비밀 털어놓으면 위험\"",
-      "summary": "AI 챗봇에 털어놓은 비밀이 법정에서 자신을 겨누는 ‘칼날’이 돼 돌아왔다. 미국 법원이 AI와의 대화 기록을 법정 증거로 인정하면서, 법조계와 산업계에 비상이 걸렸다.로이터에 따르면, 뉴욕 연방법원의 제드 라코프 판사는 지난 2월 사기 혐의로 기소된 대체 자산 운용사 베네피센트의 브래들리 헤프너 창립자에게 앤트로픽의 '클로드'와 나눈 대화 기록 31건을 검찰에 제출하라고 명령했다.피고인은 챗봇과의 대화가 변호사와의 상담을 위해 작성된 것이라며 '변호사-의뢰인 비밀유지 특권'을 주장했다. 미국 법률에 따르면, 사람들이 변호사와 나누",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209365",
+      "title": "오픈AI, 생명과학 연구를 위한 AI 모델 ‘GPT-로절린드’ 출시",
+      "summary": "오픈AI가 가설 생성부터 실험 설계, 데이터 분석까지 수행하는 생명과학 특화 AI 모델을 공개하며 신약 개발과 바이오 연구의 패러다임 전환에 나섰다. 이 모델은 인간 연구자와 협업하는 ‘AI 연구 파트너’로 설계된 것이 핵심이다.오픈AI는 16일(현지시간) 생명과학 연구를 위한 특화 AI 모델 ‘GPT-로절린드(GPT-Rosalind)’를 공개했다.GPT-로절린드는 DNA 구조 규명에 기여한 영국 과학자 로절린드 프랭클린의 이름에서 따왔다. 생화학, 유전체학, 신약 개발, 전임상 연구 등 생명과학 전반에서 활용될 수 있도록 설계됐으",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209384",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 18:00:00",
-      "date": "2026-04-16",
-      "candidate_score": 7.295
+      "published": "2026-04-17 12:50:01",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "혜움, 업스테이지 국가대표 AI 컨소시엄 신규 참여…’금융 서비스 확산’ 담당",
-      "summary": "혜움(대표 옥형석)은 업스테이지 컨소시엄을 통해 정부 ‘독자 AI 파운데이션 모델 개발 프로젝트’에 합류, 소상공인·중소기업 대상 에이전틱 AI 실증 및 확산에 나선다고 16일 밝혔다.과학기술정보통신부가 추진하는 국가 AI 경쟁력 강화 사업인 ‘독자 AI 파운데이션 모델 개발 프로젝트’에서는 지난 2월, 업스테이지를 포함한 4개 컨소시엄이 2단계 진출팀으로 선정됐다. 이로써 현재 업스테이지 컨소시엄에는 ▲노타 ▲래블업 ▲플리토 ▲금융결제원 ▲로앤컴퍼니 ▲마키나락스 ▲뷰노 ▲데이원컴퍼니 ▲올거나이즈 ▲서강대학교 산학협력단 ▲한국과학기",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209367",
+      "title": "릴리스AI, ‘유튜브 요약’으로 110만 사용자 확보...\"비결은 인사이트 추출\"",
+      "summary": "국내 스타트업 릴리스AI(LilysAI)가 AI 요약 기능으로 110만명 이상의 사용자를 확보, 주목받고 있다. 릴리스AI는 유튜브 영상 요약을 넘어 인사이트 추출을 돕고 아이디어 파트너 역할을 하는 서비스를 통해 이 분야의 시밀러웹(SimilarWeb) 순위 국내 1위에 올랐다고 17일 밝혔다.AI로 영상과 음성, PDF 등 자료를 사용자가 원하는 형태로 요약, 분석해 주는 웹 서비스로 시작했다. 그러다 입소문을 타며 국내는 물론, 해외에서도 사용자를 모았다. 전 세계 182개국에서 110만명 이상 사용자를 확보했다.이에 힘입어",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209369",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 17:55:00",
-      "date": "2026-04-16",
-      "candidate_score": 7.295
+      "published": "2026-04-17 09:05:00",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     },
     {
-      "title": "[게시판] 텔레픽스, AI 큐브위성으로 이란 공습 피해 현장 포착 등 단신",
-      "summary": "■ 우주 AI 종합 솔루션 전문 텔레픽스(TelePIX, 대표 조성익)는 AI 큐브위성 블루본(BlueBON)으로 촬영한 위성영상을 분석한 결과, 이란 테헤란 인근 메흐라바드(Mehrabad) 공항이 공습으로 최소 4대 이상의 항공기가 파괴된 정황을 확인했다고 밝혔다. 이번 분석에는 텔레픽스의 위성데이터 분석 특화 에이전틱 AI 솔루션 '샛챗(SatCHAT)'이 활용됐으며, AI 위성 분석만으로 현장 접근이 불가능한 지역의 피해 상황을 신속하게 식별했다고 전했다. ■ 네이버(대표 최수연)는 온라인 사업자의 AI 활용 역량을 비즈니스",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209368",
+      "title": "데이터메이커, KOICA IBS 사업 종료…5년간 가나 AI 인재 육성",
+      "summary": "데이터메이커가 한국국제협력단(KOICA)의 포용적 비즈니스 프로그램(IBS)을 5년간 수행하고 최근 사업을 마무리했다고 17일 밝혔다. 이번 사업은 단순 교육 지원을 넘어 AI 산업 현장에 즉시 투입 가능한 실무형 인재를 양성하고, 이를 실제 고용으로 연결했다는 점에서 의미가 있다고 전했다.데이터메이커는 2020년부터 2025년까지 아프리카 가나 아크라 지역을 중심으로 AI 데이터셋 구축 교육과 일자리 창출 사업을 진행했다. 사업비 25억원이 투입된 이번 프로젝트는 개발도상국의 지속 가능한 경제 성장 기반 마련을 목표로 추진됐다.데",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209356",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-04-16 17:50:00",
-      "date": "2026-04-16",
-      "candidate_score": 7.295
+      "published": "2026-04-17 09:00:00",
+      "date": "2026-04-17",
+      "candidate_score": 7.811
     }
   ],
   "engagement_patterns": {
@@ -210,24 +211,26 @@
   },
   "qa": {
     "passed": true,
-    "score": 0.81,
+    "score": 0.75,
     "issues": [
-      "[AI] Reply 3의 '외부 의존성' 단점 언급이 모호함 - 구체적으로 어떤 의존성인지 명확하지 않음"
+      "[AI] Reply 4의 '의료, 법무, 금융에 이어'라는 부분이 기사 내용을 벗어남",
+      "[AI] 각 댓글이 독립적이어서 연결성이 부족함",
+      "[AI] 개발자 관점의 실용적 정보가 부족함"
     ],
     "suggestions": [
-      "Reply 4에서 실제 설정 과정의 간단한 예시나 스크린샷 언급 추가",
-      "기존 자동화 도구(GitHub Actions, Jenkins 등)와의 차별점을 더 구체적으로 설명",
-      "루틴 기능의 현재 제한사항이나 요금 정보 언급 고려",
-      "개발자들이 바로 시도해볼 수 있는 starter 루틴 예시 1-2개 추가"
+      "개발자들이 관심 가질 만한 API 활용 가능성이나 기술적 접근법 언급",
+      "댓글 간 논리적 연결고리 강화 (예: '이런 특징 때문에 → 이런 활용이 가능하고 → 이런 변화가 예상된다')",
+      "바이오인포매틱스나 데이터 처리 관점에서의 개발자 기회 제시",
+      "구체적인 활용 예시나 시나리오 추가로 실용성 강화"
     ]
   },
   "posting_result": {
-    "post_id": "18139524139510691",
-    "reply_1": "18104616310733606",
-    "reply_2": "18181040659346963",
-    "reply_3": "18093540728177461",
-    "reply_4": "17886314559496148",
-    "link_id": "18078997169199959"
+    "post_id": "18579903058022433",
+    "reply_1": "17966906763050453",
+    "reply_2": "18345326938209621",
+    "reply_3": "18103548334899232",
+    "reply_4": "18099216326073279",
+    "link_id": "18104348623937977"
   },
-  "posted_at": "2026-04-17T01:57:27.313403"
+  "posted_at": "2026-04-17T13:34:44.413535"
 }
