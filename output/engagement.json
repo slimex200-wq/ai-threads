@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-17",
+    "mode": "informational",
+    "title": "오픈AI, 생명과학 연구를 위한 AI 모델 'GPT-로절린드' 출시",
+    "post_main": "오픈AI가 생명과학 전용 AI 모델 'GPT-로절린드'를 출시했다. DNA 구조 발견에 기여한 과학자 로절린드 프랭클린의 이름을 따왔다. 가설 생성부터 실험 설계, 데이터 분석까지",
+    "reply_preview": "일반 GPT와 달리 생명과학에 특화된 지식과 추론 능력을 갖췄다. 복잡한 생물학적 데이터를 이해하고 해석할 수 있다.",
+    "reply_count": 4,
+    "views": 691,
+    "likes": 2,
+    "replies": 5,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 129.1
+  },
+  {
     "date": "2026-04-16",
     "mode": "informational",
     "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
