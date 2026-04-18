@@ -1,0 +1,234 @@
+{
+  "selected_article": {
+    "original_title": "'바이브 코딩' 커서, 73조 기업 가치 평가로 AI 스타트업 최상위권 도약",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209432",
+    "reason": "This story about Cursor's massive valuation is still the best choice - it's a major milestone that shows how AI coding is reshaping development. With better explanation of vibe coding and concrete examples, it will be much more actionable for readers."
+  },
+  "post_main": "커서가 500억달러(약 73조원) 기업가치 평가를 받으며 'AI 코딩 혁명'을 증명했다. 앤드리슨 호로비츠와 스라이브 캐피털이 20억달러 투자를 주도하고, 엔비디아도 전략적 투자를 검토 중이다. 이미 엔비디아 개발자 3만명이 커서를 쓰고 있어서 젠슨 황이 '가장 좋아하는 엔터프라이즈 AI 서비스'라고 할 정도.",
+  "replies": [
+    "바이브 코딩이란 '로그인 화면 만들어줘'라고 말하면 AI가 즉석에서 HTML, CSS, JS까지 다 짜주는 방식이다. 기획서나 설계 없이도 아이디어만으로 코드가 나온다.",
+    "커서 시작하려면 VS Code 확장에서 Cursor 설치하고 Ctrl+K로 AI에게 명령하면 된다. 기존 코드 선택하고 '이거 최적화해줘'만 해도 바로 개선안이 나온다.",
+    "실제로 써보면 간단한 기능은 몇 분 만에 완성된다. 기존에 한 시간 걸리던 CRUD API 작성이 10분으로 단축되는 수준이야.",
+    "엔비디아 개발자 3만명이 이미 검증한 도구다. OpenAI, Anthropic과 어깨 나란히 하는 AI 스타트업 최상위권까지 올라선 이유가 있다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "Cursor AI coding demo tutorial",
+    "reason": "A demo video showing how to use Cursor's Ctrl+K feature and AI code generation would make the 'vibe coding' concept much clearer for beginners"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209432",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209432_211829_3837.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Anthropic’s new cybersecurity model could get it back in the government’s good graces",
+      "summary": "The Trump administration has spent nearly two months fighting with AI company Anthropic. It's dubbed the company a \"RADICAL LEFT, WOKE COMPANY\" full of \"Leftwing nut jobs\" and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic's buzzy new cybersecurity-focused model: Claude Mythos Preview. [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/914229/tides-turning-anthropic-trump-administration-cybersecurity-mythos-preview",
+      "source": "AI | The Verge",
+      "published": "2026-04-17T16:14:21-04:00",
+      "date": "2026-04-17",
+      "candidate_score": 9.517,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. CEO Dario Amodei reportedly had a meeting at the White House on Friday. CEO Dario Amodei reportedly had a meeting at the White House on Friday. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. The Trump administration has spent nearly two months fighting with AI company Anthropic. It’s dubbed the company a “RADICAL LEFT, WOKE COMPANY” full of “Leftwing nut jobs” and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic’s buzzy new cybersecurity-focused model : Claude Mythos Preview. Anthropic’s relationship with the Pentagon soured quickly in late February after the company refused to budge on two red lines: using its technology for domestic mass surveillance or lethal fully autonomous weapons with no human in the loop. Anthropic’s tech has in the past been used heavily by the DoD and, it was the first company to have its models cleared to operate on classified military networks. The stalemate led to public insults on social media, Anthropic being categorized as a “ supply chain risk ,” the company filing a lawsuit fighting that designation , and a temporary injunction halting its ban. Anthropic has recently attempted to get back in t"
+    },
+    {
+      "title": "'바이브 코딩' 커서, 73조 기업 가치 평가로 AI 스타트업 최상위권 도약",
+      "summary": "'바이브 코딩' 선두 주자 커서가 약 20억달러(약 2조9000억원) 규모의 신규 투자 유치를 추진하며 기업 가치 500억달러(약 73조원)를 넘보는 것으로 알려졌다. 이제는 실리콘 밸리를 대표하는 스타트업으로 올라서는 분위기다.17일(현지시간) CNBC에 따르면, 이번 투자 라운드는 기존 투자사인 앤드리슨 호로비츠와 스라이브 캐피털이 공동 주도하고 있다.여기에 엔비디아도 전략적 투자자로 참여를 검토 중이다. 엔비디아는 이미 3만여명의 개발자가 커서를 사용하고 있으며, 젠슨 황 CEO는 이를 \"가장 좋아하는 엔터프라이즈 AI 서비스",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209432",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 12:35:47",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "'주차타워부터 AI 버스'까지… 목포, 스마트 교통 혁신 중",
+      "summary": "목포시가 전남 서남권 교통 수요 변화에 선제 대응하기 위해 스마트 광역교통 인프라 구축 구상을 본격화했다고 17일 밝혔다.목포는 14일 시청에서 미래를 잇는 스마트 광역교통 인프라 구축계획 보고회를 열고 핵심 과제를 점검했다.이번 보고회는 전남·광주 통합특별시 추진과 해남 AI 데이터센터 조성 등 대규모 개발로 사람과 산업, 물류 이동이 크게 늘어날 것이라는 전망에 맞춰 열렸다.단순한 교통시설 확충을 넘어 목포가 서남권 광역교통의 핵심 거점 역할을 선점하겠다는 전략이 담겼다. 도시 교통정책을 생활 교통과 산업 물류, 데이터 기반 운",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209390",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 11:57:00",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "세레브라스, 나스닥 상장 재추진…오픈AI 파트너십이 발판",
+      "summary": "AI 반도체 기업 세레브라스가 미국 나스닥 상장에 재도전한다. 이번에는 오픈AI라는 굵직한 수익원을 확보한 것이 성장의 보증 수표가 됐다. CNBC는 17일(현지시간) 세레브라스가 나스닥에 티커 심볼 ‘CBRS’로 상장하기 위한 기업공개(IPO)를 신청했다고 보도했다.세레브라스는 공시를 통해 2025년 매출 5억1000만달러(약 7400억원), 순이익 8790만달러(약 1300억원)를 기록했다고 밝혔다. 이는 전년 대비 약 76% 성장한 수치로, 2024년 4억8500만달러 순손실에서 흑자 전환에 성공했다.또 246억달러(약 36조",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209431",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 11:55:59",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "앤트로픽, 올인원 디자인 도구 ‘클로드 디자인’ 공개...어도비·캔바 위협",
+      "summary": "앤트로픽이 사업 영역을 디자인으로 확장했다. 전문가 위주의 기존 디자인 도구 시장을 뒤흔들 수 있을 정도의 파괴력을 가진 것으로 드러났다. 앤트로픽은 17일(현지시간) 대화형 AI를 활용해 시각 디자인과 프로토타입을 제작할 수 있는 새로운 도구 ‘클로드 디자인(Claude Design)’을 공개했다.최신 모델인 '클로드 오퍼스 4.7'을 기반으로 하며, 현재 연구 미리보기 형태로 유료 구독제인 프로, 맥스, 팀, 엔터프라이즈 사용자에게 차례로 제공되고 있다.자연어로 원하는 디자인을 설명하면, AI가 초안을 생성하는 방식이다. 여기에",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209428",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 11:23:03",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "[기고] 3시간마다 'AI 입니다' 알림으로 청소년 죽음 막을 수 있나",
+      "summary": "2024년 플로리다의 14세 소년 수엘 세처 3세가 AI 챗봇 '캐릭터닷AI'와 수개월간 대화한 끝에 스스로 목숨을 끊었다.여론은 \"위험 콘텐츠를 차단하라\"는 쪽으로 수렴됐고 캐릭터닷AI는 미성년자 대상 대화를 사실상 차단했다.하지만 문제는 이것이 전부가 아니다.스탠퍼드 연구팀에 따르면 챗봇 응답의 70% 이상에서 사용자의 비위를 맞추는 '아첨 패턴'이 확인됐다. 특히 사용자의 말을 긍정하며 의미를 확대하는 '반영적 요약'이 36.3%에 달했다.폭력적 사고를 보일 때 챗봇이 부추긴 비율은 33.3%였으며, 자해 언급 시 이를 촉진한",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209416",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 10:52:32",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "메타, 5월20일 직원 10% 감축...후반기 추가 감원 예정",
+      "summary": "메타가 AI 중심 조직 전환을 위해 대규모 구조조정에 나선다. 내부 계획에 따르면, 오는 5월20일을 시작으로 올해 첫 대규모 감원이 단행되며, 이후 추가 감원이 이어질 예정이다.로이터는 17일(현지시간) 복수의 소식통을 인용, 메타가 1차로 전체 인력의 10%, 즉 8000여명을 감원할 계획이라고 보도했다.이후 하반기에도 추가 감원이 예정돼 있지만, 구체적인 시기와 규모는 확정되지 않았다. 경영진은 AI 기술 발전 속도를 지켜보며 감원 계획을 조정할 것으로 전해졌다.앞서 지난달에는 메타가 전체 인력의 20%, 1만5800명 이상을",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209429",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 10:47:23",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "‘AI 시대’ 속 어도비의 전략은?… 챗봇에 들어간 에이전트형 AI",
+      "summary": "AI타임스 조예주 기자 joyejuoffice@aitimes.com",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209421",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 06:55:00",
+      "date": "2026-04-18",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "OpenAI’s former Sora boss is leaving",
+      "summary": "Last month, OpenAI gave up on its Sora video generation tool, and on Friday, the Sora team's leader, Bill Peebles, announced that he is leaving the company. OpenAI has been shifting its priorities as part of an effort to avoid \"side quests,\" and Peebles' departure is just one of many recent changes as the company [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/914463/openai-sora-bill-peebles-kevin-weil-leaving-departing",
+      "source": "AI | The Verge",
+      "published": "2026-04-17T17:13:25-04:00",
+      "date": "2026-04-17",
+      "candidate_score": 7.717
+    },
+    {
+      "title": "Should you stare into Sam Altman&#8217;s orb before your next date?",
+      "summary": "Tinder users who prove they're a real person by visiting an identity-verifying orb will soon be able to get five free boosts in the app - and it's just the latest service to embrace the orb. World, which was co-founded by OpenAI CEO Sam Altman, initially tested Tinder verification using its facial scanning orbs through [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/914385/world-id-tinder-identity-verifying-orb",
+      "source": "AI | The Verge",
+      "published": "2026-04-17T16:42:47-04:00",
+      "date": "2026-04-17",
+      "candidate_score": 7.717
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      },
+      {
+        "date": "2026-04-12",
+        "mode": "informational",
+        "title": "The AI code wars are heating up",
+        "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot ",
+        "reply_casual": "",
+        "views": 264,
+        "likes": 4,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 144.4
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 319.9,
+      "likes": 2.5,
+      "replies": 5.3,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 97.7
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.74,
+    "issues": [
+      "[AI] Reply 1과 2 사이의 연결이 어색함 - 바이브 코딩 설명 후 갑자기 Cursor 설치법으로 넘어감",
+      "[AI] Reply 4가 단순 반복으로 느껴짐 - 이미 메인 포스트에서 언급된 내용 재탕"
+    ],
+    "suggestions": [
+      "Reply 2를 '커서는 이런 바이브 코딩을 어떻게 구현할까?'로 연결 개선",
+      "Reply 4를 미래 전망이나 한계점으로 대체해서 균형감 추가",
+      "구체적인 예시 코드나 스크린샷 언급으로 실용성 강화",
+      "개발자 레벨별(초급/중급) 활용법 차이 설명 추가"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18119865565631104",
+    "reply_1": "18120383260651206",
+    "reply_2": "18101403451784887",
+    "reply_3": "18098621357051715",
+    "reply_4": "18601290499032654",
+    "link_id": "18143176915497584"
+  },
+  "posted_at": "2026-04-18T15:49:13.758055"
+}

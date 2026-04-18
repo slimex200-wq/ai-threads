@@ -1,18 +1,5 @@
 [
   {
-    "date": "2026-04-11",
-    "titles": [
-      "Anthropic temporarily banned OpenClaw's creator from accessing Claude",
-      "알리바바, 새로운 AI 영상 모델로 '시댄스' 제치고 벤치마크 1위 등극",
-      "알리바바, 화제의 영상 모델 '해피호스' 개발 확인...AI 조직 개편 후 첫 성과"
-    ],
-    "urls": [
-      "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
-      "https://www.aitimes.com/news/articleView.html?idxno=209093",
-      "https://www.aitimes.com/news/articleView.html?idxno=209109"
-    ]
-  },
-  {
     "date": "2026-04-12",
     "titles": [
       "앤트로픽, '클로드 포 워드' 출시… MS 오피스서 '코파일럿'과 경쟁",
@@ -80,6 +67,15 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=209352",
       "https://www.aitimes.com/news/articleView.html?idxno=209384"
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "titles": [
+      "'바이브 코딩' 커서, 73조 기업 가치 평가로 AI 스타트업 최상위권 도약"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209432"
     ]
   }
 ]
