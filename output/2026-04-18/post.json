@@ -1,45 +1,54 @@
 {
   "selected_article": {
-    "original_title": "앤트로픽, 올인원 디자인 도구 '클로드 디자인' 공개...어도비·캔바 위협",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=209428",
-    "reason": "This is more immediately useful for the target audience - a new AI tool that developers and creators can actually use right now. It has clear practical implications and workflow changes that make it highly shareable."
+    "original_title": "The App Store is booming again, and AI may be why",
+    "link": "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/",
+    "reason": "Still the best choice - contradicts widespread AI predictions with concrete data, highly shareable contrarian insight, and offers practical implications for developers"
   },
-  "post_main": "앤트로픽이 '클로드 디자인' 공개했다. 자연어로 디자인을 설명하면 AI가 초안을 생성하는 방식이다. 최신 모델 '클로드 오퍼스 4.7' 기반으로, 현재 유료 구독자에게 연구 미리보기 형태로 제공 중이다. 어도비나 캔바처럼 복잡한 도구 없이도 프로토타입을 바로 만들 수 있다는 게 핵심이다.",
+  "post_main": "모두가 AI 때문에 앱이 죽을 거라고 했는데, 완전히 반대 상황이 벌어지고 있다. 앱피규어스 데이터에 따르면 올해 1분기 전 세계 앱 출시가 전년 대비 60% 급증했고, iOS 앱스토어만 보면 80%나 늘었다. 4월은 더 극적이다. 전체 스토어 기준 104%, iOS만 89% 폭증했다.",
   "replies": [
-    "기존 디자인 도구와 차이점은 학습 곡선이 거의 없다는 것. '빨간색 배경에 로고가 중앙에 있는 명함 디자인해줘' 이런 식으로 말하면 바로 결과물이 나온다고.",
-    "개발자들이 프로토타입 만들 때 특히 유용할 듯. 디자이너 없이도 기획 단계에서 빠르게 목업을 뽑아볼 수 있으니까. MVP 개발할 때 시간 절약 효과가 클 것 같고.",
-    "어도비나 피그마 독점이던 디자인 도구 시장에 AI가 본격 진입한 신호다. 앞으로는 '도구 사용법'보다 '무엇을 만들지 아는 것'이 더 중요해질 듯하다."
+    "애플 마케팅 부사장 조즈 조스위악도 '앱스토어 죽음설은 과장됐다'고 못 박았다. AI 챗봇이 앱을 대체하는 게 아니라 앱 개발을 민주화시키고 있다는 분석이다.",
+    "핵심은 AI가 누구나 앱을 만들 수 있게 해준다는 점이다. 코딩 경험 없는 크리에이터들이 새로운 앱 골드러시를 이끌고 있다.",
+    "흥미로운 건 이런 예측이 이미 나오고 있었다는 것이다. 낫싱 CEO 칼 페이 같은 업계 인사들은 여전히 AI 시대엔 앱보다 다른 컴퓨팅 플랫폼이 뜰 거라고 보고 있다.",
+    "개발자나 크리에이터라면 지금이 AI 앱 개발 도구들을 탐색해볼 타이밍이다. 시장이 확장하는 초기 단계에서 기회를 잡을 수 있거든."
   ],
   "media_plan": {
     "preferred_type": "image",
-    "search_query": "Claude Design AI tool interface",
-    "reason": "A screenshot of Claude Design's interface would help visualize how natural language design generation works in practice"
+    "search_query": "app store growth chart 2026 statistics",
+    "reason": "A visual chart showing the dramatic 60-104% increase in app releases would make the surprising data more compelling and shareable"
   },
   "topic_tag": "ai.threads",
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209428",
-  "og_image": "https://cdn.aitimes.com/news/photo/202604/209428_211828_2654.png",
+  "source_link": "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2026/04/app-store-with-badge-GettyImages-2193151739.jpg?w=1024",
   "video_url": "",
   "mode": "informational",
   "candidate_articles": [
     {
-      "title": "Tokenmaxxing, OpenAI’s shopping spree, and the AI Anxiety Gap",
-      "summary": "The gap between AI insiders and everyone else&#160;is widening, and the spending, suspicion, and even new vocabulary are starting to show it. While OpenAI is busy buying up everything from&#160;finance apps&#160;to&#160;talk shows, a certain shoe company just&#160;rebranded as an AI infrastructure play, and Anthropic unveiled a model it says is&#160;too powerful to release publicly&#160;&#8230;but&#160;apparently not&#160;too [&#8230;]",
-      "link": "https://techcrunch.com/podcast/tokenmaxxing-openais-shopping-spree-and-the-ai-anxiety-gap/",
+      "title": "The App Store is booming again, and AI may be why",
+      "summary": "New data from Appfigures shows a swell of new app launches in 2026, suggesting AI tools could be fueling a mobile software boom.",
+      "link": "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/",
       "source": "AI News & Artificial Intelligence | TechCrunch",
-      "published": "Fri, 17 Apr 2026 15:57:40 +0000",
-      "date": "2026-04-17",
-      "candidate_score": 11.178,
-      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . The gap between AI insiders and everyone else is widening , and the spending, suspicion, and even new vocabulary are starting to show it. While OpenAI is busy buying up everything from finance apps to talk shows , a certain shoe company just rebranded as an AI infrastructure play , and Anthropic unveiled a model it says is too powerful to release publicly … but apparently not too powerful to demo to Federal Reserve Chair Jerome Powell. On this episode of TechCrunch’s Equity podcast, Kirsten Korosec, Anthony Ha, and Sean O’Kane dig into what’s actually being built in AI infrastructure, who’s winning the enterprise battle between OpenAI and Anthropic, and more of the week’s headlines. Listen to the full episode to hear about: Subscribe to Equity on YouTube , Apple Podcasts , Overcast , Spotify and all the casts. You also can follow Equity on X and Threads , at @EquityPod. Anthony Ha is TechCrunch’s weekend editor. Previously, he worked as a tech reporter at Adweek, a senior editor at VentureBeat, a local government reporter at the Hollister Free Lance, and vice president of content at a VC firm. He lives in New York City. You can contact or verify outreach from Anthony by emailing anthony.ha@techcrunch.com . Theresa Loconsolo is an audio producer at TechCrunch focusing on Equity, the network’s flagship podcast. Before joining TechCrunch in 2022, she was one of 2 producers at a four-station conglomerate wh"
+      "published": "Sat, 18 Apr 2026 13:00:00 +0000",
+      "date": "2026-04-18",
+      "candidate_score": 12.009,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . Everyone said AI would kill apps. Instead, new app launches are soaring. According to a new analysis from market intelligence provider Appfigures , worldwide app releases in the first quarter of 2026 were up 60% year-over-year across both Apple’s App Store and Google Play. That percentage was an even higher 80% when looking at the iOS App Store alone. In April 2026 so far, the total number of app releases is up 104% across both stores compared to the same time last year, and up 89% on iOS. As Apple’s Senior Vice President of Worldwide Marketing, Greg “Joz” Joswiak, quipped In a recent interview : rumors of the App Store’s death in the AI age “may have been greatly exaggerated.” These findings come amid concerns that the rise of AI chatbots and agents would ultimately see users turning away from apps — a theory that’s already being floated by those in the industry, like Nothing CEO Carl Pei , who is focused on building a smartphone for the AI era. The New York Times also reported last year on the potential for new computing platforms to eclipse the smartphone, like smart glasses, ambient computing devices, or reimagined smartwatches with AI features. OpenAI is even working on an AI hardware device with famed Apple designer Jony Ive. But there’s another possibility, too: AI will make it easier for anyone to create apps, driving a rebirth of the App Store. The new app gold rush could be led by creators who"
     },
     {
-      "title": "Anthropic’s new cybersecurity model could get it back in the government’s good graces",
-      "summary": "The Trump administration has spent nearly two months fighting with AI company Anthropic. It's dubbed the company a \"RADICAL LEFT, WOKE COMPANY\" full of \"Leftwing nut jobs\" and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic's buzzy new cybersecurity-focused model: Claude Mythos Preview. [&#8230;]",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/914229/tides-turning-anthropic-trump-administration-cybersecurity-mythos-preview",
-      "source": "AI | The Verge",
-      "published": "2026-04-17T16:14:21-04:00",
-      "date": "2026-04-17",
-      "candidate_score": 9.378,
-      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. CEO Dario Amodei reportedly had a meeting at the White House on Friday. CEO Dario Amodei reportedly had a meeting at the White House on Friday. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. The Trump administration has spent nearly two months fighting with AI company Anthropic. It’s dubbed the company a “RADICAL LEFT, WOKE COMPANY” full of “Leftwing nut jobs” and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic’s buzzy new cybersecurity-focused model : Claude Mythos Preview. Anthropic’s relationship with the Pentagon soured quickly in late February after the company refused to budge on two red lines: using its technology for domestic mass surveillance or lethal fully autonomous weapons with no human in the loop. Anthropic’s tech has in the past been used heavily by the DoD and, it was the first company to have its models cleared to operate on classified military networks. The stalemate led to public insults on social media, Anthropic being categorized as a “ supply chain risk ,” the company filing a lawsuit fighting that designation , and a temporary injunction halting its ban. Anthropic has recently attempted to get back in t"
+      "title": "세계로 번지는 '미소스' 경계령...영국·인도, 모델 조기 접근 권한 요구",
+      "summary": "앤트로픽이 차세대 AI 모델 ‘클로드 미소스(Claude Mythos)’의 제한적 공개를 확대하며, 글로벌 금융권과 규제 당국에 긴장감이 고조되고 있다. 이 모델이 기존 사이버보안 체계를 무력화할 수 있는 잠재력을 지닌 것으로 평가되면서, 모델 접근 권한 요구가 이어지는 것으로 전해졌다.16일(현지시간) 블룸버그에 따르면, 앤트로픽은 이르면 다음 주 영국 금융기관을 대상으로 미소스 모델 접근을 제공할 계획이다. 이는 ‘프로젝트 글라스윙(Project Glasswing)’ 프로그램에 따라, 일부 기업과 기관에 한해 사전 테스트 기회를",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209414",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 20:51:03",
+      "date": "2026-04-18",
+      "candidate_score": 7.409
+    },
+    {
+      "title": "구찌, 구글 파트너십으로 2027년 AI 안경 출시",
+      "summary": "구찌가 구글과의 파트너십을 통해 스마트 안경을 출시할 계획이다. 구찌를 소유한 케링 그룹의 루카 데 메오 CEO는 16일(현지시간) 로이터와의 인터뷰를 통해 내년에 AI 안경 분야에 진출하는 최초의 명품 브랜드가 될 가능성이 있다고 밝혔다.그는 이날 이탈리아 피렌체에서 열린 투자 설명회에서 스마트 안경 출시 시기에 대한 질문에 \"아마 내년, 2027년쯤이 될 것\"이라고 답했다.구글은 구찌와의 파트너십에 대해서는 답변을 내놓지 않았다.이번 조치는 케링 그룹 전체 매출에서 차지하는 비중이 작은 안경과 보석 사업 부문을 확대하려는 전략에",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209439",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-18 20:30:26",
+      "date": "2026-04-18",
+      "candidate_score": 7.409
     },
     {
       "title": "[AI 이슈트렌드] '호르무즈 통제권' 공방에 관심 집중...충남 교사 피습·세종 이전도 화제",
@@ -48,7 +57,7 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-18 16:21:25",
       "date": "2026-04-18",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     },
     {
       "title": "'주차타워부터 AI 버스'까지… 목포, 스마트 교통 혁신 중",
@@ -57,7 +66,7 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-18 11:57:00",
       "date": "2026-04-18",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     },
     {
       "title": "세레브라스, 나스닥 상장 재추진…오픈AI 파트너십이 발판",
@@ -66,16 +75,7 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-18 11:55:59",
       "date": "2026-04-18",
-      "candidate_score": 7.578
-    },
-    {
-      "title": "앤트로픽, 올인원 디자인 도구 ‘클로드 디자인’ 공개...어도비·캔바 위협",
-      "summary": "앤트로픽이 사업 영역을 디자인으로 확장했다. 전문가 위주의 기존 디자인 도구 시장을 뒤흔들 수 있을 정도의 파괴력을 가진 것으로 드러났다. 앤트로픽은 17일(현지시간) 대화형 AI를 활용해 시각 디자인과 프로토타입을 제작할 수 있는 새로운 도구 ‘클로드 디자인(Claude Design)’을 공개했다.최신 모델인 '클로드 오퍼스 4.7'을 기반으로 하며, 현재 연구 미리보기 형태로 유료 구독제인 프로, 맥스, 팀, 엔터프라이즈 사용자에게 차례로 제공되고 있다.자연어로 원하는 디자인을 설명하면, AI가 초안을 생성하는 방식이다. 여기에",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=209428",
-      "source": "AI타임스 - 전체기사",
-      "published": "2026-04-18 11:23:03",
-      "date": "2026-04-18",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     },
     {
       "title": "[기고] 3시간마다 'AI 입니다' 알림으로 청소년 죽음 막을 수 있나",
@@ -84,7 +84,7 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-18 10:52:32",
       "date": "2026-04-18",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     },
     {
       "title": "메타, 5월20일 직원 10% 감축...후반기 추가 감원 예정",
@@ -93,7 +93,7 @@
       "source": "AI타임스 - 전체기사",
       "published": "2026-04-18 10:47:23",
       "date": "2026-04-18",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     },
     {
       "title": "OpenAI’s former Sora boss is leaving",
@@ -102,7 +102,7 @@
       "source": "AI | The Verge",
       "published": "2026-04-17T17:13:25-04:00",
       "date": "2026-04-17",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     },
     {
       "title": "Should you stare into Sam Altman&#8217;s orb before your next date?",
@@ -111,7 +111,7 @@
       "source": "AI | The Verge",
       "published": "2026-04-17T16:42:47-04:00",
       "date": "2026-04-17",
-      "candidate_score": 7.578
+      "candidate_score": 7.409
     }
   ],
   "engagement_patterns": {
@@ -210,24 +210,25 @@
   },
   "qa": {
     "passed": true,
-    "score": 0.8,
+    "score": 0.76,
     "issues": [
-      "[AI] 클로드 오퍼스 4.7 모델명이 정확한지 확인 필요 - 일반적인 앤트로픽 모델명 패턴과 다름",
-      "[AI] 현재 서비스 제공 상태에 대한 구체적 정보 부족"
+      "[AI] Reply 3 breaks thread momentum by introducing conflicting viewpoint without clear connection",
+      "[AI] Thread jumps between data points and conclusions without smooth transitions",
+      "[AI] Reply 4's call-to-action feels somewhat generic"
     ],
     "suggestions": [
-      "클로드 디자인의 실제 사용 예시나 스크린샷 언급으로 구체성 높이기",
-      "가격이나 접근성에 대한 정보 추가하면 개발자들에게 더 실용적",
-      "기존 도구들과의 성능 비교나 한계점도 언급하면 균형잡힌 정보 제공 가능",
-      "Reply 2에서 구체적인 사용 시나리오 하나 더 추가하면 좋겠음"
+      "Restructure reply 3 to better connect the contrarian view to the overall narrative",
+      "Add transitional phrases between replies to improve flow",
+      "Make the final call-to-action more specific - mention particular AI app development tools or platforms",
+      "Consider reordering: move the democratization concept (reply 2) right after the data surprise (main post) for better logical flow"
     ]
   },
   "posting_result": {
-    "post_id": "18063962615345559",
-    "reply_1": "17884096752523894",
-    "reply_2": "18117321778733166",
-    "reply_3": "18579943486060192",
-    "link_id": "18097661900084162"
+    "post_id": "17875929324576744",
+    "reply_1": "18117165838729302",
+    "reply_2": "18104813522300771",
+    "reply_3": "17948638755139882",
+    "reply_4": "18010696361700070"
   },
-  "posted_at": "2026-04-18T19:11:00.236299"
+  "posted_at": "2026-04-18T23:12:33.790286"
 }
