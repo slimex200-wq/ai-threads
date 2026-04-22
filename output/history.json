@@ -1,64 +1,5 @@
 [
   {
-    "date": "2026-04-12",
-    "titles": [
-      "앤트로픽, '클로드 포 워드' 출시… MS 오피스서 '코파일럿'과 경쟁",
-      "The AI code wars are heating up"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209123",
-      "https://www.theverge.com/column/910019/ai-coding-wars-openai-google-anthropic"
-    ]
-  },
-  {
-    "date": "2026-04-13",
-    "titles": [
-      "딥시크, 내몽골 데이터센터에 엔지니어 모집...자체 시설 구축 나서",
-      "From LLMs to hallucinations, here's a simple guide to common AI terms",
-      "중국 뒤흔든 '동료 복제 AI'...인간 능력을 AI '스킬'로 추출"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209126",
-      "https://techcrunch.com/2026/04/12/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
-      "https://www.aitimes.com/news/articleView.html?idxno=209150"
-    ]
-  },
-  {
-    "date": "2026-04-14",
-    "titles": [
-      "리퀴드 AI, '갤럭시 S25 울트라'에서 작동하는 450M VLM 출시",
-      "OpenAI has bought AI personal finance startup Hiro"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209148",
-      "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/"
-    ]
-  },
-  {
-    "date": "2026-04-15",
-    "titles": [
-      "컴퓨팅 수요 폭발로 GPU 비용 대폭 상승...두달 만에 50% 올라",
-      "앤트로픽, '오퍼스 4.7' 이르면 이번 주 출시...AI 디자인 도구도 추가",
-      "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209243",
-      "https://www.aitimes.com/news/articleView.html?idxno=209260",
-      "https://www.aitimes.com/news/articleView.html?idxno=209296"
-    ]
-  },
-  {
-    "date": "2026-04-16",
-    "titles": [
-      "Google rolls out a native Gemini app for Mac",
-      "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents"
-    ],
-    "urls": [
-      "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac",
-      "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/"
-    ]
-  },
-  {
     "date": "2026-04-17",
     "titles": [
       "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 '루틴' 공개",
@@ -80,6 +21,15 @@
       "https://www.aitimes.com/news/articleView.html?idxno=209432",
       "https://www.aitimes.com/news/articleView.html?idxno=209428",
       "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "titles": [
+      "OpenAI now lets teams make custom bots that can do work on their own"
+    ],
+    "urls": [
+      "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots"
     ]
   }
 ]

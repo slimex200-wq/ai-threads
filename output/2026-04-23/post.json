@@ -1,0 +1,237 @@
+{
+  "selected_article": {
+    "original_title": "OpenAI now lets teams make custom bots that can do work on their own",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots",
+    "reason": "Still the most actionable choice - teams can implement this immediately with concrete business value. The practical workflow automation examples make it highly shareable among developers and business users."
+  },
+  "post_main": "OpenAI가 ChatGPT에 '워크스페이스 에이전트' 기능을 추가했다. 비즈니스/기업 요금제 사용자들이 클라우드에서 24시간 작동하는 맞춤형 AI 봇을 만들 수 있다. 웹에서 제품 피드백을 찾아 슬랙으로 보고서 자동 전송하거나, Gmail에서 영업 후속 이메일을 작성하는 식으로 말이다.",
+  "replies": [
+    "앤트로픽의 클로드 코워크 같은 에이전트 경쟁이 치열해지면서 사용자는 더 다양한 선택권을 갖게 됐다는 게 포인트다.",
+    "한 번 만든 에이전트를 팀 내에서 공유할 수 있어서 효율성이 높다. 예를 들어 마케팅팀이 만든 피드백 수집 봇을 영업팀도 쓸 수 있는 식.",
+    "다만 클라우드에서 회사 데이터를 처리하는 만큼 보안 정책 검토가 필요하고, 기업 요금제라 비용도 고려해야 한다.",
+    "개발팀이라면 코드 리뷰 요약, GitHub 이슈 트래킹, 배포 알림 자동화 같은 반복 업무부터 시작해보는 게 좋을 듯하다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "openai chatgpt workspace agents demo",
+    "reason": "워크스페이스 에이전트가 실제로 슬랙이나 Gmail과 연동되어 작업하는 모습을 보여주는 데모 영상이 기능 이해에 도움될 것"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots",
+  "og_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK155_OPEN_AI_4_CVirginia_B.png?quality=90&amp;strip=all&amp;crop=0%2C10.742221417566%2C100%2C78.515557164868&amp;w=1200",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Google Cloud launches two new AI chips to compete with Nvidia",
+      "summary": "Google's newest TPUs are faster and cheaper than the previous versions. But the company is still embracing Nvidia in its cloud — for now.",
+      "link": "https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 22 Apr 2026 18:39:27 +0000",
+      "date": "2026-04-22",
+      "candidate_score": 11.676,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Save up to $680 on your Disrupt 2026 pass. Ends 11:59 p.m. PT tonight. REGISTER NOW . Google Cloud on Wednesday announced that its eighth generation of custom-built AI chips, or tensor processing units (TPUs), will be split in two. One chip, named the TPU 8t, will be geared for model training and another, the TPU 8i, is aimed at inference. Inference is the ongoing usage of models, aka what happens after users submit prompts. As you might expect, the company touts some impressive performance specs for these new TPUs compared to the previous generations: up to 3x faster AI model training, 80% better performance per dollar, and the ability to get 1 million+ TPUs to work together in a single cluster. The upshot should be a lot more compute for a lot less energy — and cost to customers — than previous versions. It calls these chips TPUs, not GPUs, because its custom low-power chips were originally named Tensor. But Google’s chips are not a full frontal assault on Nvidia’s future, at least not yet. Like the other giant cloud providers, including Microsoft and Amazon , Google is using these chips to supplement the Nvidia-based systems it offers in its infrastructure. It is not flat-out replacing Nvidia. In fact, Google promises its cloud will have Nvidia’s latest chip, Vera Rubin, available later this year. One day the hyperscalers building their own AI chips (which includes Amazon, Microsoft, and Google) may grow to need Nvidia less, as enterprises move their AI needs to their clouds and port"
+    },
+    {
+      "title": "OpenAI now lets teams make custom bots that can do work on their own",
+      "summary": "OpenAI is giving users of its Business, Enterprise, Edu, and Teachers plans access to cloud-based \"workspace\" agents available in ChatGPT that can perform business tasks. In its blog post, OpenAI gives examples of agents like one that finds product feedback on the web and sends a report in Slack and a sales agent that can [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots",
+      "source": "AI | The Verge",
+      "published": "2026-04-22T16:09:02-04:00",
+      "date": "2026-04-22",
+      "candidate_score": 9.876,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. The new workspace agents can perform tasks like reporting on product feedback on their own in the cloud. The new workspace agents can perform tasks like reporting on product feedback on their own in the cloud. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. OpenAI is giving users of its Business, Enterprise, Edu, and Teachers plans access to cloud-based “workspace” agents available in ChatGPT that can perform business tasks. In its blog post , OpenAI gives examples of agents like one that finds product feedback on the web and sends a report in Slack and a sales agent that can draft follow-up emails in Gmail. These new agents follow increasing interest in agents across the AI landscape, especially after OpenClaw — the AI agent formerly known as Clawdbot and Moltbot that touts itself as the “AI that actually does things” — went viral . OpenClaw founder Peter Steinberger now works for OpenAI . OpenAI is also facing increased competition from Anthropic, which offers its own Claude Cowork agent that can complete tasks for you using files from your computer, as well as a separate platform for making autonomous agents . OpenAI’s new workspace agents can be shared within organizations, “so teams can"
+    },
+    {
+      "title": "메타, AI 학습 데이터 수집 위해 직원 키보드·마우스 작동까지 기록",
+      "summary": "메타가 직원들의 컴퓨터 사용 행태를 실시간으로 수집해 AI 모델 학습에 활용하는 새로운 프로그램을 도입, 내부 반발과 프라이버시 논란이 일고 있다.21일(현지시간) 로이터와 비즈니스 인사이더에 따르면, 메타는 최근 직원들의 업무용 컴퓨터에서 키 입력, 마우스 이동, 클릭, 화면 캡처 등을 기록하는 소프트웨어 ‘MCI(Model Capability Initiative)’를 도입했다.이를 통해 수집된 데이터는 AI 모델이 인간의 실제 컴퓨터 사용 방식을 학습하도록 돕는 데 활용된다. 메타는 이를 통해 드롭다운 메뉴 선택, 키보드 단축키",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209605",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-22 17:55:56",
+      "date": "2026-04-22",
+      "candidate_score": 8.876
+    },
+    {
+      "title": "AI failure could trigger the next financial crisis, warns Elizabeth Warren",
+      "summary": "\"I know a bubble when I see one.\" That's what Sen. Elizabeth Warren (D-MA), who led the push to create a new consumer financial regulator in the wake of the 2008 recession, told a crowd at a Vanderbilt Policy Accelerator event in Washington, DC on Wednesday. Warren warned of what she called \"striking\" parallels to [&#8230;]",
+      "link": "https://www.theverge.com/policy/917026/ai-economy-bubble-elizabeth-warren",
+      "source": "AI | The Verge",
+      "published": "2026-04-22T16:29:05-04:00",
+      "date": "2026-04-22",
+      "candidate_score": 8.076,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. “The first big stumble will have everyone running for the exits.” “The first big stumble will have everyone running for the exits.” Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. “I know a bubble when I see one.” That’s what Sen. Elizabeth Warren (D-MA), who led the push to create a new consumer financial regulator in the wake of the 2008 recession, told a crowd at a Vanderbilt Policy Accelerator event in Washington, DC on Wednesday. Warren warned of what she called “striking” parallels to that crisis in the AI industry. While she believes the technology has “enormous potential,” she warned that AI companies’ massive spending and borrowing practices are creating a tinderbox and Congress should step in. Though the AI industry has grown rapidly, Warren said the pace isn’t keeping up with their spending, requiring them to borrow from opaque sources like private credit funds, without the same kind of regulatory oversight that traditional banks face. “If AI companies are unable to increase revenues with lightning speed, they won’t be able to service their massive debt loads,” Warren said. “And because of shady accounting strategies, the first big stumble will have everyone running for the exits,"
+    },
+    {
+      "title": "Watch Sony’s elite ping-pong robot beat top-ranked players",
+      "summary": "Humans have been building ping-pong playing robots for decades, such as Omron's FORPHEUS that challenged amateur competitors at CES 2017. What sets Ace apart from the rest is that the robot, which was developed by Sony's AI division, is the first that can hold its own against top-ranked human players and occasionally even beat them [&#8230;]",
+      "link": "https://www.theverge.com/tech/916800/sony-ai-ace-ping-pong-table-tennis-robot-cameras",
+      "source": "AI | The Verge",
+      "published": "2026-04-22T13:43:38-04:00",
+      "date": "2026-04-22",
+      "candidate_score": 8.076,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Ace is an AI-powered articulated robot that uses 12 cameras to compete against top table tennis players. Ace is an AI-powered articulated robot that uses 12 cameras to compete against top table tennis players. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Humans have been building ping-pong playing robots for decades, such as Omron’s FORPHEUS that challenged amateur competitors at CES 2017. What sets Ace apart from the rest is that the robot, which was developed by Sony’s AI division , is the first that can hold its own against top-ranked human players and occasionally even beat them in matches that follow the official rules of the International Table Tennis Federation (ITTF). AI is already capable of besting humans at games like Chess and Go , but physical games pose a much greater challenge as robots have to be engineered to match the speed and responsiveness of the human mind and body. To be competitive at table tennis, a particularly difficult game with a ball moving at a high speed and spin that can alter its trajectory, Sony’s researchers developed a robotic system with eight joints. Two joints control the paddle’s position, two adjust its overall orientation, and the other three enab"
+    },
+    {
+      "title": "Google turns Chrome into an AI co-worker for the workplace",
+      "summary": "Google brings Gemini-powered \"auto browse\" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and more.",
+      "link": "https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Wed, 22 Apr 2026 17:30:00 +0000",
+      "date": "2026-04-22",
+      "candidate_score": 8.076
+    },
+    {
+      "title": "'카카오톡에서 AI가 먼저 말을 걸어 온다'...에이전틱 AI '카나나' 공개",
+      "summary": "이제 카카오톡에서 '카나나'를 통해 자동으로 제안 및 추천을 받을 수 있다.카카오(대표 정신아)는 22일 '카나나 인 카카오톡(Kanana in KakaoTalk)' 기능을 정식 출시했다. 이 기능은 카카오톡 온디바이스 AI 서비스로, 카카오톡 25.9.0 버전 이상부터 사용할 수 있다.이 기능은 2025년 10월부터 iOS 일부 사용자를 대상으로 비공개 테스트가 진행했다. 이 과정에서 선톡의 유용성을 검증, 지난 3월17일 베타테스트를 마치고 19일부터 에이전트 및 선톡 기능을 차례로 도입했다. 현재는 지원 기기(갤럭시 S22,",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209618",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-23 04:20:00",
+      "date": "2026-04-23",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "구글, 연구 에이전트 '딥 리서치 맥스' 출시...기업 데이터·웹 통합 분석",
+      "summary": "구글이 자율 연구 AI 시장 공략을 위해 기업 데이터와 웹 정보를 통합 분석하는 차세대 연구 인프라를 선보였다. 구글은 21일(현지시간) 최신 AI 모델 '제미나이 3.1 프로'를 기반으로 한 자율 연구 AI 에이전트 ▲딥 리서치(Deep Research) ▲딥 리서치 맥스(Deep Research Max)를 공개했다.이번 업데이트는 단순한 기능 개선을 넘어 AI가 인간 분석가의 역할을 대체할 수 있는 수준의 ‘자율 연구 시스템’으로 진화하고 있음을 보여준다. 특히 금융, 생명과학, 시장조사 등 고도의 정확성이 요구되는 산업을 겨냥",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209579",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-22 18:55:31",
+      "date": "2026-04-22",
+      "candidate_score": 7.076
+    },
+    {
+      "title": "오픈AI, 챗GPT에 24시간 작동 에이전트 기능 '에르메스' 테스트 중",
+      "summary": "오픈AI가 '챗GPT'에서 상시 작동하는 자율형 AI 에이전트 기능을 시험 중인 것으로 알려졌다. 리버스 엔지니어링 전문가로 유명한 티보르 블라호는 21일(현지시간) X를 통해 오픈AI가 챗GPT에서 연중무휴 24시간 작동하는 에이전트 기능 ‘에르메스(Hermes)’를 테스트 중이라고 밝혔다.이에 따르면, 현재 베타 형태로 테스트 중인 에르메스는 챗GPT에 ‘에이전트(Agents)’ 메뉴로 배치됐다. 사용자는 \"24시간 주 7일 동안 작동하는\" 이 기능을 통해 자신만의 AI 에이전트를 생성하고 작업을 수행하도록 설정할 수 있다.여기",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209616",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-22 18:44:04",
+      "date": "2026-04-22",
+      "candidate_score": 7.076
+    },
+    {
+      "title": "알트먼, 앤트로픽에 역대급 직격탄...\"미소스는 '공포 마케팅'에 불과\"",
+      "summary": "샘 알트먼 오픈AI CEO가 앤트로픽의 '클로드 미소스' 비공개 전략이 '공포 마케팅'이라고 비판했다. 나아가 앤트로픽이 AI의 위험을 강조하는 것이 최근 자신이 공격받은 것과 무관하지 않다며 비난했다.알트먼 CEO는 21일(현지시간) 공개된 '코어 메모리' 팟캐스트에 그렉 브록먼 사장과 출연, 오픈AI의 10주년을 돌아보는 인터뷰를 진행했다. 이들이 동시에 팟캐스트에 등장한 것은 처음이다.이들은 기업 구조 개편과 '소라(Sora)' 출시 취소, AGI 등에 대해 90여분간 이야기를 나눴다. 소셜 네트워크 시대가 저물고 AI 중심의",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209608",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-22 18:00:00",
+      "date": "2026-04-22",
+      "candidate_score": 7.076
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      },
+      {
+        "date": "2026-04-12",
+        "mode": "informational",
+        "title": "The AI code wars are heating up",
+        "post_main": "AI 코딩 도구 전쟁이 본격 시작됐다. OpenAI, Google, Anthropic이 동시에 코딩 에이전트를 쏟아내고 있거든.\n\n불과 2년 전만 해도 GitHub Copilot ",
+        "reply_casual": "",
+        "views": 264,
+        "likes": 4,
+        "replies": 9,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 144.4
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 332.8,
+      "likes": 2.3,
+      "replies": 5.2,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 98.1
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.8,
+    "issues": [
+      "[AI] Reply 1에서 '앤트로픽의 클로드 코워크'와 같은 경쟁사 언급이 갑작스럽고 맥락 부족",
+      "[AI] 보안/비용 우려사항과 실무 적용 제안이 분리되어 있어 논리적 흐름이 약간 어색함"
+    ],
+    "suggestions": [
+      "Reply 1을 경쟁 상황보다는 기능의 핵심 장점이나 작동 방식 설명으로 대체",
+      "Reply 3의 주의사항과 Reply 4의 실무 제안을 하나로 통합하여 '도입 시 고려사항과 시작 방법'으로 구성",
+      "개발팀 외에 다른 직군(마케팅, 영업)도 활용할 수 있는 구체적 예시 1-2개 추가",
+      "비용 정보가 있다면 대략적인 가격대나 ROI 관점에서 언급하면 더 실용적"
+    ]
+  },
+  "posting_result": {
+    "post_id": "17861871945566004",
+    "reply_1": "18118006216730133",
+    "reply_2": "18369401749164678",
+    "reply_3": "18117543241734934",
+    "reply_4": "18086716952029468",
+    "link_id": "18119681182710535"
+  },
+  "posted_at": "2026-04-23T07:12:57.913647"
+}
