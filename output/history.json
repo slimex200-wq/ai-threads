@@ -1,35 +1,20 @@
 [
   {
-    "date": "2026-04-17",
-    "titles": [
-      "앤트로픽, '클로드 코드' 상시 실행용 반복 자동화 기능 '루틴' 공개",
-      "오픈AI, 생명과학 연구를 위한 AI 모델 'GPT-로절린드' 출시"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209352",
-      "https://www.aitimes.com/news/articleView.html?idxno=209384"
-    ]
-  },
-  {
-    "date": "2026-04-18",
-    "titles": [
-      "'바이브 코딩' 커서, 73조 기업 가치 평가로 AI 스타트업 최상위권 도약",
-      "앤트로픽, 올인원 디자인 도구 '클로드 디자인' 공개...어도비·캔바 위협",
-      "The App Store is booming again, and AI may be why"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209432",
-      "https://www.aitimes.com/news/articleView.html?idxno=209428",
-      "https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/"
-    ]
-  },
-  {
     "date": "2026-04-23",
     "titles": [
       "OpenAI now lets teams make custom bots that can do work on their own"
     ],
     "urls": [
       "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots"
+    ]
+  },
+  {
+    "date": "2026-04-25",
+    "titles": [
+      "문샷, 300개 에이전트 동시 운영하는 '키미 K2.6 에이전트 스웜' 공개"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209726"
     ]
   }
 ]
