@@ -1,33 +1,33 @@
 {
   "sources": {
     "Bluesky": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "warm",
       "items": []
     },
     "TruthSocial": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "warm",
       "items": []
     },
     "Reddit": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "warm",
       "items": []
     },
     "Instagram": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "warm",
       "items": []
     },
     "TikTok": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "warm",
       "items": []
     },
     "HN": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "hot",
       "items": [
         {
           "title": "Half of planned US data center builds have been delayed or canceled",
@@ -41,8 +41,8 @@
       ]
     },
     "Polymarket": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "warm",
       "items": [
         {
           "title": "OpenAI announces it has achieved AGI before 2027?",
@@ -227,8 +227,8 @@
       ]
     },
     "YouTube": {
-      "last_refresh_at": "2026-04-24T22:07:38.611091+00:00",
-      "last_mode": "cold",
+      "last_refresh_at": "2026-04-25T22:00:06.929309+00:00",
+      "last_mode": "hot",
       "items": []
     }
   }

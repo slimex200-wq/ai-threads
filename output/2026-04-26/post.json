@@ -1,0 +1,238 @@
+{
+  "selected_article": {
+    "original_title": "Anthropic created a test marketplace for agent-on-agent commerce",
+    "link": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+    "reason": "This remains the best choice - it's concrete, practical, and reveals something unexpected about AI capabilities. The marketplace experiment is easy to understand and the findings about agent quality gaps are immediately relevant to anyone using AI."
+  },
+  "post_main": "앤트로픽이 AI 에이전트끼리 실제 돈으로 거래하는 마켓플레이스를 테스트했다. 직원 69명에게 각각 100달러를 주고 AI가 대신 중고 물품을 사고팔게 했더니, 총 186건의 거래가 성사되며 4000달러어치가 거래됐다. 놀라운 건 더 좋은 AI 모델이 더 나은 결과를 얻지만 사용자는 그 차이를 모른다는 점이다.",
+  "replies": [
+    "실험에서 발견된 핵심 문제는 '에이전트 품질 격차'다. 성능 좋은 AI로 대리하는 사람은 더 좋은 가격에 거래하지만, 손해보는 쪽은 자신이 불리한 상황인지 깨닫지 못한다.",
+    "이는 협상이나 거래에서 어떤 AI를 쓰느냐가 실질적 결과 차이를 만들 수 있다는 뜻이다. 69명의 직원이 참여한 이 실험에서 그 격차가 명확히 드러났다.",
+    "흥미롭게도 AI에게 주는 초기 지시사항은 거래 성사율이나 가격에 별다른 영향을 주지 않았다. 결국 모델 자체의 성능이 더 중요했다는 얘기다.",
+    "이제 AI가 우리를 대신해 더 많은 일을 할 텐데, 어떤 AI 도구를 선택하느냐가 생각보다 훨씬 중요할 것 같다. 특히 돈이 오가는 상황에서는 더욱."
+  ],
+  "media_plan": {
+    "preferred_type": "none",
+    "search_query": "",
+    "reason": "This is a conceptual experiment about AI agent behavior rather than a visual demonstration"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2023/08/GettyImages-88622588.jpg?resize=1200,870",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Three reasons why DeepSeek’s new model matters",
+      "summary": "On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts than its last generation, thanks to a new design that helps it handle large amounts of text more efficiently. Like DeepSeek’s previous models, V4 is open source, meaning it is available&#8230;",
+      "link": "https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/",
+      "source": "MIT Technology Review",
+      "published": "Fri, 24 Apr 2026 21:40:58 +0000",
+      "date": "2026-04-24",
+      "candidate_score": 16.883,
+      "details": "The long-awaited V4 is more efficient and a win for Chinese chipmakers. On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts than its last generation, thanks to a new design that helps it handle large amounts of text more efficiently. Like DeepSeek’s previous models, V4 is open source, meaning it is available for anyone to download, use, and modify. V4 marks DeepSeek’s most significant release since R1 , the reasoning model it launched in January 2025. R1, which was trained on limited computing resources, stunned the global AI industry with its strong performance and efficiency, turning DeepSeek from a little-known research team into China’s best-known AI company almost overnight. It also helped set off a wave of open-weight model releases from other Chinese AI firms. DeepSeek has kept a relatively low profile since then—but earlier this month, it effectively teased V4’s release when it added “expert” and “flash” modes to the online version of its model, prompting speculation that the updates were tied to a bigger upcoming release. While the company has become a powerful symbol of China’s AI ambitions, its big return to cutting-edge frontier models comes after months of scrutiny—including major personnel departures , delays to previous model launches , and growing scrutiny from both the US and Chinese governments. So, will V4 shake the AI field the way R1 did? Almost certainly not, but here are three big reasons why this release matters. As with R1 before it, DeepSeek claims tha"
+    },
+    {
+      "title": "xAI, 에이전트 환경 특화 음성 모델  공개...\"사전 추론으로 오류 줄여\"",
+      "summary": "xAI와 중국 샤오미가 각각 에이전트 환경에 특화된 차세대 음성 AI 모델을 공개했다. xAI는 23일(현지시간) 새로운 음성 모델 ‘그록 보이스 싱크 패스트 1.0(Grok Voice Think Fast 1.0)’을 공개하며 API 형태로 제공을 시작했다.이 모델은 고객 지원, 전화 영업, 예약 관리 등 복잡하고 다단계 업무를 음성 기반으로 처리하는 데 최적화된 것이 특징이다.실시간 추론 능력을 유지하면서도 응답 지연을 최소화해 자연스러운 대화 경험을 구현하는 데 초점을 맞췄다. 저지연 통신 환경을 위해 스타링크(Starlink)",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209741",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-25 16:44:00",
+      "date": "2026-04-25",
+      "candidate_score": 8.883
+    },
+    {
+      "title": "Anthropic created a test marketplace for agent-on-agent commerce",
+      "summary": "In a recent experiment, Anthropic created a classified marketplace where AI agents represented both buyers and sellers, striking real deals for real goods and real money.",
+      "link": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Sat, 25 Apr 2026 21:43:37 +0000",
+      "date": "2026-04-25",
+      "candidate_score": 8.083,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. In a recent experiment, Anthropic created a classified marketplace where AI agents represented both buyers and sellers, striking real deals for real goods and real money. The company admitted this test — which it called Project Deal — was only “a pilot experiment with a self-selected participant pool” of 69 Anthropic employees who were given a budget of $100 (paid out via gift cards) to buy stuff from their coworkers. Nonetheless, Anthropic said it was “struck by how well Project Deal worked,” with 186 deals made, totaling more than $4,000 in value. The company said it actually ran four separate marketplaces with different models — one that was “real” (where everyone was represented by the company’s most-advanced model, and with deals actually honored after the experiment) and another three for study. Apparently, when users are represented by more advanced models, they get “objectively better outcomes,” Anthropic said. But users didn’t seem to notice the disparity, raising the possibility of “‘agent quality’ gaps” where “people on the losing end might not realize they’re worse off.” Also, the initial instructions given to the agents didn’t appear to affect sale likelihood or the negotiated prices. StrictlyVC kicks off the year in SF. Register now for unfiltered fireside chats and VC insights with leaders from Uber, Replit, Eclipse, and more. Plus, high-value connections that actually move the needle."
+    },
+    {
+      "title": "OpenAI CEO apologizes to Tumbler Ridge community",
+      "summary": "In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcement about the suspect in a recent mass shooting.",
+      "link": "https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Sat, 25 Apr 2026 17:17:56 +0000",
+      "date": "2026-04-25",
+      "candidate_score": 8.083,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcement about the suspect in a recent mass shooting. After police identified 18-year-old Jesse Van Rootselaar as a suspected shooter who allegedly killed eight people, the Wall Street Journal reported that OpenAI had flagged and banned Van Rootselaar’s ChatGPT account in June 2025 for after she described scenarios involving gun violence. The company’s staff debated alerting police but ultimately decided against it , eventually reaching out to Canadian authorities after the shooting. OpenAI has since said that it is improving safety protocols , for example by putting more flexible criteria in place to determine when accounts get referred to authorities, and by establishing direct points of contact with Canadian law enforcement. In Altman’s letter, which was first published in the local newspaper Tumbler RidgeLines , the CEO said he’d discussed the shooting with Tumbler Ridge Mayor Darryl Krakowka and British Columbia Premier David Eby, and they’d all agreed “a public apology was necessary,” but “time was also needed to respect the community as you grieved.” “I am deeply sorry that we did not alert law enforcement to the account that was banned in June,” Altman said. “While I know words can never be enough, I believe an apology is necessary to recognize the harm"
+    },
+    {
+      "title": "Why Cohere is merging with Aleph Alpha",
+      "summary": "Canadian AI startup Cohere is taking over Germany-based Aleph Alpha with support from Lidl’s owner, Schwarz Group. With the blessing of their governments, the companies intend to offer a sovereign alternative to enterprises in an AI landscape dominated by American players.",
+      "link": "https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Sat, 25 Apr 2026 16:00:00 +0000",
+      "date": "2026-04-25",
+      "candidate_score": 8.083,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Canadian AI startup Cohere is taking over Germany-based Aleph Alpha with support from Schwarz Group (parent company of grocery chain Lidl). With the blessing of their governments, the companies intend to offer a sovereign alternative to enterprises in an AI landscape dominated by American players. As companies that develop large language models, Aleph Alpha and Cohere have been hometown stars, while still lagging far behind OpenAI and the likes globally. But similarities aside, this isn’t an alliance between equals. Last valued at $6.8 billion , Cohere will lead the new entity that will incorporate Aleph Alpha, subject to approval by authorities and shareholders. Schwarz Group, one of Aleph Alpha’s main shareholders, is already fully onboard with the deal. The retail giant will now become a strategic backer of the new entity with €500 million in structured financing (approximately $600 million) — and with expectations that it will make use of STACKIT, the sovereign cloud service of its IT division Schwarz Digits. As part of its investment, Schwarz Group is also acting as Cohere’s lead investor in the Series E round of funding — and it already set the price tag. According to German business media outlet Handelsblatt, the term sheet anchors the valuation at around $20 billion . This would be a significant leap that combined revenue alone can’t justify. While Cohere reported $240 million in annual recurr"
+    },
+    {
+      "title": "엔비디아, 시총 5조달러 탈환...'딥시크-V4' 출시에도 상승",
+      "summary": "엔비디아 주가가 24일(현지시간) 지난해 10월 이후 처음으로 다시 시가총액 5조달러(약 7387조5000억원)를 돌파했다. 이는 투자자들이 다음 주 빅테크의 실적 발표를 앞두고 AI 칩 관련 투자에 몰려들었기 때문이다.주가는 4.3% 상승해 208.27달러로 마감했다. 엔비디아 주가는 AI 서비스 및 모델 개발에 대한 수요 급증에 힘입어 2022년 말 이후 14배 이상 상승했다. 엔비디아의 GPU는 마이크로소프트와 아마존, 구글 등 하이퍼스케일러는 물론, 이제는 메타와 오픈AI, 앤트로픽 등 모델 개발 업체의 자체 데이터센터 구축",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209744",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-25 20:02:31",
+      "date": "2026-04-25",
+      "candidate_score": 7.083
+    },
+    {
+      "title": "AI와의 대화, 법정에선 어디까지 '증거'로 인정될까",
+      "summary": "\"수면제랑 술이랑 같이 먹으면 사람이 죽을 수도 있나.\"얼마 전 국내에서는 모텔 약물 살인 사건에서 '챗GPT'와 나눈 대화 기록이 범행의 고의성을 입증하는 주요 단서로 주목받은 바 있다.또 미국 법원이 최근 AI와의 대화 기록을 법정 증거로 인정하면서, 법조계와 산업계에 비상이 걸린 것으로 알려졌다. 하지만 법무법인 원 임창국 변호사는 \"아직은 판례가 엇갈리는 상황\"이라며, 주의가 필요하다고 지적했다. AI 대화 기록은 국내 법정에서 과연 어디까지 효력을 발휘할 수 있을지 주요 쟁점을 정리했다.■ AI 대화기록 법적 증거로 채택될",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209505",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-25 19:00:20",
+      "date": "2026-04-25",
+      "candidate_score": 7.083
+    },
+    {
+      "title": "캐나다 코히어, 독일 AI 스타트업 알레프 알파 인수...\"유럽 소버린 AI 지원\"",
+      "summary": "캐나다 AI 스타트업 코히어가 독일 AI 스타트업 알레프 알파(Aleph Alpha)를 인수하며 유럽 시장 공략과 ‘소버린 AI’ 구축에 나섰다. 코히어는 24일(현지시간) 인수 계약을 체결했다고 발표하며, 통합 법인은 코히어라는 이름을 유지하고 캐나다와 독일을 거점으로 운영될 예정이라고 밝혔다.구체적인 거래 금액은 공개하지 않았다. 업계에서는 합병 후 기업 가치가 200억달러(약 30조원) 수준으로 평가했다.이번 거래에는 독일 유통 대기업 슈바르츠 그룹의 참여도 눈에 띈다. 알레프 알파의 주요 투자자인 슈바르츠 그룹은 코히어의 신",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209738",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-25 18:22:07",
+      "date": "2026-04-25",
+      "candidate_score": 7.083
+    },
+    {
+      "title": "메타, 'AI 에이전트' 구현 위해 아마존 CPU 대규모 도입",
+      "summary": "메타가 AI 인프라 확장을 위해 아마존웹서비스(AWS)와 수십억달러 규모의 CPU 사용 계약을 체결했다. 이는 GPU 중심이던 AI 생태계에서 CPU의 역할이 부각되는 흐름을 보여주는 상징적 사례로 평가됐다.메타는 24일(현지시간) 에이전트형 AI 구현을 위해 최소 3년 동안 AWS의 자체 설계 칩인 ‘그래비톤(Graviton)’ CPU를 컴퓨팅 포트폴리오에 통합할 예정이라고 발표했다.이번 계약을 통해 메타는 수천만개 코어 규모의 연산 자원을 확보하게 되며, 이는 AI 에이전트와 다양한 AI 서비스 운영에 활용될 예정이다. 구체적인",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209737",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-25 18:03:35",
+      "date": "2026-04-25",
+      "candidate_score": 7.083
+    },
+    {
+      "title": "중국, 기술 유출 차단 위해 AI 기업의 미국 투자 유치 제한",
+      "summary": "중국 정부가 자국 AI 기업들에 대한 미국 자본 유입을 강력히 통제하는 방안을 추진하고 있다. 민감 기술의 해외 유출을 막고 국가 안보를 강화하려는 조치로, 글로벌 AI 투자 지형에도 적지 않은 영향을 미칠 전망이다.블룸버그에 따르면, 중국 국가발전개혁위원회(NDRC) 등 주요 규제 당국은 24일(현지시간) 일부 핵심 기술 기업에 정부 승인 없이 미국 자본을 유치하지 말라는 지침을 전달했다.대상에는 문샷 AI와 스텝펀 등이 포함된 것으로 알려졌다. 바이트댄스도 미국 투자자와 지분 거래 시 사전 승인을 받도록 하는 규제 대상에 포함됐",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209739",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-25 17:36:45",
+      "date": "2026-04-25",
+      "candidate_score": 7.083
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-25",
+        "mode": "informational",
+        "title": "문샷, 300개 에이전트 동시 운영하는 '키미 K2.6 에이전트 스웜' 공개",
+        "post_main": "지금까지 AI는 혼자서 차례차례 일했다. 한 번에 하나씩. 문샷 AI가 이걸 완전히 바꿨다. 키미 K2.6에서 300개 AI 에이전트가 동시에 돌아간다. 마치 대형 프로젝트를 30",
+        "reply_preview": "구체적으로 뭘 할 수 있을까? 웹사이트 300개 동시 분석, 보고서 여러 챕터 병렬 작성, 데이터 처리와 시각화 동시 진행 같은 일들이다.",
+        "reply_count": 3,
+        "views": 1172,
+        "likes": 4,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 187.2
+      },
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      },
+      {
+        "date": "2026-04-10",
+        "mode": "informational",
+        "title": "앤트로픽, '클로드 코워크' 기능 강화하고 정식 서비스 시작",
+        "post_main": "앤트로픽이 클로드 코워크를 정식 출시했다. 3개월간 맥스 요금제 독점이었는데, 이제 모든 유료 요금제에서 쓸 수 있다.\n\n코워크는 클로드가 직접 파일을 읽고 수정하는 에이전트 기능",
+        "reply_casual": "",
+        "views": 795,
+        "likes": 5,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 164.5
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 400.7,
+      "likes": 2.4,
+      "replies": 5.2,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 104.6
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.85,
+    "issues": [
+      "[AI] 4000달러어치 → 4000달러가 (natural Korean expression)",
+      "[AI] 어떤 AI 도구를 선택하느냐가 → 어떤 AI 도구를 선택하는지가 (more natural grammar)"
+    ],
+    "suggestions": [
+      "Add specific examples of price differences between AI models to make the 'quality gap' more concrete",
+      "Include a brief mention of what types of items were traded to help readers visualize the experiment",
+      "Consider adding a practical tip about how developers can evaluate AI model performance for their use cases",
+      "The final reply could benefit from a more actionable takeaway beyond general advice"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18119408083728085",
+    "reply_1": "17943646395177423",
+    "reply_2": "17923284453297965",
+    "reply_3": "18117343573706955",
+    "reply_4": "18095891669468249",
+    "link_id": "18085527434621478"
+  },
+  "posted_at": "2026-04-26T07:02:23.346208"
+}

@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-25",
+    "mode": "informational",
+    "title": "문샷, 300개 에이전트 동시 운영하는 '키미 K2.6 에이전트 스웜' 공개",
+    "post_main": "지금까지 AI는 혼자서 차례차례 일했다. 한 번에 하나씩. 문샷 AI가 이걸 완전히 바꿨다. 키미 K2.6에서 300개 AI 에이전트가 동시에 돌아간다. 마치 대형 프로젝트를 30",
+    "reply_preview": "구체적으로 뭘 할 수 있을까? 웹사이트 300개 동시 분석, 보고서 여러 챕터 병렬 작성, 데이터 처리와 시각화 동시 진행 같은 일들이다.",
+    "reply_count": 3,
+    "views": 1172,
+    "likes": 4,
+    "replies": 5,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 187.2
+  },
+  {
     "date": "2026-04-23",
     "mode": "informational",
     "title": "OpenAI now lets teams make custom bots that can do work on their own",
