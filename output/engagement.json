@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-26",
+    "mode": "informational",
+    "title": "Anthropic created a test marketplace for agent-on-agent commerce",
+    "post_main": "앤트로픽이 AI 에이전트끼리 실제 돈으로 거래하는 마켓플레이스를 테스트했다. 직원 69명에게 각각 100달러를 주고 AI가 대신 중고 물품을 사고팔게 했더니, 총 186건의 거래가",
+    "reply_preview": "실험에서 발견된 핵심 문제는 '에이전트 품질 격차'다. 성능 좋은 AI로 대리하는 사람은 더 좋은 가격에 거래하지만, 손해보는 쪽은 자신이 불리",
+    "reply_count": 4,
+    "views": 1886,
+    "likes": 4,
+    "replies": 5,
+    "reposts": 1,
+    "quotes": 0,
+    "score": 266.6
+  },
+  {
     "date": "2026-04-25",
     "mode": "informational",
     "title": "문샷, 300개 에이전트 동시 운영하는 '키미 K2.6 에이전트 스웜' 공개",
