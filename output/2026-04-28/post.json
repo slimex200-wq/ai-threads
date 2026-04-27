@@ -1,0 +1,236 @@
+{
+  "selected_article": {
+    "original_title": "구글, AI가 학습 데이터 스스로 설계하는 '시뮬라' 공개...\"단순 베끼기는 끝나\"",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=209779",
+    "reason": "This article reveals a fundamental shift in AI training methodology - from simple data collection to intelligent data design. It's highly practical for developers and has clear implications for the future of AI development, making it very shareable."
+  },
+  "post_main": "구글이 AI 학습의 판을 바꿨다. 지금까지는 인터넷에서 긁어온 데이터를 그냥 쏟아부었다면, 이제는 AI가 필요한 학습 데이터를 스스로 '설계'한다. 구글의 새 프레임워크 '시뮬라'가 그 주인공이다. 특히 의료, 법률 같은 전문 분야는 데이터가 부족하거나 민감해서 이런 접근이 꼭 필요했다.",
+  "replies": [
+    "기존 방식: 인터넷 데이터 → 모델에 투입\n새 방식: 모델이 필요한 데이터 종류를 파악 → 맞춤형 합성 데이터 생성 → 효율적 학습",
+    "이게 왜 중요한가? 전문 분야 AI를 만들 때 '좋은 데이터'를 구하기 어려웠는데, 이제 AI가 알아서 필요한 데이터를 만들어낸다.",
+    "개발자들에게는 새로운 기회다. 데이터 부족으로 포기했던 틈새 분야 AI 서비스도 이제 가능해질 것 같다."
+  ],
+  "media_plan": {
+    "preferred_type": "image",
+    "search_query": "AI synthetic data generation process diagram",
+    "reason": "A visual diagram showing the difference between traditional data collection vs AI-designed synthetic data generation would help readers understand this conceptual shift"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=209779",
+  "og_image": "https://cdn.aitimes.com/news/photo/202604/209779_212332_313.png",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Google employees ask Sundar Pichai to say no to classified military AI use",
+      "summary": "Over 600 Google employees signed a letter to CEO Sundar Pichai demanding that Google block the Pentagon from using its AI models for classified purposes, reports the The Washington Post. Its organizers claim many of the signers work in Google's DeepMind AI lab, and include more than 20 principals, directors, and vice presidents. According to [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter",
+      "source": "AI | The Verge",
+      "published": "2026-04-27T14:17:12-04:00",
+      "date": "2026-04-27",
+      "candidate_score": 9.874,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. After a report that Google is in talks with the Pentagon, hundreds of employees signed a letter against the idea.﻿ After a report that Google is in talks with the Pentagon, hundreds of employees signed a letter against the idea.﻿ Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Over 600 Google employees signed a letter to CEO Sundar Pichai demanding that Google block the Pentagon from using its AI models for classified purposes, reports the The Washington Post . Its organizers claim many of the signers work in Google’s DeepMind AI lab, and include more than 20 principals, directors, and vice presidents. According to the Post , the letter says that “The only way to guarantee that Google does not become associated with such harms is to reject any classified workloads. Otherwise, such uses may occur without our knowledge or the power to stop them.” Anthropic is currently in a legal battle with the Pentagon over being designated a “supply chain risk,” after refusing to loosen guardrails around how the US military can use its AI models, with support from across the tech industry, including employees at Google . The letter specifically references a recent report by The Information that said Google a"
+    },
+    {
+      "title": "Canonical lays out a plan for AI in Ubuntu Linux",
+      "summary": "One of the most popular Linux distributions is about to get an influx of AI features. As reported by Phoronix, Jon Seager, VP of engineering at Ubuntu developer Canonical, shared a blog post on Monday detailing plans to add AI features to the Linux distro over the next year. As the post states, the AI [&#8230;]",
+      "link": "https://www.theverge.com/tech/919411/canonical-ubuntu-linux-ai-features",
+      "source": "AI | The Verge",
+      "published": "2026-04-27T16:47:45-04:00",
+      "date": "2026-04-27",
+      "candidate_score": 8.074,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. ﻿Canonical plans to add AI features “throughout 2026” but says “Ubuntu is not becoming an AI product.” ﻿Canonical plans to add AI features “throughout 2026” but says “Ubuntu is not becoming an AI product.” Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. One of the most popular Linux distributions is about to get an influx of AI features. As reported by Phoronix , Jon Seager, VP of engineering at Ubuntu developer Canonical, shared a blog post on Monday detailing plans to add AI features to the Linux distro over the next year. As the post states, the AI features “will come in two forms: first as a means of enhancing existing OS functionality with AI models in the background, and latterly in the form of ‘AI native’ features and workflows for those who want them.” These features will range from accessibility tools like improved speech-to-text and text-to-speech to agentic AI features for tasks like troubleshooting or personal automation. According to Seager, Canonical will be prioritizing model transparency and local inference when adding these AI features. Behind the scenes, Canonical is also encouraging its engineers to use AI more, but Seager noted that “I will not be measuring people at Canon"
+    },
+    {
+      "title": "OpenAI ends Microsoft legal peril over its $50B Amazon deal",
+      "summary": "OpenAI has won major concessions from its largest shareholder, Microsoft, that will allow it to sell products on AWS, while Microsoft gets more cash in a revenue-share agreement.",
+      "link": "https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 27 Apr 2026 17:40:38 +0000",
+      "date": "2026-04-27",
+      "candidate_score": 8.074,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. On Monday, Microsoft and OpenAI announced that they have, once again, renegotiated the deal binding the two companies. Despite some opinions on X that frame it as a victory for the ChatGPT maker over the Windows giant, both sides are walking away winners. Most importantly, the new terms solve an issue that was hanging over OpenAI’s head since it signed its up-to-$50-billion deal with Amazon. With this new deal, instead of Microsoft having exclusive access to all of OpenAI’s products and IP until the magical day when OpenAI produces AGI, its partnership has a definitive timeline. This contract gives Microsoft a nonexclusive license to OpenAI IP for models and products through 2032. The two companies are still calling Microsoft OpenAI’s “primary cloud partner,” meaning that the bulk of OpenAI’s cloud will likely be served by Azure for the six years this deal covers, even as OpenAI rushes to build its own data centers with other partners. In October , OpenAI agreed to buy an additional $250 billion worth of Microsoft’s cloud. This line is a message to Microsoft shareholders that OpenAI will still be an enormous Azure customer. OpenAI products will ship “first on Azure, unless Microsoft cannot and chooses not to support the necessary capabilities,” the companies say. But, critically, “OpenAI can now serve all its products to customers across any cloud provider.” Again, “first” is not defined clearly in th"
+    },
+    {
+      "title": "허사비스, 이 대통령 접견...K-문샷 지원·서울 AI 캠퍼스 개소 등 합의",
+      "summary": "이재명 대통령과 데미스 허사비스 구글 딥마인드 CEO가 27일 청와대에서 만나 AI 기술의 발전 흐름과 책임 있는 AI 활용, 글로벌 협력 방안에 대해 대화를 나눴다.접견에 앞서 허사비스 CEO는 2016년 알파고 대국을 기념으로 이세돌 9단의 서명이 담긴 바둑판을 이 대통령에게 전달했다.김용범 청와대 정책실장의 브리핑에 따르면, 이 대통령은 “허사비스 대표님은 한국에서 정말 유명한 분이신데 알고 계시냐”는 말로 인사를 건냈다.이에 허사비스 CEO는 “10년 전 알파고 대국이 열린 서울에서 오늘날의 AI가 태동했다”라며 “한국은 나",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209815",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-28 07:00:37",
+      "date": "2026-04-28",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "[4월27일] \"알고리즘의 자유 vs 기업의 책임\"...머스크의 소송이 던진 근본적인 질문",
+      "summary": "지난 9일(현지시간)에는 일론 머스크 CEO의 xAI가 미국 콜로라도주의 AI 규제법 시행을 막기 위해 소송을 제기했다는 소식이 전해졌습니다. 당시에는 지방 정부의 AI 규제에 반대하려는 AI 기업의 소송으로 비쳐, 큰 주목을 받지 못했습니다.연방 차원에서도 주 단위 AI 규제를 견제하려는 움직임이 나타나고 있습니다. 행정부와 정치권에서는 지방 정부의 규제가 기술 혁신을 저해할 수 있다는 입장을 보였으며, 관련 행정 조치도 이어지고 있습니다. 이 과정에서 앤트로픽이 주 정부 규제에 찬성한 데에 대해 비판이 제기되기도 했습니다.여기에",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209768",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-28 07:00:00",
+      "date": "2026-04-28",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "챗봇에게 ‘위험한 질문’…법정에서 증거 되나",
+      "summary": "AI타임스 조예주 기자 joyejuoffice@aitimes.com",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209799",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-28 06:55:00",
+      "date": "2026-04-28",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "사카나 AI, 단순 모델 호출 넘어 모델 가중치 섞는 ‘진화형 오케스트레이션’ 공개",
+      "summary": "단일 거대 모델의 한계를 넘어, 여러 개의 전문 AI가 실시간으로 결합해 문제를 해결하는 새로운 차원의 오케스트레이션 시스템이 등장했다.사카나 AI는 24일(현지시간) ‘사카나 푸구(Sakana Fugu)’를 공개하고, 초기 베타 테스터 모집에 나섰다고 밝혔다.사카나 푸구는 하나의 거대한 모델이 아닌, 여러 최첨단 AI 모델을 동시에 활용하는 시스템이다. 기존 오케스트레이션이 문제 유형에 따라 단순히 A 혹은 B 모델로 연결해주는 ‘라우팅(Routing)’ 방식이었다면, 푸구는 한 단계 더 나아가 모델의 가중치(Weights) 자체",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209787",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-27 18:58:18",
+      "date": "2026-04-27",
+      "candidate_score": 7.074
+    },
+    {
+      "title": "구글, AI가 학습 데이터 스스로 설계하는 '시뮬라' 공개...\"단순 베끼기는 끝나\"",
+      "summary": "단순히 양만 늘리던 AI 합성 데이터 시대가 가고, 데이터 자체를 공학적으로 '설계'해 모델의 지능을 높이는 새로운 프레임워크가 등장했다.구글과 스위스 로잔공과대학교(EPFL) 연구진은 최근 합성 데이터를 체계적으로 설계하고 생성하는 프레임워크 ‘시뮬라(Simula)’를 공개했다.지금까지 대규모 AI 모델의 발전은 인터넷에 축적된 방대한 텍스트와 이미지 데이터에 크게 의존해 왔다. 그러나 사이버보안, 법률, 의료 등 전문 영역으로 AI 활용이 확대되면서 상황이 달라지고 있다. 이 분야는 학습에 필요한 데이터가 절대적으로 부족하거나,",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209779",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-27 18:38:22",
+      "date": "2026-04-27",
+      "candidate_score": 7.074
+    },
+    {
+      "title": "\"흩어진 GPU 하나로 묶어\"...구글, '비동기·분산식' 모델 학습법 공개",
+      "summary": "구글이 기존의 하드웨어 ‘완전 동기화’ 구조를 벗어나, 비동기·분산 방식으로도 안정적인 대규모 모델 학습이 가능한 새로운 아키텍처를 제시했다.구글 딥마인드는 23일(현지시간) 기존 AI 학습의 핵심 제약으로 꼽히던 동기화 문제를 해결하는 새로운 학습 아키텍처 ‘디커플드 디로코(Decoupled DiLoCo·Distributed Low-Communication)’를 온라인 아카이브를 통해 공개했다. 지금까지 대형언어모델(LLM)은 수천~수만개의 GPU나 TPU가 동시에 같은 속도로 계산을 수행하고, 단계마다 결과를 맞혀야 하는 구조로",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209767",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-27 18:18:09",
+      "date": "2026-04-27",
+      "candidate_score": 7.074
+    },
+    {
+      "title": "구글, MS 제치고 'AI 컴퓨팅' 세계 1위 올라...\"자체 칩 TPU의 힘\"",
+      "summary": "구글이 마이크로소프트(MS)를 누르고 세계에서 AI 컴퓨팅 연산 자원을 가장 많이 확보한 기업으로 떠올랐다. GPU 보유량은 MS에 못 미치지만, 자체 개발 칩인 TPU가 폭발적으로 성장한 데 힘입은 것이다.비영리 연구 단체인 에포크 AI(Epoch AI)는 최근 보고서를 통해 구글이 2025년 4분기 기준 전 세계 누적 AI 컴퓨팅 용량의 약 4분의 1을 보유하며 최대 규모의 AI 컴퓨팅 자원 보유자가 될 것으로 추정했다.이에 따르면, 구글의 총연산 능력은 약 5.2M H100e에 달한다. H100e는 'H100 환산량(Equiv",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209792",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-27 18:00:00",
+      "date": "2026-04-27",
+      "candidate_score": 7.074
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-26",
+        "mode": "informational",
+        "title": "Anthropic created a test marketplace for agent-on-agent commerce",
+        "post_main": "앤트로픽이 AI 에이전트끼리 실제 돈으로 거래하는 마켓플레이스를 테스트했다. 직원 69명에게 각각 100달러를 주고 AI가 대신 중고 물품을 사고팔게 했더니, 총 186건의 거래가",
+        "reply_preview": "실험에서 발견된 핵심 문제는 '에이전트 품질 격차'다. 성능 좋은 AI로 대리하는 사람은 더 좋은 가격에 거래하지만, 손해보는 쪽은 자신이 불리",
+        "reply_count": 4,
+        "views": 1886,
+        "likes": 4,
+        "replies": 5,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 266.6
+      },
+      {
+        "date": "2026-04-25",
+        "mode": "informational",
+        "title": "문샷, 300개 에이전트 동시 운영하는 '키미 K2.6 에이전트 스웜' 공개",
+        "post_main": "지금까지 AI는 혼자서 차례차례 일했다. 한 번에 하나씩. 문샷 AI가 이걸 완전히 바꿨다. 키미 K2.6에서 300개 AI 에이전트가 동시에 돌아간다. 마치 대형 프로젝트를 30",
+        "reply_preview": "구체적으로 뭘 할 수 있을까? 웹사이트 300개 동시 분석, 보고서 여러 챕터 병렬 작성, 데이터 처리와 시각화 동시 진행 같은 일들이다.",
+        "reply_count": 3,
+        "views": 1172,
+        "likes": 4,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 187.2
+      },
+      {
+        "date": "2026-04-08",
+        "mode": "informational",
+        "title": "엔비디아도 'KV 캐시' 해결... '트라이어텐션'으로 메모리 10배 절감",
+        "post_main": "엔비디아가 AI 메모리 사용량을 10.7배 줄이는 기술을 공개했다. 트라이어텐션이라는 이름인데, 그동안 LLM의 최대 걸림돌이었던 KV 캐시 문제를 근본적으로 해결하는 방식이거든.",
+        "reply_casual": "",
+        "views": 788,
+        "likes": 7,
+        "replies": 6,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 173.8
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 499.7,
+      "likes": 2.5,
+      "replies": 5.2,
+      "reposts": 0.1,
+      "quotes": 0.0,
+      "score": 115.4
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.74,
+    "issues": [
+      "[AI] Reply 2 could be more specific about what types of 'good data' were hard to obtain",
+      "[AI] Missing concrete examples of how developers can actually implement or access this technology"
+    ],
+    "suggestions": [
+      "Add a specific example in reply 2 (e.g., '의료 AI를 만들려면 수만 건의 진단 사례가 필요했는데...')",
+      "Include a practical next step for developers in reply 3 (e.g., when/how they can use this framework)",
+      "Consider adding a brief mention of limitations or current availability status",
+      "The main post could benefit from one concrete example to make it more relatable"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18049571768729412",
+    "reply_1": "18004778951863245",
+    "reply_2": "17907636948220089",
+    "reply_3": "17937202965245198",
+    "link_id": "17874605409603505"
+  },
+  "posted_at": "2026-04-28T07:14:32.125106"
+}
