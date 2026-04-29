@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-04-23",
-    "titles": [
-      "OpenAI now lets teams make custom bots that can do work on their own"
-    ],
-    "urls": [
-      "https://www.theverge.com/ai-artificial-intelligence/917065/openai-chatgpt-workspace-agents-custom-teams-bots"
-    ]
-  },
-  {
     "date": "2026-04-25",
     "titles": [
       "문샷, 300개 에이전트 동시 운영하는 '키미 K2.6 에이전트 스웜' 공개"
@@ -33,6 +24,15 @@
     ],
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=209779"
+    ]
+  },
+  {
+    "date": "2026-04-30",
+    "titles": [
+      "엔트로픽, 창작 소프트웨어 제어하는 '클로드 커넥터' 출시...\"어도비·블렌더와 연동\""
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=209904"
     ]
   }
 ]
