@@ -34,5 +34,14 @@
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=209904"
     ]
+  },
+  {
+    "date": "2026-05-01",
+    "titles": [
+      "Elon Musk testifies that xAI trained Grok on OpenAI models"
+    ],
+    "urls": [
+      "https://techcrunch.com/2026/04/30/elon-musk-xai-openai-trial-model-distillation"
+    ]
   }
 ]

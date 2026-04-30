@@ -1,0 +1,239 @@
+{
+  "selected_article": {
+    "original_title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+    "link": "https://techcrunch.com/2026/04/30/elon-musk-xai-openai-trial-model-distillation",
+    "reason": "This is a concrete, newsworthy revelation that exposes common but rarely admitted industry practices. It's practically useful for understanding how AI companies actually work behind the scenes, shareable due to the Musk drama, and teaches something specific about 'distillation' that most people don't know about."
+  },
+  "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)에게 지식을 전달하는 방식이다. \"모든 AI 회사가 다 한다\"고 했지만 이렇게 공개적으로 인정한 건 처음이다.",
+  "replies": [
+    "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력을 갖도록 훈련시킨다.",
+    "이 기법의 핵심은 효율성이다. GPT-4 수준 성능을 1/10 크기 모델로 구현할 수 있다면, 서빙 비용이 대폭 줄어든다. Hugging Face의 DistilBERT 같은 오픈소스 도구들도 이 원리를 활용한다.",
+    "결국 AI 업계는 서로 베끼며 발전하는 생태계가 됐다. 개발자 입장에서는 좋은 소식이다. 거대 모델의 능력을 더 저렴하게 활용할 수 있는 길이 계속 열리고 있다는 뜻이기 때문이다."
+  ],
+  "media_plan": {
+    "preferred_type": "none",
+    "search_query": "",
+    "reason": "법정 증언 내용이라 관련 영상이 제한적이고, 디스틸레이션 개념은 텍스트로 충분히 설명 가능함"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://techcrunch.com/2026/04/30/elon-musk-xai-openai-trial-model-distillation",
+  "og_image": "",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "OpenAI announces new advanced security for ChatGPT accounts, including a partnership with Yubico",
+      "summary": "OpenAI is launching additional opt-in protections for ChatGPT accounts. The new security initiative includes a new partnership with security key provider Yubico.",
+      "link": "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 30 Apr 2026 18:20:03 +0000",
+      "date": "2026-04-30",
+      "candidate_score": 11.664,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. OpenAI is getting serious about account security. The company on Thursday launched Advanced Account Security (AAS), a set of opt-in protections for ChatGPT users designed for high-value individuals — but available to anyone who wants them. As part of that new program, digital security provider Yubico announced it has partnered with OpenAI to link two new security key products to ChatGPT accounts. The company said the partnership was designed to protect users from the threat of phishing, which is considered to be a growing threat for chatbot users. The two companies are releasing a pair of “co-branded” YubiKeys — dubbed the YubiKey C NFC and the YubiKey C Nano. OpenAI has suggested that AAS is a good fit for political dissidents, journalists, researchers, and elected officials — people who engage in politically charged and risky work. One would assume that it might make sense for enterprise users, whose corporate secrets are squirreled away in ChatGPT sessions. “Ultimately, our intent is to drastically reduce the threat of unauthorized access to sensitive data in OpenAI accounts worldwide,” Yubico CEO Jerrod Chong said in press release announcing the deal. Security keys are small pieces of hardware that can be tied to digital accounts and enacted through a computer’s USB ports. A unique cryptographic identifier lives on the key, which allows only the person in possession of it to log into a connected a"
+    },
+    {
+      "title": "Elon Musk confirms xAI used OpenAI’s models to train Grok",
+      "summary": "In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's models to improve its own. The matter at question is model distillation, a common industry practice by which one larger AI model acts as a \"teacher\" of sorts to pass on knowledge to a smaller [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation",
+      "source": "AI | The Verge",
+      "published": "2026-04-30T14:16:57-04:00",
+      "date": "2026-04-30",
+      "candidate_score": 9.864,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. ﻿He said it was “partly” true that the company had used model distillation to improve xAI’s models. ﻿He said it was “partly” true that the company had used model distillation to improve xAI’s models. Posts from this author will be added to your daily email digest and your homepage feed. If you buy something from a Verge link, Vox Media may earn a commission. See our ethics statement. Posts from this author will be added to your daily email digest and your homepage feed. In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI’s models to improve its own. The matter at question is model distillation, a common industry practice by which one larger AI model acts as a “teacher” of sorts to pass on knowledge to a smaller AI model, the “student.” Although it’s often used legitimately within companies using one of their own AI models to train another, it’s also a practice that’s sometimes used by smaller AI labs to try to get their models to mimic the performance of a larger competitor’s model. Asked on the stand whether he knew what model distillation was, Musk said it’s to use one AI model to train another. When asked whether xAI has distilled OpenAI’s technology, Musk seemed to avoid the question, saying that “generally all the AI companies” do such a thing. And w"
+    },
+    {
+      "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+      "summary": "\"Distillation\" is a hot topic as frontier labs try to prevent smaller competitors from copying their models.",
+      "link": "https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 30 Apr 2026 18:03:57 +0000",
+      "date": "2026-04-30",
+      "candidate_score": 9.864,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. OpenAI and Anthropic have been on the warpath lately against third-party efforts to train new AI models by prompting their publicly accessible chatbots and APIs, a process known as “distillation.” That conversation has focused on Chinese firms using distillation to create open-weight models that are nearly as capable as U.S. offerings, but available at a much lower cost. However, tech workers have widely assumed that American labs use these techniques on each other to avoid falling behind competitors. Now we know it’s true in at least one case: On the stand in a California federal court on Thursday, Elon Musk was asked if xAI has used distillation techniques on OpenAI models to train Grok, and he asserted it was a general practice among AI companies. Asked if that meant “yes,” he said, “Partly.” Musk is in the process of suing OpenAI , CEO Sam Altman, and Greg Brockman, alleging they breached the original nonprofit mission for OpenAI by shifting the entity to a for-profit structure. That trial began this week, featuring testimony from the tech leader. Musk’s admission is notable because distillation threatens AI giants by undermining the advantage they’ve built by investing in compute infrastructure. This allows other software makers to create models that are nearly as capable on the cheap. There’s no small amount of irony here, given the bending and alleged breaking of copyright rules by frontier lab"
+    },
+    {
+      "title": "Apple was surprised by AI-driven demand for Macs",
+      "summary": "Apple said it will be supply-constrained on Mac mini, Studio, and Neo in the next quarter, too.",
+      "link": "https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 30 Apr 2026 22:12:52 +0000",
+      "date": "2026-04-30",
+      "candidate_score": 8.064,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Apple’s iPhone sales and Services revenue were the stars of the show in the tech giant’s most recent quarter, but the Mac quietly outperformed — helped by growing demand for AI workloads. Wall Street investors had expected to see Mac revenue in the low $8 billion range, but Apple reported $8.4 billion in the second quarter ended March 28 — a notable beat for a non-core segment of the tech giant’s business. In addition, investors ahead of earnings believed that Mac sales would be essentially flat year-over-year . Instead, Mac sales were up 6% on an annual basis, the company told investors. The company’s total revenue was $111.2 billion, a 17% increase from the same period last year. Apple chalked up some of the Mac growth to recent product launches, including the well-received MacBook Neo. However, those fun, colorful computers were only on sale for a few weeks after the March 4 preorders began. Realistically, most units shipped mid- to late March, and some demand may have been pushed into April as certain models sold out. Apple CEO Tim Cook told analysts on the company’s Q2 earnings call on Thursday that customer demand for the Neo was “off the charts” and higher than Apple had expected. He also noted that Apple set a record in the quarter for customers new to the Mac, partly due to the Neo. Cook attributed the Mac sales growth to the use of the platform for running local AI models, like OpenClaw — so"
+    },
+    {
+      "title": "Legal AI startup Legora hits $5.6B valuation and its battle with Harvey just got hotter",
+      "summary": "The two wildly fast-growing rivals have raised massive sums, pushed into each other's home turf, and now have dueling ad campaigns.",
+      "link": "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 30 Apr 2026 20:14:47 +0000",
+      "date": "2026-04-30",
+      "candidate_score": 8.064,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Nvidia has laid a new brick in its AI empire . NVentures, its corporate VC fund, has backed Legora, reportedly its first legal AI investment. Leveraging AI to help lawyers streamline their work, the Swedish-born legal tech startup is competing with U.S. player Harvey. Alongside Atlassian and other new financial investors, NVentures joined Legora’s cap table as part of a $50 million Series D extension that comes a month after the startup’s $550 million Series D . In the interval, this Y Combinator alum crossed $100 million in annual recurring revenue (ARR) — a milestone that contributed to its new $5.6 billion post-money valuation. This brings Legora’s valuation just a tad closer to Harvey’s, which reached $11 billion last month when Sequoia tripled down on its investment. Andreessen Horowitz, Coatue, Conviction Partners, Elad Gil, Matt Miller’s Evantic , and Kleiner Perkins also participated in that round. Legora, too, is backed by high-profile VCs, but it puts even more emphasis on the big names it secured as clients, such as Bird & Bird, Cleary Gottlieb, and Linklaters. According to the company, the platform it launched only 18 months ago is now used by more than 1,000 law firms and in-house legal teams across 50 markets. Harvey has game in that area too. It claims 100,000 lawyers across 1,300 organizations as customers, ranging from global law firms like Hengeler Mueller and Latham & Watkins to cor"
+    },
+    {
+      "title": "After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too",
+      "summary": "OpenAI will begin rolling out its cybersecurity testing tool, GPT-5.5 Cyber only \"to critical cyber defenders\" at first.",
+      "link": "https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 30 Apr 2026 19:27:41 +0000",
+      "date": "2026-04-30",
+      "candidate_score": 8.064
+    },
+    {
+      "title": "All the evidence unveiled so far in Musk v. Altman",
+      "summary": "The Musk v. Altman trial is underway, and that means exhibits, or the evidence to be presented in court, are being revealed piece by piece. So far, email exchanges, photos, and corporate documents are circulating from the earliest days of OpenAI - and from before the AI lab even had a name. Some high-level takeaways: [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial",
+      "source": "AI | The Verge",
+      "published": "2026-04-30T15:00:00-04:00",
+      "date": "2026-04-30",
+      "candidate_score": 8.064
+    },
+    {
+      "title": "[4월30일] GPT-5.5의 ‘고블린’ 논란…AI는 왜 엉뚱한 말을 하게 됐나",
+      "summary": "최근 오픈AI에서는 '고블린'이라는 단어가 화제가 됐습니다.arb8020이라는 X 사용자가 28일(현지시간) 밝힌 바에 따르면, 'GPT-5.5'의 시스템 프롬프트에는 \"고블린, 그렘린, 너구리, 트롤, 오우거, 비둘기 또는 기타 동물이나 생물에 대한 이야기는 사용자의 질문과 절대적으로 명확하게 관련이 있는 경우가 아니면 절대 하지 말라\"라는 지침이 포함돼 있습니다. 이 문장은 무려 4번이나 등장합니다.또 비즈니스 인사이더에 따르면, 며칠 전 일부 사용자들이 게시한 GPT-5.5와의 대화 스크린샷에도 이러한 생물에 대한 언급이 포함",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209975",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-01 07:00:00",
+      "date": "2026-05-01",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "구글도 ‘제미나이’ 앱 광고 검토…AI 챗봇 수익, 광고 중심으로 전환하나",
+      "summary": "구글이 '제미나이' 앱에 직접 광고를 게재하는 것에 대해 긍정적인 입장을 보였다. 필립 쉰들러 구글 최고 사업책임자(CBO)는 29일(현지시간) 분기 실적 컨퍼런스콜을 통해 \"제대로만 한다면 광고는 정말 가치 있는 것이 될 수 있다\"라고 말했다.그는 \"현재 우리는 AI 모드의 광고에 집중하고 있지만, AI 모드에서 효과적인 형식은 제미나이 앱에도 성공적으로 적용될 수 있다고 확신한다\"라고 덧붙였다.이는 3개월 전의 입장보다 가능성을 더 열어둔 것이다. 지난 1월 챗GPT 광고 도입 소식에 따라, 구글은 이에 대한 질문을 수차례 받은",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210000",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-30 19:14:00",
+      "date": "2026-04-30",
+      "candidate_score": 7.064
+    },
+    {
+      "title": "소프트뱅크, 신설 AI 기업 미국 상장 추진 중...\"데이터센터가 핵심\"",
+      "summary": "소프트뱅크가 AI와 로보틱스 사업을 중심으로 한 신설 기업 로즈(Roze)의 미국 시장 상장을 추진 중인 것으로 알려졌다. 손정의 회장의 주도로 진행되는 이번 프로젝트는 데이터센터 구축을 핵심 축으로 삼고 있으며, 기업 가치는 최대 1000억달러(약 148조원)에 이를 것으로 전망된다.파이낸셜 타임스는 29일(현지시간) 복수의 소식통을 인용, 소프트뱅크가 이르면 올해 안에 로즈를 상장하는 것을 목표로 하고 있다고 보도했다.소프트뱅크는 오는 7월 텍사스의 데이터센터에서 투자자들에게 사업 비전을 공개할 계획이다. 구체적인 지분 매각 규",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=209989",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-04-30 18:35:29",
+      "date": "2026-04-30",
+      "candidate_score": 7.064
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-04-26",
+        "mode": "informational",
+        "title": "Anthropic created a test marketplace for agent-on-agent commerce",
+        "post_main": "앤트로픽이 AI 에이전트끼리 실제 돈으로 거래하는 마켓플레이스를 테스트했다. 직원 69명에게 각각 100달러를 주고 AI가 대신 중고 물품을 사고팔게 했더니, 총 186건의 거래가",
+        "reply_preview": "실험에서 발견된 핵심 문제는 '에이전트 품질 격차'다. 성능 좋은 AI로 대리하는 사람은 더 좋은 가격에 거래하지만, 손해보는 쪽은 자신이 불리",
+        "reply_count": 4,
+        "views": 1886,
+        "likes": 4,
+        "replies": 5,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 266.6
+      },
+      {
+        "date": "2026-04-30",
+        "mode": "informational",
+        "title": "엔트로픽, 창작 소프트웨어 제어하는 '클로드 커넥터' 출시...\"어도비·블렌더와 연동\"",
+        "post_main": "앤트로픽이 크리에이터들의 작업 방식을 완전히 바꿀 도구를 내놨다. '클로드 커넥터'는 어도비, 블렌더, 에이블톤 라이브 같은 창작 소프트웨어에 클로드를 직접 연결한다. 이제 포토샵",
+        "reply_preview": "지금까지는 작업하다 막히면 브라우저 켜고 클로드 사이트 가서 물어봐야 했다. 이제 작업 툴 안에서 바로 AI 도움을 받을 수 있으니 워크플로우가",
+        "reply_count": 4,
+        "views": 1460,
+        "likes": 2,
+        "replies": 6,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 224.0
+      },
+      {
+        "date": "2026-04-28",
+        "mode": "informational",
+        "title": "구글, AI가 학습 데이터 스스로 설계하는 '시뮬라' 공개...\"단순 베끼기는 끝나\"",
+        "post_main": "구글이 AI 학습의 판을 바꿨다. 지금까지는 인터넷에서 긁어온 데이터를 그냥 쏟아부었다면, 이제는 AI가 필요한 학습 데이터를 스스로 '설계'한다. 구글의 새 프레임워크 '시뮬라'",
+        "reply_preview": "기존 방식: 인터넷 데이터 → 모델에 투입\n새 방식: 모델이 필요한 데이터 종류를 파악 → 맞춤형 합성 데이터 생성 → 효율적 학습",
+        "reply_count": 3,
+        "views": 1063,
+        "likes": 9,
+        "replies": 5,
+        "reposts": 2,
+        "quotes": 0,
+        "score": 217.3
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 589.4,
+      "likes": 2.8,
+      "replies": 5.2,
+      "reposts": 0.3,
+      "quotes": 0.0,
+      "score": 127.8
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.85,
+    "issues": [
+      "[AI] 법정 증언의 구체적 맥락이 부족해 정확성에 약간의 의문이 남음",
+      "[AI] 디스틸레이션 설명이 약간 단순화되어 기술적 정확성이 완벽하지 않음"
+    ],
+    "suggestions": [
+      "소송 배경을 한 문장으로 추가하면 맥락이 더 명확해질 것",
+      "실제 개발자들이 사용할 수 있는 디스틸레이션 도구나 라이브러리 예시를 더 구체적으로 제시",
+      "비용 절감 효과를 구체적인 숫자로 보여주면 더 임팩트가 클 것",
+      "마지막 reply에서 개발자들이 실제로 활용할 수 있는 actionable tip 추가"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18109143067848094",
+    "reply_1": "18359370433227188",
+    "reply_2": "18085225589620771",
+    "reply_3": "18107335918929763",
+    "link_id": "18131454934563948"
+  },
+  "posted_at": "2026-05-01T07:30:24.158677"
+}
