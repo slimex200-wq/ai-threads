@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-01",
+    "mode": "informational",
+    "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+    "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+    "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+    "reply_count": 3,
+    "views": 5886,
+    "likes": 9,
+    "replies": 4,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 673.6
+  },
+  {
     "date": "2026-04-30",
     "mode": "informational",
     "title": "엔트로픽, 창작 소프트웨어 제어하는 '클로드 커넥터' 출시...\"어도비·블렌더와 연동\"",
