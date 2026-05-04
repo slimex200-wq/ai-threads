@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-04",
+    "mode": "informational",
+    "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+    "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+    "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+    "reply_count": 3,
+    "views": 3690,
+    "likes": 4,
+    "replies": 4,
+    "reposts": 0,
+    "quotes": 0,
+    "score": 429.0
+  },
+  {
     "date": "2026-05-01",
     "mode": "informational",
     "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",

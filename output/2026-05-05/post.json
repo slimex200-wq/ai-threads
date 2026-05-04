@@ -1,0 +1,238 @@
+{
+  "selected_article": {
+    "original_title": "Image AI models now drive app growth, beating chatbot upgrades",
+    "link": "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
+    "reason": "This remains the best choice - concrete data that changes how developers prioritize AI features, with specific numbers that make it highly shareable and actionable."
+  },
+  "post_main": "AI 앱 다운로드를 늘리고 싶다면 이미지 모델을 출시하라. Appfigures 조사에 따르면 이미지 AI 모델 출시가 일반 챗봇 업데이트보다 6.5배 더 많은 다운로드를 가져온다고 한다. 제미나이는 이미지 모델로 2200만 다운로드, ChatGPT는 1200만 다운로드를 추가로 얻었다.",
+  "replies": [
+    "흥미로운 건 초기엔 대화형 AI가 더 인기였다는 점이다. 이제는 사람들이 '보는' AI에 더 관심이 많아졌다.",
+    "하지만 다운로드 급증이 매출로 이어지지 않는다는 함정이 있다. 사용자들이 호기심에 설치했다가 실제론 잘 안 쓰기 때문이다.",
+    "개발자라면 GPT-4o처럼 이미지 생성/편집 기능을 우선 개발해보자. 텍스트 AI보다 시각적 임팩트가 크고 바이럴 효과도 좋다."
+  ],
+  "media_plan": {
+    "preferred_type": "image",
+    "search_query": "AI app download statistics chart comparison",
+    "reason": "The 6.5x difference and specific download numbers for major apps would create a compelling visual comparison that reinforces the key insight"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2026/03/ai-apps-GettyImages-2214375253.jpg?resize=1200,800",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Image AI models now drive app growth, beating chatbot upgrades",
+      "summary": "Appfigures finds visual model launches generate 6.5x more downloads — but most don’t convert that spike into revenue.",
+      "link": "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 04 May 2026 19:12:49 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 13.461,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. Image model releases are driving growth for AI mobile apps, generating 6.5x more downloads than traditional model updates, according to a new report from app intelligence provider Appfigures. This marks a shift from earlier days, when the release of new models powering the conversational experiences drove more demand, alongside the new features like a voice chat interface . For instance, ChatGPT and Gemini each added tens of millions of new downloads after releasing their respective image models, Appfigures found. For Google’s Gemini, the release of its image model Nano Banana drove an additional 22+ million downloads in the 28 days following the introduction of the Gemini 2.5 Flash image model last August . This launch lifted the app’s downloads by more than 4x over that period, the data showed. Meanwhile, ChatGPT added more than 12 million incremental installs in the 28 days after the introduction of its GPT-4o image model in March of last year. That’s roughly 4.5x more downloads than it saw for its GPT-4o, GPT-4.5, and GPT-5 model releases, Appfigures pointed out. Other model releases followed similar trends, though on a smaller scale. Meta AI’s introduction of its AI video feed Vibes added an estimated 2.6 million incremental downloads in the 28 days after its September 2025 release . (Yes, technically, this is a video model, but it’s ultimately about visual content, not just text.) Still, the report cauti"
+    },
+    {
+      "title": "OpenAI’s cozy partner Cerebras is on track for a blockbuster IPO",
+      "summary": "AI chip maker Cerebras is heading for a blockbuster IPO that could value it at $26.6 billion or more. Its relationship with OpenAI is deep and rich.",
+      "link": "https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 04 May 2026 21:53:21 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 9.861,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. In the long-running saga that is Cerebras Systems’ IPO, the finish line is finally in sight. The AI chipmaker said on Monday that it is preparing to sell 28 million shares at $115 to $125 a share. This would raise $3.5 billion and give it a $26.6 billion market cap at the high end. That would be a nice bump in just a couple of months for the late investors who piled into its $1 billion Series H at a $23 billion valuation in February. It would also be a boon to OpenAI and a few of its executives. Should Cerebras pull off an initial public offering at or above the high end, this will be the largest tech IPO of 2026 so far. It could also prove the appetite for even bigger blockbuster offerings in the wings, like SpaceX and possibly OpenAI and Anthropic. Cerebras offers an AI-specific chip called the Wafer-Scale Engine 3 that challenges GPU-based AI chips. Cerebras says its chip is faster for inference while using less power than such competitors. Inference is the compute needed to process user prompts. A long list of top-name investors stands to gain from a healthy IPO. Rick Gerson’s Alpha Wave; Benchmark (via partner Eric Vishria); Lior Susan’s Eclipse; Fidelity; and Foundation Capital (via partner Steve Vassallo) are its largest shareholders with more than a 5% stake, according to the company’s SEC filing . The company says its list of investors also includes 1789 Capital, Abu Dhabi Growth Fund, Abu Dhabi’s G42"
+    },
+    {
+      "title": "Sierra raises $950M as the race to own enterprise AI gets serious",
+      "summary": "The raise gives Sierra more than $1 billion to work with — capital the company says it will use to become the \"global standard\" for AI-powered customer experiences.",
+      "link": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 04 May 2026 16:45:55 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 9.861,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. Bret Taylor’s AI startup Sierra is raising a $950 million funding round led by Tiger Global and GV, the company announced Monday , pushing its post-money valuation above $15 billion. The raise gives Sierra more than $1 billion to work with — capital the company says it will use to become the “global standard” for AI-powered customer experiences. Like a lot of AI companies, Sierra has, smartly, been very proactive in touting its own growth in a crowded market. The company says it started with just four design partners a couple of years ago. Today it claims to have more than 40% of the Fortune 50 as customers, and says the agents running on its platform are handling billions of interactions, from refinancing mortgages to processing insurance claims, managing returns, and powering nonprofit fundraising campaigns. Indeed, the funding news follows a stretch of breakneck revenue growth as shared by Sierra, which first said it hit $100 million in annual recurring revenue in late November, then published another post in early February, saying it had hit $150 million in ARR. That pacing reflects both the urgency enterprises feel about deploying AI and the costs that come with it. Taylor, who also serves as chairman of OpenAI and was formerly co-CEO of Salesforce, has said that the best-case outcome for agentic AI is lower costs and higher revenue for clients, but before those returns materialize, the ramp-up phase can"
+    },
+    {
+      "title": "Anthropic and OpenAI are both launching joint ventures for enterprise AI services",
+      "summary": "Both Anthropic and OpenAI have partnered with asset managers to more aggressively market their enterprise AI products.",
+      "link": "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 04 May 2026 15:59:24 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 9.861,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. On Monday, Anthropic announced a joint venture focusing on deploying enterprise AI services. Blackstone, Hellman & Friedman, and Goldman Sachs will be founding partners in the new venture, which is backed by a group of VCs, hedge funds, and private equity firms, including Apollo Global Management, General Atlantic, GIC, Leonard Green, and Sequoia Capital. The Wall Street Journal, which first reported news of the partnership, reported the new venture was valued at $1.5 billion , which includes a $300 million commitment each from Anthropic, Blackstone, and Hellman & Friedman. The announcement comes just as Anthropic’s chief rival is preparing to make a similar move. Mere hours before the Anthropic announcement, Bloomberg reported that OpenAI was raising funds for a new venture called The Development Company, along very similar lines. OpenAI’s venture would operate at a larger scale, raising $4 billion from 19 investors against a $10 billion valuation. Named investors include TPG, Brookfield Asset Management, Advent, and Bain Capital, with no apparent overlap in investment between the OpenAI venture and Anthropic’s competitor. The overall logic of the two ventures is the same, raising money from alternative asset managers to create new channels for enterprise AI deals. The ventures will presumably get preferred sales access to their investors’ portfolio companies, while the investors will capture more value from"
+    },
+    {
+      "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
+      "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. The trial began with [&#8230;]",
+      "link": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+      "source": "AI | The Verge",
+      "published": "2026-05-04T11:43:49-04:00",
+      "date": "2026-05-04",
+      "candidate_score": 9.861,
+      "details": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT . In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. The trial began with jury selection on April 27th. Elon Musk took the stand on April 28th as the first witness called, portraying his interest in founding OpenAI as an effort to help save humanity , then returned to the stand on April 29th and again for a third day of testimony on April 30th, before his financial manager and Neuralink CEO, Jared Birchall, took the stand. Week two of the trial has begun, with professor Stuart Russell and OpenAI cofounder Greg Brockman scheduled to take the stand on Monday, May 4th, and, for the first time, a live audio stream on YouTube . Musk was a cofounder of OpenAI and claims that Altman and Brockman tricked him into giving the company money, only to turn their backs on their original goal. However, OpenAI says that “This lawsuit has always been a baseless and jealous bid to derail a competitor” in a bid to boost Musk’s own SpaceX / xAI / X companies that have launched Grok as a competitor to ChatGPT. In his lawsuit, Musk is asking for the removal of Altman and Brockman , and for OpenAI to stop operating as a public benefit corporation. Musk has also demanded that OpenAI’s nonprofit receive up to $150 billion in damages he’s asking for if he wins the case. Here’s all the latest on the trial between Musk and Altman: Just before they l"
+    },
+    {
+      "title": "Elon Musk’s only AI expert witness at the OpenAI trial fears an AGI arms race",
+      "summary": "Stuart Russell is a long-time AI researcher who thinks governments need to restrain frontier labs.",
+      "link": "https://techcrunch.com/2026/05/04/elon-musks-only-expert-witness-at-the-openai-trial-fears-an-agi-arms-race/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 04 May 2026 16:57:47 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 8.061
+    },
+    {
+      "title": "Elon Musk sent ominous texts to Greg Brockman, Sam Altman after asking for a settlement, OpenAI claims",
+      "summary": "Musk texted OpenAI's president and co-founder saying that he and CEO Sam Altman \"will be the most hated men in America\" if OpenAI doesn't settle the suit.",
+      "link": "https://techcrunch.com/2026/05/04/elon-musk-sent-ominous-texts-to-greg-brockman-sam-altman-after-asking-for-a-settlement-openai-claims/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Mon, 04 May 2026 16:36:03 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 8.061
+    },
+    {
+      "title": "[5월4일] 세계 최고 부자와 오픈AI의 충돌 첫 주...\"머스크, 난관 직면\"",
+      "summary": "지난주 시작된 일론 머스크 CEO와 오픈AI의 재판은 AI 업계를 대표하는 사건으로 큰 주목을 받았습니다. 세계 최고 부자와 세계 최고 AI 기업의 충돌이라는 점은 물론, 현재 AI 업계의 구도와 안전 문제 등이 복잡하게 얽혀있기 때문입니다.특히 머스크 CEO는 사흘 연속으로 증언에 나섰으며, 샘 알트먼 CEO와 그렉 브록먼 사장도 재판 내내 자리를 지킨 것으로 알려졌습니다. 법정 밖에서는 AI관련 단체의 시위가 벌어진 가운데 방청석을 확보하기 위해 새벽 5시부터 많은 사람들이 줄을 섰으며, 결국 일부는 바닥에까지 앉아 재판을 지켜",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210081",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-05 07:00:00",
+      "date": "2026-05-05",
+      "candidate_score": 8.0
+    },
+    {
+      "title": "The latest AI news we announced in April 2026",
+      "summary": "mp4 featuring an underwater video and a mobile AI video mockup.",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/",
+      "source": "AI",
+      "published": "Mon, 04 May 2026 17:00:00 +0000",
+      "date": "2026-05-04",
+      "candidate_score": 7.061
+    },
+    {
+      "title": "오픈AI, GPT-5.5 프롬프트 가이드 공개...\"길게 지시하지 않아도 충분\"",
+      "summary": "오픈AI가 최신 모델 GPT-5.5를 위한 프롬프트 가이드를 공개하며, AI 활용 방식의 근본적인 변화가 필요하다고 밝혔다. 핵심은 복잡한 지시 대신 ‘결과 중심’의 간결한 요청이다. 오픈AI는 1일(현지시간) ‘GPT-5.5 프롬프트 가이드’를 통해 프롬프트를 일종의 ‘운영 계약(contract)’으로 설계할 것을 권장했다.즉, 모델의 수행 과정을 세세하게 통제하기보다 ▲목표 결과 ▲성공 기준 ▲제약 조건 ▲활용 가능한 근거 ▲출력 형식 ▲중단 조건을 명확히 제시하면, GPT-5.5가 스스로 최적의 해결 경로를 선택한다는 설명이다",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210050",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-04 16:51:08",
+      "date": "2026-05-04",
+      "candidate_score": 7.061
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-05-01",
+        "mode": "informational",
+        "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+        "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+        "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+        "reply_count": 3,
+        "views": 5886,
+        "likes": 9,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 673.6
+      },
+      {
+        "date": "2026-05-04",
+        "mode": "informational",
+        "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+        "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+        "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+        "reply_count": 3,
+        "views": 3690,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 429.0
+      },
+      {
+        "date": "2026-04-26",
+        "mode": "informational",
+        "title": "Anthropic created a test marketplace for agent-on-agent commerce",
+        "post_main": "앤트로픽이 AI 에이전트끼리 실제 돈으로 거래하는 마켓플레이스를 테스트했다. 직원 69명에게 각각 100달러를 주고 AI가 대신 중고 물품을 사고팔게 했더니, 총 186건의 거래가",
+        "reply_preview": "실험에서 발견된 핵심 문제는 '에이전트 품질 격차'다. 성능 좋은 AI로 대리하는 사람은 더 좋은 가격에 거래하지만, 손해보는 쪽은 자신이 불리",
+        "reply_count": 4,
+        "views": 1886,
+        "likes": 4,
+        "replies": 5,
+        "reposts": 1,
+        "quotes": 0,
+        "score": 266.6
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 1031.3,
+      "likes": 3.2,
+      "replies": 5.1,
+      "reposts": 0.3,
+      "quotes": 0.0,
+      "score": 172.3
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.8,
+    "issues": [
+      "[AI] GPT-4o는 주로 이미지 생성이 아닌 이미지 이해/분석 모델인데 '이미지 생성/편집 기능'이라고 부정확하게 표현",
+      "[AI] 6.5배라는 구체적 수치가 원문에서 명시적으로 언급되지 않았을 가능성"
+    ],
+    "suggestions": [
+      "Reply 3에서 GPT-4o 대신 DALL-E나 Midjourney 같은 실제 이미지 생성 모델을 예시로 사용",
+      "매출 연결 부분(Reply 2)에서 구체적인 해결책이나 대안 제시하면 더 유용함",
+      "이미지 AI 모델 개발 시 고려사항(비용, 기술적 난이도 등) 언급하면 초보자에게 더 실용적"
+    ]
+  },
+  "posting_result": {
+    "post_id": "17963853300081991",
+    "reply_1": "17884901928539902",
+    "reply_2": "17945227740177019",
+    "reply_3": "18149046154485045",
+    "link_id": "17884655481544918"
+  },
+  "posted_at": "2026-05-05T07:34:17.298514"
+}
