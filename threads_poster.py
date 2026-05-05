@@ -90,10 +90,19 @@ def _is_retryable(response: httpx.Response) -> bool:
     return False
 
 
-def _create_text(client: httpx.Client, user_id: str, token: str, text: str, reply_to_id: str = "") -> str:
+def _create_text(
+    client: httpx.Client,
+    user_id: str,
+    token: str,
+    text: str,
+    reply_to_id: str = "",
+    link_attachment: str = "",
+) -> str:
     params = {"media_type": "TEXT", "text": text, "access_token": token}
     if reply_to_id:
         params["reply_to_id"] = reply_to_id
+    if link_attachment:
+        params["link_attachment"] = link_attachment
     response = client.post(f"{GRAPH_API_BASE}/{user_id}/threads", params=params)
     if response.status_code >= 400:
         raise RuntimeError(f"text container failed: {response.status_code} {response.text[:500]}")
@@ -107,12 +116,15 @@ def _create_image(
     image_url: str,
     text: str = "",
     reply_to_id: str = "",
+    link_attachment: str = "",
 ) -> str:
     params = {"media_type": "IMAGE", "image_url": image_url, "access_token": token}
     if text:
         params["text"] = text
     if reply_to_id:
         params["reply_to_id"] = reply_to_id
+    if link_attachment:
+        params["link_attachment"] = link_attachment
     response = client.post(f"{GRAPH_API_BASE}/{user_id}/threads", params=params)
     if response.status_code >= 400:
         raise RuntimeError(f"image container failed: {response.status_code} {response.text[:500]}")
@@ -126,12 +138,15 @@ def _create_video(
     video_url: str,
     text: str = "",
     reply_to_id: str = "",
+    link_attachment: str = "",
 ) -> str:
     params = {"media_type": "VIDEO", "video_url": video_url, "access_token": token}
     if text:
         params["text"] = text
     if reply_to_id:
         params["reply_to_id"] = reply_to_id
+    if link_attachment:
+        params["link_attachment"] = link_attachment
     response = client.post(f"{GRAPH_API_BASE}/{user_id}/threads", params=params)
     if response.status_code >= 400:
         raise RuntimeError(f"video container failed: {response.status_code} {response.text[:500]}")
@@ -202,10 +217,13 @@ def post_thread(
     with httpx.Client(timeout=30.0) as client:
         main_text = str(content.get("post_main", "")).strip()
 
+        link = source_link or ""
+
         if video_url:
             try:
                 main_creation_id = _create_video(
-                    client, user_id, access_token, video_url, text=main_text
+                    client, user_id, access_token, video_url,
+                    text=main_text, link_attachment=link,
                 )
                 _wait_for_container(client, main_creation_id, access_token)
                 print("  Main media: video")
@@ -215,35 +233,43 @@ def post_thread(
                 try:
                     if image_url:
                         main_creation_id = _create_image(
-                            client, user_id, access_token, image_url, text=main_text
+                            client, user_id, access_token, image_url,
+                            text=main_text, link_attachment=link,
                         )
                         print("  Main media: image (video fallback)")
                     else:
                         main_creation_id = _create_text(
-                            client, user_id, access_token, main_text
+                            client, user_id, access_token, main_text,
+                            link_attachment=link,
                         )
                         print("  Main media: text (video fallback)")
                 except Exception as image_exc:
                     print(f"  Image fallback also failed: {image_exc}")
                     image_url = None
                     main_creation_id = _create_text(
-                        client, user_id, access_token, main_text
+                        client, user_id, access_token, main_text,
+                        link_attachment=link,
                     )
                     print("  Main media: text (video+image fallback)")
         elif image_url:
             try:
                 main_creation_id = _create_image(
-                    client, user_id, access_token, image_url, text=main_text
+                    client, user_id, access_token, image_url,
+                    text=main_text, link_attachment=link,
                 )
                 print("  Main media: image")
             except Exception as exc:
                 print(f"  Main image failed, falling back to text: {exc}")
                 image_url = None
                 main_creation_id = _create_text(
-                    client, user_id, access_token, main_text
+                    client, user_id, access_token, main_text,
+                    link_attachment=link,
                 )
         else:
-            main_creation_id = _create_text(client, user_id, access_token, main_text)
+            main_creation_id = _create_text(
+                client, user_id, access_token, main_text,
+                link_attachment=link,
+            )
 
         time.sleep(CONTAINER_WAIT_DELAY)
         post_id = _publish(client, user_id, access_token, main_creation_id)
@@ -261,30 +287,5 @@ def post_thread(
             )
             if reply_id:
                 result[reply["key"]] = reply_id
-
-        if source_link:
-            time.sleep(REPLY_DELAY)
-            # Cascade onto the last published reply so the link lands at chain end
-            # regardless of how Threads UI orders sibling replies of the main post.
-            last_reply_id = post_id
-            for reply in reply_sequence:
-                rid = result.get(reply["key"])
-                if rid:
-                    last_reply_id = rid
-            try:
-                creation_id = _create_text(
-                    client,
-                    user_id,
-                    access_token,
-                    source_link,
-                    reply_to_id=last_reply_id,
-                )
-                time.sleep(CONTAINER_WAIT_DELAY)
-                result["link_id"] = _publish(
-                    client, user_id, access_token, creation_id
-                )
-                print(f"  Link reply: {result['link_id']}")
-            except Exception as exc:
-                print(f"  Link reply failed: {exc}")
 
     return result
