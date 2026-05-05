@@ -11,8 +11,12 @@ import httpx
 
 def extract_article_text(raw_html: str, *, max_chars: int = 1600) -> str:
     """Extract readable text from article HTML without extra dependencies."""
-    article_match = re.search(r"<article\b[^>]*>(.*?)</article>", raw_html, re.IGNORECASE | re.DOTALL)
-    source = article_match.group(1) if article_match else raw_html
+    source = raw_html
+    for match in re.finditer(r"<article\b[^>]*>(.*?)</article>", raw_html, re.IGNORECASE | re.DOTALL):
+        candidate = match.group(1)
+        if len(re.findall(r"<p\b[^>]*>", candidate, re.IGNORECASE)) >= 3:
+            source = candidate
+            break
 
     paragraphs = re.findall(r"<p\b[^>]*>(.*?)</p>", source, re.IGNORECASE | re.DOTALL)
     cleaned_parts: list[str] = []

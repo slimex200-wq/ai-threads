@@ -8,5 +8,6 @@ def test_build_prompt_includes_grounding_rules():
     )
 
     assert "do not" in prompt.lower()
-    assert "explicitly present in the candidate article" in prompt
+    assert "do not invent facts" in prompt
+    assert "Title, Summary, or Details" in prompt
     assert "160~420" in prompt

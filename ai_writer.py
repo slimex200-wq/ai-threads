@@ -107,8 +107,12 @@ Avoid:
 - hashtags
 - raw links in the prose
 - "card news" framing
-- do not add facts, benchmarks, company background, compatibility claims, or use cases unless they are explicitly present in the candidate article title or summary
+- do not invent facts. Stay grounded in the candidate article's Title, Summary, or Details fields below. If a fact is not in any of those fields, leave it out.
 - if a detail would require guessing, leave it out
+
+Use what's there:
+- When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
+- A concrete number or mechanism beats a generic adjective every time.
 
 # OUTPUT FORMAT
 Return JSON only.
@@ -134,8 +138,8 @@ Return JSON only.
 
 # STRUCTURE RULES
 - `post_main`: 160~420 characters, usually 3~4 sentences
-- `replies`: 1~5 items
-- each reply: 50~220 characters
+- `replies`: 2~4 items
+- each reply: 80~280 characters
 - replies do NOT need fixed roles
 - the thread should naturally flow from fact -> interpretation -> practical takeaway
 - if there is a strong practical angle, prioritize it over generic commentary
