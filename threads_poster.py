@@ -264,13 +264,20 @@ def post_thread(
 
         if source_link:
             time.sleep(REPLY_DELAY)
+            # Cascade onto the last published reply so the link lands at chain end
+            # regardless of how Threads UI orders sibling replies of the main post.
+            last_reply_id = post_id
+            for reply in reply_sequence:
+                rid = result.get(reply["key"])
+                if rid:
+                    last_reply_id = rid
             try:
                 creation_id = _create_text(
                     client,
                     user_id,
                     access_token,
                     source_link,
-                    reply_to_id=post_id,
+                    reply_to_id=last_reply_id,
                 )
                 time.sleep(CONTAINER_WAIT_DELAY)
                 result["link_id"] = _publish(

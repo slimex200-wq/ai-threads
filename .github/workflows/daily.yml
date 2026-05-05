@@ -22,7 +22,10 @@ jobs:
       - name: Checkout last30days skill
         uses: actions/checkout@v4
         with:
+          # Pinned to the last commit before the upstream scripts/ -> skills/ reorg
+          # so social_collector's `from lib.*` imports keep resolving.
           repository: mvanhorn/last30days-skill
+          ref: 4d6224f79aab743052d36248949ca03b24fded26
           path: .last30days-skill
 
       - name: Setup last30days lib path
