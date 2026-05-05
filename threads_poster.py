@@ -283,16 +283,20 @@ def post_thread(
         print(f"  Main post: {post_id}")
         result["post_id"] = post_id
 
+        # Cascade replies (R1 -> R2 -> R3) so Threads recognizes the chain as
+        # a single author thread rather than independent siblings of the main post.
+        parent_id = post_id
         for reply in reply_sequence:
             reply_id = _post_reply(
                 client,
                 user_id,
                 access_token,
                 reply["text"],
-                post_id,
+                parent_id,
                 reply["label"],
             )
             if reply_id:
                 result[reply["key"]] = reply_id
+                parent_id = reply_id
 
     return result
