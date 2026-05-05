@@ -1,0 +1,238 @@
+{
+  "selected_article": {
+    "original_title": "Apple plans to make iOS 27 a Choose Your Own Adventure of AI models",
+    "link": "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-AI-models/",
+    "reason": "This is a significant practical change that will affect millions of iPhone users. It's concrete news about a specific feature ('Extensions') with clear workflow implications, and it's something people can actually use and benefit from when iOS 27 launches."
+  },
+  "post_main": "애플이 iOS 27에서 게임 체인저급 기능을 준비 중이다. '익스텐션'이라는 내부 코드명의 이 기능은 사용자가 시리, 라이팅 툴, 이미지 플레이그라운드에서 구글이나 앤트로픽 같은 서드파티 AI 모델을 직접 선택해서 쓸 수 있게 해준다. 지금은 ChatGPT만 선택지였는데, 이제 본격적인 AI 모델 경쟁 시대가 열린다.",
+  "replies": [
+    "작동 방식도 흥미롭다. 앱스토어에서 호환 AI 앱을 설치하면, 그 모델을 시리 기본값으로 설정할 수 있다. 심지어 AI 모델별로 다른 시리 목소리도 쓸 수 있다고 한다.",
+    "이게 중요한 이유는 애플이 드디어 AI에서 '선택권'을 준다는 것이다. 지금까지는 애플 방식 아니면 안 되는 식이었는데, iOS 27부터는 구글 제미니로 시리를 쓰거나 앤트로픽 클로드로 텍스트를 쓸 수 있게 된다.",
+    "팀 쿡 후임인 존 테르누스 CEO 체제에서 나온 첫 번째 큰 AI 전략 변화다. 애플이 AI에서 '뒤처져 있다'는 비판을 의식한 듯, 이번엔 생태계를 열어서 경쟁력을 확보하겠다는 전략으로 보인다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "iOS 27 AI Extensions demo",
+    "reason": "iOS 27의 새로운 AI 모델 선택 기능을 시연하는 영상이 있다면 사용자들이 실제 작동 방식을 이해하는 데 도움이 될 것"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-AI-models/",
+  "og_image": "https://techcrunch.com/wp-content/uploads/2026/03/ai-apps-GettyImages-2214375253.jpg?resize=1200,800",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Apple plans to make iOS 27 a Choose Your Own Adventure of AI models",
+      "summary": "With Apple's latest operating system updates, users will reportedly have their pick of which third-party AI models they want to use for a host of tasks.",
+      "link": "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Tue, 05 May 2026 20:56:41 +0000",
+      "date": "2026-05-05",
+      "candidate_score": 11.662,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. When iOS 27 is released later this year, iPhone users will reportedly have a lot of choice when it comes to which AI models they want to use on-device. A new report from Bloomberg says that Apple plans to give users their pick of a number of third-party large language models that will be capable of powering various functions within the iPhone’s operating system. The new feature, dubbed “Extensions” internally, will allow users to “access generative AI capabilities from installed apps on demand, through Apple Intelligence features such as Siri, Writing Tools, Image Playground and more,” reads a message reportedly shown in test versions of the software. The new capability will also be available for iPadOS 27 and macOS 27, the outlet writes, adding that models from Google and Anthropic are being tested now. Less clear is where ChatGPT stands. Since it is currently the model available to users, one implication is that it will remain a choice. TechCrunch reached out to Apple for more information. With long-serving CEO Tim Cook soon stepping down , Apple’s incoming top executive, John Ternus, is tasked with charting the future of the company — including its AI strategy. The company is widely perceived to be “behind” on AI, as it is not launching as many new AI services as some of its peers. However, Apple is still bringing in a generous amount of AI-based revenue and its plan is less about spending money building ou"
+    },
+    {
+      "title": "Apple could let you pick a favorite AI model in iOS 27",
+      "summary": "The next update to Apple's operating systems could allow users to choose their preferred AI model for running Apple Intelligence. According to Bloomberg's Mark Gurman, Apple is planning to allow third-party chatbots to power its AI features system-wide in iOS 27, iPadOS 27, and macOS 27, all expected for this fall. In addition to running [&#8230;]",
+      "link": "https://www.theverge.com/tech/924515/apple-intelligence-third-party-chatbot-extensions-ios-27",
+      "source": "AI | The Verge",
+      "published": "2026-05-05T15:45:30-04:00",
+      "date": "2026-05-05",
+      "candidate_score": 11.662,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. AI ‘extensions’ could let users run Apple Intelligence with third-party AI models — and not just ChatGPT. AI ‘extensions’ could let users run Apple Intelligence with third-party AI models — and not just ChatGPT. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. The next update to Apple’s operating systems could allow users to choose their preferred AI model for running Apple Intelligence. According to Bloomberg ’s Mark Gurman, Apple is planning to allow third-party chatbots to power its AI features system-wide in iOS 27, iPadOS 27, and macOS 27, all expected for this fall. In addition to running Siri , compatible third-party AI models, called “Extensions,” will also now be able to run other Apple Intelligence features like Writing Tools and Image Playground. According to Gurman, Apple will also allow users to choose different Siri voices for different AI models — Siri responses from one of Apple’s AI models could have one voice, while an instance of Siri running on ChatGPT could use another voice. Users will be able to “choose from AI model providers that opt in by adding support through their App Store apps.” Once a compatible AI app is installed, users will be able to set it as their preferre"
+    },
+    {
+      "title": "Google Home&#8217;s Gemini AI can handle more complicated requests",
+      "summary": "Google Home users can now ask Gemini to complete more complex, multi-step tasks and combine multiple tasks in a single command. Google has updated Gemini for Home to Gemini 3.1, which it says will improve the smart home assistant's ability to interpret and act on requests. The upgrade will also make Gemini for Home better [&#8230;]",
+      "link": "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade",
+      "source": "AI | The Verge",
+      "published": "2026-05-05T17:46:04-04:00",
+      "date": "2026-05-05",
+      "candidate_score": 9.862,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. An upgrade to Gemini 3.1 lets Google’s smart home assistant handle multiple requests in the same voice command. An upgrade to Gemini 3.1 lets Google’s smart home assistant handle multiple requests in the same voice command. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Google Home users can now ask Gemini to complete more complex, multi-step tasks and combine multiple tasks in a single command. Google has updated Gemini for Home to Gemini 3.1 , which it says will improve the smart home assistant’s ability to interpret and act on requests. The upgrade will also make Gemini for Home better at handling recurring and all-day events and allow users to “move around” upcoming events. Last month, Google also updated Gemini for Home with improvements for understanding natural language and identifying devices correctly. The upgrades follow reports of bugs in Google’s new smart home assistant, like confusing different animals in camera footage or struggling with accuracy in activity summaries. In addition to the Gemini upgrade, Google also announced improvements to the camera experience , new automation capabilities , and two public previews: Ask Home on Web and a new notification feature. Ask Home on"
+    },
+    {
+      "title": "Apple agrees to pay iPhone owners $250 million for not delivering AI Siri",
+      "summary": "Apple has agreed to pay $250 million to settle a class action lawsuit that accused it of misleading customers about the availability of its Apple Intelligence features. The proposed settlement would apply to people in the US who purchased all models of the iPhone 16 and the iPhone 15 Pro between June 10th, 2024 and [&#8230;]",
+      "link": "https://www.theverge.com/tech/924706/apple-iphone-siri-intelligence-class-action-lawsuit-settlement",
+      "source": "AI | The Verge",
+      "published": "2026-05-05T17:18:23-04:00",
+      "date": "2026-05-05",
+      "candidate_score": 9.862,
+      "details": "Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. Posts from this topic will be added to your daily email digest and your homepage feed. The proposed settlement in a class action lawsuit will get some cash back to people who bought the iPhone 16 lineup and the iPhone 15 Pro. The proposed settlement in a class action lawsuit will get some cash back to people who bought the iPhone 16 lineup and the iPhone 15 Pro. Posts from this author will be added to your daily email digest and your homepage feed. Posts from this author will be added to your daily email digest and your homepage feed. Apple has agreed to pay $250 million to settle a class action lawsuit that accused it of misleading customers about the availability of its Apple Intelligence features. The proposed settlement would apply to people in the US who purchased all models of the iPhone 16 and the iPhone 15 Pro between June 10th, 2024 and March 29th, 2025. People who submit qualifying claims can receive $25 for each eligible device, “which may decrease or increase up to $95 per device, depending on claim volume and other factors,” according to Clarkson Law Firm , the legal team behind the class action lawsuit. The settlement will resolve a 2025 lawsuit , alleging Apple’s advertisements created a “clear and reasonable consumer expectation” that Apple Intelligence features would be available with the launch of the iPhone 16. The lawsuit claimed Apple’s products “offered a significantly limited or e"
+    },
+    {
+      "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
+      "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk took the [&#8230;]",
+      "link": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+      "source": "AI | The Verge",
+      "published": "2026-05-05T13:28:52-04:00",
+      "date": "2026-05-05",
+      "candidate_score": 9.862,
+      "details": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT . In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk took the stand on April 28th as the first witness called, portraying his interest in founding OpenAI as an effort to help save humanity across three days of testimony, before his financial manager and Neuralink CEO, Jared Birchall, took the stand. Week two of the trial is underway, with professor Stuart Russell and OpenAI cofounder Greg Brockman taking the stand on Monday, as the proceedings also added a live audio stream on YouTube . On Tuesday, Brockman’s testimony continued, with Shivon Zilis , a former OpenAI board member who shares four children with Musk, up next. It’s possible that audio of her testimony will not be available on the stream, with lawyers citing threats against her and her children. Microsoft CEO Satya Nadella is scheduled to appear on Monday, with OpenAI cofounder and former chief scientist Ilya Sutskever lined up to testify after that. Musk was a cofounder of OpenAI and claims that Altman and Brockman tricked him into giving the company money, only to turn their backs on their original goal. However, OpenAI says that “This lawsuit has always been a baseless and jealous bid to derail a competitor” in a bid to boost Musk’s own SpaceX / xAI / X companies that have launched Grok as a competitor to ChatGPT. In his lawsuit, Musk is asking for"
+    },
+    {
+      "title": "Microsoft gives up on Xbox Copilot AI",
+      "summary": "Xbox is \"winding down Copilot on mobile\" and \"will stop development of Copilot on console,\" new Xbox CEO Asha Sharma announced on Tuesday. The move follows Sharma's reorganization of the Xbox platform team earlier on Tuesday, which added executives from Microsoft's CoreAI team - where Sharma worked before taking over Xbox - to the Xbox [&#8230;]",
+      "link": "https://www.theverge.com/games/924551/microsoft-xbox-ceo-copilot-ai-asha-sharma",
+      "source": "AI | The Verge",
+      "published": "2026-05-05T15:54:37-04:00",
+      "date": "2026-05-05",
+      "candidate_score": 8.062
+    },
+    {
+      "title": "Pennsylvania sues Character.AI after a chatbot allegedly posed as a doctor",
+      "summary": "According to Pennsylvania's filing, a Character.AI chatbot presented itself as a licensed psychiatrist during a state investigation, and also fabricated a serial number for its state medical license.",
+      "link": "https://techcrunch.com/2026/05/05/pennsylvania-sues-character-ai-after-a-chatbot-allegedly-posed-as-a-doctor/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Tue, 05 May 2026 17:46:10 +0000",
+      "date": "2026-05-05",
+      "candidate_score": 8.062
+    },
+    {
+      "title": "S2W “AI 에이전트의 성패, LLM 성능 넘어 '온톨로지' 설계에 달려”",
+      "summary": "“AI는 왜 그런 결정을 내렸는지 설명이 가능해야 합니다. 기업의 의사결정을 돕는 AI 에이전트는 단순한 데이터 레이크를 넘어 ‘온톨로지’를 결합해야만 ‘설명 가능한 AI(XAI)’로 나아갈 수 있습니다.” 온톨로지는 AI 에이전트 확장으로 최근 중요성이 부쩍 강조되는 기술이다. 대형언어모델(LLM)은 결과의 근거를 알 수 없는 '블랙박스' 구조지만, 데이터 간의 관계를 지도로 그린 온톨로지는 AI가 어떤 경로로 답을 냈는지 추적할 수 있게 하기 때문이다. 단순한 ‘키워드’ 바탕의 검색을 넘어 내재한 의미와 연관성을 바탕으로 데이터",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210100",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-05 22:43:28",
+      "date": "2026-05-05",
+      "candidate_score": 7.062
+    },
+    {
+      "title": "Trump orders federal review of AI model releases by May 31?",
+      "summary": "This market will resolve to “Yes” if Donald Trump signs any federal legislation into law or performs any executive action that creates, authorizes, or directs a federal government review process for the public release of new artificial intelligence models by the listed date, 11:59 PM ET. Otherwise, this market will resolve to “No.”\n\nA qualifying action must create a federal process for reviewing o",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/449384",
+      "date": "2026-05-05",
+      "engagement": 0,
+      "candidate_score": -17.338
+    },
+    {
+      "title": "Best AI model on May 8? (Style Control Off)",
+      "summary": "This market will resolve according to the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on the specified date, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will be used to resolv",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/435297",
+      "date": "2026-05-05",
+      "engagement": 0,
+      "candidate_score": -19.138
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-05-05",
+        "mode": "informational",
+        "title": "\"CEO들의 '신 콤플렉스' 경계해야\"...젠슨 황, AI 비관론에 쓴소리",
+        "post_main": "젠슨 황이 앤트로픽 다리오 아모데이 CEO를 겨냥해 강하게 비판했다. \"신입 대졸자 일자리의 50%를 휩쓸어버릴 것이라는 말은 터무니없다\"며 \"CEO가 되면 '신 콤플렉스'에 빠져",
+        "reply_preview": "황 CEO는 \"AI가 타자를 대신 쳐주니 일자리가 사라질 것이라고 결론내리는 것은 근본적으로 틀린 생각\"이라고 지적했다. 직업의 과업(Task)",
+        "reply_count": 3,
+        "views": 15908,
+        "likes": 63,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 1,
+        "score": 2043.8
+      },
+      {
+        "date": "2026-05-01",
+        "mode": "informational",
+        "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+        "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+        "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+        "reply_count": 3,
+        "views": 5886,
+        "likes": 9,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 673.6
+      },
+      {
+        "date": "2026-05-04",
+        "mode": "informational",
+        "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+        "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+        "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+        "reply_count": 3,
+        "views": 3690,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 429.0
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-16",
+        "mode": "informational",
+        "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+        "post_main": "OpenAI가 기업용 에이전트 SDK에 '샌드박스' 기능을 추가했다. 이제 AI 에이전트가 격리된 컴퓨터 환경에서만 작동하고, 특정 파일과 코드에만 접근한다. 전체 시스템은 보호받",
+        "reply_preview": "샌드박스에서 에이전트는 지정된 워크스페이스 내 파일 읽기/쓰기, 승인된 도구 사용만 가능하다. 시스템 파일이나 다른 프로젝트는 접근 불가.",
+        "reply_count": 4,
+        "views": 36,
+        "likes": 1,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 58.6
+      },
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 1775.2,
+      "likes": 6.2,
+      "replies": 5.5,
+      "reposts": 0.2,
+      "quotes": 0.1,
+      "score": 265.9
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.77,
+    "issues": [
+      "[AI] 팀 쿡 후임인 존 테르누스 CEO라는 부분이 부정확함 - 팀 쿡은 여전히 CEO이고 존 테르누스는 하드웨어 엔지니어링 수석 부사장",
+      "[AI] 제목과 내용이 iOS 27에 대해 확정적으로 서술하고 있지만 실제로는 계획/준비 단계의 내용"
+    ],
+    "suggestions": [
+      "CEO 관련 정보를 정확히 수정하거나 삭제할 것",
+      "확정되지 않은 기능에 대해서는 '계획', '예정', '준비 중' 등의 표현을 더 명확히 사용",
+      "개발자들에게 더 유용하도록 API나 개발 관점에서의 의미를 추가",
+      "첫 번째 답글에서 '호환 AI 앱' 개념을 좀 더 명확히 설명"
+    ]
+  },
+  "posting_result": {
+    "post_id": "17968518723058989",
+    "reply_1": "18102209305792363",
+    "reply_2": "18200453485353425",
+    "reply_3": "17855945859648930"
+  },
+  "posted_at": "2026-05-06T07:31:31.865001"
+}
