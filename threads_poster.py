@@ -218,6 +218,13 @@ def post_thread(
         main_text = str(content.get("post_main", "")).strip()
 
         link = source_link or ""
+        # Inline the source URL in the main text so it's clickable in the post.
+        # link_attachment is kept as metadata, but Threads hides the auto link
+        # card when an image/video is also attached. Inlining guarantees the
+        # source surfaces. Threads de-duplicates: the same URL won't render
+        # twice if it's already shown as a card.
+        if link:
+            main_text = f"{main_text}\n\n{link}"
 
         if video_url:
             try:
