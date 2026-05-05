@@ -201,7 +201,50 @@ def post_thread(
 
     with httpx.Client(timeout=30.0) as client:
         main_text = str(content.get("post_main", "")).strip()
-        main_creation_id = _create_text(client, user_id, access_token, main_text)
+
+        if video_url:
+            try:
+                main_creation_id = _create_video(
+                    client, user_id, access_token, video_url, text=main_text
+                )
+                _wait_for_container(client, main_creation_id, access_token)
+                print("  Main media: video")
+            except Exception as exc:
+                print(f"  Main video failed, falling back: {exc}")
+                video_url = None
+                try:
+                    if image_url:
+                        main_creation_id = _create_image(
+                            client, user_id, access_token, image_url, text=main_text
+                        )
+                        print("  Main media: image (video fallback)")
+                    else:
+                        main_creation_id = _create_text(
+                            client, user_id, access_token, main_text
+                        )
+                        print("  Main media: text (video fallback)")
+                except Exception as image_exc:
+                    print(f"  Image fallback also failed: {image_exc}")
+                    image_url = None
+                    main_creation_id = _create_text(
+                        client, user_id, access_token, main_text
+                    )
+                    print("  Main media: text (video+image fallback)")
+        elif image_url:
+            try:
+                main_creation_id = _create_image(
+                    client, user_id, access_token, image_url, text=main_text
+                )
+                print("  Main media: image")
+            except Exception as exc:
+                print(f"  Main image failed, falling back to text: {exc}")
+                image_url = None
+                main_creation_id = _create_text(
+                    client, user_id, access_token, main_text
+                )
+        else:
+            main_creation_id = _create_text(client, user_id, access_token, main_text)
+
         time.sleep(CONTAINER_WAIT_DELAY)
         post_id = _publish(client, user_id, access_token, main_creation_id)
         print(f"  Main post: {post_id}")
@@ -219,58 +262,22 @@ def post_thread(
             if reply_id:
                 result[reply["key"]] = reply_id
 
-        if video_url or image_url or source_link:
+        if source_link:
             time.sleep(REPLY_DELAY)
-            link_text = source_link or ""
             try:
-                if video_url:
-                    creation_id = _create_video(
-                        client,
-                        user_id,
-                        access_token,
-                        video_url,
-                        text=link_text,
-                        reply_to_id=post_id,
-                    )
-                    _wait_for_container(client, creation_id, access_token)
-                elif image_url:
-                    creation_id = _create_image(
-                        client,
-                        user_id,
-                        access_token,
-                        image_url,
-                        text=link_text,
-                        reply_to_id=post_id,
-                    )
-                else:
-                    creation_id = _create_text(
-                        client,
-                        user_id,
-                        access_token,
-                        link_text,
-                        reply_to_id=post_id,
-                    )
-
+                creation_id = _create_text(
+                    client,
+                    user_id,
+                    access_token,
+                    source_link,
+                    reply_to_id=post_id,
+                )
                 time.sleep(CONTAINER_WAIT_DELAY)
-                result["link_id"] = _publish(client, user_id, access_token, creation_id)
-                print(f"  Media/link reply: {result['link_id']}")
+                result["link_id"] = _publish(
+                    client, user_id, access_token, creation_id
+                )
+                print(f"  Link reply: {result['link_id']}")
             except Exception as exc:
-                print(f"  Media reply failed, skipping: {exc}")
-                if video_url and image_url:
-                    try:
-                        print("  Falling back to image...")
-                        creation_id = _create_image(
-                            client,
-                            user_id,
-                            access_token,
-                            image_url,
-                            text=link_text,
-                            reply_to_id=post_id,
-                        )
-                        time.sleep(CONTAINER_WAIT_DELAY)
-                        result["link_id"] = _publish(client, user_id, access_token, creation_id)
-                        print(f"  Image fallback succeeded: {result['link_id']}")
-                    except Exception as image_exc:
-                        print(f"  Image fallback failed: {image_exc}")
+                print(f"  Link reply failed: {exc}")
 
     return result

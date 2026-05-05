@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import re
+from pathlib import Path
 from typing import Any
 
 from llm_backend import request_structured_json
@@ -201,6 +202,54 @@ Recent titles:
 """.lstrip()
 
 
+def _load_post_excerpts(
+    date_str: str, *, max_post: int = 250, max_reply: int = 200
+) -> tuple[str, str]:
+    if not date_str:
+        return "", ""
+    path = Path("output") / date_str / "post.json"
+    if not path.exists():
+        return "", ""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return "", ""
+    post_main = str(data.get("post_main", ""))[:max_post]
+    first_reply = ""
+    replies = data.get("replies")
+    if isinstance(replies, list) and replies:
+        first_reply = str(replies[0])[:max_reply]
+    else:
+        for legacy_key in (
+            "reply_explain",
+            "reply_background",
+            "reply_important",
+            "reply_impact",
+            "reply_action",
+            "reply_counter",
+            "reply_casual",
+        ):
+            value = data.get(legacy_key)
+            if value:
+                first_reply = str(value)[:max_reply]
+                break
+    return post_main, first_reply
+
+
+def _format_engagement_item(item: dict[str, Any]) -> list[str]:
+    date_str = str(item.get("date", ""))
+    post_main, first_reply = _load_post_excerpts(date_str)
+    if not post_main:
+        post_main = str(item.get("post_main", ""))
+    title = str(item.get("title", ""))[:80]
+    out = [f"- [{date_str}] score={item.get('score', 0)} title={title}"]
+    if post_main:
+        out.append(f"  post: {post_main}")
+    if first_reply:
+        out.append(f"  reply: {first_reply}")
+    return out
+
+
 def _build_engagement_instruction(patterns: dict[str, Any] | None) -> str:
     if not patterns or not patterns.get("top"):
         return ""
@@ -213,19 +262,13 @@ def _build_engagement_instruction(patterns: dict[str, Any] | None) -> str:
     ]
 
     for item in patterns.get("top", [])[:3]:
-        preview = item.get("post_main", "")[:80]
-        lines.append(
-            f"- [{item.get('date', '')}] score={item.get('score', 0)} title={item.get('title', '')[:60]} | preview={preview}"
-        )
+        lines.extend(_format_engagement_item(item))
 
     if patterns.get("bottom"):
         lines.append("")
         lines.append("Weak performers:")
         for item in patterns.get("bottom", [])[:3]:
-            preview = item.get("post_main", "")[:80]
-            lines.append(
-                f"- [{item.get('date', '')}] score={item.get('score', 0)} title={item.get('title', '')[:60]} | preview={preview}"
-            )
+            lines.extend(_format_engagement_item(item))
 
     lines.append("")
     lines.append("Favor threads that are practical, concrete, and easy to share.")
