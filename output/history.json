@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-04-30",
-    "titles": [
-      "엔트로픽, 창작 소프트웨어 제어하는 '클로드 커넥터' 출시...\"어도비·블렌더와 연동\""
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=209904"
-    ]
-  },
-  {
     "date": "2026-05-01",
     "titles": [
       "Elon Musk testifies that xAI trained Grok on OpenAI models"
@@ -48,6 +39,15 @@
     ],
     "urls": [
       "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-AI-models/"
+    ]
+  },
+  {
+    "date": "2026-05-07",
+    "titles": [
+      "아모데이 \"미소스 유효 기간은 6~12개월...중국이 곧 따라잡을 것\""
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=210157"
     ]
   }
 ]
