@@ -1,0 +1,239 @@
+{
+  "selected_article": {
+    "original_title": "[5월7일] \"분당 제작비 30달러\"...하루 500편씩 쏟아내는 중국의 AI 드라마 공장",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=210186",
+    "reason": "This article provides concrete numbers and practical insights about AI's impact on content creation that are immediately relevant to creators and developers. The specific cost data (30 dollars per minute) and production volume (500 episodes daily) make it highly shareable."
+  },
+  "post_main": "중국에서 AI 드라마가 폭발하고 있다. 분당 제작비 30달러(약 4만원)로 마이크로 드라마를 만들어서 하루 평균 470편씩 쏟아내고 있다. 올해 수익 예상치는 25조원으로 중국 영화 박스오피스(14조원)의 2배 규모다. 바이트댄스 '시댄스 2.0', 콰이쇼우 '클링 3.0' 같은 AI 도구가 핵심이다.",
+  "replies": [
+    "비용 절감이 엄청나다. 기존 촬영 방식 대비 5분의 1 수준으로 제작비를 줄이고, 제작 기간도 3개월에서 1개월로 단축했다. 제작 예산의 30%를 AI 도구에 투자하는 중이다.",
+    "1년 전에는 인기 드라마 차트에서 AI 드라마가 7%였는데, 지금은 38%까지 늘었다. 3월 한 달간 더우인(중국 틱톡)에만 5만편의 AI 제작 콘텐츠가 추가됐다.",
+    "정부도 적극 지원 중이다. 충칭시는 세로형 콘텐츠 제작을 위한 전용 단지를 만들어서 매년 300개 제작팀이 입주한다. 세금 감면, GPU 제공, 데이터 접근까지 지원한다.",
+    "국내에서도 스푼랩스가 '비글루' 같은 플랫폼에서 AI 숏드라마 제작을 시작했다. 1~2분짜리 에피소드로 구성된 이 포맷, 창작자들이 주목할 만한 새로운 기회가 될 수 있다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "중국 AI 드라마 마이크로 드라마 제작",
+    "reason": "AI로 제작된 중국 마이크로 드라마 예시 영상을 보여주면 독자들이 품질과 제작 방식을 직접 확인할 수 있어 이해도가 높아진다"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210186",
+  "og_image": "https://cdn.aitimes.com/news/photo/202605/210186_212772_5325.png",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "OpenAI launches new voice intelligence features in its API",
+      "summary": "The new features could be handy for customer service systems, but OpenAI says they have applications that work across a variety of other fields, including education and creator platforms.",
+      "link": "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 07 May 2026 22:24:50 +0000",
+      "date": "2026-05-07",
+      "candidate_score": 13.46,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. OpenAI said Thursday that its API will now include a number of new voice intelligence features designed to help developers create apps that can talk, transcribe, and translate conversations with users. The company’s new GPT‑Realtime‑2 is another voice model, built to create a realistic vocal simulation that can converse with users. However, unlike its predecessor (GPT-Realtime-1.5) this one is built with GPT‑5‑class reasoning that OpenAI says was created to deal with more complicated requests from users. The company is also launching GPT‑Realtime‑Translate which, just as it sounds, is designed to provide real-time translation services that “keep pace” with the user, conversationally. The feature includes more than 70 input languages (that is, the languages that it can comprehend) and 13 output languages (the languages it relays to the speaker). Finally, the company has also launched a new transcription capability, GPT-Realtime-Whisper, which gives users live speech-to-text capabilities that are captured as interactions occur. “Together, the models we are launching move real-time audio from simple call-and-response toward voice interfaces that can actually do work: listen, reason, translate, transcribe, and take action as a conversation unfolds,” the company said. Who will these updates be good for? Companies that want to expand customer service capabilities are an obvious target. However, OpenAI also notes tha"
+    },
+    {
+      "title": "Voi founders’ new AI startup Pit has become the latest rising star out of Stockholm",
+      "summary": "AI startup Pit is led by the co-founders of European scooter giant Voi and backed by a16z, which is leading the startup’s $16 million seed round.",
+      "link": "https://techcrunch.com/2026/05/07/voi-founders-new-ai-startup-pit-has-become-the-latest-rising-star-out-of-stockholm/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 07 May 2026 21:02:11 +0000",
+      "date": "2026-05-07",
+      "candidate_score": 8.06,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. Swedish startup Pit may have gained notice for some rage-bait social media posts, but it has also become another Stockholm AI startup to watch. Pit is led by the co-founders of European scooter giant Voi, including Voi CEO Fredrik Hjelm. He is joined by former iZettle and Klarna engineers. And it is now backed by a16z, which is leading the startup’s $16 million seed round. Stockholm, also home to Lovable , is one of the places where a16z has been actively looking for the next European unicorn . Pit is going after enterprise AI with products intended to learn from the clients how their businesses run then create custom software to automate processes, Pit CEO Adam Jafer told TechCrunch. Jafer left Voi last summer after a seven-year tenure during which the company scaled into a team of nearly 1,000 employees operating in 13 countries. From his engineering viewpoint, Jafer saw how AI has matured enough for enterprise use. Initially, he saw a chance to replace low-hanging SaaS tools with in-house apps, but he soon envisioned an opportunity beyond Voi. “The aha moment for the bigger opportunity was when the models were no longer just chatbots that generate text, but became more agentic and could do things,” he told TechCrunch. Unlike competitors offering AI agent-building or vibe-coding products, Pit positions itself as an “AI product team as a service.” Pit is entering a crowded market and hopes to differentiate it"
+    },
+    {
+      "title": "OpenAI introduces new ‘Trusted Contact’ safeguard for cases of possible self-harm",
+      "summary": "The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.",
+      "link": "https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 07 May 2026 20:20:20 +0000",
+      "date": "2026-05-07",
+      "candidate_score": 8.06,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. On Thursday OpenAI announced a new feature called Trusted Contact, designed to alert a trusted third party if mentions of self-harm are expressed within a conversation. The feature allows an adult ChatGPT user to designate another person as a trusted contact within their account, such as a friend or family member. In cases where a conversation may turn to self-harm, OpenAI will now encourage the user to reach out to that contact. It also sends an automated alert to the contact, encouraging them to check in with the user. OpenAI has faced a wave of lawsuits from the families of people who have committed suicide after talking with its chatbot. In a number of cases, the families say ChatGPT encouraged their loved one to kill themselves — or even helped them plan it out . OpenAI currently uses a combination of automation and human review to handle potentially harmful incidents. Certain conversational triggers alert the company’s system to suicidal ideations, which then relay the information to a human safety team. The company claims that every time it receives this kind of notification, the incident is reviewed by a human. “We strive to review these safety notifications in under one hour,” the company says. If OpenAI’s internal team decides that the situation represents a serious safety risk, ChatGPT proceeds to send the trusted contact an alert — either by email, text message, or an in-app notification. The alert"
+    },
+    {
+      "title": "[5월7일] \"분당 제작비 30달러\"...하루 500편씩 쏟아내는 중국의 AI 드라마 공장",
+      "summary": "최근 유튜브 쇼츠나 인스타그램 릴스 등에서는 '중국 사이다 드라마'라는 제목으로 돌아다니는 영상이 늘고 있습니다. 연속극과 비슷한 형태로, 1~2분짜리 에피소드 수십편으로 구성된 드라마도 흔합니다. 이런 영상들은 대부분 시청자의 흥미를 끌기 위해 충격적인 반전으로 끝납니다. 여기에 최근에는 AI를 활용해 배우의 얼굴이나 배경을 자연스럽게 수정한 영상들도 빠르게 늘고 있습니다.중국에서는 이런 '마이크로 드라마'가 빠르게 성장 중입니다. 코로나19 팬데믹 기간 인기를 얻기 시작한 이 포맷은 이제 중국 엔터테인먼트 산업의 핵심 성장 분야",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210186",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-08 07:00:00",
+      "date": "2026-05-08",
+      "candidate_score": 8.0,
+      "details": "최근 유튜브 쇼츠나 인스타그램 릴스 등에서는 '중국 사이다 드라마'라는 제목으로 돌아다니는 영상이 늘고 있습니다. 연속극과 비슷한 형태로, 1~2분짜리 에피소드 수십편으로 구성된 드라마도 흔합니다. 이런 영상들은 대부분 시청자의 흥미를 끌기 위해 충격적인 반전으로 끝납니다. 여기에 최근에는 AI를 활용해 배우의 얼굴이나 배경을 자연스럽게 수정한 영상들도 빠르게 늘고 있습니다. 중국에서는 이런 '마이크로 드라마'가 빠르게 성장 중입니다. 코로나19 팬데믹 기간 인기를 얻기 시작한 이 포맷은 이제 중국 엔터테인먼트 산업의 핵심 성장 분야 중 하나로 꼽히고 있습니다. 2024년 중국 시청자 수는 6억6000만명에 달하는 것으로 알려졌습니다. 이어 올해에는 1200억위안(약 25조5800억원) 이상의 수익을 올릴 것으로 예상됐는데, 이는 중국 전체 영화 박스오피스 수익인 680억위안(약 14조5000억원)의 두배에 달하는 규모입니다. 이런 포맷은 세계적으로도 빠르게 인기를 넓혀가고 있습니다. 릴숏이나 드라마박스, 탑숏 등 중국의 숏폼 앱들은 국내 서비스도 강화하고 있습니다. 최근에는 국내 기업 스푼랩스가 '비글루'와 같은 플랫폼에서 AI를 도입한 숏드라마 제작을 시작했습니다. 사우스차이나모닝포스트 에 따르면, 이런 마이크로 드라마 산업의 성공 요인 중 상당 부분은 사업 모델에 있습니다. 낮은 제작비와 빠른 제작 기간 덕분에 기존의 드라마 제작 방식에 비해 수익을 내기가 훨씬 쉽다는 것입니다. 그리고 중국 업계는 비용과 생산 시간을 더 줄이기 위해 AI 제작 도구를 도입하는 데 총력을 기울이고 있다는 소식입니다. 일부 중국 제작사들은 AI 기반 드라마를 분당 30달러(약 4만3600원) 수준의 비용으로 제작할 수 있다고 주장하고 있습니다. 현재 중국의 콘텐츠 기업들은 제작 예산의 30%를 AI 도구에 투자하고 있으며, 이를 통해 제작 기간을 3개월에서 1개월로 단축하고 비용을 기존 촬영 방식의 약 5분의 1 수준으로 낮춘 것으로 전해졌습니다. 특히 바이트댄스의 '시댄스 2.0'이나 콰이쇼우의 '클링 3.0', 셍슈의 '비두'와 같은 AI 도구들의 성능이 크게 향상, 일부 콘텐츠에서는 시청자들이 AI 생성 영상에 큰 이질감을 느끼지 않을 정도라는 평도 나오고 있습니다. 이 때문에 최근에는 마이크로 드라마에 AI를 결합한 사례가 폭발적으로 증가하고 있습니다. 지난 1월 한달 동안에만 하루 평균 470편 이상의 AI 마이크로 드라마가 공개됐다는 보도가 나왔습니다. 또 인기 드라마 차트 100위권 중 38%를 차지할 정도로 인기가 늘어나고 있습니다. 1년 전에는 그 비율이 7%에 불과했습니다. 이어 3월에는 중국판 틱톡 더우인에 AI 제작된 콘텐츠가 5만여편이나 추가됐다는 통계도 등장했습니다. 이는 하루 평균 1600여편이 넘는 수치입니다. 그리고 이런 추세는 정부의 지원에 힘입은 바가 큰 것으로 알려졌습니다. 중국 지방 정부는 마이크로 드라마 제작 스튜디오를 지원하기 위해 세금 감면, 보조금 지급, GPU 제공, 데이터 접근, 트래픽 지원 등에 나서고 있습니다. 충칭시는 세로형 콘텐츠 제작을 위해 '량장 영화·텔레비전 애니메이션 문화창작공원'을 조성했습니다. 이곳에는 매년 300개 이상의 제작팀이 찾고 있다고 합니다. 저장성"
+    },
+    {
+      "title": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "summary": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "source": "HN",
+      "link": "",
+      "date": "",
+      "engagement": 0,
+      "candidate_score": 1.0
+    },
+    {
+      "title": "Next OpenAI Model: Arena Debut?",
+      "summary": "This market will resolve to \"Yes\" if the next model released by OpenAI has at least the specified score on the Arena.AI Leaderboard (arena.ai/leaderboard/text) when the table under the \"Leaderboard\" tab is checked on the date after the day of the release, 12:00 PM ET.  Otherwise, this market will resolve to \"No\".\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at ",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/437851",
+      "date": "2026-05-07",
+      "engagement": 0,
+      "candidate_score": -15.54
+    },
+    {
+      "title": "Trump orders federal review of AI model releases by May 31?",
+      "summary": "This market will resolve to “Yes” if Donald Trump signs any federal legislation into law or performs any executive action that creates, authorizes, or directs a federal government review process for the public release of new artificial intelligence models by the listed date, 11:59 PM ET. Otherwise, this market will resolve to “No.”\n\nA qualifying action must create a federal process for reviewing o",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/449384",
+      "date": "2026-05-06",
+      "engagement": 0,
+      "candidate_score": -18.34
+    },
+    {
+      "title": "Best AI model on May 8? (Style Control Off)",
+      "summary": "This market will resolve according to the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on the specified date, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will be used to resolv",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/435297",
+      "date": "2026-05-06",
+      "engagement": 0,
+      "candidate_score": -20.14
+    },
+    {
+      "title": "Which company has the best AI model end of May?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will b",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/376520",
+      "date": "2026-05-07",
+      "engagement": 0,
+      "candidate_score": -27.14
+    },
+    {
+      "title": "Which company has best AI model end of June?",
+      "summary": "This market will resolve according to the company which owns the model which has the highest arena rank based off the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text with the style control off will be used to resolve",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/57705",
+      "date": "2026-05-07",
+      "engagement": 0,
+      "candidate_score": -27.14
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-05-05",
+        "mode": "informational",
+        "title": "\"CEO들의 '신 콤플렉스' 경계해야\"...젠슨 황, AI 비관론에 쓴소리",
+        "post_main": "젠슨 황이 앤트로픽 다리오 아모데이 CEO를 겨냥해 강하게 비판했다. \"신입 대졸자 일자리의 50%를 휩쓸어버릴 것이라는 말은 터무니없다\"며 \"CEO가 되면 '신 콤플렉스'에 빠져",
+        "reply_preview": "황 CEO는 \"AI가 타자를 대신 쳐주니 일자리가 사라질 것이라고 결론내리는 것은 근본적으로 틀린 생각\"이라고 지적했다. 직업의 과업(Task)",
+        "reply_count": 3,
+        "views": 15908,
+        "likes": 63,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 1,
+        "score": 2043.8
+      },
+      {
+        "date": "2026-05-01",
+        "mode": "informational",
+        "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+        "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+        "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+        "reply_count": 3,
+        "views": 5886,
+        "likes": 9,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 673.6
+      },
+      {
+        "date": "2026-05-04",
+        "mode": "informational",
+        "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+        "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+        "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+        "reply_count": 3,
+        "views": 3690,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 429.0
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-05-07",
+        "mode": "informational",
+        "title": "아모데이 \"미소스 유효 기간은 6~12개월...중국이 곧 따라잡을 것\"",
+        "post_main": "앤트로픽 '미소스' AI가 소프트웨어 취약점 발견 능력을 획기적으로 향상시켰다. 이전 모델은 20여개 찾던 것을, 이제는 단일 소프트웨어에서 수백 건씩 발견한다. 전체적으로는 수만",
+        "reply_preview": "아모데이 CEO는 \"취약점이 급증하면서 해킹, 랜섬웨어 피해, 금융 손실이 폭발적으로 늘어날 위험이 있다\"고 경고했다. 학교, 병원, 은행 등 ",
+        "reply_count": 3,
+        "views": 46,
+        "likes": 3,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 49.6
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 1692.8,
+      "likes": 6.0,
+      "replies": 5.4,
+      "reposts": 0.2,
+      "quotes": 0.0,
+      "score": 255.6
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.83,
+    "issues": [
+      "[AI] Reply 1에서 '기존 촬영 방식 대비 5분의 1'이라는 비교 기준이 명확하지 않음",
+      "[AI] Reply 4에서 국내 사례 연결이 다소 급작스러움"
+    ],
+    "suggestions": [
+      "Reply 1에서 구체적인 기존 제작비 예시를 추가하면 비교가 더 명확해짐",
+      "Reply 2와 3 사이에 연결 문장 추가로 flow 개선",
+      "Reply 4에서 국내 진출 가능성에 대한 개발자 관점의 인사이트 추가",
+      "각 reply에 개발자들이 활용할 수 있는 구체적인 액션 포인트 추가"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18109237285710440",
+    "reply_1": "18081151541141876",
+    "reply_2": "18323140096281333",
+    "reply_3": "18080798210425044",
+    "reply_4": "17939856993037720"
+  },
+  "posted_at": "2026-05-08T07:36:04.843789"
+}

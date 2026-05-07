@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-05-01",
-    "titles": [
-      "Elon Musk testifies that xAI trained Grok on OpenAI models"
-    ],
-    "urls": [
-      "https://techcrunch.com/2026/04/30/elon-musk-xai-openai-trial-model-distillation"
-    ]
-  },
-  {
     "date": "2026-05-04",
     "titles": [
       "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors"
@@ -48,6 +39,15 @@
     ],
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=210157"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "titles": [
+      "[5월7일] \"분당 제작비 30달러\"...하루 500편씩 쏟아내는 중국의 AI 드라마 공장"
+    ],
+    "urls": [
+      "https://www.aitimes.com/news/articleView.html?idxno=210186"
     ]
   }
 ]
