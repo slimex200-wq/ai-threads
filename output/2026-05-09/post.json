@@ -1,0 +1,239 @@
+{
+  "selected_article": {
+    "original_title": "파이어폭스, '미소스' 투입 한달 만에 보안 버그 271개 수정",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=210268",
+    "reason": "This article remains the best choice - it provides concrete, measurable results with clear practical implications for developers. The specific numbers, timeframe, and technical details make it highly shareable and educational."
+  },
+  "post_main": "모질라가 앤트로픽 '미소스'를 투입한 지 한 달 만에 파이어폭스 보안 버그 271개를 수정했다. 작년 4월 31개에서 올해 4월 423개로 급증했다. 심지어 10~15년간 코드 깊숙이 숨어있던 고위험 샌드박스 탈출 버그까지 찾아냈다. AI 보안 감사가 드디어 실전 레벨에 도달했다는 신호다.",
+  "replies": [
+    "샌드박스 탈출 취약점 발견이 핵심이다. 브라우저가 악성코드를 격리하는 보안 구조를 뚫는 버그로, 모질라가 최대 2900만원 포상금을 줄 정도로 찾기 어렵다.",
+    "성공 비결은 단순 GPT-4 코드 리뷰가 아니다. AI가 의심 지점을 찾으면 실제 테스트 케이스를 만들고, 가상머신에서 실행해서 진짜 취약점인지 자동 검증하는 시스템을 구축했다.",
+    "대규모 C/C++ 프로젝트나 브라우저, 시스템 소프트웨어에 특히 효과적이다. 기존 퍼징 인프라가 있다면 AI 분석 레이어를 추가하는 방식으로 시작해볼 수 있다.",
+    "아직 AI가 완벽한 패치까지 만들지는 못한다. 하지만 버그 발견 속도가 10배 이상 빨라져서 보안팀 워크플로우가 완전히 바뀔 것 같다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "sandbox escape vulnerability demo",
+    "reason": "A technical demo showing how sandbox vulnerabilities work would help readers understand why this type of bug discovery is so significant"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210268",
+  "og_image": "https://cdn.aitimes.com/news/photo/202605/210268_212905_723.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "[5월8일] 고블린 모드부터 '사마리자'까지...팬미팅 같은 오픈AI 'GPT-5.5 파티'",
+      "summary": "오픈AI는 5일(현지시간) 미국 샌프란시스코 본사에서 'GPT-5.5 파티'를 열었습니다. 새로운 모델이나 기술을 발표하는 공식 행사라기 보다는 최근 좋은 분위기를 타고 있는 GPT-5.5와 코덱스를 계기로, 개발자들과 친목을 다지는 정도의 가벼운 행사로 알려졌습니다.그러나 비즈니스 인사이더 등에 따르면, 이 행사는 오히려 실리콘 밸리에서 가장 인기 있는 행사 중 하나가 됐습니다. 실제로 이날에는 수백명만 초대됐는데, 참가 신청은 8000명에 달했습니다. 이 때문에 오픈AI는 행사에 참여하지 못한 사람들을 위해 한달 동안 코덱스 사",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210244",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-09 07:00:00",
+      "date": "2026-05-09",
+      "candidate_score": 8.0,
+      "details": "오픈AI는 5일(현지시간) 미국 샌프란시스코 본사에서 'GPT-5.5 파티'를 열었습니다. 새로운 모델이나 기술을 발표하는 공식 행사라기 보다는 최근 좋은 분위기를 타고 있는 GPT-5.5와 코덱스를 계기로, 개발자들과 친목을 다지는 정도의 가벼운 행사로 알려졌습니다. 그러나 비즈니스 인사이더 등에 따르면, 이 행사는 오히려 실리콘 밸리에서 가장 인기 있는 행사 중 하나가 됐습니다. 실제로 이날에는 수백명만 초대됐는데, 참가 신청은 8000명 에 달했습니다. 이 때문에 오픈AI는 행사에 참여하지 못한 사람들을 위해 한달 동안 코덱스 사용량을 업그레이드하며, 감사의 뜻을 표했습니다. 그리고 그날 저녁부터 X에는 행사에 대한 사진이 올라오기 시작했습니다. 여기에서는 팬미팅과 같은 분위기가 엿보입니다. 가장 눈길을 끈 것은 샘 알트먼 오픈AI CEO입니다. 와인잔을 들고 개발자들과 찍힌 사진이 잇달아 올라왔습니다. 심지어 한 참석자는 그의 사진을 모나리자와 합성한 '사마리자(Samalisa)' 그림을 출력, 액자에 넣어서 왔습니다. 사마는 그가 X에서 사용하는 ID입니다. 또 어떤 개발자는 고블린 귀를 달고 등장했습니다. 알트먼 CEO는 그 옆에서 '고블린 모드'라는 문구를 들고 사진을 찍었습니다. 이는 최근 불거진 GPT-5.5의 고블린 논란 을 희화한 것입니다. 챗봇에 문제가 있다는 것으로 볼 수 있지만, 그는 이를 일종의 밈으로 여기는 분위기입니다. 현장에서 오픈AI가 나눠 준 기념품 사진도 올라왔습니다. 오픈AI 로고가 들어간 캔버스 토트백과 '이 문구를 읽고 있다면, 나는 지금 코드 리팩토링 중(If You're Reading This, I'm Refactoring)'이라는 개발자 농담이 들어간 코텍스 양말, 애니메이션이나 게임 풍의 사진 카드 등 '덕후 분위기'가 묻어나는 아이템이 포함됐습니다. 흥미로운 점은 행사 기획 과정에도 GPT-5.5가 일부 활용됐다는 점입니다. 알트먼 CEO는 한 인터뷰 에서 GPT-5.5에게 “파티를 위해 무엇이 필요하냐”라고 물었다고 밝혔습니다. 그는 \"AI가 파티를 위해 아름다운 일련의 사항들을 제시했다\"라고 말했는데, 여기에는 5월5일에 행사를 개최하고, 연설을 짧게 유지하며, AI를 만든 사람들이 건배사를 하는 것 등이 포함됩니다. 물론 AI는 자신이 건배에 참여하지는 않을 것이라고 덧붙였다고 합니다. 그리고 이러한 상호작용을 \"기묘한 새로운 행동\"이라며 \"뭔가 좀 다르게 느껴지는 것들이 있다\"라고 지적했습니다. 특히 모델 이름에 맞춰 5월5일 행사를 추천했다는 점은 꽤 사람 같은 농담처럼 들립니다 물론 이런 분위기는 실리콘 밸리 특유의 과장된 문화로 볼 수도 있습니다. 다만 흥미로운 점은 AI 기업들이 이제 단순히 모델 성능만 경쟁하는 것이 아니라, 커뮤니티까지 만들어가고 있다는 점입니다. 실제로 현지에서는 이번 행사를 두고 “신형 아이폰 발표회와 코스프레 파티의 중간쯤 되는 분위기”라는 평가도 나왔습니다. AI 모델이 점점 제품을 넘어 하나의 브랜드이자 팬덤처럼 소비되는 모습입니다. 비슷한 분위기는 앞서 오픈클로 열풍 에서 엿보였습니다. 랍스터 모양의 머리띠나 모자가 유행한 것입니다. 한편, 앤트로픽은 다음 날 샌프란시스코에서 ' 코드 위드 클로드 코드 '라는 개발자"
+    },
+    {
+      "title": "파이어폭스, '미소스' 투입 한달 만에 보안 버그 271개 수정",
+      "summary": "모질라 파이어폭스 개발진은 7일(현지시간) 공개한 기술 보고서를 통해 앤트로픽의 AI 모델 ‘클로드 미소스’를 활용해 대규모 보안 취약점을 발견하고 수정했다고 밝혔다.이에 따르면 이번 작업으로 발견된 취약점 가운데 일부는 10~15년 이상 코드 내부에 잠복해 있던 고위험 버그였다.모질라는 “불과 몇달 전만 해도 AI가 생성한 보안 버그 리포트는 대부분 쓸모없는 잡음(sloppy reports)에 가까웠다”라고 지적했다. 그러나 “최신 AI 모델과 새로운 에이전트형(agentic) 분석 시스템이 등장하면서 상황이 완전히 바뀌었다”라고",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210268",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-08 19:01:46",
+      "date": "2026-05-08",
+      "candidate_score": 7.063,
+      "details": "모질라 파이어폭스 개발진은 7일(현지시간) 공개한 기술 보고서 를 통해 앤트로픽의 AI 모델 ‘클로드 미소스’를 활용해 대규모 보안 취약점을 발견하고 수정했다고 밝혔다. 이에 따르면 이번 작업으로 발견된 취약점 가운데 일부는 10~15년 이상 코드 내부에 잠복해 있던 고위험 버그였다. 모질라는 “불과 몇달 전만 해도 AI가 생성한 보안 버그 리포트는 대부분 쓸모없는 잡음(sloppy reports)에 가까웠다”라고 지적했다. 그러나 “최신 AI 모델과 새로운 에이전트형(agentic) 분석 시스템이 등장하면서 상황이 완전히 바뀌었다”라고 강조했다. 이는 숫자로도 확인된다. 파이어폭스는 2025년 4월 31개의 보안 버그를 수정했지만, 올해 4월에는 무려 423개의 취약점을 수정했다. 공개된 사례에는 샌드박스 탈출(sandbox escape) 취약점, HTML 파싱 오류, 브라우저 권한 상승 버그 등이 포함됐다. 특히 샌드박스 탈출 취약점 발견은 업계에서도 상당히 어려운 영역으로 꼽힌다. 브라우저 샌드박스는 악성 코드가 시스템 핵심 영역에 접근하지 못하도록 격리하는 보안 구조인데, 이를 우회하려면 다단계 공격 시나리오와 복잡한 코드 분석이 필요하다. 모질라의 버그 바운티 프로그램은 샌드박스 취약점 발견 시 최대 2만달러(약 2900만원)의 포상금을 지급할 정도로 난도가 높다. 그러나 브라이언 그린스테드 모질라 엔지니어는 “인간 연구자들도 샌드박스 취약점을 발견해 왔지만, AI 기반 방식은 이전보다 훨씬 더 많은 문제를 찾아내고 있다”라고 말했다. 핵심 변화는 단순 대형언어모델(LLM) 사용이 아니라, ‘에이전트형 하네스(agentic harness)’ 구조에 있다. 초기에는 'GPT-4'나 '클로드 소네트 3.5' 같은 모델을 활용한 정적 코드 분석 실험이 진행됐지만, 허위 양성(false positive)이 너무 많아 실용성이 떨어졌다는 설명이다. 이후 모질라는 기존 퍼징(fuzzing) 인프라 위에 AI 기반 자동 분석 시스템을 구축했다. 이 시스템은 단순히 코드 의심 지점을 지적하는 데 그치지 않고, 실제 재현 가능한 테스트 케이스를 생성하고 실행해 취약점 여부를 검증한다. 연구진은 먼저 클로드 오퍼스 기반 소규모 실험으로 시작했다. 이후 여러 가상머신(VM)에 작업을 병렬 배치해 특정 파일 단위로 취약점을 탐색하도록 확장했다. AI는 코드 일부를 수정해 공격 시나리오를 구성하고, 실제로 샌드박스 우회가 가능한지까지 검증했다. 흥미로운 점은 AI가 발견하지 못한 영역도 있었다는 점이다. 모질라는 과거 프로토타입 오염(prototype pollution)을 이용한 권한 상승 공격을 방어하기 위해 핵심 구조를 기본적으로 동결(freeze)하는 아키텍처 변경을 적용했는데, AI도 이 방어 구조를 우회하지 못했다고 밝혔다. 연구진은 이를 두고 “기존 보안 강화 작업의 효과가 실제로 입증된 사례”라고 평가했다. 또 AI가 버그를 찾아내는 데는 뛰어난 성능을 보였지만, 아직 완전한 자동 수정 단계까지는 이르지 못했다는 분석도 나왔다. 모질라는 AI가 패치 코드를 제안할 수는 있지만 실제 배포 가능한 수준은 아니며, 여전히 인간 엔지니어가 직접 수정·검토 작업을 수행하고 있다고 설명했다. 그럼에도 업계에서는 AI 기반 보"
+    },
+    {
+      "title": "트럼프 방중, 엔비디아·보잉 CEO 동행…'역대급 경제협력' 나오나",
+      "summary": "도널드 트럼프 미국 대통령이 다음 주 예정된 중국 방문에 미국 주요 기업 CEO들을 대거 동행하는 방안을 추진하는 것으로 알려졌다. 미·중 기술·무역 갈등이 이어지는 가운데 AI 칩, 항공기, 금융, 에너지 분야를 중심으로 대규모 경제 협력 논의가 이뤄질 가능성이 제기된다.7일(현지시간) 블룸버그 등에 따르면, 트럼프 행정부는 엔비디아와 애플, 엑슨모빌, 보잉 등 미국 대표 기업 CEO들에게 중국 순방 동행 초청장을 보냈다. 퀄컴, 블랙스톤, 씨티그룹, 비자 경영진도 포함된 것으로 전해졌다.특히 젠슨 황 엔비디아 CEO의 참석 여부",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210274",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-08 18:49:51",
+      "date": "2026-05-08",
+      "candidate_score": 7.063,
+      "details": "도널드 트럼프 미국 대통령이 다음 주 예정된 중국 방문에 미국 주요 기업 CEO들을 대거 동행하는 방안을 추진하는 것으로 알려졌다. 미·중 기술·무역 갈등이 이어지는 가운데 AI 칩, 항공기, 금융, 에너지 분야를 중심으로 대규모 경제 협력 논의가 이뤄질 가능성이 제기된다. 7일(현지시간) 블룸버그 등에 따르면, 트럼프 행정부는 엔비디아와 애플, 엑슨모빌, 보잉 등 미국 대표 기업 CEO들에게 중국 순방 동행 초청장을 보냈다. 퀄컴, 블랙스톤, 씨티그룹, 비자 경영진도 포함된 것으로 전해졌다. 특히 젠슨 황 엔비디아 CEO의 참석 여부에 관심이 집중되고 있다. 황 CEO는 “초청받는다면 미국을 대표해 대통령과 함께 중국을 방문하는 것은 큰 영광이 될 것”이라며 “대통령이 발표할 내용을 기다려야 한다”라고 말했다. 오는 14~15일에는 중국 베이징에서 도널드 트럼프 대통령과 시진핑 중국 국가주석 간 회담 형식으로 진행될 예정이다. 블룸버그는 중국은 이란 전쟁 상황이 정리되기 전 정상회담 개최에 부담을 느끼고 있지만, 트럼프 대통령은 일정 강행 의지를 보인다고 전했다. 전문가들은 이번 방문이 외교 이벤트를 넘어, 대규모 산업 계약과 공급망 협력 논의의 장이 될 가능성에 주목하고 있다. 가장 큰 관심사는 보잉의 중국 항공기 계약이다. 켈리 오트버그 보잉 CEO는 앞서 트럼프 행정부가 중국과의 대형 항공기 계약 성사를 지원해 주길 기대한다고 밝혔다. 중국은 보잉 737 맥스 여객기 약 500대와 광동체 항공기 수십대를 포함한 대규모 주문을 검토 중인 것으로 알려져 있다. 계약이 발표되면, 이는 중국의 첫 대형 보잉 발주가 2017년 이후 처음이라는 점에서 미·중 정상회담의 상징적 성과로 평가될 가능성이 크다. 엔비디아도 중요한 이해관계로 얽혀 있다. 황 CEO는 그동안 미국 정부의 대중 AI 반도체 수출 규제 완화를 지속적으로 요구해 왔다. 그는 최근까지 미국과 중국 AI 연구 협력 필요성을 강조해 왔다. 특히 앤트로픽의 ‘미소스’가 강력한 사이버 공격·보안 분석 능력을 보였다는 사실이 공개된 이후, AI 경쟁이 단순 산업 문제가 아니라 국가 전략 차원으로 확대되고 있다고 언급한 바 있다."
+    },
+    {
+      "title": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "summary": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "source": "HN",
+      "link": "",
+      "date": "",
+      "engagement": 0,
+      "candidate_score": 1.0
+    },
+    {
+      "title": "Gemini 3.2 released by...?",
+      "summary": "This market will resolve to \"Yes\" if Google's Gemini 3.2 model is made available to the general public by the specified date (ET). Otherwise, this market will resolve to \"No.\"\n\nGemini 3.2 refers to a product explicitly named Gemini 3.2, or a variant that is recognized as a direct successor to Gemini 3.1, similar to the progression from Gemini 3 to Gemini 3.1. (e.g., Gemini 3.2 GA, Gemini 3.2/3.3/3",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/425315",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -13.737
+    },
+    {
+      "title": "Next OpenAI Model: Arena Debut?",
+      "summary": "This market will resolve to \"Yes\" if the next model released by OpenAI has at least the specified score on the Arena.AI Leaderboard (arena.ai/leaderboard/text) when the table under the \"Leaderboard\" tab is checked on the date after the day of the release, 12:00 PM ET.  Otherwise, this market will resolve to \"No\".\n\nResults from the \"Score\" column under the \"Text Arena | Overall\" Leaderboard tab at ",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/437851",
+      "date": "2026-05-07",
+      "engagement": 0,
+      "candidate_score": -16.537
+    },
+    {
+      "title": "Trump orders federal review of AI model releases by May 31?",
+      "summary": "This market will resolve to “Yes” if Donald Trump signs any federal legislation into law or performs any executive action that creates, authorizes, or directs a federal government review process for the public release of new artificial intelligence models by the listed date, 11:59 PM ET. Otherwise, this market will resolve to “No.”\n\nA qualifying action must create a federal process for reviewing o",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/449384",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -17.337
+    },
+    {
+      "title": "Which company has the best AI model end of May?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will b",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/376520",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -27.137
+    },
+    {
+      "title": "Which company has best AI model end of June?",
+      "summary": "This market will resolve according to the company which owns the model which has the highest arena rank based off the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text with the style control off will be used to resolve",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/57705",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -27.137
+    },
+    {
+      "title": "Which company has the best Math AI model end of May?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab for \"Math\" is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Math\" Leaderboard tab at https://arena.ai/leaderboard/text/math-no-style-control w",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/414059",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -27.137
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-05-05",
+        "mode": "informational",
+        "title": "\"CEO들의 '신 콤플렉스' 경계해야\"...젠슨 황, AI 비관론에 쓴소리",
+        "post_main": "젠슨 황이 앤트로픽 다리오 아모데이 CEO를 겨냥해 강하게 비판했다. \"신입 대졸자 일자리의 50%를 휩쓸어버릴 것이라는 말은 터무니없다\"며 \"CEO가 되면 '신 콤플렉스'에 빠져",
+        "reply_preview": "황 CEO는 \"AI가 타자를 대신 쳐주니 일자리가 사라질 것이라고 결론내리는 것은 근본적으로 틀린 생각\"이라고 지적했다. 직업의 과업(Task)",
+        "reply_count": 3,
+        "views": 15908,
+        "likes": 63,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 1,
+        "score": 2043.8
+      },
+      {
+        "date": "2026-05-01",
+        "mode": "informational",
+        "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+        "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+        "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+        "reply_count": 3,
+        "views": 5886,
+        "likes": 9,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 673.6
+      },
+      {
+        "date": "2026-05-04",
+        "mode": "informational",
+        "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+        "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+        "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+        "reply_count": 3,
+        "views": 3690,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 429.0
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-05-07",
+        "mode": "informational",
+        "title": "아모데이 \"미소스 유효 기간은 6~12개월...중국이 곧 따라잡을 것\"",
+        "post_main": "앤트로픽 '미소스' AI가 소프트웨어 취약점 발견 능력을 획기적으로 향상시켰다. 이전 모델은 20여개 찾던 것을, 이제는 단일 소프트웨어에서 수백 건씩 발견한다. 전체적으로는 수만",
+        "reply_preview": "아모데이 CEO는 \"취약점이 급증하면서 해킹, 랜섬웨어 피해, 금융 손실이 폭발적으로 늘어날 위험이 있다\"고 경고했다. 학교, 병원, 은행 등 ",
+        "reply_count": 3,
+        "views": 46,
+        "likes": 3,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 49.6
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 1617.8,
+      "likes": 5.8,
+      "replies": 5.4,
+      "reposts": 0.2,
+      "quotes": 0.0,
+      "score": 246.5
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.65,
+    "issues": [
+      "[AI] 작년 4월 31개에서 올해 4월 423개 - 이 수치의 의미가 불분명하고 271개와의 관계가 혼란스러움",
+      "[AI] 앤트로픽 '미소스'에 대한 설명 부족으로 독자들이 이해하기 어려움",
+      "[AI] AI 보안 감사 시스템의 구체적 작동 방식에 대한 정확한 근거가 부족함"
+    ],
+    "suggestions": [
+      "미소스가 무엇인지 한 줄로 설명 추가 (예: 앤트로픽의 AI 보안 분석 도구)",
+      "수치 관계를 명확히 정리 - 271개가 한 달간 수정된 것이고, 423개가 전체 발견량인지 구분",
+      "Reply 2의 기술적 내용을 좀 더 초보자 친화적으로 설명",
+      "실제 개발팀이 당장 시도해볼 수 있는 더 구체적인 액션 아이템 제시"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18075449234244317",
+    "reply_1": "17973636066062265",
+    "reply_2": "18133548583489729",
+    "reply_3": "17890752291351627",
+    "reply_4": "18082686368119967"
+  },
+  "posted_at": "2026-05-09T07:31:55.562419"
+}
