@@ -1,0 +1,237 @@
+{
+  "selected_article": {
+    "original_title": "딥시크 창립자 량문펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
+    "reason": "구체적인 투자 규모(4조원)와 실질적인 제품 출시 일정(V4.1 6월), 상용화 전략 변화 등이 개발자들에게 실용적인 정보를 제공한다. 중국 AI 생태계의 변화를 보여주는 중요한 사례이기도 하다."
+  },
+  "post_main": "딥시크 창립자 량문펑이 자사 투자 라운드에 개인 자금 4조3천억원을 투자한다고 발표했다. 총 투자금의 40%를 혼자 감당하겠다는 것이다. 기업가치는 75조원을 넘을 전망이며, 이는 중국 AI 기업 사상 최대 규모다. 외부 투자 비중을 줄여서 연구의 자율성을 지키면서도 인재 확보 경쟁에서 뒤처지지 않겠다는 전략이다.",
+  "replies": [
+    "이번 대규모 투자의 배경에는 투자자들의 압박이 있었다. 딥시크의 '느린 모델 출시 속도'와 수익 창출 능력에 대한 우려가 제기되자, 회사는 업계 평균에 맞춰 출시를 가속화하기로 했다.",
+    "출시 가속화의 첫 결과로 V4.1이 6월 출시된다. 기업용 도구 추가, MCP(모델 컨텍스트 프로토콜) 지원 향상이 핵심이다. 초기엔 텍스트 생성만 지원하고, 이후 이미지/오디오 처리까지 확장할 예정이다.",
+    "이런 변화는 량 창립자의 경영 철학 전환을 보여준다. 기술 이상주의자로 알려진 그가 상업적 현실을 받아들이기 시작한 것이다. 직원 보상을 위한 주식 옵션 발행도 검토 중이라고 한다."
+  ],
+  "media_plan": {
+    "preferred_type": "video",
+    "search_query": "DeepSeek V4 coding demo",
+    "reason": "딥시크 V4의 실제 코딩 성능 데모 영상이 있다면, 독자들이 V4.1에서 기대할 수 있는 개선 사항을 미리 확인할 수 있다"
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
+  "og_image": "https://cdn.aitimes.com/news/photo/202605/210296_212923_043.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "So you’ve heard these AI terms and nodded along; let’s fix that",
+      "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
+      "link": "https://techcrunch.com/2026/05/09/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Sat, 09 May 2026 21:45:00 +0000",
+      "date": "2026-05-09",
+      "candidate_score": 8.079,
+      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. Artificial intelligence is changing the world, and simultaneously inventing a whole new language to describe how it’s doing it. Spend five minutes reading about AI and you’ll run into LLMs, RAG, RLHF, and a dozen other terms that can make even very smart people in the tech world feel insecure. This glossary is our attempt to fix that. We update it regularly as the field evolves, so consider it a living document, much like the AI systems it describes. Artificial general intelligence, or AGI, is a nebulous term. But it generally refers to AI that’s more capable than the average human at many, if not most, tasks. OpenAI CEO Sam Altman once described AGI as the “equivalent of a median human that you could hire as a co-worker .” Meanwhile, OpenAI’s charter defines AGI as “highly autonomous systems that outperform humans at most economically valuable work.” Google DeepMind’s understanding differs slightly from these two definitions; the lab views AGI as “AI that’s at least as capable as humans at most cognitive tasks.” Confused? Not to worry — so are experts at the forefront of AI research . An AI agent refers to a tool that uses AI technologies to perform a series of tasks on your behalf — beyond what a more basic AI chatbot could do — such as filing expenses, booking tickets or a table at a restaurant, or even writing and maintaining code. However, as we’ve explained before , there are lots of moving pieces in thi"
+    },
+    {
+      "title": "딥시크 창립자 량원펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
+      "summary": "량원펑 창립자가 딥시크의 첫번째 투자 라운드에 최대 200억위안(약 4조3130억원), 즉 총투자금의 40%를 개인적으로 투자할 예정으로 알려졌다. 디 인포메이션은 8일(현지시간) 소식통을 인용, 량원펑 창립자가 이번 투자 라운드에서 최대 투자자가 될 가능성이 있다고 보도했다.중국 국가인공지능산업투자펀드가 이번 투자 라운드에서 두번째로 큰 규모의 투자자가 될 것으로 예상됐다. 딥시크는 최소 30억위안(약 6470억원)의 투자를 요청한 것으로 전해졌다.알려진 대로, 이번 투자 유치는 평가된 기업 가치를 바탕으로 딥시크 직원들의 보상",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-09 21:04:17",
+      "date": "2026-05-09",
+      "candidate_score": 7.079,
+      "details": "량원펑 창립자가 딥시크의 첫번째 투자 라운드에 최대 200억위안(약 4조3130억원), 즉 총투자금의 40%를 개인적으로 투자할 예정으로 알려졌다. 디 인포메이션은 8일(현지시간) 소식통을 인용, 량원펑 창립자가 이번 투자 라운드에서 최대 투자자가 될 가능성이 있다고 보도했다. 중국 국가인공지능산업투자펀드가 이번 투자 라운드에서 두번째로 큰 규모의 투자자가 될 것으로 예상됐다. 딥시크는 최소 30억위안(약 6470억원)의 투자를 요청한 것으로 전해졌다. 알려진 대로, 이번 투자 유치는 평가된 기업 가치를 바탕으로 딥시크 직원들의 보상 규모를 책정하려는 것이 주 목적이다. 이 때문에 량 창립자는 외부 투자 비중을 줄여 기업의 자율적인 연구 분위기를 유지하려는 것으로 볼 수 있다. 이번 라운드는 최대 500억위안(약 10조7800억원)을 유치하는 것이 목표로, 기업 가치는 3500억위안(약 75조4700억원)을 넘어설 것으로 예상되고 있다. 이는 중국 AI 기업 사상 최대 규모의 투자 라운드다. 이날 사우스차이나모닝포스트도 500억달러(약 73조2750억원) 가치로 투자 라운드 마무리가 임박했다고 보도했다. 이에 따르면, 중국 국가인공지능산업투자펀드와 글로벌 투자회사 힐하우스, 텐센트가 이번 투자 라운드에 참여했다. 또, 이번 투자 유치로 딥시크는 수익 창출과 상업화 계획을 가속화하고 있다는 분석이다. 관계자에 따르면, 딥시크는 최근 투자자들에게 업계 평균에 맞춰 모델 출시 속도를 높일 계획이라고 밝혔다. 기업 가치가 급격히 상승하고 있음에도 불구하고, 딥시크와 대화를 나눈 투자자들은 회사의 지속적인 수익 창출 능력과 모델 출시 속도에 대한 우려를 제기했다. 따라서 딥시크는 기술을 유료 제품과 서비스로 전환하는 작업을 진행 중이다. 딥시크 직원들은 이미 다양한 산업 분야의 기업들을 대상으로 사업 모델을 홍보하며 관심을 유도하고 있다. 또, 바이트댄스의 제품 개발팀과 다른 중국 IT 기업 출신 인력을 영입했다. 관계자들은 '딥시크-V4'의 후속 버전인 'V4.1'을 6월 중 출시할 예정이라고 전했다. V4.1은 기업 사용자를 위한 더 많은 도구와 모델 컨텍스트 프로토콜(MCP)에 대한 향상된 지원을 제공할 예정이다. 또, 이미지와 오디오를 처리할 수 있도록 개발할 계획이지만, 초기에는 텍스트 생성만 가능할 것으로 알려졌다. 딥시크의 이번 투자 유치와 상용화 노력은 회사에 있어 중대한 전환점을 의미한다는 평이다. 기술 이상주의자로 알려진 량 창립자는 딥시크를 상업적 압력으로부터 자유롭게 유지하고자 했다. 하지만 컴퓨팅 비용이 상승하고 최고 인재 확보 경쟁이 심화함에 따라 이러한 접근 방식은 점점 어려워지고 있다. 이번 자금 유치로 컴퓨팅 역량에 더 많이 투자하고 직원들에게 더 높은 임금을 지급할 수 있는 것은 물론, 직원 보상을 보충하기 위해 주식 옵션을 발행하기 시작할 수도 있다. 딥시크가 챗봇 앱을 통해 구독료를 부과하거나 광고를 판매하는 방식으로 수익을 창출할 계획이 있는지는 불분명하다. 앱은 2025년 초에 인기가 급증했지만, 현재 다른 기업에 밀린 상태다. 시장 분석 사이트에 따르면, 딥시크 앱의 월간 활성 사용자(MAU)는 4월 기준 1억3900만명으로, 바이트댄스의 '더우바오'와 알리바바의 '큐원' '쿼크'"
+    },
+    {
+      "title": "\"엔비디아 'H200' 탑재 서버, 태국 거쳐 알리바바 밀반입 의심\"",
+      "summary": "엔비디아의 고급 칩이 탑재된 AI 서버가 태국을 통해 중국의 알리바바로 흘러 들어갔다는 소식이 전해졌다. 알리바바와 태국 기업은 이를 강력하게 부인했다.블룸버그는 8일(현지시간) 관계자를 인용, 태국의 국가 AI 개발 사업에 핵심적인 역할을 하는 한 기업이 엔비디아의 'H200' 칩이 탑재된 슈퍼마이크로컴퓨터 서버 수십억달러 어치를 중국으로 밀반출하는 데 가담한 혐의를 받고 있다고 보도했다. 여러 최종 고객 중에는 알리바바도 포함됐다.앞서 미국 법무부는 지난 3월 슈퍼마이크로의 공동 창립자가 익명의 동남아시아 회사 및 여러 제3자",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210295",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-09 20:11:42",
+      "date": "2026-05-09",
+      "candidate_score": 7.079,
+      "details": "엔비디아의 고급 칩이 탑재된 AI 서버가 태국을 통해 중국의 알리바바로 흘러 들어갔다는 소식이 전해졌다. 알리바바와 태국 기업은 이를 강력하게 부인했다. 블룸버그는 8일(현지시간) 관계자를 인용, 태국의 국가 AI 개발 사업에 핵심적인 역할을 하는 한 기업이 엔비디아의 'H200' 칩이 탑재된 슈퍼마이크로컴퓨터 서버 수십억달러 어치를 중국으로 밀반출하는 데 가담한 혐의를 받고 있다고 보도했다. 여러 최종 고객 중에는 알리바바도 포함됐다. 앞서 미국 법무부는 지난 3월 슈퍼마이크로의 공동 창립자가 익명의 동남아시아 회사 및 여러 제3자 브로커와 공모해 미국 정부의 규정을 어기고 AI 반도체를 빼돌렸다고 발표했다. 당시 '회사 1'로만 지칭한 동남아시아 회사는 방콕의 오본(OBON)이라고 소식통은 전했다. 소식통에 따르면, 오본에 판매된 25억 달러 상당의 서버 중 일부가 알리바바에 넘어갔다. 특히 오본의 서버 수입은 미국이 태국에 대한 AI 칩 판매 허가제 도입을 검토하던 2025년 상반기에 급격히 증가한 것으로 나타났다. 이번 사건은 미국이 2022년 엔비디아 칩의 중국 판매를 처음으로 제한한 이후 가장 중요한 반도체 밀수 사건으로 꼽힌다. 미 법무부의 기소장에 오본이나 알리바바의 이름은 명시되지 않았으며, 당국도 이들을 공식적으로 범죄 혐의로 기소하지 않았다. 이번 사건을 기소한 뉴욕 남부 지방 검찰청과 수사에 핵심적인 역할을 한 상무부 산업안보국 대변인은 모두 논평을 거부했다. 현재 미 상무부의 요청에 따라 오본에 대한 모든 서버 선적은 중단된 상태다. 알리바바 대변인은 \"알리바바는 슈퍼 마이크로, 오본 또는 문제의 기소장에 언급되었을 수 있는 제3자 브로커와 어떠한 사업 관계도 없다\"라며 \"우리는 혐의를 받는 밀수 활동에 전혀 관여하지 않았다. 우리의 데이터센터에서는 현재 금지된 엔비디아 칩을 사용하고 있지 않으며, 과거에도 사용한 적이 없다\"라고 밝혔다. 오본은 2024년 5월 태국의 클라우드 인프라 기업 시암 AI(Siam AI)를 설립했다. 이 회사는 태국 최초로 엔비디아 클라우드 파트너로 선정됐고, 소버린 AI에 초점을 맞춘 행사에서 젠슨 황 엔비디아 CEO를 초청했다. 태국 억만장자이자 전 총리 탁신 시나와트라의 조카인 라타나폰은 2024년 5월까지 오본의 CEO를 역임했다고 회사는 밝혔다. 오본과 시암 AI가 현재까지 사업적 관계를 유지하고 있는지는 불분명하다. 라타나폰은 시암 AI를 설립하면서 오본을 떠났기 때문에 중국에 반도체 칩을 밀수했다는 미국의 의혹에 대해서는 언급할 수 없다고 말했다. 그는 \"시암 AI는 이 사건과 아무런 관련이 없다\"라며 \"미국의 모든 수출입 통제 법규를 철저히 준수하기 위해 최선을 다하고 있다\"라고 밝혔다. 블룸버그는 오본이 밀수 공모에 연루됐다는 의혹은 태국의 AI 산업에 타격을 줄 뿐만 아니라, 미국 정부가 태국에 대한 반도체 판매 제한 요구를 다시 불러일으킬 수 있다고 지적했다. 미국은 과거 3차례에 걸쳐 태국에 대한 반도체 수출 통제 방안을 검토하거나 계획했으며 밀수 문제를 해결하기 위한 초안까지 마련했지만, 실제로 시행된 적은 없다. 엔비디아 대변인은 \"우리 파트너들은 모든 단계에서 엄격한 규정 준수에 전념해야 한다\"라며 \"우리의 철저한 조사 노력으로 밀수"
+    },
+    {
+      "title": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "summary": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "source": "HN",
+      "link": "",
+      "date": "",
+      "engagement": 0,
+      "candidate_score": 1.0
+    },
+    {
+      "title": "Gemini 3.2 released by...?",
+      "summary": "This market will resolve to \"Yes\" if Google's Gemini 3.2 model is made available to the general public by the specified date (ET). Otherwise, this market will resolve to \"No.\"\n\nGemini 3.2 refers to a product explicitly named Gemini 3.2, or a variant that is recognized as a direct successor to Gemini 3.1, similar to the progression from Gemini 3 to Gemini 3.1. (e.g., Gemini 3.2 GA, Gemini 3.2/3.3/3",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/425315",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -14.721
+    },
+    {
+      "title": "Trump orders federal review of AI model releases by May 31?",
+      "summary": "This market will resolve to “Yes” if Donald Trump signs any federal legislation into law or performs any executive action that creates, authorizes, or directs a federal government review process for the public release of new artificial intelligence models by the listed date, 11:59 PM ET. Otherwise, this market will resolve to “No.”\n\nA qualifying action must create a federal process for reviewing o",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/449384",
+      "date": "2026-05-08",
+      "engagement": 0,
+      "candidate_score": -18.321
+    },
+    {
+      "title": "Which AI company will have the second-highest revenue May 11-17?",
+      "summary": "This market will resolve according to the model family that has the second-highest total estimated inference revenue based on Anera's data published at https://anera.markets/intelligence/model-family for the specified week.\n\nThe week’s values will be determined by summing the respective companies' estimated revenue figures for each day within the specified period. If data for all specified days is",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/462466",
+      "date": "2026-05-09",
+      "engagement": 0,
+      "candidate_score": -19.121
+    },
+    {
+      "title": "Best AI model on May 16? (Style Control Off)",
+      "summary": "This market will resolve according to the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on the specified date, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will be used to resolv",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/462458",
+      "date": "2026-05-09",
+      "engagement": 0,
+      "candidate_score": -19.121
+    },
+    {
+      "title": "What will be said during the 2026 Sidemen Charity Match?",
+      "summary": "The 2026 Sidemen Charity Match is scheduled for April 18, 2026.\n\nThis market will resolve to \"Yes\" if the listed term is mentioned by anyone during the official English broadcast of the 2026 Sidemen Charity Match. Otherwise, this market will resolve to \"No\".\n\nIf prerecorded clips are aired where people are speaking, those clips will count toward this market's resolution.\n\nAI-generated audio or vid",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/379214",
+      "date": "2026-05-09",
+      "engagement": 0,
+      "candidate_score": -19.121
+    },
+    {
+      "title": "Which company has the best AI model end of May?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will b",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/376520",
+      "date": "2026-05-09",
+      "engagement": 0,
+      "candidate_score": -27.121
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-05-05",
+        "mode": "informational",
+        "title": "\"CEO들의 '신 콤플렉스' 경계해야\"...젠슨 황, AI 비관론에 쓴소리",
+        "post_main": "젠슨 황이 앤트로픽 다리오 아모데이 CEO를 겨냥해 강하게 비판했다. \"신입 대졸자 일자리의 50%를 휩쓸어버릴 것이라는 말은 터무니없다\"며 \"CEO가 되면 '신 콤플렉스'에 빠져",
+        "reply_preview": "황 CEO는 \"AI가 타자를 대신 쳐주니 일자리가 사라질 것이라고 결론내리는 것은 근본적으로 틀린 생각\"이라고 지적했다. 직업의 과업(Task)",
+        "reply_count": 3,
+        "views": 15908,
+        "likes": 63,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 1,
+        "score": 2043.8
+      },
+      {
+        "date": "2026-05-01",
+        "mode": "informational",
+        "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+        "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+        "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+        "reply_count": 3,
+        "views": 5886,
+        "likes": 9,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 673.6
+      },
+      {
+        "date": "2026-05-04",
+        "mode": "informational",
+        "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+        "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+        "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+        "reply_count": 3,
+        "views": 3690,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 429.0
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-05-07",
+        "mode": "informational",
+        "title": "아모데이 \"미소스 유효 기간은 6~12개월...중국이 곧 따라잡을 것\"",
+        "post_main": "앤트로픽 '미소스' AI가 소프트웨어 취약점 발견 능력을 획기적으로 향상시켰다. 이전 모델은 20여개 찾던 것을, 이제는 단일 소프트웨어에서 수백 건씩 발견한다. 전체적으로는 수만",
+        "reply_preview": "아모데이 CEO는 \"취약점이 급증하면서 해킹, 랜섬웨어 피해, 금융 손실이 폭발적으로 늘어날 위험이 있다\"고 경고했다. 학교, 병원, 은행 등 ",
+        "reply_count": 3,
+        "views": 46,
+        "likes": 3,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 49.6
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 1638.8,
+      "likes": 5.9,
+      "replies": 5.3,
+      "reposts": 0.3,
+      "quotes": 0.1,
+      "score": 249.3
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.72,
+    "issues": [
+      "[AI] 투자자 압박과 '느린 모델 출시 속도' 관련 내용이 원문에 명시되지 않아 정확성 우려",
+      "[AI] 기업가치 75조원과 투자 비율 계산이 원문 근거 부족",
+      "[AI] MCP 지원 향상 등 구체적 기술 내용이 원문에서 확인되지 않음"
+    ],
+    "suggestions": [
+      "원문에서 확인되지 않는 세부사항들을 제거하고 확실한 정보만 포함",
+      "4조원 투자 결정의 배경을 추측보다는 공개된 사실 위주로 서술",
+      "V4.1 출시 정보를 더 간결하게 정리하되 원문 근거 명확히 할 것",
+      "개발자 타겟 독자를 위해 기술적 의미나 업계 영향을 더 구체적으로 설명"
+    ]
+  },
+  "posting_result": {
+    "post_id": "18022872368654570",
+    "reply_1": "18132058039563812",
+    "reply_2": "18079543700560869",
+    "reply_3": "17860969740690842"
+  },
+  "posted_at": "2026-05-10T07:08:21.708108"
+}
