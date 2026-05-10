@@ -209,6 +209,7 @@ def post_thread(
     source_link: str | None = None,
     video_url: str | None = None,
     mode: str = "informational",
+    strict_video: bool = False,
 ) -> dict[str, Any]:
     """Post a main thread plus ordered replies and optional media/link."""
     result: dict[str, Any] = {}
@@ -235,6 +236,9 @@ def post_thread(
                 _wait_for_container(client, main_creation_id, access_token)
                 print("  Main media: video")
             except Exception as exc:
+                if strict_video:
+                    print(f"  Main video failed in strict mode: {exc}")
+                    raise RuntimeError(f"main video failed in strict mode: {exc}") from exc
                 print(f"  Main video failed, falling back: {exc}")
                 video_url = None
                 try:

@@ -6,6 +6,7 @@ from dataclasses import asdict, is_dataclass
 from datetime import date
 import re
 from typing import Any
+from urllib.parse import parse_qs, urlparse
 
 import httpx
 
@@ -93,8 +94,17 @@ def review_page_to_content(page: dict[str, Any]) -> dict[str, Any]:
     props = page.get("properties", {}) or {}
 
     media_type = _property_select(props.get("Media Type")).lower()
-    media_url = _property_url(props.get("Media Publish URL")) or _property_url(props.get("Media Candidate URL"))
+    media_publish_url = _property_url(props.get("Media Publish URL"))
+    media_candidate_url = _property_url(props.get("Media Candidate URL"))
+    media_url = media_publish_url or media_candidate_url
     media_approved = _property_checkbox(props.get("Media Approved"))
+
+    if media_type == "video":
+        _validate_video_review_media(
+            media_publish_url=media_publish_url,
+            media_candidate_url=media_candidate_url,
+            media_approved=media_approved,
+        )
 
     content = {
         "content_brief": {
@@ -117,7 +127,7 @@ def review_page_to_content(page: dict[str, Any]) -> dict[str, Any]:
 
     if media_approved and media_url:
         if media_type == "video":
-            content["video_url"] = media_url
+            content["video_url"] = media_publish_url
         elif media_type == "image":
             content["og_image"] = media_url
 
@@ -176,6 +186,8 @@ def build_review_payload(content: dict[str, Any], qa_result: Any, *, database_id
     replies = content.get("replies")
     reply_text = "\n\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1)) if isinstance(replies, list) else ""
     media_type = _media_type(content, media_plan)
+    media_candidate_url = _review_media_candidate_url(content)
+    media_publish_url = _review_media_publish_url(media_type, media_candidate_url)
 
     properties = {
         "Title": {"title": _rich_text(title, max_total=180)},
@@ -192,8 +204,8 @@ def build_review_payload(content: dict[str, Any], qa_result: Any, *, database_id
         "Post Main": {"rich_text": _rich_text(post_main, max_total=1800)},
         "Replies": {"rich_text": _rich_text(reply_text, max_total=12000)},
         "Media Type": {"select": {"name": media_type}},
-        "Media Candidate URL": _url_property(content.get("video_url") or content.get("og_image") or ""),
-        "Media Publish URL": _url_property(content.get("video_url") or content.get("og_image") or ""),
+        "Media Candidate URL": _url_property(media_candidate_url),
+        "Media Publish URL": _url_property(media_publish_url),
         "Media Approved": {"checkbox": False},
         "QA Score": {"number": float(qa.get("score") or 0)},
         "Notes": {"rich_text": _rich_text(_notes_text(qa, media_plan), max_total=1800)},
@@ -234,6 +246,51 @@ def _media_type(content: dict[str, Any], media_plan: dict[str, Any]) -> str:
         return "image"
     preferred = str(media_plan.get("preferred_type", "none")).strip().lower()
     return preferred if preferred in {"none", "image", "video"} else "none"
+
+
+def _review_media_candidate_url(content: dict[str, Any]) -> str:
+    return str(content.get("video_url") or content.get("og_image") or "").strip()
+
+
+def _review_media_publish_url(media_type: str, media_candidate_url: str) -> str:
+    if media_type == "video" and _is_expiring_video_url(media_candidate_url):
+        return ""
+    return media_candidate_url
+
+
+def _validate_video_review_media(
+    *,
+    media_publish_url: str,
+    media_candidate_url: str,
+    media_approved: bool,
+) -> None:
+    has_video_url = bool(media_publish_url or media_candidate_url)
+    if not has_video_url:
+        return
+    if not media_approved:
+        raise NotionReviewError(
+            "Video media is present, but Media Approved is not checked. "
+            "Approve a stable Media Publish URL before setting Status=Approved."
+        )
+    if not media_publish_url:
+        raise NotionReviewError(
+            "Approved video rows require Media Publish URL. "
+            "Media Candidate URL is review-only; paste a stable public MP4/MOV URL into Media Publish URL."
+        )
+    if _is_expiring_video_url(media_publish_url):
+        raise NotionReviewError(
+            "Media Publish URL looks like an expiring video URL. "
+            "Upload the video to stable public storage before approving."
+        )
+
+
+def _is_expiring_video_url(value: str) -> bool:
+    if not value:
+        return False
+    parsed = urlparse(value)
+    host = parsed.netloc.lower()
+    query = parse_qs(parsed.query)
+    return "googlevideo.com" in host and "expire" in query
 
 
 def _notes_text(qa: dict[str, Any], media_plan: dict[str, Any]) -> str:

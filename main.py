@@ -430,6 +430,7 @@ def publish_approved_reviews(*, mode: str, limit: int) -> int:
             source_link=content.get("source_link", ""),
             video_url=content.get("video_url", ""),
             mode=mode,
+            strict_video=bool(content.get("video_url")),
         )
         mark_review_published(page_id, result)
 

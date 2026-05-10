@@ -1,6 +1,9 @@
 """threads_poster reply mapping tests."""
 
-from threads_poster import REPLY_KEYS, REPLY_LABELS, get_reply_sequence
+import pytest
+
+import threads_poster
+from threads_poster import REPLY_KEYS, REPLY_LABELS, get_reply_sequence, post_thread
 
 
 def test_viral_reply_keys():
@@ -54,3 +57,34 @@ def test_get_reply_sequence_falls_back_to_legacy_keys():
         "compare",
         "summary",
     ]
+
+
+def test_post_thread_strict_video_does_not_fallback_to_text(monkeypatch):
+    class DummyClient:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+    monkeypatch.setattr(threads_poster.httpx, "Client", lambda **kwargs: DummyClient())
+    monkeypatch.setattr(
+        threads_poster,
+        "_create_video",
+        lambda *args, **kwargs: (_ for _ in ()).throw(RuntimeError("bad video")),
+    )
+
+    def fail_text_fallback(*args, **kwargs):
+        raise AssertionError("text fallback should not run in strict video mode")
+
+    monkeypatch.setattr(threads_poster, "_create_text", fail_text_fallback)
+
+    with pytest.raises(RuntimeError, match="strict mode"):
+        post_thread(
+            access_token="token",
+            user_id="user",
+            content={"post_main": "Main", "replies": []},
+            source_link="https://example.com/article",
+            video_url="https://cdn.example.com/video.mp4",
+            strict_video=True,
+        )

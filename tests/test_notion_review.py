@@ -1,6 +1,14 @@
 from dataclasses import dataclass
 
-from notion_review import build_approved_query_payload, build_published_update_payload, build_review_payload, review_page_to_content
+import pytest
+
+from notion_review import (
+    NotionReviewError,
+    build_approved_query_payload,
+    build_published_update_payload,
+    build_review_payload,
+    review_page_to_content,
+)
 
 
 @dataclass(frozen=True)
@@ -56,6 +64,24 @@ def test_build_review_payload_maps_core_properties():
     assert "Status" in checklist
 
 
+def test_build_review_payload_keeps_expiring_video_candidate_out_of_publish_url():
+    content = {
+        **_content(),
+        "video_url": "https://rr1---sn.example.googlevideo.com/videoplayback?expire=1778419860&mime=video%2Fmp4",
+    }
+
+    payload = build_review_payload(
+        content,
+        FakeQA(passed=True, score=0.86, issues=(), suggestions=()),
+        database_id="database-id",
+    )
+
+    props = payload["properties"]
+    assert props["Media Type"]["select"]["name"] == "video"
+    assert props["Media Candidate URL"]["url"] == content["video_url"]
+    assert props["Media Publish URL"]["url"] is None
+
+
 def test_review_page_to_content_converts_approved_row():
     page = {
         "id": "page-id",
@@ -84,6 +110,54 @@ def test_review_page_to_content_converts_approved_row():
     assert content["selected_article"]["link"] == "https://example.com/article"
     assert content["content_brief"]["target_reader"] == "developers"
     assert content["video_url"] == "https://cdn.example.com/demo.mp4"
+
+
+def test_review_page_to_content_blocks_unapproved_video_candidate():
+    page = {
+        "properties": {
+            "Post Main": {"type": "rich_text", "rich_text": [{"plain_text": "Main post"}]},
+            "Replies": {"type": "rich_text", "rich_text": [{"plain_text": "1. First"}]},
+            "Media Type": {"type": "select", "select": {"name": "video"}},
+            "Media Candidate URL": {"type": "url", "url": "https://cdn.example.com/demo.mp4"},
+            "Media Approved": {"type": "checkbox", "checkbox": False},
+        },
+    }
+
+    with pytest.raises(NotionReviewError, match="Media Approved"):
+        review_page_to_content(page)
+
+
+def test_review_page_to_content_requires_publish_url_for_approved_video():
+    page = {
+        "properties": {
+            "Post Main": {"type": "rich_text", "rich_text": [{"plain_text": "Main post"}]},
+            "Replies": {"type": "rich_text", "rich_text": [{"plain_text": "1. First"}]},
+            "Media Type": {"type": "select", "select": {"name": "video"}},
+            "Media Candidate URL": {"type": "url", "url": "https://cdn.example.com/demo.mp4"},
+            "Media Approved": {"type": "checkbox", "checkbox": True},
+        },
+    }
+
+    with pytest.raises(NotionReviewError, match="Media Publish URL"):
+        review_page_to_content(page)
+
+
+def test_review_page_to_content_rejects_expiring_publish_video_url():
+    page = {
+        "properties": {
+            "Post Main": {"type": "rich_text", "rich_text": [{"plain_text": "Main post"}]},
+            "Replies": {"type": "rich_text", "rich_text": [{"plain_text": "1. First"}]},
+            "Media Type": {"type": "select", "select": {"name": "video"}},
+            "Media Publish URL": {
+                "type": "url",
+                "url": "https://rr1---sn.example.googlevideo.com/videoplayback?expire=1778419860&mime=video%2Fmp4",
+            },
+            "Media Approved": {"type": "checkbox", "checkbox": True},
+        },
+    }
+
+    with pytest.raises(NotionReviewError, match="expiring video URL"):
+        review_page_to_content(page)
 
 
 def test_review_page_to_content_requires_media_approval_for_media_url():
