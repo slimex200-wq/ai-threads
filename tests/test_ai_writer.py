@@ -19,6 +19,8 @@ def test_build_prompt_includes_grounding_rules():
     assert "CTA" in prompt
     assert "explanatory voice" in prompt
     assert "not bulletin voice" in prompt
+    assert "<br><br>" in prompt
+    assert "actual narrow Threads timeline" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():
@@ -45,6 +47,18 @@ def test_line_break_tokens_are_normalized():
 
     assert content["post_main"] == "첫 줄\n둘째 줄"
     assert content["replies"] == ["하나\n둘"]
+
+
+def test_blank_line_tokens_are_preserved():
+    content = _ensure_required_fields(
+        {
+            "post_main": "First<br><br>Second",
+            "replies": ["One<br><br>Two"],
+        }
+    )
+
+    assert content["post_main"] == "First\n\nSecond"
+    assert content["replies"] == ["One\n\nTwo"]
 
 
 def test_prompt_uses_json_safe_candidate_titles():

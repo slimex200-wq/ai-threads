@@ -127,6 +127,19 @@ def test_freeform_allows_compact_but_valid_main_post():
     assert not any("post_main too short" in issue for issue in issues)
 
 
+def test_freeform_rejects_dense_threads_formatting():
+    content = _make_freeform_content()
+    content["replies"][0] = (
+        "\uc774 \uae00\uc740 \uccab \uc904\uc5d0\uc11c \uae30\uc900\uc744 \ubcf4\uc5ec\uc90d\ub2c8\ub2e4.\n"
+        "\ub450 \ubc88\uc9f8 \uc904\uc740 \uadf8 \uc774\uc720\ub97c \uc124\uba85\ud569\ub2c8\ub2e4.\n"
+        "\uc138 \ubc88\uc9f8 \uc904\uc740 \uc2e4\uc81c \uc791\uc5c5\uc5d0 \uc801\uc6a9\ud560 \uae30\uc900\uc744 \uc815\ub9ac\ud569\ub2c8\ub2e4."
+    )
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("visually dense for Threads" in issue for issue in issues)
+
+
 def test_legacy_informational_still_works():
     issues = _check_rules(_make_legacy_informational_content(), mode="informational")
     assert issues == []

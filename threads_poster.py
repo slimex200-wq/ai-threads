@@ -78,6 +78,12 @@ def get_reply_sequence(content: dict[str, Any], mode: str) -> list[dict[str, str
     return sequence
 
 
+def format_threads_display_text(text: str) -> str:
+    """Add visible breathing room for the narrow Threads timeline."""
+    lines = [line.strip() for line in str(text or "").replace("\r\n", "\n").replace("\r", "\n").split("\n")]
+    return "\n\n".join(line for line in lines if line)
+
+
 def _is_retryable(response: httpx.Response) -> bool:
     if response.status_code >= 500:
         return True
@@ -216,7 +222,7 @@ def post_thread(
     reply_sequence = get_reply_sequence(content, mode=mode)
 
     with httpx.Client(timeout=30.0) as client:
-        main_text = str(content.get("post_main", "")).strip()
+        main_text = format_threads_display_text(str(content.get("post_main", "")).strip())
 
         link = source_link or ""
         # Inline the source URL in the main text so it's clickable in the post.
@@ -295,7 +301,7 @@ def post_thread(
                 client,
                 user_id,
                 access_token,
-                reply["text"],
+                format_threads_display_text(reply["text"]),
                 parent_id,
                 reply["label"],
             )

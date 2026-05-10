@@ -3,7 +3,7 @@
 import pytest
 
 import threads_poster
-from threads_poster import REPLY_KEYS, REPLY_LABELS, get_reply_sequence, post_thread
+from threads_poster import REPLY_KEYS, REPLY_LABELS, format_threads_display_text, get_reply_sequence, post_thread
 
 
 def test_viral_reply_keys():
@@ -57,6 +57,12 @@ def test_get_reply_sequence_falls_back_to_legacy_keys():
         "compare",
         "summary",
     ]
+
+
+def test_format_threads_display_text_adds_visible_spacing():
+    text = "첫 문장\n둘째 문장\n\n셋째 문장"
+
+    assert format_threads_display_text(text) == "첫 문장\n\n둘째 문장\n\n셋째 문장"
 
 
 def test_post_thread_strict_video_does_not_fallback_to_text(monkeypatch):

@@ -152,7 +152,7 @@ Avoid:
 Style target:
 - Korean only, except proper nouns and product names
 - short declarative sentences
-- line breaks between sentences
+- visible blank lines between sentences or micro-paragraphs
 - one idea per line
 - calm, precise, slightly opinionated
 - no forced jokes
@@ -165,6 +165,8 @@ Style target:
 - no generic "AI 시대가 왔다" endings
 - no more than one emoji, preferably none
 - write with sparse rhythm: thesis, pause, concrete proof, implication, criterion
+- optimize for the actual narrow Threads timeline, not a Markdown preview
+- avoid 3~4 consecutive non-empty lines with no blank line; it looks cramped on Threads
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -173,6 +175,7 @@ Use what's there:
 # OUTPUT FORMAT
 Return JSON only.
 Important JSON safety rule: when post_main or a reply needs line breaks, use the literal token `<br>` inside the JSON string.
+Use `<br><br>` for visible paragraph gaps between sparse lines.
 Do not put raw newline characters inside JSON string values.
 The pipeline will convert `<br>` into real line breaks after parsing.
 
@@ -215,7 +218,8 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 - deep article with real mechanisms, tradeoffs, or examples: 11~16 replies
 - use 17~18 replies only when the article truly supports that much useful development
 - each reply: 45~360 Korean characters
-- use `<br>` inside post_main and replies to mark the sparse line-by-line rhythm
+- use `<br><br>` inside post_main and replies to create actual breathing room on Threads
+- most replies should read as 2~4 short visual paragraphs, not one compact block
 - every reply must be readable as its own post in the chain
 - each reply should explain, not just report; avoid turning the thread into a stack of verdict sentences
 - suggested reply arc, scaled to length:
@@ -461,8 +465,22 @@ def _ensure_required_fields(content: dict[str, Any], mode: str = "informational"
 def _normalize_line_break_tokens(value: Any) -> str:
     text = str(value or "").strip()
     text = re.sub(r"\s*<br\s*/?>\s*", "\n", text, flags=re.IGNORECASE)
-    lines = [line.strip() for line in text.splitlines()]
-    return "\n".join(line for line in lines if line)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    lines = [line.strip() for line in text.split("\n")]
+    cleaned: list[str] = []
+    previous_blank = False
+    for line in lines:
+        if not line:
+            if cleaned and not previous_blank:
+                cleaned.append("")
+                previous_blank = True
+            continue
+        cleaned.append(line)
+        previous_blank = False
+
+    while cleaned and cleaned[-1] == "":
+        cleaned.pop()
+    return "\n".join(cleaned)
 
 
 def _legacy_replies_from_content(content: dict[str, Any], mode: str) -> list[str]:

@@ -115,6 +115,16 @@ def _monotone_da_ratio(lines: list[str]) -> float:
     return sum(1 for line in korean_lines if _ends_with_da_family(line)) / len(korean_lines)
 
 
+def _is_dense_threads_block(text: str) -> bool:
+    if not _has_korean(text):
+        return False
+    normalized = str(text or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+    if len(normalized) < 70 or "\n\n" in normalized:
+        return False
+    non_empty_lines = [line.strip() for line in normalized.split("\n") if line.strip()]
+    return len(non_empty_lines) >= 3
+
+
 def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[str]:
     issues: list[str] = []
 
@@ -177,6 +187,10 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
         for pattern in _BANNED_PATTERNS:
             if pattern and pattern in text:
                 issues.append(f"{text_name} contains banned pattern: {pattern}")
+        if _is_dense_threads_block(text):
+            issues.append(
+                f"{text_name} is visually dense for Threads; use blank lines between short sentence blocks"
+            )
 
     da_ratio = _monotone_da_ratio(_non_empty_lines(texts_to_check))
     if da_ratio >= 0.72:
