@@ -1,55 +1,75 @@
 {
-  "selected_article": {
-    "original_title": "딥시크 창립자 량문펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
-    "link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
-    "reason": "구체적인 투자 규모(4조원)와 실질적인 제품 출시 일정(V4.1 6월), 상용화 전략 변화 등이 개발자들에게 실용적인 정보를 제공한다. 중국 AI 생태계의 변화를 보여주는 중요한 사례이기도 하다."
+  "content_brief": {
+    "topic": "피규어 AI Helix-02 휴머노이드 2대의 침실 정리 협업 데모",
+    "target_reader": "개발자 / 초보자 / 바이브 코더 / AI 제품을 보는 실무자",
+    "reader_problem": "휴머노이드 로봇 데모가 실제 기술 진전인지, 잘 만든 쇼케이스인지 구분하기 어렵다.",
+    "promise": "로봇 영상을 볼 때 무엇을 먼저 확인해야 하는지 자율성, 일반화, 협업 기준으로 정리해준다.",
+    "angle": "이번 영상의 핵심은 침대 정리가 아니라 두 로봇이 명시적 메시지 없이 상대 움직임을 보고 작업을 맞췄다는 점이다.",
+    "why_now": "피규어 AI가 Helix-02 로봇 2대로 실제 속도, 완전 자율, 단일 신경망 기반 침실 정리 데모를 공개했기 때문이다.",
+    "takeaway": "휴머노이드 데모를 볼 때는 원격 조종 여부, 전용 하드코딩 여부, 상대 행동 변화에 맞춘 조율 여부를 먼저 확인하면 된다."
   },
-  "post_main": "딥시크 창립자 량문펑이 자사 투자 라운드에 개인 자금 4조3천억원을 투자한다고 발표했다. 총 투자금의 40%를 혼자 감당하겠다는 것이다. 기업가치는 75조원을 넘을 전망이며, 이는 중국 AI 기업 사상 최대 규모다. 외부 투자 비중을 줄여서 연구의 자율성을 지키면서도 인재 확보 경쟁에서 뒤처지지 않겠다는 전략이다.",
+  "selected_article": {
+    "original_title": "피규어 AI, 휴머노이드 2대가 '눈치'로 2분 만에 침실 정리...'로봇 협업 새 지평'",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=210299",
+    "reason": "영상으로 이해하기 쉽고, 실제 속도·완전 자율·단일 신경망·명시적 메시지 없는 협업처럼 로봇 데모를 평가하는 실용 기준을 만들 수 있는 구체 정보가 많다.",
+    "evidence": "피규어 AI는 Helix-02 모델을 탑재한 휴머노이드 2대가 침실을 정리하는 영상을 공개했다. 한 로봇은 침대 위 코트와 책을 정돈하고, 다른 로봇은 노트북을 닫고 헤드폰을 걸어뒀다. 이후 둘은 침대 양쪽에서 베개와 이불을 정리했고, 2분도 채 안 되는 시간에 작업했다. 회사는 단일 학습된 신경망이 픽셀 데이터에서 직접 동작으로 다중 휴머노이드 협력 조작을 수행한 사례라고 설명했다. 명시적 메시지 교환이나 외부 통제 없이, 실제 속도와 완전 자율로 작동했다고 밝혔다. 침대 정리 전용 프로그램이 아니라 기존 식료품 정리나 공장 작업에 쓰던 동일 알고리즘에 데이터만 추가해 학습했다고 설명했다.",
+    "summary": "휴머노이드 로봇 2대가 협업, 침실을 정리하는 영상이 공개됐다. 피규어 AI는 이를 지능형 휴머노이드가 인간 환경에서 공통의 목표를 해결하기 위해 협력한 첫번째 사례라고 강조했다.피규어 AI는 8일(현지시간) '헬릭스(Helix)-02' 모델을 탑재한 로봇 2대가 침실을 정리하는 영상을 선보였다. 한대는 침대 위에 코트와 책을 정돈하고, 다른 한대는 노트북을 닫고 헤드폰을 걸어두는 등 책상 위를 정리한다. 그다음 나란히 침대 양쪽으로 이동해 베개를 정리하고 이불을 가지런히 정돈한다. 이 과정에서 두 로봇은 고갯짓을 통해 이불을 들어",
+    "details": "휴머노이드 로봇 2대가 협업, 침실을 정리하는 영상이 공개됐다. 피규어 AI는 이를 지능형 휴머노이드가 인간 환경에서 공통의 목표를 해결하기 위해 협력한 첫번째 사례라고 강조했다. 피규어 AI는 8일(현지시간) '헬릭스(Helix)-02' 모델을 탑재한 로봇 2대가 침실을 정리하는 영상을 선보였다. 한대는 침대 위에 코트와 책을 정돈하고, 다른 한대는 노트북을 닫고 헤드폰을 걸어두는 등 책상 위를 정리한다. 그다음 나란히 침대 양쪽으로 이동해 베개를 정리하고 이불을 가지런히 정돈한다. 이 과정에서 두 로봇은 고갯짓을 통해 이불을 들어 올리고, 제자리에 놓고, 다시 걷어내는 동작을 조율해 2분도 채 안 되는 시간에 깔끔하게 침실을 정리한다. 피규어 AI는 블로그를 통해 \"단일 학습된 신경망이 픽셀 단위의 데이터에서 직접 동작으로 다중 휴머노이드의 협력적 이동 조작을 수행하는 최초의 사례\"라고 설명했다. 이제까지 일반적으로 로봇은 '걷기'나 '물건 집기', '상황 판단' 등 여러개의 프로그램을 따로 만들어 통합하는 형태였다. 그러나 이 사례는 단일 AI로 모든 것을 한꺼번에 배웠다는 의미다. 또 로봇이 물체를 파악한 뒤 복잡하게 계산하는 중간 과정 없이, 인간처럼 픽셀을 보자마자 바로 행동을 결정했다는 뜻이다. 이를 '엔드-투-엔드 비전-행동 정책(End-to-End Vision-Action Policy)'라고 한다. 여기에 두 로봇이 메시지를 주고받거나 외부의 통제를 받은 것이 아니라, 상대방의 움직임을 확인하고 이에 맞춰 행동했다는 말이다. 실제로 로봇은 자신의 동작이 끝나면, 상대의 진행 상황을 지켜보고 있다가 타이밍을 맞추는 모습을 보여줬다. 피규어 AI는 이미 2025년 2월 2대의 로봇이 협력해 식료품을 정리하는 모습을 선보인 바 있다. 그러나 이번 침대 정리는 몇가지 요인 때문에 로봇에게는 매우 어려운 일이라고 전했다. 우선 두 로봇은 단순히 따로 작동하는 것이 아니라, 한쪽이 하는 모든 행동을 다른 로봇이 이해해야 한다. 또 이불은 고정된 형태가 없어, 로봇이 이불의 주름을 인식하고 당길 때 생기는 장력을 실시간으로 계산해 반응하는 것은 로봇 공학의 난제였다. 여기에 로봇은 침실에서 여러 동작을 선보였는데, 이는 수천번의 연속적인 정확한 판단이 필요하다는 것이다. 코리 린치 피규어 AI 담당 이사는 X를 통해 \"이 로봇들 사이에는 명시적인 메시지 교환이 없다. 고개를 끄덕이는 등의 시각적인 움직임을 통해 모든 동작을 조율한다\"라고 밝혔다. 또 영상은 실제 속도로 재생됐고, 원격 조종 없이 완전 자율적으로 작동했다고 강조했다. 이처럼 피규어의 로봇은 침대 정리 전용으로 프로그래밍된 게 아니다. 기존에 식료품 정리나 공장에서 쓰던 동일한 알고리즘에 데이터만 추가했을 뿐인데 침대 정리를 학습했다는 점이 혁신적이다. 이는 로봇이 새로운 환경에 투입될 확장성을 크게 높여준다. 또 단일 신경망이 초당 수십번씩 상황을 업데이트하며 반응, 속도 측면에서도 큰 진보를 이뤄낸 것으로 볼 수 있다. 이 회사는 지난 2월 출시한 헬릭스 02를 새로운 데이터로 훈련, 문 열기나 가구 밀기, 옷 걸쳐주기 등 더 복잡한 작업을 처리할 수 있도록 했다고 밝힌 바 있다. 그리고 이날에는 협업 장면까지 선보인 것이다. 또 브렛 애드콕",
+    "source": "AI타임스 - 전체기사"
+  },
+  "post_main": "휴머노이드 영상은 손재주보다 '조율 방식'을 먼저 보세요.\n피규어 AI의 새 데모는 로봇 2대가 침실을 2분 안에 정리한 장면입니다.\n핵심은 빠른 집안일이 아니라, 실제 속도와 완전 자율 협업이에요.",
   "replies": [
-    "이번 대규모 투자의 배경에는 투자자들의 압박이 있었다. 딥시크의 '느린 모델 출시 속도'와 수익 창출 능력에 대한 우려가 제기되자, 회사는 업계 평균에 맞춰 출시를 가속화하기로 했다.",
-    "출시 가속화의 첫 결과로 V4.1이 6월 출시된다. 기업용 도구 추가, MCP(모델 컨텍스트 프로토콜) 지원 향상이 핵심이다. 초기엔 텍스트 생성만 지원하고, 이후 이미지/오디오 처리까지 확장할 예정이다.",
-    "이런 변화는 량 창립자의 경영 철학 전환을 보여준다. 기술 이상주의자로 알려진 그가 상업적 현실을 받아들이기 시작한 것이다. 직원 보상을 위한 주식 옵션 발행도 검토 중이라고 한다."
+    "겉으로는 그냥 방을 치운 영상처럼 보입니다.\n한 대는 침대 위 코트와 책을 정리하고, 다른 한 대는 노트북을 닫고 헤드폰을 걸어둡니다.\n그다음 둘이 침대 양쪽에서 베개와 이불을 맞춰요.",
+    "여기서 볼 건 작업 목록이 아닙니다.\n두 로봇이 같은 공간에서 서로의 진행 상황을 보고 타이밍을 맞췄다는 점입니다.\n혼자 잘하는 로봇과 같이 일하는 로봇은 다른 문제니까요.",
+    "피규어 AI 설명에 따르면 명시적인 메시지 교환은 없었습니다.\n외부에서 원격 조종한 것도 아니라고 했고요.\n고개를 끄덕이는 식의 시각적 움직임을 보고 동작을 조율했다는 설명입니다.",
+    "쉽게 말하면, 로봇끼리 별도 채팅방을 연 게 아닙니다.\n상대 로봇의 몸짓과 현재 상황을 보고 다음 행동을 고른 쪽에 가깝습니다.\n사람이 같이 이불 정리할 때 쓰는 그 '눈치'와 비슷한 층위예요.",
+    "기술적으로는 엔드-투-엔드 비전-행동 정책이라는 말이 나옵니다.\n카메라 픽셀을 보고, 여러 손계산 규칙을 중간에 길게 붙이기보다, 행동으로 바로 이어가는 방식입니다.\n어려운 말이지만 방향은 단순합니다. 보는 것에서 움직임까지 한 덩어리로 배우는 것.",
+    "이전 로봇 시스템은 걷기, 집기, 판단 같은 기능을 따로 만들고 이어 붙이는 경우가 많았습니다.\n이번 주장은 다릅니다.\n단일 학습 신경망이 픽셀 데이터에서 다중 휴머노이드 협력 조작까지 이어졌다는 이야기입니다.",
+    "침대 정리가 까다로운 이유도 분명합니다.\n이불은 상자처럼 모양이 고정돼 있지 않아요.\n주름, 당기는 힘, 상대 로봇의 움직임이 계속 바뀝니다.\n그래서 둘 중 하나만 잘 움직여서는 부족합니다.",
+    "더 중요한 포인트는 전용 프로그램이 아니라는 설명입니다.\n피규어는 기존에 식료품 정리나 공장 작업에 쓰던 같은 알고리즘에 데이터만 추가해 침대 정리를 학습했다고 밝혔습니다.\n여기서 일반화 가능성을 보게 됩니다.",
+    "그래서 질문을 바꿔야 합니다.\n'집안일 로봇이 곧 오나?'보다 먼저 볼 건 이겁니다.\n같은 정책이 다른 물체, 다른 공간, 다른 파트너 앞에서도 버틸 수 있는가.",
+    "다음 휴머노이드 영상을 볼 때는 세 가지만 확인하면 됩니다.\n원격 조종이 아닌가.\n특정 작업용 하드코딩이 아닌가.\n상대 로봇이나 사람의 행동 변화에 맞춰 스스로 조율하는가.\n멋진 영상인지보다, 반복 가능한 정책인지가 핵심입니다."
   ],
   "media_plan": {
     "preferred_type": "video",
-    "search_query": "DeepSeek V4 coding demo",
-    "reason": "딥시크 V4의 실제 코딩 성능 데모 영상이 있다면, 독자들이 V4.1에서 기대할 수 있는 개선 사항을 미리 확인할 수 있다"
+    "search_query": "Figure AI Helix 02 two humanoid robots bedroom cleanup demo",
+    "reason": "이 글의 핵심은 두 휴머노이드가 실제 공간에서 시각적 신호로 협업하는 장면이라 영상이 가장 직접적인 증거가 된다."
   },
   "topic_tag": "ai.threads",
-  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
-  "og_image": "https://cdn.aitimes.com/news/photo/202605/210296_212923_043.jpg",
-  "video_url": "",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210299",
+  "og_image": "https://cdn.aitimes.com/news/photo/202605/210299_212927_4550.jpg",
+  "video_url": "https://rr2---sn-3u-bh2zz.googlevideo.com/videoplayback?expire=1778419860&ei=NDQAaruuL_jE1d8P1uD24Ag&ip=121.135.149.182&id=o-AK24eAsuroOGouTFS2aDFIVNalG3Tk09A13ucfaKml6v&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=391&met=1778398260%2C&mh=_v&mm=31%2C26&mn=sn-3u-bh2zz%2Csn-ojnpo5-5o&ms=au%2Conr&mv=m&mvi=2&pcm2cms=yes&pl=20&rms=au%2Cau&initcwndbps=3922500&bui=AbKmrwqh4EKl0ghhRRTdPa-F0I6sw-Fm_UwDxmycB5axNKpg1cGqE8sTEVChgFdugTfWWtfFf-a6UA1p&spc=96Xrv5Q2qZfwgLraMqRC92jhE3OZsu8f4vty10tn7l8o8PtoXRTk&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=8081853&ratebypass=yes&dur=133.909&lmt=1778392464051464&mt=1778397641&fvip=4&fexp=51565116%2C51565681&c=ANDROID_VR&txp=4438534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AHEqNM4wRAIgaWvhb12BUeCtqSJKdsdxqWht1YwYgOz3qr3mPdHNflQCIB0LmoKjoNtgq2fSsX-7Y5xJry2NVyFnM2c5y2YBwo3h&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIhALKS20DMjxG-jNxO2SsMTBHvGq0StsXB90b5L8VqSMWeAiBm_TBumILdKsthvoglvJcLxR07H73IAeRclBfRUuYKJg%3D%3D",
   "mode": "informational",
   "candidate_articles": [
     {
-      "title": "So you’ve heard these AI terms and nodded along; let’s fix that",
-      "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
-      "link": "https://techcrunch.com/2026/05/09/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+      "title": "Voice AI in India is hard. Wispr Flow is betting on it anyway.",
+      "summary": "Wispr Flow says growth accelerated in India after its Hinglish rollout, even as voice AI products continue to face challenges.",
+      "link": "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/",
       "source": "AI News & Artificial Intelligence | TechCrunch",
-      "published": "Sat, 09 May 2026 21:45:00 +0000",
-      "date": "2026-05-09",
-      "candidate_score": 8.079,
-      "details": "The first StrictlyVC of 2026 hits SF on April 30. Tickets are going fast. Register now. Buy one Disrupt pass, and get the second at 50% off. Ends May 8. Register now. Artificial intelligence is changing the world, and simultaneously inventing a whole new language to describe how it’s doing it. Spend five minutes reading about AI and you’ll run into LLMs, RAG, RLHF, and a dozen other terms that can make even very smart people in the tech world feel insecure. This glossary is our attempt to fix that. We update it regularly as the field evolves, so consider it a living document, much like the AI systems it describes. Artificial general intelligence, or AGI, is a nebulous term. But it generally refers to AI that’s more capable than the average human at many, if not most, tasks. OpenAI CEO Sam Altman once described AGI as the “equivalent of a median human that you could hire as a co-worker .” Meanwhile, OpenAI’s charter defines AGI as “highly autonomous systems that outperform humans at most economically valuable work.” Google DeepMind’s understanding differs slightly from these two definitions; the lab views AGI as “AI that’s at least as capable as humans at most cognitive tasks.” Confused? Not to worry — so are experts at the forefront of AI research . An AI agent refers to a tool that uses AI technologies to perform a series of tasks on your behalf — beyond what a more basic AI chatbot could do — such as filing expenses, booking tickets or a table at a restaurant, or even writing and maintaining code. However, as we’ve explained before , there are lots of moving pieces in thi"
+      "published": "Sun, 10 May 2026 02:00:00 +0000",
+      "date": "2026-05-10",
+      "candidate_score": 10.487,
+      "details": "India’s internet users already rely heavily on voice notes, voice search, and multilingual messaging. Turning those habits into a scalable AI business, however, remains difficult because of the country’s linguistic complexity, mixed-language usage, and uneven monetization patterns. Wispr Flow is betting the opportunity is worth the challenge. The Bay Area-headquartered startup, which builds AI-powered voice input software, says India is now its fastest-growing market, even though voice-based AI products remain early and fragmented in the South Asian nation. That growth has pushed Wispr Flow to expand more aggressively for Indian users, beginning with Hinglish — a hybrid mix of Hindi and English commonly spoken by locals. The startup is also planning broader multilingual voice support, a local hiring push, and, eventually, lower pricing as it looks to expand beyond white-collar users and into Indian households. Earlier waves of voice technology in India — from digital assistants to WhatsApp voice notes — largely revolved around convenience. AI startups such as Wispr Flow are now betting that generative AI can turn those habits into a broader computing layer. To make the product more relevant for Indian users, Wispr Flow began beta testing a Hinglish voice model earlier this year and launched on Android — India’s dominant mobile operating system — after initially debuting on Mac and Windows before expanding to iOS in 2025. Co-founder and CEO Tanay Kothari told TechCrunch that the startup initially saw adoption in India largely among white-collar professionals such as managers"
     },
     {
-      "title": "딥시크 창립자 량원펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
-      "summary": "량원펑 창립자가 딥시크의 첫번째 투자 라운드에 최대 200억위안(약 4조3130억원), 즉 총투자금의 40%를 개인적으로 투자할 예정으로 알려졌다. 디 인포메이션은 8일(현지시간) 소식통을 인용, 량원펑 창립자가 이번 투자 라운드에서 최대 투자자가 될 가능성이 있다고 보도했다.중국 국가인공지능산업투자펀드가 이번 투자 라운드에서 두번째로 큰 규모의 투자자가 될 것으로 예상됐다. 딥시크는 최소 30억위안(약 6470억원)의 투자를 요청한 것으로 전해졌다.알려진 대로, 이번 투자 유치는 평가된 기업 가치를 바탕으로 딥시크 직원들의 보상",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
+      "title": "엔비디아, 올해 투자 벌써 58.6조 돌파…\"전년 규모 넘어선 공급망 장악\"",
+      "summary": "엔비디아의 올해 투자액이 400억달러(약 58조6200억원)를 돌파한 것으로 집계됐다. 이는 이미 전년도 연간 투자액을 넘어선 수치로, 칩 제조를 넘어 AI 공급망 전반으로 지배력을 확장하려는 움직임이 가속화되고 있다.9일(현지시간) CNBC에 따르면, 엔비디아는 이미 400억달러 이상의 투자 약정을 확보하고 상장 기업 주식을 포트폴리오에 포함하는 등 올해 들어 투자 범위를 더 확대하고 있다.가장 큰 비중을 차지한 것은 오픈AI에 300억달러(약 44조원)를 투자한 것이다. 이전에는 앤트로픽과 xAI의 대규모 투자에도 참여했다.나머",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210301",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-05-09 21:04:17",
-      "date": "2026-05-09",
-      "candidate_score": 7.079,
-      "details": "량원펑 창립자가 딥시크의 첫번째 투자 라운드에 최대 200억위안(약 4조3130억원), 즉 총투자금의 40%를 개인적으로 투자할 예정으로 알려졌다. 디 인포메이션은 8일(현지시간) 소식통을 인용, 량원펑 창립자가 이번 투자 라운드에서 최대 투자자가 될 가능성이 있다고 보도했다. 중국 국가인공지능산업투자펀드가 이번 투자 라운드에서 두번째로 큰 규모의 투자자가 될 것으로 예상됐다. 딥시크는 최소 30억위안(약 6470억원)의 투자를 요청한 것으로 전해졌다. 알려진 대로, 이번 투자 유치는 평가된 기업 가치를 바탕으로 딥시크 직원들의 보상 규모를 책정하려는 것이 주 목적이다. 이 때문에 량 창립자는 외부 투자 비중을 줄여 기업의 자율적인 연구 분위기를 유지하려는 것으로 볼 수 있다. 이번 라운드는 최대 500억위안(약 10조7800억원)을 유치하는 것이 목표로, 기업 가치는 3500억위안(약 75조4700억원)을 넘어설 것으로 예상되고 있다. 이는 중국 AI 기업 사상 최대 규모의 투자 라운드다. 이날 사우스차이나모닝포스트도 500억달러(약 73조2750억원) 가치로 투자 라운드 마무리가 임박했다고 보도했다. 이에 따르면, 중국 국가인공지능산업투자펀드와 글로벌 투자회사 힐하우스, 텐센트가 이번 투자 라운드에 참여했다. 또, 이번 투자 유치로 딥시크는 수익 창출과 상업화 계획을 가속화하고 있다는 분석이다. 관계자에 따르면, 딥시크는 최근 투자자들에게 업계 평균에 맞춰 모델 출시 속도를 높일 계획이라고 밝혔다. 기업 가치가 급격히 상승하고 있음에도 불구하고, 딥시크와 대화를 나눈 투자자들은 회사의 지속적인 수익 창출 능력과 모델 출시 속도에 대한 우려를 제기했다. 따라서 딥시크는 기술을 유료 제품과 서비스로 전환하는 작업을 진행 중이다. 딥시크 직원들은 이미 다양한 산업 분야의 기업들을 대상으로 사업 모델을 홍보하며 관심을 유도하고 있다. 또, 바이트댄스의 제품 개발팀과 다른 중국 IT 기업 출신 인력을 영입했다. 관계자들은 '딥시크-V4'의 후속 버전인 'V4.1'을 6월 중 출시할 예정이라고 전했다. V4.1은 기업 사용자를 위한 더 많은 도구와 모델 컨텍스트 프로토콜(MCP)에 대한 향상된 지원을 제공할 예정이다. 또, 이미지와 오디오를 처리할 수 있도록 개발할 계획이지만, 초기에는 텍스트 생성만 가능할 것으로 알려졌다. 딥시크의 이번 투자 유치와 상용화 노력은 회사에 있어 중대한 전환점을 의미한다는 평이다. 기술 이상주의자로 알려진 량 창립자는 딥시크를 상업적 압력으로부터 자유롭게 유지하고자 했다. 하지만 컴퓨팅 비용이 상승하고 최고 인재 확보 경쟁이 심화함에 따라 이러한 접근 방식은 점점 어려워지고 있다. 이번 자금 유치로 컴퓨팅 역량에 더 많이 투자하고 직원들에게 더 높은 임금을 지급할 수 있는 것은 물론, 직원 보상을 보충하기 위해 주식 옵션을 발행하기 시작할 수도 있다. 딥시크가 챗봇 앱을 통해 구독료를 부과하거나 광고를 판매하는 방식으로 수익을 창출할 계획이 있는지는 불분명하다. 앱은 2025년 초에 인기가 급증했지만, 현재 다른 기업에 밀린 상태다. 시장 분석 사이트에 따르면, 딥시크 앱의 월간 활성 사용자(MAU)는 4월 기준 1억3900만명으로, 바이트댄스의 '더우바오'와 알리바바의 '큐원' '쿼크'"
+      "published": "2026-05-10 13:32:11",
+      "date": "2026-05-10",
+      "candidate_score": 7.687,
+      "details": "엔비디아의 올해 투자액이 400억달러(약 58조6200억원)를 돌파한 것으로 집계됐다. 이는 이미 전년도 연간 투자액을 넘어선 수치로, 칩 제조를 넘어 AI 공급망 전반으로 지배력을 확장하려는 움직임이 가속화되고 있다. 9일(현지시간) CNBC에 따르면, 엔비디아는 이미 400억달러 이상의 투자 약정을 확보하고 상장 기업 주식을 포트폴리오에 포함하는 등 올해 들어 투자 범위를 더 확대하고 있다. 가장 큰 비중을 차지한 것은 오픈AI에 300억달러(약 44조원)를 투자한 것이다. 이전에는 앤트로픽과 xAI의 대규모 투자에도 참여했다. 나머지 100억달러는 코닝(광섬유), 아이렌(데이터센터)를 비롯해 마벨·루멘텀(광학 기술), 코어위브·네비우스(네오클라우드) 등 인프라 기업들에 전략적으로 배분됐다. 이처럼 올해 상장 기업에는 최소 7건, 비상장 기업에는 약 24건의 투자에 참여했다. 젠슨 황 CEO는 지난 4월 팟캐스트에서 ”훌륭하고 놀라운 파운데이션 모델 기업들이 너무나 많고, 우리는 그 모든 기업에 투자하려고 노력한다”라며 ”우리는 특정 기업을 선택해서 성공시키는 것이 아니라, 모두를 지원해야 한다”라고 말했다. 엔비디아는 몇년부터 이미 업체 최대의 투자자로 꼽혀왔다. 2024년 155억달러, 2025년 350억달러였던 투자 규모는 올해 상반기에만 이미 400억 달러를 돌파하며 가파른 상승 곡선을 그리고 있다. 투자 성과도 눈부시다. 1월 말 기준 비상장 투자 자산은 222억5000만달러로 전년 대비 6배 이상 급증했으며, 특히 인텔 지분 투자 가치가 수개월 만에 5배(수익률 400%)로 불어나며 막대한 평가 이익을 거뒀다. 이처럼 전체 AI 공급망에 자금을 지원하며 영향력을 확대하고 있지만, '순환 투자(Circular Investment)'에 대한 경계론도 만만치 않다. 매튜 브라이슨 웨드부시 증권 애널리스트는 \"엔비디아가 준 돈으로 고객사가 GPU를 사는 구조\"라며 수요의 진정성에 의문을 제기했다. 벤 바자린 애널리스트도 \"시장 상황이 반전되면 이 자금 지원이 독이 될 수 있다\"라고 경고했다. 한편, 엔비디아는 오는 20일 실적 발표를 앞두고 있다. 여기에서는 투자 기업들에 대한 구체적인 지분율과 평가 손익이 투명하게 공개될지가 관전 포인트다."
     },
     {
-      "title": "\"엔비디아 'H200' 탑재 서버, 태국 거쳐 알리바바 밀반입 의심\"",
-      "summary": "엔비디아의 고급 칩이 탑재된 AI 서버가 태국을 통해 중국의 알리바바로 흘러 들어갔다는 소식이 전해졌다. 알리바바와 태국 기업은 이를 강력하게 부인했다.블룸버그는 8일(현지시간) 관계자를 인용, 태국의 국가 AI 개발 사업에 핵심적인 역할을 하는 한 기업이 엔비디아의 'H200' 칩이 탑재된 슈퍼마이크로컴퓨터 서버 수십억달러 어치를 중국으로 밀반출하는 데 가담한 혐의를 받고 있다고 보도했다. 여러 최종 고객 중에는 알리바바도 포함됐다.앞서 미국 법무부는 지난 3월 슈퍼마이크로의 공동 창립자가 익명의 동남아시아 회사 및 여러 제3자",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=210295",
+      "title": "피규어 AI, 휴머노이드 2대가 '눈치'로 2분 만에 침실 정리...\"로봇 협업 새 지평\"",
+      "summary": "휴머노이드 로봇 2대가 협업, 침실을 정리하는 영상이 공개됐다. 피규어 AI는 이를 지능형 휴머노이드가 인간 환경에서 공통의 목표를 해결하기 위해 협력한 첫번째 사례라고 강조했다.피규어 AI는 8일(현지시간) '헬릭스(Helix)-02' 모델을 탑재한 로봇 2대가 침실을 정리하는 영상을 선보였다. 한대는 침대 위에 코트와 책을 정돈하고, 다른 한대는 노트북을 닫고 헤드폰을 걸어두는 등 책상 위를 정리한다. 그다음 나란히 침대 양쪽으로 이동해 베개를 정리하고 이불을 가지런히 정돈한다. 이 과정에서 두 로봇은 고갯짓을 통해 이불을 들어",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210299",
       "source": "AI타임스 - 전체기사",
-      "published": "2026-05-09 20:11:42",
-      "date": "2026-05-09",
-      "candidate_score": 7.079,
-      "details": "엔비디아의 고급 칩이 탑재된 AI 서버가 태국을 통해 중국의 알리바바로 흘러 들어갔다는 소식이 전해졌다. 알리바바와 태국 기업은 이를 강력하게 부인했다. 블룸버그는 8일(현지시간) 관계자를 인용, 태국의 국가 AI 개발 사업에 핵심적인 역할을 하는 한 기업이 엔비디아의 'H200' 칩이 탑재된 슈퍼마이크로컴퓨터 서버 수십억달러 어치를 중국으로 밀반출하는 데 가담한 혐의를 받고 있다고 보도했다. 여러 최종 고객 중에는 알리바바도 포함됐다. 앞서 미국 법무부는 지난 3월 슈퍼마이크로의 공동 창립자가 익명의 동남아시아 회사 및 여러 제3자 브로커와 공모해 미국 정부의 규정을 어기고 AI 반도체를 빼돌렸다고 발표했다. 당시 '회사 1'로만 지칭한 동남아시아 회사는 방콕의 오본(OBON)이라고 소식통은 전했다. 소식통에 따르면, 오본에 판매된 25억 달러 상당의 서버 중 일부가 알리바바에 넘어갔다. 특히 오본의 서버 수입은 미국이 태국에 대한 AI 칩 판매 허가제 도입을 검토하던 2025년 상반기에 급격히 증가한 것으로 나타났다. 이번 사건은 미국이 2022년 엔비디아 칩의 중국 판매를 처음으로 제한한 이후 가장 중요한 반도체 밀수 사건으로 꼽힌다. 미 법무부의 기소장에 오본이나 알리바바의 이름은 명시되지 않았으며, 당국도 이들을 공식적으로 범죄 혐의로 기소하지 않았다. 이번 사건을 기소한 뉴욕 남부 지방 검찰청과 수사에 핵심적인 역할을 한 상무부 산업안보국 대변인은 모두 논평을 거부했다. 현재 미 상무부의 요청에 따라 오본에 대한 모든 서버 선적은 중단된 상태다. 알리바바 대변인은 \"알리바바는 슈퍼 마이크로, 오본 또는 문제의 기소장에 언급되었을 수 있는 제3자 브로커와 어떠한 사업 관계도 없다\"라며 \"우리는 혐의를 받는 밀수 활동에 전혀 관여하지 않았다. 우리의 데이터센터에서는 현재 금지된 엔비디아 칩을 사용하고 있지 않으며, 과거에도 사용한 적이 없다\"라고 밝혔다. 오본은 2024년 5월 태국의 클라우드 인프라 기업 시암 AI(Siam AI)를 설립했다. 이 회사는 태국 최초로 엔비디아 클라우드 파트너로 선정됐고, 소버린 AI에 초점을 맞춘 행사에서 젠슨 황 엔비디아 CEO를 초청했다. 태국 억만장자이자 전 총리 탁신 시나와트라의 조카인 라타나폰은 2024년 5월까지 오본의 CEO를 역임했다고 회사는 밝혔다. 오본과 시암 AI가 현재까지 사업적 관계를 유지하고 있는지는 불분명하다. 라타나폰은 시암 AI를 설립하면서 오본을 떠났기 때문에 중국에 반도체 칩을 밀수했다는 미국의 의혹에 대해서는 언급할 수 없다고 말했다. 그는 \"시암 AI는 이 사건과 아무런 관련이 없다\"라며 \"미국의 모든 수출입 통제 법규를 철저히 준수하기 위해 최선을 다하고 있다\"라고 밝혔다. 블룸버그는 오본이 밀수 공모에 연루됐다는 의혹은 태국의 AI 산업에 타격을 줄 뿐만 아니라, 미국 정부가 태국에 대한 반도체 판매 제한 요구를 다시 불러일으킬 수 있다고 지적했다. 미국은 과거 3차례에 걸쳐 태국에 대한 반도체 수출 통제 방안을 검토하거나 계획했으며 밀수 문제를 해결하기 위한 초안까지 마련했지만, 실제로 시행된 적은 없다. 엔비디아 대변인은 \"우리 파트너들은 모든 단계에서 엄격한 규정 준수에 전념해야 한다\"라며 \"우리의 철저한 조사 노력으로 밀수"
+      "published": "2026-05-10 11:48:58",
+      "date": "2026-05-10",
+      "candidate_score": 7.687,
+      "details": "휴머노이드 로봇 2대가 협업, 침실을 정리하는 영상이 공개됐다. 피규어 AI는 이를 지능형 휴머노이드가 인간 환경에서 공통의 목표를 해결하기 위해 협력한 첫번째 사례라고 강조했다. 피규어 AI는 8일(현지시간) '헬릭스(Helix)-02' 모델을 탑재한 로봇 2대가 침실을 정리하는 영상을 선보였다. 한대는 침대 위에 코트와 책을 정돈하고, 다른 한대는 노트북을 닫고 헤드폰을 걸어두는 등 책상 위를 정리한다. 그다음 나란히 침대 양쪽으로 이동해 베개를 정리하고 이불을 가지런히 정돈한다. 이 과정에서 두 로봇은 고갯짓을 통해 이불을 들어 올리고, 제자리에 놓고, 다시 걷어내는 동작을 조율해 2분도 채 안 되는 시간에 깔끔하게 침실을 정리한다. 피규어 AI는 블로그를 통해 \"단일 학습된 신경망이 픽셀 단위의 데이터에서 직접 동작으로 다중 휴머노이드의 협력적 이동 조작을 수행하는 최초의 사례\"라고 설명했다. 이제까지 일반적으로 로봇은 '걷기'나 '물건 집기', '상황 판단' 등 여러개의 프로그램을 따로 만들어 통합하는 형태였다. 그러나 이 사례는 단일 AI로 모든 것을 한꺼번에 배웠다는 의미다. 또 로봇이 물체를 파악한 뒤 복잡하게 계산하는 중간 과정 없이, 인간처럼 픽셀을 보자마자 바로 행동을 결정했다는 뜻이다. 이를 '엔드-투-엔드 비전-행동 정책(End-to-End Vision-Action Policy)'라고 한다. 여기에 두 로봇이 메시지를 주고받거나 외부의 통제를 받은 것이 아니라, 상대방의 움직임을 확인하고 이에 맞춰 행동했다는 말이다. 실제로 로봇은 자신의 동작이 끝나면, 상대의 진행 상황을 지켜보고 있다가 타이밍을 맞추는 모습을 보여줬다. 피규어 AI는 이미 2025년 2월 2대의 로봇이 협력해 식료품을 정리하는 모습을 선보인 바 있다. 그러나 이번 침대 정리는 몇가지 요인 때문에 로봇에게는 매우 어려운 일이라고 전했다. 우선 두 로봇은 단순히 따로 작동하는 것이 아니라, 한쪽이 하는 모든 행동을 다른 로봇이 이해해야 한다. 또 이불은 고정된 형태가 없어, 로봇이 이불의 주름을 인식하고 당길 때 생기는 장력을 실시간으로 계산해 반응하는 것은 로봇 공학의 난제였다. 여기에 로봇은 침실에서 여러 동작을 선보였는데, 이는 수천번의 연속적인 정확한 판단이 필요하다는 것이다. 코리 린치 피규어 AI 담당 이사는 X를 통해 \"이 로봇들 사이에는 명시적인 메시지 교환이 없다. 고개를 끄덕이는 등의 시각적인 움직임을 통해 모든 동작을 조율한다\"라고 밝혔다. 또 영상은 실제 속도로 재생됐고, 원격 조종 없이 완전 자율적으로 작동했다고 강조했다. 이처럼 피규어의 로봇은 침대 정리 전용으로 프로그래밍된 게 아니다. 기존에 식료품 정리나 공장에서 쓰던 동일한 알고리즘에 데이터만 추가했을 뿐인데 침대 정리를 학습했다는 점이 혁신적이다. 이는 로봇이 새로운 환경에 투입될 확장성을 크게 높여준다. 또 단일 신경망이 초당 수십번씩 상황을 업데이트하며 반응, 속도 측면에서도 큰 진보를 이뤄낸 것으로 볼 수 있다. 이 회사는 지난 2월 출시한 헬릭스 02를 새로운 데이터로 훈련, 문 열기나 가구 밀기, 옷 걸쳐주기 등 더 복잡한 작업을 처리할 수 있도록 했다고 밝힌 바 있다. 그리고 이날에는 협업 장면까지 선보인 것이다. 또 브렛 애드콕"
     },
     {
       "title": "Time to add option in Hacker News \"AI excluded Show HN\"",
@@ -67,7 +87,34 @@
       "link": "https://polymarket.com/event/425315",
       "date": "2026-05-08",
       "engagement": 0,
-      "candidate_score": -14.721
+      "candidate_score": -15.113
+    },
+    {
+      "title": "Which AI company will have the second-highest revenue May 11-17?",
+      "summary": "This market will resolve according to the model family that has the second-highest total estimated inference revenue based on Anera's data published at https://anera.markets/intelligence/model-family for the specified week.\n\nThe week’s values will be determined by summing the respective companies' estimated revenue figures for each day within the specified period. If data for all specified days is",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/462466",
+      "date": "2026-05-10",
+      "engagement": 0,
+      "candidate_score": -18.513
+    },
+    {
+      "title": "Best AI model on May 16? (Style Control Off)",
+      "summary": "This market will resolve according to the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on the specified date, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will be used to resolv",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/462458",
+      "date": "2026-05-10",
+      "engagement": 0,
+      "candidate_score": -18.513
+    },
+    {
+      "title": "What will be said during the 2026 Sidemen Charity Match?",
+      "summary": "The 2026 Sidemen Charity Match is scheduled for April 18, 2026.\n\nThis market will resolve to \"Yes\" if the listed term is mentioned by anyone during the official English broadcast of the 2026 Sidemen Charity Match. Otherwise, this market will resolve to \"No\".\n\nIf prerecorded clips are aired where people are speaking, those clips will count toward this market's resolution.\n\nAI-generated audio or vid",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/379214",
+      "date": "2026-05-10",
+      "engagement": 0,
+      "candidate_score": -18.513
     },
     {
       "title": "Trump orders federal review of AI model releases by May 31?",
@@ -76,43 +123,16 @@
       "link": "https://polymarket.com/event/449384",
       "date": "2026-05-08",
       "engagement": 0,
-      "candidate_score": -18.321
-    },
-    {
-      "title": "Which AI company will have the second-highest revenue May 11-17?",
-      "summary": "This market will resolve according to the model family that has the second-highest total estimated inference revenue based on Anera's data published at https://anera.markets/intelligence/model-family for the specified week.\n\nThe week’s values will be determined by summing the respective companies' estimated revenue figures for each day within the specified period. If data for all specified days is",
-      "source": "Polymarket",
-      "link": "https://polymarket.com/event/462466",
-      "date": "2026-05-09",
-      "engagement": 0,
-      "candidate_score": -19.121
-    },
-    {
-      "title": "Best AI model on May 16? (Style Control Off)",
-      "summary": "This market will resolve according to the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on the specified date, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will be used to resolv",
-      "source": "Polymarket",
-      "link": "https://polymarket.com/event/462458",
-      "date": "2026-05-09",
-      "engagement": 0,
-      "candidate_score": -19.121
-    },
-    {
-      "title": "What will be said during the 2026 Sidemen Charity Match?",
-      "summary": "The 2026 Sidemen Charity Match is scheduled for April 18, 2026.\n\nThis market will resolve to \"Yes\" if the listed term is mentioned by anyone during the official English broadcast of the 2026 Sidemen Charity Match. Otherwise, this market will resolve to \"No\".\n\nIf prerecorded clips are aired where people are speaking, those clips will count toward this market's resolution.\n\nAI-generated audio or vid",
-      "source": "Polymarket",
-      "link": "https://polymarket.com/event/379214",
-      "date": "2026-05-09",
-      "engagement": 0,
-      "candidate_score": -19.121
+      "candidate_score": -18.713
     },
     {
       "title": "Which company has the best AI model end of May?",
       "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will b",
       "source": "Polymarket",
       "link": "https://polymarket.com/event/376520",
-      "date": "2026-05-09",
+      "date": "2026-05-10",
       "engagement": 0,
-      "candidate_score": -27.121
+      "candidate_score": -26.513
     }
   ],
   "engagement_patterns": {
@@ -214,24 +234,13 @@
   },
   "qa": {
     "passed": true,
-    "score": 0.72,
-    "issues": [
-      "[AI] 투자자 압박과 '느린 모델 출시 속도' 관련 내용이 원문에 명시되지 않아 정확성 우려",
-      "[AI] 기업가치 75조원과 투자 비율 계산이 원문 근거 부족",
-      "[AI] MCP 지원 향상 등 구체적 기술 내용이 원문에서 확인되지 않음"
-    ],
+    "score": 0.98,
+    "issues": [],
     "suggestions": [
-      "원문에서 확인되지 않는 세부사항들을 제거하고 확실한 정보만 포함",
-      "4조원 투자 결정의 배경을 추측보다는 공개된 사실 위주로 서술",
-      "V4.1 출시 정보를 더 간결하게 정리하되 원문 근거 명확히 할 것",
-      "개발자 타겟 독자를 위해 기술적 의미나 업계 영향을 더 구체적으로 설명"
+      "Helix-02 이름을 본문 초반에 한 번 넣으면 기사 고유성이 더 살아납니다.",
+      "8번의 일반화 설명은 강한 주장처럼 보일 수 있으니 '가능성을 보게 됩니다'보다 '가능성의 근거로 볼 수 있습니다' 정도로 낮추면 더 안전합니다.",
+      "5번의 기술 설명은 좋지만 '손계산 규칙' 표현은 약간 구어적이라 '분리된 규칙 모듈'처럼 바꾸면 개발자 독자에게 더 정확하게 읽힙니다."
     ]
   },
-  "posting_result": {
-    "post_id": "18022872368654570",
-    "reply_1": "18132058039563812",
-    "reply_2": "18079543700560869",
-    "reply_3": "17860969740690842"
-  },
-  "posted_at": "2026-05-10T07:08:21.708108"
+  "notion_review_url": "https://www.notion.so/AI-2-2-35cea344dcf881c9b027fdebf7daa7c0"
 }
