@@ -53,7 +53,8 @@ Use `claude_cli_with_api_fallback` only when you explicitly accept API spend.
 글 생성은 GitHub Actions에서 실행하지 않는다.
 
 비용과 품질 관리를 위해 초안 생성은 로컬에서 직접 실행할 때만 수행한다.
-승인된 Notion row 게시만 별도 workflow가 처리한다.
+승인된 Notion row 게시도 자동 실행하지 않는다.
+로컬 명령 또는 GitHub Actions 수동 실행 버튼으로만 게시한다.
 
 ---
 
@@ -124,7 +125,7 @@ python -m pytest tests -v
 
 검수 후 Notion row의 `Status`를 `Approved`로 바꾸고 필요하면 `Media Publish URL` + `Media Approved`를 채운 뒤 `python main.py --publish-approved`를 실행하면 게시 후 row가 `Published`로 바뀐다.
 
-로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow가 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`를 사용해 `Approved` row를 게시한다. 이 workflow는 글을 새로 생성하지 않고, 이미 승인된 Notion row만 게시한다. 10분마다 `Approved` row를 확인하며, 필요할 때 수동 실행도 가능하다. 게시 후 결과 evidence를 `output/`에 커밋한다.
+로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow를 수동 실행해서 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`로 `Approved` row를 게시할 수 있다. 이 workflow는 글을 새로 생성하지 않고, 이미 승인된 Notion row만 게시한다. 자동 폴링은 하지 않는다. 게시 후 결과 evidence를 `output/`에 커밋한다.
 
 ### 선택적 수집 소스
 
@@ -244,7 +245,7 @@ Preview에는 이제 아래가 함께 포함된다:
 글 생성 workflow는 없다.
 
 새 초안 생성은 로컬에서 `python main.py --dry-run` 또는 `python main.py`를 직접 실행할 때만 수행한다.
-`publish-approved.yml`은 Notion에서 `Status=Approved`인 row를 게시만 한다.
+`publish-approved.yml`은 수동 실행 시 Notion에서 `Status=Approved`인 row를 게시만 한다.
 
 ---
 

@@ -1,9 +1,6 @@
 name: Publish Approved AI Threads
 
 on:
-  schedule:
-    # Poll for Notion Status=Approved rows. GitHub runs schedules in UTC and may delay them.
-    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       limit:
