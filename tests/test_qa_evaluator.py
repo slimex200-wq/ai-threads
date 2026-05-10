@@ -105,6 +105,19 @@ def test_freeform_banned_pattern_detected():
     assert any("#" in issue for issue in issues)
 
 
+def test_freeform_rejects_monotone_da_endings():
+    content = _make_freeform_content()
+    content["post_main"] = "이 글은 첫 줄에서 기준을 보여준다.\n독자는 여기서 읽을 이유를 찾는다."
+    content["replies"] = [
+        "첫 번째 답글은 사실을 설명한다.\n두 번째 줄도 같은 어미로 닫힌다.\n세 번째 줄 역시 보고서처럼 끝난다.",
+        "다음 답글도 정보를 전달한다.\n중간 문장도 계속 같은 리듬이다.\n마지막 문장까지 모두 판정문처럼 들린다.",
+    ]
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("too many Korean lines end with '-다'" in issue for issue in issues)
+
+
 def test_freeform_allows_compact_but_valid_main_post():
     content = _make_freeform_content()
     content["post_main"] = "A" * 90

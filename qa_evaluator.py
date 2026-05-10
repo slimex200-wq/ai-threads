@@ -89,6 +89,32 @@ def _extract_replies(content: dict[str, Any], mode: str) -> list[str]:
     return extracted
 
 
+def _non_empty_lines(texts: list[str]) -> list[str]:
+    lines: list[str] = []
+    for text in texts:
+        for line in str(text or "").splitlines():
+            stripped = line.strip()
+            if stripped:
+                lines.append(stripped)
+    return lines
+
+
+def _has_korean(text: str) -> bool:
+    return bool(re.search(r"[가-힣]", text))
+
+
+def _ends_with_da_family(line: str) -> bool:
+    cleaned = re.sub(r"[\s\"'“”‘’)\].,!?…]+$", "", line.strip())
+    return cleaned.endswith("다") or cleaned.endswith("니다")
+
+
+def _monotone_da_ratio(lines: list[str]) -> float:
+    korean_lines = [line for line in lines if _has_korean(line)]
+    if len(korean_lines) < 8:
+        return 0.0
+    return sum(1 for line in korean_lines if _ends_with_da_family(line)) / len(korean_lines)
+
+
 def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[str]:
     issues: list[str] = []
 
@@ -152,6 +178,12 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
             if pattern and pattern in text:
                 issues.append(f"{text_name} contains banned pattern: {pattern}")
 
+    da_ratio = _monotone_da_ratio(_non_empty_lines(texts_to_check))
+    if da_ratio >= 0.72:
+        issues.append(
+            f"too many Korean lines end with '-다' ({da_ratio:.0%}); use a more explanatory, guided rhythm"
+        )
+
     return issues
 
 
@@ -186,6 +218,7 @@ Rubric:
 - specificity: uses concrete numbers, mechanisms, names, or contrasts from the article
 - actionable_takeaway: final reply gives a useful decision rule, next step, or check to run
 - grounding: claims stay inside the selected article title, summary, details, and source context
+- explanatory_voice: the reader feels guided through why each point matters, not briefed by a stack of declarative facts
 
 Fail aggressively when:
 - the draft is only a bland news recap
@@ -197,6 +230,8 @@ Fail aggressively when:
 - it has dense paragraphs instead of one idea per line
 - it is padded to an arbitrary reply count instead of stopping when the idea is complete
 - Korean endings feel monotonous because every line leans on the same polite ending
+- too many lines end with "-다", making the draft feel like a bulletin or report instead of an explanation
+- the draft reports facts accurately but does not guide the reader through the meaning
 - a critical issue remains even if the numeric score is decent
 
 Return JSON only:

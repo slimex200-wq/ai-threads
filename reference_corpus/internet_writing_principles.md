@@ -161,6 +161,16 @@ Threads adaptation:
 
 ## Korean Style Guardrails
 
+Aim for an explanatory voice, not a bulletin voice:
+
+- The reader should feel guided, not briefed.
+- Do not stack declarative "-다" endings line after line.
+- Mix claim, explanation, question, contrast, and small aside.
+- Use connective explanatory moves: "쉽게 말하면", "이게 중요한 이유는",
+  "여기서 봐야 할 건", "반대로", "그래서".
+- A sharp sentence can end with "-다"; a whole thread should not sound like
+  ten verdicts in a row.
+
 Avoid monotonous endings:
 
 - Do not end every line with "-요", "-죠", "-습니다", or "-합니다".

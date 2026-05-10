@@ -156,6 +156,9 @@ Style target:
 - one idea per line
 - calm, precise, slightly opinionated
 - no forced jokes
+- explanatory voice, not bulletin voice: the reader should feel guided, not briefed
+- do not stack "-다" endings line after line; mix claim, explanation, question, contrast, and small aside
+- use connective explanatory moves naturally: "쉽게 말하면", "이게 중요한 이유는", "여기서 봐야 할 건", "반대로", "그래서"
 - avoid repetitive polite endings like "-요", "-죠", "-습니다", and "-합니다"
 - use polite endings only when they are the cleanest sentence; otherwise vary with compact written Korean
 - do not make every line end the same way
@@ -214,6 +217,7 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 - each reply: 45~360 Korean characters
 - use `<br>` inside post_main and replies to mark the sparse line-by-line rhythm
 - every reply must be readable as its own post in the chain
+- each reply should explain, not just report; avoid turning the thread into a stack of verdict sentences
 - suggested reply arc, scaled to length:
   - open: name the real problem or tension
   - middle: show proof, mechanism, example, or tradeoff
@@ -588,6 +592,8 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             "You may change the article if another candidate is clearly more useful and shareable.",
             "Make the thread match the unclejobs.ai short-line essay rhythm.",
             "Choose the reply count from the idea density: 3~6 compact, 7~10 normal, 11~16 deep; never pad.",
+            "Rewrite from bulletin voice into explanatory voice: guide the reader through why each point matters.",
+            "Do not stack '-다' endings line after line; mix claim, explanation, question, contrast, and small aside.",
             "Avoid repeating polite Korean endings like '-요', '-죠', '-습니다', and '-합니다' on every line.",
             "Make the first sentence a CTA-like line: tell the reader what to notice, rethink, check, stop doing, or try.",
             "Use inverted pyramid order in post_main: payoff or criterion first, proof second, background later.",

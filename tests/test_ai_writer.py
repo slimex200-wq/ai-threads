@@ -17,6 +17,8 @@ def test_build_prompt_includes_grounding_rules():
     assert "inverted pyramid" in prompt
     assert "first sentence" in prompt
     assert "CTA" in prompt
+    assert "explanatory voice" in prompt
+    assert "not bulletin voice" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():
