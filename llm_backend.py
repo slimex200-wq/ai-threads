@@ -121,7 +121,15 @@ def _request_via_claude_cli(
         json.dumps(schema, ensure_ascii=False),
         prompt,
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, timeout=180)
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        cwd=cwd,
+        timeout=180,
+    )
     if result.returncode != 0:
         raise RuntimeError(f"Claude CLI failed: {result.stderr[:500] or result.stdout[:500]}")
 
@@ -158,7 +166,15 @@ def _request_via_codex_cli(
             str(output_path),
             prompt,
         ]
-        result = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, timeout=180)
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            cwd=cwd,
+            timeout=180,
+        )
         if result.returncode != 0:
             raise RuntimeError(f"Codex CLI failed: {result.stderr[:500] or result.stdout[:500]}")
         return _parse_json_object(output_path.read_text(encoding="utf-8"))

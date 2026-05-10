@@ -126,7 +126,7 @@ What "good" means:
 1. The post has a clear reader and a clear promise.
 2. The main post opens with the strongest concrete fact or tension.
 3. The replies flow from fact -> interpretation -> practical takeaway.
-4. The last reply gives a clear "so what / what to try next" point.
+4. The last reply gives a clear "so what / what to try next" point that a reader can apply.
 5. The thread is interesting enough that someone would save, share, or follow.
 
 Avoid:
@@ -175,13 +175,13 @@ Return JSON only.
 }}
 
 # STRUCTURE RULES
-- `post_main`: 160~420 characters, usually 3~4 sentences
+- `post_main`: 180~420 Korean characters, usually 3~4 sentences. Aim for 190~320; do not write near the lower bound.
 - `replies`: 2~4 items
 - each reply: 80~280 characters
 - replies do NOT need fixed keys, but they must have jobs:
   - reply 1: explain the mechanism or missing context
   - middle replies: show implication, contrast, or caveat
-  - final reply: practical takeaway for the target reader
+  - final reply: practical takeaway for the target reader, framed as a concrete decision rule, next step, or check to run
 - the thread must naturally flow from fact -> interpretation -> practical takeaway
 - the content_brief.takeaway and final reply must point in the same direction
 - if there is a strong practical angle, prioritize it over generic commentary
@@ -189,6 +189,7 @@ Return JSON only.
 - if there is no good media angle, set preferred_type to "none"
 - if the article uses technical jargon or an acronym like VLM, explain it once in simple Korean
 - include at least one concrete use case, workflow implication, or "what to try next" point across the thread
+- if you cannot ground a technical detail in the article fields, remove it instead of making the thread sound smarter
 - do not add background facts just because they are interesting. Use only context that strengthens the angle.
 
 # CANDIDATE ARTICLES
@@ -507,6 +508,9 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             f"Previous score: {qa_feedback.get('score', 0):.2f}",
             "Keep the same article only if it is still the best choice.",
             "You may change the article if another candidate is clearly more useful and shareable.",
+            "Make post_main comfortably longer than the minimum: target 190~320 Korean characters.",
+            "Make the final reply actionable: a concrete decision rule, next step, or check to run.",
+            "If grounding was criticized, remove any fact that is not explicit in the candidate Title, Summary, or Details.",
             "Return JSON only.",
         ]
     )

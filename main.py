@@ -114,6 +114,8 @@ def _get_youtube_direct_url(youtube_url: str) -> str | None:
             ],
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             timeout=30,
         )
         if result.returncode == 0 and result.stdout.strip():
@@ -147,6 +149,8 @@ def _download_and_upload_video(youtube_url: str) -> str | None:
                 ],
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
+                errors="replace",
                 timeout=120,
             )
             if result.returncode != 0 or not os.path.exists(out_path):
@@ -197,6 +201,8 @@ def search_promo_video(search_query: str) -> str | None:
             ["yt-dlp", f"ytsearch5:{query}", "-j", "--no-download", "--no-warnings"],
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             timeout=30,
         )
         if result.returncode != 0 or not result.stdout.strip():

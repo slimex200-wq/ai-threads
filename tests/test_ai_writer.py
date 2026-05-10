@@ -10,7 +10,7 @@ def test_build_prompt_includes_grounding_rules():
     assert "do not" in prompt.lower()
     assert "do not invent facts" in prompt
     assert "Title, Summary, or Details" in prompt
-    assert "160~420" in prompt
+    assert "180~420" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():
@@ -23,4 +23,5 @@ def test_build_prompt_requires_ship30_content_brief():
     assert '"target_reader"' in prompt
     assert '"reader_problem"' in prompt
     assert "fact -> interpretation -> practical takeaway" in prompt
+    assert "concrete decision rule" in prompt
     assert "Ship 30-style" in prompt
