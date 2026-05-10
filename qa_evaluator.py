@@ -125,6 +125,14 @@ def _is_dense_threads_block(text: str) -> bool:
     return len(non_empty_lines) >= 3
 
 
+def _has_long_threads_visual_line(text: str, limit: int = 38) -> bool:
+    for line in str(text or "").replace("\r\n", "\n").replace("\r", "\n").split("\n"):
+        line = line.strip()
+        if _has_korean(line) and len(line) > limit:
+            return True
+    return False
+
+
 def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[str]:
     issues: list[str] = []
 
@@ -190,6 +198,10 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
         if _is_dense_threads_block(text):
             issues.append(
                 f"{text_name} is visually dense for Threads; use blank lines between short sentence blocks"
+            )
+        if _has_long_threads_visual_line(text):
+            issues.append(
+                f"{text_name} has a visual line that is too long for Threads; split it before the ending wraps alone"
             )
 
     da_ratio = _monotone_da_ratio(_non_empty_lines(texts_to_check))

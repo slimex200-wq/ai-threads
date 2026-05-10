@@ -7,6 +7,7 @@ Supports both:
 
 from __future__ import annotations
 
+import re
 import time
 from typing import Any
 
@@ -17,6 +18,8 @@ PUBLISH_RETRY_ATTEMPTS = 5
 PUBLISH_RETRY_DELAY = 3
 CONTAINER_WAIT_DELAY = 2
 REPLY_DELAY = 5
+THREADS_VISUAL_LINE_LIMIT = 34
+THREADS_VISUAL_LINE_MIN = 14
 
 REPLY_KEYS: dict[str, list[str]] = {
     "viral": [
@@ -81,7 +84,43 @@ def get_reply_sequence(content: dict[str, Any], mode: str) -> list[dict[str, str
 def format_threads_display_text(text: str) -> str:
     """Add visible breathing room for the narrow Threads timeline."""
     lines = [line.strip() for line in str(text or "").replace("\r\n", "\n").replace("\r", "\n").split("\n")]
-    return "\n\n".join(line for line in lines if line)
+    blocks = ["\n".join(_wrap_threads_visual_line(line)) for line in lines if line]
+    return "\n\n".join(blocks)
+
+
+def _wrap_threads_visual_line(
+    line: str,
+    *,
+    limit: int = THREADS_VISUAL_LINE_LIMIT,
+    min_chunk: int = THREADS_VISUAL_LINE_MIN,
+) -> list[str]:
+    """Split long Korean visual lines before Threads creates ugly orphan wraps."""
+    text = str(line or "").strip()
+    if len(text) <= limit:
+        return [text] if text else []
+
+    chunks: list[str] = []
+    remaining = text
+    while len(remaining) > limit:
+        split_at = _find_threads_line_split(remaining, limit=limit, min_chunk=min_chunk)
+        chunk = remaining[:split_at].strip()
+        if not chunk:
+            break
+        chunks.append(chunk)
+        remaining = remaining[split_at:].strip()
+
+    if remaining:
+        chunks.append(remaining)
+    return chunks
+
+
+def _find_threads_line_split(text: str, *, limit: int, min_chunk: int) -> int:
+    window = text[: limit + 1]
+    whitespace_indexes = [match.start() for match in re.finditer(r"\s+", window)]
+    candidates = [index for index in whitespace_indexes if index >= min_chunk]
+    if candidates:
+        return candidates[-1]
+    return min(limit, len(text))
 
 
 def _is_retryable(response: httpx.Response) -> bool:

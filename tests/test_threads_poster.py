@@ -65,6 +65,14 @@ def test_format_threads_display_text_adds_visible_spacing():
     assert format_threads_display_text(text) == "첫 문장\n\n둘째 문장\n\n셋째 문장"
 
 
+def test_format_threads_display_text_wraps_long_lines_before_orphan_endings():
+    text = "좋은 데모는 '무엇을 했는가'보다 '어디까지 사람이 개입했는가'를 보여줍니다."
+    formatted = format_threads_display_text(text)
+
+    assert "보여줍니\n다" not in formatted
+    assert all(len(line) <= 38 for line in formatted.splitlines() if line)
+
+
 def test_post_thread_strict_video_does_not_fallback_to_text(monkeypatch):
     class DummyClient:
         def __enter__(self):

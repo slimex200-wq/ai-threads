@@ -167,6 +167,7 @@ Style target:
 - write with sparse rhythm: thesis, pause, concrete proof, implication, criterion
 - optimize for the actual narrow Threads timeline, not a Markdown preview
 - avoid 3~4 consecutive non-empty lines with no blank line; it looks cramped on Threads
+- keep each visual line short enough that the final ending does not wrap alone on mobile
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -220,6 +221,7 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 - each reply: 45~360 Korean characters
 - use `<br><br>` inside post_main and replies to create actual breathing room on Threads
 - most replies should read as 2~4 short visual paragraphs, not one compact block
+- if one sentence is long, split it into two visual lines at a natural phrase boundary
 - every reply must be readable as its own post in the chain
 - each reply should explain, not just report; avoid turning the thread into a stack of verdict sentences
 - suggested reply arc, scaled to length:

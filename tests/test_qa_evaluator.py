@@ -140,6 +140,18 @@ def test_freeform_rejects_dense_threads_formatting():
     assert any("visually dense for Threads" in issue for issue in issues)
 
 
+def test_freeform_rejects_overlong_visual_line():
+    content = _make_freeform_content()
+    content["replies"][0] = (
+        "\uc88b\uc740 \ub370\ubaa8\ub294 '\ubb34\uc5c7\uc744 \ud588\ub294\uac00'\ubcf4\ub2e4 "
+        "'\uc5b4\ub514\uae4c\uc9c0 \uc0ac\ub78c\uc774 \uac1c\uc785\ud588\ub294\uac00'\ub97c \ubcf4\uc5ec\uc90d\ub2c8\ub2e4."
+    )
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("too long for Threads" in issue for issue in issues)
+
+
 def test_legacy_informational_still_works():
     issues = _check_rules(_make_legacy_informational_content(), mode="informational")
     assert issues == []
