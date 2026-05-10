@@ -1,10 +1,20 @@
 """QA evaluator tests for freeform and legacy thread structures."""
 
-from qa_evaluator import _EVAL_PROMPT, _check_rules
+import qa_evaluator
+from qa_evaluator import _EVAL_PROMPT, _check_rules, evaluate
 
 
 def _make_freeform_content() -> dict:
     return {
+        "content_brief": {
+            "topic": "AI agent workflows",
+            "target_reader": "developers and vibe coders",
+            "reader_problem": "They do not know which agent update matters in practice.",
+            "promise": "Show the one workflow implication worth trying.",
+            "angle": "The update matters only if it changes daily work.",
+            "why_now": "Teams are adopting agent tooling right now.",
+            "takeaway": "Test the workflow on one bounded task before broad rollout.",
+        },
         "post_main": "A" * 240,
         "replies": [
             "B" * 100,
@@ -27,6 +37,15 @@ def _make_freeform_content() -> dict:
 
 def _make_legacy_informational_content() -> dict:
     return {
+        "content_brief": {
+            "topic": "AI agent workflows",
+            "target_reader": "developers",
+            "reader_problem": "They need a practical signal.",
+            "promise": "Explain the useful implication.",
+            "angle": "Workflow impact beats feature hype.",
+            "why_now": "The feature just shipped.",
+            "takeaway": "Try it on one small workflow.",
+        },
         "post_main": "A" * 250,
         "reply_background": "B" * 120,
         "reply_impact": "C" * 120,
@@ -43,6 +62,15 @@ def _make_legacy_informational_content() -> dict:
 
 def _make_legacy_viral_content() -> dict:
     return {
+        "content_brief": {
+            "topic": "AI coding tools",
+            "target_reader": "vibe coders",
+            "reader_problem": "They need to know what is worth attention.",
+            "promise": "Show why this update matters.",
+            "angle": "The workflow change is the story.",
+            "why_now": "The market is shifting quickly.",
+            "takeaway": "Compare the tool on a real task.",
+        },
         "post_main": "A" * 250 + "?",
         "reply_explain": "B" * 100,
         "reply_important": "C" * 100,
@@ -65,11 +93,11 @@ def test_freeform_valid():
 
 def test_freeform_requires_replies():
     content = _make_freeform_content()
-    content["replies"] = []
+    content["replies"] = ["Only one reply is not enough for a thread"]
 
     issues = _check_rules(content, mode="informational")
 
-    assert any("replies" in issue for issue in issues)
+    assert any("at least two" in issue for issue in issues)
 
 
 def test_freeform_banned_pattern_detected():
@@ -100,8 +128,24 @@ def test_legacy_viral_still_works():
     assert issues == []
 
 
+def test_content_brief_is_required():
+    content = _make_freeform_content()
+    content["content_brief"]["takeaway"] = ""
+
+    issues = _check_rules(content, mode="informational")
+
+    assert "content_brief.takeaway is required" in issues
+
+
 def test_eval_prompt_template_formats_cleanly():
     rendered = _EVAL_PROMPT.format(
+        brief_topic="Topic",
+        brief_target_reader="Reader",
+        brief_reader_problem="Problem",
+        brief_promise="Promise",
+        brief_angle="Angle",
+        brief_why_now="Now",
+        brief_takeaway="Takeaway",
         article_title="Title",
         article_reason="Reason",
         post_main="Main body",
@@ -109,4 +153,56 @@ def test_eval_prompt_template_formats_cleanly():
     )
 
     assert '"clarity"' in rendered
+    assert '"actionable_takeaway"' in rendered
+    assert "Content brief" in rendered
     assert "{article_title}" not in rendered
+
+
+def test_ai_critical_issue_blocks_pass(monkeypatch):
+    def fake_eval(content, mode="informational"):
+        return {
+            "clarity": 9,
+            "usefulness": 9,
+            "accuracy": 9,
+            "shareability": 9,
+            "thread_flow": 9,
+            "hook_clarity": 9,
+            "reader_fit": 9,
+            "specificity": 9,
+            "actionable_takeaway": 9,
+            "grounding": 9,
+            "critical_issues": ["final reply has no practical takeaway"],
+            "suggestions": ["Add a concrete next step."],
+        }
+
+    monkeypatch.setattr(qa_evaluator, "_evaluate_with_ai", fake_eval)
+
+    result = evaluate(_make_freeform_content(), mode="informational")
+
+    assert not result.passed
+    assert any("final reply" in issue for issue in result.issues)
+
+
+def test_low_ship30_dimension_blocks_pass(monkeypatch):
+    def fake_eval(content, mode="informational"):
+        return {
+            "clarity": 9,
+            "usefulness": 9,
+            "accuracy": 9,
+            "shareability": 9,
+            "thread_flow": 9,
+            "hook_clarity": 9,
+            "reader_fit": 9,
+            "specificity": 9,
+            "actionable_takeaway": 4,
+            "grounding": 9,
+            "critical_issues": [],
+            "suggestions": ["Make the final reply useful."],
+        }
+
+    monkeypatch.setattr(qa_evaluator, "_evaluate_with_ai", fake_eval)
+
+    result = evaluate(_make_freeform_content(), mode="informational")
+
+    assert not result.passed
+    assert any("actionable_takeaway below threshold" in issue for issue in result.issues)

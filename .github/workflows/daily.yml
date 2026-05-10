@@ -57,6 +57,9 @@ jobs:
           TRUTHSOCIAL_TOKEN: ${{ secrets.TRUTHSOCIAL_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          NOTION_REVIEW_REQUIRED: ${{ vars.NOTION_REVIEW_REQUIRED }}
+          NOTION_CONTENT_DATABASE_ID: ${{ vars.NOTION_CONTENT_DATABASE_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         run: python main.py
 
       - name: Commit output

@@ -49,6 +49,16 @@ _REPLY_LIMITS = {
     "informational": (50, 220),
 }
 
+_CONTENT_BRIEF_FIELDS = (
+    "topic",
+    "target_reader",
+    "reader_problem",
+    "promise",
+    "angle",
+    "why_now",
+    "takeaway",
+)
+
 _BANNED_PATTERNS = (
     "#",
     "http://",
@@ -57,7 +67,8 @@ _BANNED_PATTERNS = (
     "자세한 내용은",
 )
 
-QA_PASS_THRESHOLD = 0.55
+QA_PASS_THRESHOLD = 0.72
+QA_MIN_DIMENSION = 6.5
 
 
 def _extract_replies(content: dict[str, Any], mode: str) -> list[str]:
@@ -78,6 +89,7 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
 
     post_main = str(content.get("post_main", "")).strip()
     replies = _extract_replies(content, mode)
+    content_brief = content.get("content_brief", {})
     selected_article = content.get("selected_article", {})
 
     if not post_main:
@@ -91,7 +103,9 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
             issues.append(f"post_main too long ({len(post_main)} > {post_hi})")
 
     if not replies:
-        issues.append("replies must contain at least one non-empty item")
+        issues.append("replies must contain at least two non-empty items")
+    elif len(replies) < 2:
+        issues.append("replies must contain at least two non-empty items")
     elif len(replies) > 5:
         issues.append("replies must contain at most five items")
 
@@ -109,6 +123,14 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
     for key in ("original_title", "link", "reason"):
         if not str(selected_article.get(key, "")).strip():
             issues.append(f"selected_article.{key} is required")
+
+    if not isinstance(content_brief, dict):
+        issues.append("content_brief must be an object")
+        content_brief = {}
+
+    for key in _CONTENT_BRIEF_FIELDS:
+        if not str(content_brief.get(key, "")).strip():
+            issues.append(f"content_brief.{key} is required")
 
     if content.get("topic_tag") != "ai.threads":
         issues.append("topic_tag must be 'ai.threads'")
@@ -136,6 +158,11 @@ Score 0-10 on:
 3. accuracy
 4. shareability
 5. thread_flow
+6. hook_clarity
+7. reader_fit
+8. specificity
+9. actionable_takeaway
+10. grounding
 
 Rubric:
 - clarity: easy to follow, no jargon wall
@@ -143,6 +170,17 @@ Rubric:
 - accuracy: grounded in the selected article, not exaggerated
 - shareability: makes someone want to share or follow
 - thread_flow: replies feel like a coherent chain, not random fragments
+- hook_clarity: main post quickly makes the reader stop and understand the point
+- reader_fit: it is obvious who this helps and why they should care
+- specificity: uses concrete numbers, mechanisms, names, or contrasts from the article
+- actionable_takeaway: final reply gives a useful "so what / what to try next"
+- grounding: claims stay inside the selected article title, summary, details, and source context
+
+Fail aggressively when:
+- the draft is only a bland news recap
+- the final reply has no practical takeaway
+- background context appears abruptly and breaks the thread
+- a critical issue remains even if the numeric score is decent
 
 Return JSON only:
 {{
@@ -151,9 +189,23 @@ Return JSON only:
   "accuracy": 0,
   "shareability": 0,
   "thread_flow": 0,
+  "hook_clarity": 0,
+  "reader_fit": 0,
+  "specificity": 0,
+  "actionable_takeaway": 0,
+  "grounding": 0,
   "critical_issues": ["..."],
   "suggestions": ["..."]
 }}
+
+Content brief:
+Topic: {brief_topic}
+Target reader: {brief_target_reader}
+Reader problem: {brief_reader_problem}
+Promise: {brief_promise}
+Angle: {brief_angle}
+Why now: {brief_why_now}
+Takeaway: {brief_takeaway}
 
 Selected article:
 Title: {article_title}
@@ -174,6 +226,11 @@ EVAL_SCHEMA = {
         "accuracy": {"type": "number"},
         "shareability": {"type": "number"},
         "thread_flow": {"type": "number"},
+        "hook_clarity": {"type": "number"},
+        "reader_fit": {"type": "number"},
+        "specificity": {"type": "number"},
+        "actionable_takeaway": {"type": "number"},
+        "grounding": {"type": "number"},
         "critical_issues": {"type": "array", "items": {"type": "string"}},
         "suggestions": {"type": "array", "items": {"type": "string"}},
     },
@@ -183,6 +240,11 @@ EVAL_SCHEMA = {
         "accuracy",
         "shareability",
         "thread_flow",
+        "hook_clarity",
+        "reader_fit",
+        "specificity",
+        "actionable_takeaway",
+        "grounding",
         "critical_issues",
         "suggestions",
     ],
@@ -205,8 +267,16 @@ def _parse_eval_json(text: str) -> dict[str, Any]:
 def _evaluate_with_ai(content: dict[str, Any], mode: str = "informational") -> dict[str, Any]:
     replies = _extract_replies(content, mode)
     article = content.get("selected_article", {}) or {}
+    brief = content.get("content_brief", {}) or {}
     replies_text = "\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1))
     prompt = _EVAL_PROMPT.format(
+        brief_topic=brief.get("topic", ""),
+        brief_target_reader=brief.get("target_reader", ""),
+        brief_reader_problem=brief.get("reader_problem", ""),
+        brief_promise=brief.get("promise", ""),
+        brief_angle=brief.get("angle", ""),
+        brief_why_now=brief.get("why_now", ""),
+        brief_takeaway=brief.get("takeaway", ""),
         article_title=article.get("original_title", ""),
         article_reason=article.get("reason", ""),
         post_main=content.get("post_main", ""),
@@ -246,19 +316,29 @@ def evaluate(content: dict[str, Any], *, skip_ai: bool = False, mode: str = "inf
         )
 
     weights = {
-        "clarity": 0.25,
-        "usefulness": 0.30,
-        "accuracy": 0.20,
-        "shareability": 0.15,
-        "thread_flow": 0.10,
+        "clarity": 0.12,
+        "usefulness": 0.16,
+        "accuracy": 0.14,
+        "shareability": 0.10,
+        "thread_flow": 0.14,
+        "hook_clarity": 0.10,
+        "reader_fit": 0.08,
+        "specificity": 0.08,
+        "actionable_takeaway": 0.12,
+        "grounding": 0.06,
     }
     weighted_sum = sum(float(eval_result.get(key, 0)) * weight for key, weight in weights.items())
     overall = round(weighted_sum / 10, 2)
 
     ai_issues = [f"[AI] {issue}" for issue in eval_result.get("critical_issues", []) if issue]
+    dimension_issues = [
+        f"[AI] {key} below threshold ({float(eval_result.get(key, 0)):.1f} < {QA_MIN_DIMENSION})"
+        for key in weights
+        if float(eval_result.get(key, 0)) < QA_MIN_DIMENSION
+    ]
     suggestions = tuple(str(item) for item in eval_result.get("suggestions", []) if item)
-    issues = tuple(rule_issues + ai_issues)
-    passed = overall >= QA_PASS_THRESHOLD and len(rule_issues) == 0
+    issues = tuple(rule_issues + ai_issues + dimension_issues)
+    passed = overall >= QA_PASS_THRESHOLD and len(rule_issues) == 0 and not ai_issues and not dimension_issues
 
     return QAResult(
         passed=passed,

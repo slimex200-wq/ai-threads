@@ -22,6 +22,28 @@ from llm_backend import request_structured_json
 GENERATION_SCHEMA = {
     "type": "object",
     "properties": {
+        "content_brief": {
+            "type": "object",
+            "properties": {
+                "topic": {"type": "string"},
+                "target_reader": {"type": "string"},
+                "reader_problem": {"type": "string"},
+                "promise": {"type": "string"},
+                "angle": {"type": "string"},
+                "why_now": {"type": "string"},
+                "takeaway": {"type": "string"},
+            },
+            "required": [
+                "topic",
+                "target_reader",
+                "reader_problem",
+                "promise",
+                "angle",
+                "why_now",
+                "takeaway",
+            ],
+            "additionalProperties": True,
+        },
         "selected_article": {
             "type": "object",
             "properties": {
@@ -46,7 +68,7 @@ GENERATION_SCHEMA = {
         },
         "topic_tag": {"type": "string"},
     },
-    "required": ["selected_article", "post_main", "replies", "media_plan", "topic_tag"],
+    "required": ["content_brief", "selected_article", "post_main", "replies", "media_plan", "topic_tag"],
     "additionalProperties": True,
 }
 
@@ -92,13 +114,20 @@ Voice:
 {style_block}
 
 # TASK
-Pick exactly one article and write a freeform thread.
+Pick exactly one article, create a short content brief, then write a freeform thread.
+
+Think like a Ship 30-style digital writer:
+1. Choose a niche reader before writing.
+2. Name the reader's current problem or confusion.
+3. Promise one useful idea, not a broad news recap.
+4. Use the article as proof, then turn it into a practical takeaway.
 
 What "good" means:
-1. The post teaches something useful right now.
-2. It explains why the change matters in practice.
-3. It gives readers at least one clear "so what / what to try next" takeaway.
-4. It is interesting enough that someone would share it with a friend.
+1. The post has a clear reader and a clear promise.
+2. The main post opens with the strongest concrete fact or tension.
+3. The replies flow from fact -> interpretation -> practical takeaway.
+4. The last reply gives a clear "so what / what to try next" point.
+5. The thread is interesting enough that someone would save, share, or follow.
 
 Avoid:
 - bland news summaries
@@ -118,6 +147,15 @@ Use what's there:
 Return JSON only.
 
 {{
+  "content_brief": {{
+    "topic": "specific topic, not a broad category",
+    "target_reader": "who this is for, e.g. developers / beginners / vibe coders / solo founders",
+    "reader_problem": "what this reader is confused about or deciding now",
+    "promise": "what the thread will help the reader understand or do",
+    "angle": "the sharp point of view for this article",
+    "why_now": "why this matters today",
+    "takeaway": "the practical final takeaway"
+  }},
   "selected_article": {{
     "original_title": "exact title from candidate list",
     "link": "exact link from candidate list",
@@ -140,13 +178,18 @@ Return JSON only.
 - `post_main`: 160~420 characters, usually 3~4 sentences
 - `replies`: 2~4 items
 - each reply: 80~280 characters
-- replies do NOT need fixed roles
-- the thread should naturally flow from fact -> interpretation -> practical takeaway
+- replies do NOT need fixed keys, but they must have jobs:
+  - reply 1: explain the mechanism or missing context
+  - middle replies: show implication, contrast, or caveat
+  - final reply: practical takeaway for the target reader
+- the thread must naturally flow from fact -> interpretation -> practical takeaway
+- the content_brief.takeaway and final reply must point in the same direction
 - if there is a strong practical angle, prioritize it over generic commentary
 - if a useful comparison helps, include it naturally
 - if there is no good media angle, set preferred_type to "none"
 - if the article uses technical jargon or an acronym like VLM, explain it once in simple Korean
 - include at least one concrete use case, workflow implication, or "what to try next" point across the thread
+- do not add background facts just because they are interesting. Use only context that strengthens the angle.
 
 # CANDIDATE ARTICLES
 {articles_text}
@@ -293,6 +336,10 @@ def _parse_response(text: str) -> dict[str, Any]:
 
 
 def _ensure_required_fields(content: dict[str, Any], mode: str = "informational") -> dict[str, Any]:
+    content_brief = content.get("content_brief")
+    if not isinstance(content_brief, dict):
+        content_brief = {}
+
     selected_article = content.get("selected_article")
     if not isinstance(selected_article, dict):
         selected_article = {}
@@ -309,6 +356,15 @@ def _ensure_required_fields(content: dict[str, Any], mode: str = "informational"
 
     normalized = {
         **content,
+        "content_brief": {
+            "topic": str(content_brief.get("topic", "")).strip(),
+            "target_reader": str(content_brief.get("target_reader", "")).strip(),
+            "reader_problem": str(content_brief.get("reader_problem", "")).strip(),
+            "promise": str(content_brief.get("promise", "")).strip(),
+            "angle": str(content_brief.get("angle", "")).strip(),
+            "why_now": str(content_brief.get("why_now", "")).strip(),
+            "takeaway": str(content_brief.get("takeaway", "")).strip(),
+        },
         "selected_article": {
             "original_title": str(selected_article.get("original_title", "")).strip(),
             "link": str(selected_article.get("link", "")).strip(),

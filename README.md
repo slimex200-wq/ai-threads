@@ -65,6 +65,12 @@ python main.py
 # 바이럴 모드
 python main.py --mode viral
 
+# Notion Approved row를 Threads로 게시
+python main.py --publish-approved
+
+# Notion 연동 설정/DB 접근 확인
+python main.py --check-notion
+
 # 포스팅 없이 생성 + QA만
 python main.py --dry-run
 
@@ -104,6 +110,21 @@ python -m pytest tests -v
 | `TELEGRAM_BOT_TOKEN` | 텔레그램 preview/result 알림 |
 | `TELEGRAM_CHAT_ID` | 텔레그램 채팅 대상 |
 
+### Notion review gate
+
+| 변수 | 설명 |
+|---|---|
+| `NOTION_REVIEW_REQUIRED` | `1`이면 Notion 검수 페이지를 만들고 Threads 직접 포스팅을 멈춤 |
+| `NOTION_API_KEY` | Notion API로 review row 생성 시 필요 |
+| `NOTION_CONTENT_DATABASE_ID` | AI Content Pipeline database id |
+| `NOTION_VERSION` | Notion API version, 기본값 `2022-06-28` |
+
+로컬에서는 `.env.example`을 `.env`로 복사한 뒤 값을 채우면 자동 로드된다. GitHub Actions에서는 `NOTION_API_KEY`를 repository secret으로, `NOTION_REVIEW_REQUIRED=1`과 `NOTION_CONTENT_DATABASE_ID`를 repository variable로 설정한다.
+
+검수 후 Notion row의 `Status`를 `Approved`로 바꾸고 필요하면 `Media Publish URL` + `Media Approved`를 채운 뒤 `python main.py --publish-approved`를 실행하면 게시 후 row가 `Published`로 바뀐다.
+
+로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow를 수동 실행한다. 이 workflow는 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`를 사용해 `Approved` row를 게시하고 결과 evidence를 `output/`에 커밋한다.
+
 ### 선택적 수집 소스
 
 | 변수 | 설명 |
@@ -129,8 +150,9 @@ python -m pytest tests -v
 7. 기사 선택 직후 링크/미디어 prefetch
 8. QA
 9. preview
-10. post / dry-run
-11. learning log 저장
+10. optional Notion review gate
+11. post / dry-run
+12. learning log 저장
 ```
 
 ---
@@ -188,6 +210,7 @@ python -m pytest tests -v
 | `qa_evaluator.py` | 규칙 + 품질 평가 |
 | `threads_poster.py` | Threads posting |
 | `telegram_notify.py` | preview/result 알림 |
+| `notion_review.py` | optional Notion review handoff + Approved row publish sync |
 | `learning_log.py` | 학습 로그 / SFT export |
 | `llm_backend.py` | CLI/API/Codex backend 추상화 |
 
@@ -198,6 +221,7 @@ python -m pytest tests -v
 Preview에는 이제 아래가 함께 포함된다:
 
 - 선택 기사
+- content brief
 - 선택 이유
 - 원문 링크
 - 메인글

@@ -1,4 +1,24 @@
 import os
+from pathlib import Path
+
+
+def _load_env_file(path: str = ".env") -> None:
+    """Load simple KEY=VALUE entries for local runs without adding a dependency."""
+    env_path = Path(path)
+    if not env_path.exists():
+        return
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_env_file()
 
 # RSS 소스 (보충용)
 RSS_FEEDS = [
@@ -47,6 +67,12 @@ AI_KEYWORDS = [
 
 # Content mode
 CONTENT_MODE = os.environ.get("CONTENT_MODE", "informational")  # "viral" or "informational"
+
+# Notion review gate
+NOTION_API_KEY = os.environ.get("NOTION_API_KEY", "")
+NOTION_CONTENT_DATABASE_ID = os.environ.get("NOTION_CONTENT_DATABASE_ID", "")
+NOTION_VERSION = os.environ.get("NOTION_VERSION", "2022-06-28")
+NOTION_REVIEW_REQUIRED = os.environ.get("NOTION_REVIEW_REQUIRED", "0").lower() in {"1", "true", "yes"}
 
 # API timing guardrails
 PIPELINE_TIMEOUT = 300    # 전체 파이프라인 5분 제한

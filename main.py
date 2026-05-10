@@ -31,6 +31,9 @@ from config import (
     CONTENT_MODE,
     FORCE_POST_HOUR,
     MAX_DAILY_POSTS,
+    NOTION_API_KEY,
+    NOTION_CONTENT_DATABASE_ID,
+    NOTION_REVIEW_REQUIRED,
     PIPELINE_TIMEOUT,
     THREADS_ACCESS_TOKEN,
     THREADS_USER_ID,
@@ -325,10 +328,106 @@ def _build_learning_record(
     }
 
 
+def check_notion_setup() -> int:
+    """Print a safe Notion review-gate diagnostic without exposing secrets."""
+    print("[notion] review required:", NOTION_REVIEW_REQUIRED)
+    print("[notion] NOTION_API_KEY set:", bool(NOTION_API_KEY), f"(length={len(NOTION_API_KEY)})")
+    print("[notion] NOTION_CONTENT_DATABASE_ID:", NOTION_CONTENT_DATABASE_ID or "<missing>")
+
+    if not NOTION_REVIEW_REQUIRED:
+        print("[notion] Notion handoff is disabled. Set NOTION_REVIEW_REQUIRED=1 to create Review rows.")
+    if not NOTION_API_KEY or not NOTION_CONTENT_DATABASE_ID:
+        print("[notion] missing required Notion env; no review row can be created.")
+        return 1
+
+    try:
+        from notion_review import list_approved_pages
+
+        review_rows = list_approved_pages(limit=1, status="Review")
+        print(f"[notion] API reachable; Review query returned {len(review_rows)} row(s) in first page.")
+        return 0
+    except Exception as exc:
+        print(f"[notion] API check failed: {exc}")
+        return 1
+
+
+def publish_approved_reviews(*, mode: str, limit: int) -> int:
+    """Publish manually approved Notion rows without running the news pipeline."""
+    if not THREADS_ACCESS_TOKEN or not THREADS_USER_ID:
+        print("[error] THREADS_ACCESS_TOKEN or THREADS_USER_ID is missing")
+        sys.exit(1)
+
+    from history import save_title
+    from notion_review import list_approved_pages, mark_review_published, review_page_to_content
+    from threads_poster import post_thread
+
+    pages = list_approved_pages(limit=limit)
+    if not pages:
+        print("[publish-approved] no Approved Notion rows found")
+        return 0
+
+    out_dir = Path("output") / date.today().isoformat()
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    published = 0
+    for page in pages:
+        page_id = str(page.get("id", ""))
+        content = review_page_to_content(page)
+        article = content.get("selected_article", {})
+        title = article.get("original_title") or page_id
+        print(f"[publish-approved] posting: {title}")
+
+        result = post_thread(
+            access_token=THREADS_ACCESS_TOKEN,
+            user_id=THREADS_USER_ID,
+            content=content,
+            image_url=content.get("og_image", ""),
+            source_link=content.get("source_link", ""),
+            video_url=content.get("video_url", ""),
+            mode=mode,
+        )
+        mark_review_published(page_id, result)
+
+        record = {
+            "notion_page_id": page_id,
+            "content": content,
+            "posting_result": result,
+            "posted_at": datetime.now().isoformat(),
+        }
+        safe_page_id = page_id.replace("-", "")[:12] or f"item{published + 1}"
+        (out_dir / f"notion-approved-{safe_page_id}.json").write_text(
+            json.dumps(record, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        if article.get("original_title"):
+            save_title(article["original_title"], url=article.get("link", ""))
+        published += 1
+
+    print(f"[publish-approved] published {published} Notion-approved row(s)")
+    return published
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="AI Threads pipeline")
     parser.add_argument("--dry-run", action="store_true", help="Generate and QA only, without posting")
     parser.add_argument("--collect-engagement", action="store_true", help="Collect engagement only, then exit")
+    parser.add_argument(
+        "--publish-approved",
+        action="store_true",
+        help="Post Approved rows from the Notion review database, then mark them Published",
+    )
+    parser.add_argument(
+        "--publish-approved-limit",
+        type=int,
+        default=1,
+        help="Maximum Notion Approved rows to publish in one run",
+    )
+    parser.add_argument(
+        "--check-notion",
+        action="store_true",
+        help="Check Notion review gate env and database access, then exit",
+    )
     parser.add_argument(
         "--export-sft",
         default="",
@@ -344,6 +443,13 @@ def main() -> None:
 
     mode = args.mode or CONTENT_MODE
     print(f"[mode] {mode}")
+
+    if args.check_notion:
+        sys.exit(check_notion_setup())
+
+    if args.publish_approved:
+        publish_approved_reviews(mode=mode, limit=args.publish_approved_limit)
+        return
 
     if args.export_sft:
         from learning_log import export_sft_examples
@@ -368,7 +474,7 @@ def main() -> None:
         print("[error] ANTHROPIC_API_KEY is missing")
         sys.exit(1)
 
-    if not args.dry_run and (not THREADS_ACCESS_TOKEN or not THREADS_USER_ID):
+    if not args.dry_run and not NOTION_REVIEW_REQUIRED and (not THREADS_ACCESS_TOKEN or not THREADS_USER_ID):
         print("[error] THREADS_ACCESS_TOKEN or THREADS_USER_ID is missing")
         sys.exit(1)
 
@@ -551,6 +657,33 @@ def main() -> None:
     from learning_log import append_learning_record
 
     source_date = date.today().isoformat()
+    if NOTION_REVIEW_REQUIRED:
+        try:
+            from notion_review import submit_review_page
+
+            notion_page = submit_review_page(save_data, qa_result)
+            save_data["notion_review_url"] = notion_page.get("url", "")
+            post_json_path.write_text(json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"\n[review] Notion review page: {save_data['notion_review_url']}")
+        except Exception as exc:
+            save_data["notion_review_error"] = str(exc)
+            post_json_path.write_text(json.dumps(save_data, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"\n[review] Notion handoff failed: {exc}")
+
+        append_learning_record(
+            _build_learning_record(
+                mode=mode,
+                candidate_articles=filtered[:10],
+                engagement_patterns=engagement_patterns,
+                content=save_data,
+                qa_result=qa_result,
+                source_date=source_date,
+                posted=False,
+            )
+        )
+        print("[review] NOTION_REVIEW_REQUIRED=1, skipping Threads post until manual approval")
+        return
+
     if args.dry_run:
         append_learning_record(
             _build_learning_record(

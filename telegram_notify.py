@@ -39,10 +39,17 @@ def send_result(result: dict) -> bool:
 
 def _format_text_preview(content: dict) -> str:
     article = content.get("selected_article", {}) or {}
+    brief = content.get("content_brief", {}) or {}
     sequence = get_reply_sequence(content, mode=content.get("mode", "informational"))
 
     lines = [
         "[AI Threads preview]",
+        "",
+        "Content brief",
+        f"- reader: {brief.get('target_reader', '')}",
+        f"- problem: {brief.get('reader_problem', '')}",
+        f"- angle: {brief.get('angle', '')}",
+        f"- takeaway: {brief.get('takeaway', '')}",
         "",
         "Selected article",
         f"- title: {article.get('original_title', '?')}",

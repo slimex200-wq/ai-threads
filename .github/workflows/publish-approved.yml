@@ -1,0 +1,79 @@
+name: Publish Approved AI Threads
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum Approved Notion rows to publish"
+        required: true
+        default: "1"
+      mode:
+        description: "Content mode used for reply ordering fallback"
+        required: true
+        default: "informational"
+        type: choice
+        options:
+          - informational
+          - viral
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-approved-ai-threads
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Seoul
+
+jobs:
+  publish:
+    name: Publish Notion-approved rows
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Publish approved rows
+        env:
+          CONTENT_MODE: ${{ inputs.mode }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_CONTENT_DATABASE_ID: ${{ vars.NOTION_CONTENT_DATABASE_ID || 'e8fb2e0e1aba4736b25000befcb5825e' }}
+        run: |
+          LIMIT="${{ inputs.limit }}"
+          case "$LIMIT" in
+            ''|*[!0-9]*)
+              echo "::error::limit must be a positive integer"
+              exit 1
+              ;;
+          esac
+          python main.py --publish-approved --publish-approved-limit "$LIMIT" --mode "${{ inputs.mode }}"
+
+      - name: Commit publish evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          git diff --staged --quiet && exit 0
+          cat > /tmp/commit-message.txt <<'EOF'
+          Record Notion-approved Threads publish
+
+          The publish-approved workflow writes local evidence after posting approved Notion rows so the repository keeps a trail of remote publishes.
+
+          Constraint: GitHub Actions secrets are write-only and cannot be copied back into local .env
+          Confidence: medium
+          Scope-risk: narrow
+          Tested: publish-approved GitHub Actions workflow path
+          Not-tested: Live Threads API success before manual dispatch
+          EOF
+          git commit -F /tmp/commit-message.txt
+          git push
