@@ -12,6 +12,8 @@ def test_build_prompt_includes_grounding_rules():
     assert "Title, Summary, or Details" in prompt
     assert "60~260" in prompt
     assert "<br>" in prompt
+    assert "STANDING INTERNET WRITING REFERENCE" in prompt
+    assert "Internet readers usually decide before they read" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():

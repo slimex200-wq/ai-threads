@@ -19,6 +19,8 @@ from typing import Any
 from llm_backend import request_structured_json
 
 
+WRITING_REFERENCE_PATH = Path(__file__).resolve().parent / "reference_corpus" / "internet_writing_principles.md"
+
 GENERATION_SCHEMA = {
     "type": "object",
     "properties": {
@@ -94,11 +96,12 @@ def build_prompt(
     articles_text = _format_articles(articles)
     history_instruction = _build_history_instruction(used_titles)
     engagement_instruction = _build_engagement_instruction(engagement_patterns)
+    writing_reference = _build_writing_reference()
 
     style_block = _build_style_block(mode)
 
     return f"""
-{history_instruction}{engagement_instruction}
+{history_instruction}{engagement_instruction}{writing_reference}
 # ROLE
 You write Korean Threads posts for a mixed audience:
 - developers
@@ -356,6 +359,24 @@ def _build_engagement_instruction(patterns: dict[str, Any] | None) -> str:
     lines.append("Favor threads that are practical, concrete, and easy to share.")
     lines.append("")
     return "\n".join(lines)
+
+
+def _build_writing_reference() -> str:
+    try:
+        text = WRITING_REFERENCE_PATH.read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+
+    if not text:
+        return ""
+
+    return f"""
+## STANDING INTERNET WRITING REFERENCE
+Use this as editorial guidance. Do not quote or mention the sources in the post.
+
+{text}
+
+""".lstrip()
 
 
 def _parse_response(text: str) -> dict[str, Any]:
