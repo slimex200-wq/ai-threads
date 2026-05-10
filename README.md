@@ -1,6 +1,6 @@
 # AI Threads
 
-AI/개발 관련 뉴스와 커뮤니티 신호를 모아서, **한국어 Threads 초안 + 꼬리글 + 관련 미디어**까지 자동으로 만드는 파이프라인.
+AI/개발 관련 뉴스와 커뮤니티 신호를 모아서, 로컬 실행 시 **한국어 Threads 초안 + 꼬리글 + 관련 미디어**까지 만드는 파이프라인.
 
 이 프로젝트는 단순 뉴스 요약기가 아니라 아래를 목표로 한다:
 
@@ -48,13 +48,12 @@ AI/개발 관련 뉴스와 커뮤니티 신호를 모아서, **한국어 Threads
 `claude_cli` is intentionally CLI-only for local runs. It does not fall back to `anthropic_api`.
 Use `claude_cli_with_api_fallback` only when you explicitly accept API spend.
 
-### GitHub Actions 스케줄 실행
-워크플로에서는 명시적으로:
+### GitHub Actions 글 생성
 
-- `THREADS_LLM_BACKEND=anthropic_api`
+글 생성은 GitHub Actions에서 실행하지 않는다.
 
-를 사용한다.  
-즉, **스케줄은 API**, **수동은 CLI** 구조다.
+비용과 품질 관리를 위해 초안 생성은 로컬에서 직접 실행할 때만 수행한다.
+승인된 Notion row 게시만 별도 workflow가 처리한다.
 
 ---
 
@@ -125,7 +124,7 @@ python -m pytest tests -v
 
 검수 후 Notion row의 `Status`를 `Approved`로 바꾸고 필요하면 `Media Publish URL` + `Media Approved`를 채운 뒤 `python main.py --publish-approved`를 실행하면 게시 후 row가 `Published`로 바뀐다.
 
-로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow가 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`를 사용해 `Approved` row를 게시한다. 이 workflow는 10분마다 `Approved` row를 확인하며, 필요할 때 수동 실행도 가능하다. 게시 후 결과 evidence를 `output/`에 커밋한다.
+로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow가 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`를 사용해 `Approved` row를 게시한다. 이 workflow는 글을 새로 생성하지 않고, 이미 승인된 Notion row만 게시한다. 10분마다 `Approved` row를 확인하며, 필요할 때 수동 실행도 가능하다. 게시 후 결과 evidence를 `output/`에 커밋한다.
 
 ### 선택적 수집 소스
 
@@ -239,16 +238,13 @@ Preview에는 이제 아래가 함께 포함된다:
 
 워크플로:
 
-- `.github/workflows/daily.yml`
+- `.github/workflows/publish-approved.yml`
 - `.github/workflows/refresh-token.yml`
 
-`daily.yml`은 현재:
+글 생성 workflow는 없다.
 
-- 스케줄 실행
-- `THREADS_LLM_BACKEND=anthropic_api`
-- `python main.py`
-
-구조다.
+새 초안 생성은 로컬에서 `python main.py --dry-run` 또는 `python main.py`를 직접 실행할 때만 수행한다.
+`publish-approved.yml`은 Notion에서 `Status=Approved`인 row를 게시만 한다.
 
 ---
 
