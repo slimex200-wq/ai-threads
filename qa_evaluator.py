@@ -181,7 +181,7 @@ Rubric:
 - accuracy: grounded in the selected article, not exaggerated
 - shareability: makes someone want to save, share, or follow because the idea is reusable
 - thread_flow: replies feel coherent and right-sized for the idea, not random fragments, a short news recap, or padded filler
-- hook_clarity: main post states one clean thesis in short lines
+- hook_clarity: first sentence works as a strong CTA or direction of attention, then the main post states one clean thesis in short lines
 - reader_fit: it is obvious who this helps and why they should care
 - specificity: uses concrete numbers, mechanisms, names, or contrasts from the article
 - actionable_takeaway: final reply gives a useful decision rule, next step, or check to run
@@ -189,6 +189,8 @@ Rubric:
 
 Fail aggressively when:
 - the draft is only a bland news recap
+- the first sentence is slow setup instead of a CTA, payoff, or direction of attention
+- the main post hides the strongest point behind background context instead of using inverted pyramid order
 - the final reply has no practical takeaway
 - background context appears abruptly and breaks the thread
 - it does not use the short-line essay rhythm

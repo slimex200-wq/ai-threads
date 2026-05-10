@@ -12,7 +12,10 @@ shape before asking for attention.
 For AI Threads, this means:
 
 - Lead with the idea, not the announcement.
-- Make the first post answer: "Why should this matter to me?"
+- Use an inverted pyramid: strongest reader payoff first, then proof, then context.
+- Make the first sentence act like a CTA: it should tell the reader what to notice,
+  rethink, check, stop doing, or try.
+- Make the first post answer: "Why should this matter to me right now?"
 - Put the strongest information early.
 - Let each reply do one job.
 - Stop when the idea is complete.
@@ -35,11 +38,33 @@ Operational rules:
 
 Threads adaptation:
 
-- Main post = thesis plus tension.
+- Main post = CTA-like first sentence, thesis, and tension.
 - Early replies = proof that this is not generic commentary.
 - Later replies = implication, caveat, or criterion.
 
-### 2. Concise, scannable, objective writing beats promotional writing
+### 2. Inverted pyramid beats slow setup
+
+Source base: web journalism and plain-language content design.
+
+Operational rules:
+
+- Put the reader payoff before background.
+- If the first sentence only introduces the news, rewrite it.
+- A strong first sentence is not necessarily a command. It can be a sharp
+  invitation: "Stop judging this by X", "Look at Y first", "Use this as a
+  test", "Do not miss the constraint".
+- Context belongs after the reader knows why the context matters.
+- The ending should not reveal the main point for the first time; it should
+  leave the reader with a usable criterion.
+
+Threads adaptation:
+
+- First line: CTA / direction of attention.
+- Main post: thesis and stakes.
+- Replies 1-2: strongest evidence or contrast.
+- Later replies: explanation, caveat, application.
+
+### 3. Concise, scannable, objective writing beats promotional writing
 
 Source base: John Morkes and Jakob Nielsen, "Concise, SCANNABLE, and Objective:
 How to Write for the Web."
@@ -61,7 +86,7 @@ Threads adaptation:
   rule.
 - Never pad a thread to fit a template.
 
-### 3. Think in layers: bite, snack, meal
+### 4. Think in layers: bite, snack, meal
 
 Source base: Janice Redish, "Letting Go of the Words."
 
@@ -80,7 +105,7 @@ Threads adaptation:
 - 7-10 replies is a normal thread.
 - 11+ replies needs enough mechanism or examples to justify the length.
 
-### 4. Write for the reader's task
+### 5. Write for the reader's task
 
 Source base: Redish; Digital.gov plain-language guidance.
 
@@ -98,7 +123,7 @@ Threads adaptation:
   AI-curious operators.
 - Bad target reader framing: "everyone interested in AI."
 
-### 5. Make the idea sticky without making it clickbait
+### 6. Make the idea sticky without making it clickbait
 
 Source base: Chip Heath and Dan Heath, "Made to Stick."
 
@@ -116,7 +141,7 @@ Threads adaptation:
 - Do not invent stakes.
 - The "sticky" part should be a reusable lens, not a loud hook.
 
-### 6. Short is not shallow
+### 7. Short is not shallow
 
 Source base: Axios "Smart Brevity"; Ann Handley, "Everybody Writes."
 
@@ -163,6 +188,8 @@ Avoid:
 
 Before accepting a draft:
 
+- Does the first sentence work as a strong CTA or direction of attention?
+- Does the first post use inverted pyramid order instead of slow setup?
 - Is the first post a thesis, not a headline rewrite?
 - Can the reader understand the payoff in 5 seconds?
 - Does each reply add a new move?

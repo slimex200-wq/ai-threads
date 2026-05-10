@@ -122,17 +122,20 @@ Pick exactly one article, create a short content brief, then write a right-sized
 
 Think like a calm technical essayist in the style of unclejobs.ai:
 1. Choose one strong thesis.
-2. Turn the article into a broader idea about how AI work changes.
-3. Explain the idea through short, sparse Korean lines.
-4. Use the article as proof, not as the whole post.
-5. End with a practical criterion the reader can use.
+2. Open with an inverted-pyramid first sentence: payoff or CTA first, context later.
+3. Make the first sentence tell the reader what to notice, rethink, check, stop doing, or try.
+4. Turn the article into a broader idea about how AI work changes.
+5. Explain the idea through short, sparse Korean lines.
+6. Use the article as proof, not as the whole post.
+7. End with a practical criterion the reader can use.
 
 What "good" means:
-1. The main post states a clean thesis in 2~4 short lines.
-2. Replies read like a connected essay, not a list of news bullets.
-3. Each reply develops exactly one move: problem, contrast, example, caveat, criterion, or close.
-4. The article supplies proof points, but the thread teaches a reusable lens.
-5. The thread is interesting enough that someone would save it as a way to think.
+1. The first sentence is a strong CTA or direction of attention, not slow setup.
+2. The main post states a clean thesis in 2~4 short lines.
+3. Replies read like a connected essay, not a list of news bullets.
+4. Each reply develops exactly one move: problem, contrast, example, caveat, criterion, or close.
+5. The article supplies proof points, but the thread teaches a reusable lens.
+6. The thread is interesting enough that someone would save it as a way to think.
 
 Avoid:
 - bland news summaries
@@ -201,6 +204,8 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 
 # STRUCTURE RULES
 - `post_main`: 60~260 Korean characters, usually 2~4 short lines
+- first sentence: a CTA-like line that gives the reader an action or attention direction
+- use inverted pyramid order: payoff or criterion first, proof second, background later
 - `replies`: choose the count from the idea density, not from a fixed template
 - compact article: 3~6 replies
 - normal article: 7~10 replies
@@ -213,7 +218,7 @@ The pipeline will convert `<br>` into real line breaks after parsing.
   - open: name the real problem or tension
   - middle: show proof, mechanism, example, or tradeoff
   - close: practical takeaway for the target reader, framed as a concrete decision rule, next step, or check to run
-- the thread must naturally flow from thesis -> problem -> examples -> tradeoff -> criterion -> takeaway
+- the thread must naturally flow from first-line CTA -> thesis -> proof -> tradeoff -> criterion -> takeaway
 - if the idea is already clear, stop; never pad the thread to look more substantial
 - the content_brief.takeaway and final reply must point in the same direction
 - if there is a strong practical angle, prioritize it over generic commentary
@@ -584,6 +589,8 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             "Make the thread match the unclejobs.ai short-line essay rhythm.",
             "Choose the reply count from the idea density: 3~6 compact, 7~10 normal, 11~16 deep; never pad.",
             "Avoid repeating polite Korean endings like '-요', '-죠', '-습니다', and '-합니다' on every line.",
+            "Make the first sentence a CTA-like line: tell the reader what to notice, rethink, check, stop doing, or try.",
+            "Use inverted pyramid order in post_main: payoff or criterion first, proof second, background later.",
             "Make post_main a clean thesis in 2~4 short lines.",
             "Make the final reply actionable: a concrete decision rule, next step, or check to run.",
             "If grounding was criticized, remove any fact that is not explicit in the candidate Title, Summary, or Details.",

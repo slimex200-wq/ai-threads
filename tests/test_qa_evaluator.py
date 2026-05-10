@@ -155,6 +155,8 @@ def test_eval_prompt_template_formats_cleanly():
     assert '"actionable_takeaway"' in rendered
     assert "Content brief" in rendered
     assert "short-line essay rhythm" in rendered
+    assert "direction of attention" in rendered
+    assert "inverted pyramid" in rendered
     assert "{article_title}" not in rendered
 
 

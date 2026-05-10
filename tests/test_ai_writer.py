@@ -14,6 +14,9 @@ def test_build_prompt_includes_grounding_rules():
     assert "<br>" in prompt
     assert "STANDING INTERNET WRITING REFERENCE" in prompt
     assert "Internet readers usually decide before they read" in prompt
+    assert "inverted pyramid" in prompt
+    assert "first sentence" in prompt
+    assert "CTA" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():
@@ -25,7 +28,7 @@ def test_build_prompt_requires_ship30_content_brief():
     assert '"content_brief"' in prompt
     assert '"target_reader"' in prompt
     assert '"reader_problem"' in prompt
-    assert "thesis -> problem -> examples -> tradeoff -> criterion -> takeaway" in prompt
+    assert "first-line CTA -> thesis -> proof -> tradeoff -> criterion -> takeaway" in prompt
     assert "concrete decision rule" in prompt
     assert "unclejobs.ai" in prompt
 
