@@ -50,8 +50,8 @@ _REPLY_LIMITS = {
 }
 
 _FREEFORM_REPLY_COUNT_LIMITS = {
-    "viral": (5, 12),
-    "informational": (12, 18),
+    "viral": (2, 12),
+    "informational": (2, 18),
 }
 
 _CONTENT_BRIEF_FIELDS = (
@@ -180,7 +180,7 @@ Rubric:
 - usefulness: gives a practical takeaway
 - accuracy: grounded in the selected article, not exaggerated
 - shareability: makes someone want to save, share, or follow because the idea is reusable
-- thread_flow: replies feel like a coherent long essay, not random fragments or a short news recap
+- thread_flow: replies feel coherent and right-sized for the idea, not random fragments, a short news recap, or padded filler
 - hook_clarity: main post states one clean thesis in short lines
 - reader_fit: it is obvious who this helps and why they should care
 - specificity: uses concrete numbers, mechanisms, names, or contrasts from the article
@@ -193,7 +193,8 @@ Fail aggressively when:
 - background context appears abruptly and breaks the thread
 - it does not use the short-line essay rhythm
 - it has dense paragraphs instead of one idea per line
-- it has fewer than 12 replies for the main essay thread
+- it is padded to an arbitrary reply count instead of stopping when the idea is complete
+- Korean endings feel monotonous because every line leans on the same polite ending
 - a critical issue remains even if the numeric score is decent
 
 Return JSON only:

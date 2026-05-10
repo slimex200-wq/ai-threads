@@ -115,7 +115,7 @@ Voice:
 {style_block}
 
 # TASK
-Pick exactly one article, create a short content brief, then write a long, freeform Threads essay.
+Pick exactly one article, create a short content brief, then write a right-sized freeform Threads post.
 
 Think like a calm technical essayist in the style of unclejobs.ai:
 1. Choose one strong thesis.
@@ -150,18 +150,12 @@ Style target:
 - one idea per line
 - calm, precise, slightly opinionated
 - no forced jokes
+- avoid repetitive polite endings like "-요", "-죠", "-습니다", and "-합니다"
+- use polite endings only when they are the cleanest sentence; otherwise vary with compact written Korean
+- do not make every line end the same way
 - no generic "AI 시대가 왔다" endings
 - no more than one emoji, preferably none
-- write like this rhythm:
-  "차이는 실제로 읽을 때 크게 납니다.
-
-  마크다운은 위에서 아래로 읽어야 합니다.
-
-  HTML은 다르게 만들 수 있습니다.
-
-  탭을 넣을 수 있습니다.
-  섹션을 접었다 펼칠 수 있습니다.
-  비교안을 카드 형태로 놓을 수 있습니다."
+- write with sparse rhythm: thesis, pause, concrete proof, implication, criterion
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -204,18 +198,20 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 
 # STRUCTURE RULES
 - `post_main`: 60~260 Korean characters, usually 2~4 short lines
-- `replies`: 12~18 items
+- `replies`: choose the count from the idea density, not from a fixed template
+- compact article: 3~6 replies
+- normal article: 7~10 replies
+- deep article with real mechanisms, tradeoffs, or examples: 11~16 replies
+- use 17~18 replies only when the article truly supports that much useful development
 - each reply: 45~360 Korean characters
 - use `<br>` inside post_main and replies to mark the sparse line-by-line rhythm
 - every reply must be readable as its own post in the chain
-- suggested reply arc:
-  - replies 1~2: name the reader's problem
-  - replies 3~5: introduce the bigger idea
-  - replies 6~9: give concrete examples or use cases
-  - replies 10~12: show tradeoffs, limits, or counterpoints
-  - replies 13~16: give decision criteria
-  - final reply: practical takeaway for the target reader, framed as a concrete decision rule, next step, or check to run
+- suggested reply arc, scaled to length:
+  - open: name the real problem or tension
+  - middle: show proof, mechanism, example, or tradeoff
+  - close: practical takeaway for the target reader, framed as a concrete decision rule, next step, or check to run
 - the thread must naturally flow from thesis -> problem -> examples -> tradeoff -> criterion -> takeaway
+- if the idea is already clear, stop; never pad the thread to look more substantial
 - the content_brief.takeaway and final reply must point in the same direction
 - if there is a strong practical angle, prioritize it over generic commentary
 - if a useful comparison helps, include it naturally
@@ -565,7 +561,8 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             "Keep the same article only if it is still the best choice.",
             "You may change the article if another candidate is clearly more useful and shareable.",
             "Make the thread match the unclejobs.ai short-line essay rhythm.",
-            "Use 12~18 replies, each with one clear essay move.",
+            "Choose the reply count from the idea density: 3~6 compact, 7~10 normal, 11~16 deep; never pad.",
+            "Avoid repeating polite Korean endings like '-요', '-죠', '-습니다', and '-합니다' on every line.",
             "Make post_main a clean thesis in 2~4 short lines.",
             "Make the final reply actionable: a concrete decision rule, next step, or check to run.",
             "If grounding was criticized, remove any fact that is not explicit in the candidate Title, Summary, or Details.",

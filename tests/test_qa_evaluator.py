@@ -89,11 +89,11 @@ def test_freeform_valid():
 
 def test_freeform_requires_replies():
     content = _make_freeform_content()
-    content["replies"] = ["Only one reply is not enough for a thread"] * 3
+    content["replies"] = ["Only one reply is not enough for a thread"]
 
     issues = _check_rules(content, mode="informational")
 
-    assert any("at least 12" in issue for issue in issues)
+    assert any("at least 2" in issue for issue in issues)
 
 
 def test_freeform_banned_pattern_detected():
