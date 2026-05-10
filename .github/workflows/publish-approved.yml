@@ -1,6 +1,9 @@
 name: Publish Approved AI Threads
 
 on:
+  schedule:
+    # Poll for Notion Status=Approved rows. GitHub runs schedules in UTC and may delay them.
+    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       limit:
@@ -43,20 +46,21 @@ jobs:
 
       - name: Publish approved rows
         env:
-          CONTENT_MODE: ${{ inputs.mode }}
+          CONTENT_MODE: ${{ inputs.mode || 'informational' }}
+          PUBLISH_LIMIT: ${{ inputs.limit || '1' }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_CONTENT_DATABASE_ID: ${{ vars.NOTION_CONTENT_DATABASE_ID || 'e8fb2e0e1aba4736b25000befcb5825e' }}
         run: |
-          LIMIT="${{ inputs.limit }}"
+          LIMIT="$PUBLISH_LIMIT"
           case "$LIMIT" in
             ''|*[!0-9]*)
               echo "::error::limit must be a positive integer"
               exit 1
               ;;
           esac
-          python main.py --publish-approved --publish-approved-limit "$LIMIT" --mode "${{ inputs.mode }}"
+          python main.py --publish-approved --publish-approved-limit "$LIMIT" --mode "$CONTENT_MODE"
 
       - name: Commit publish evidence
         run: |

@@ -123,7 +123,7 @@ python -m pytest tests -v
 
 검수 후 Notion row의 `Status`를 `Approved`로 바꾸고 필요하면 `Media Publish URL` + `Media Approved`를 채운 뒤 `python main.py --publish-approved`를 실행하면 게시 후 row가 `Published`로 바뀐다.
 
-로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow를 수동 실행한다. 이 workflow는 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`를 사용해 `Approved` row를 게시하고 결과 evidence를 `output/`에 커밋한다.
+로컬에 Threads 토큰이 없으면 GitHub Actions의 `Publish Approved AI Threads` workflow가 repository secrets의 `THREADS_ACCESS_TOKEN`, `THREADS_USER_ID`, `NOTION_API_KEY`를 사용해 `Approved` row를 게시한다. 이 workflow는 10분마다 `Approved` row를 확인하며, 필요할 때 수동 실행도 가능하다. 게시 후 결과 evidence를 `output/`에 커밋한다.
 
 ### 선택적 수집 소스
 
