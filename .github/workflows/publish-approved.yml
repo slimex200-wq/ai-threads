@@ -1,6 +1,11 @@
 name: Publish Approved AI Threads
 
 on:
+  schedule:
+    - cron: "*/10 * * * *"
+  repository_dispatch:
+    types:
+      - notion-approved
   workflow_dispatch:
     inputs:
       limit:
@@ -43,8 +48,8 @@ jobs:
 
       - name: Publish approved rows
         env:
-          CONTENT_MODE: ${{ inputs.mode || 'informational' }}
-          PUBLISH_LIMIT: ${{ inputs.limit || '1' }}
+          CONTENT_MODE: ${{ github.event.inputs.mode || github.event.client_payload.mode || 'informational' }}
+          PUBLISH_LIMIT: ${{ github.event.inputs.limit || github.event.client_payload.limit || '1' }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}

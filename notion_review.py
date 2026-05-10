@@ -66,10 +66,7 @@ def list_approved_pages(
     if not token or not database_id:
         raise NotionReviewError("NOTION_API_KEY and NOTION_CONTENT_DATABASE_ID are required")
 
-    payload = {
-        "filter": {"property": "Status", "select": {"equals": status}},
-        "page_size": max(1, min(limit, 100)),
-    }
+    payload = build_approved_query_payload(limit=limit, status=status)
     with httpx.Client(timeout=20.0) as client:
         response = client.post(
             f"{NOTION_API_BASE}/databases/{database_id}/query",
@@ -80,6 +77,15 @@ def list_approved_pages(
     if response.status_code >= 400:
         raise NotionReviewError(f"Notion query failed: {response.status_code} {response.text[:500]}")
     return list(response.json().get("results", []))
+
+
+def build_approved_query_payload(*, limit: int = 1, status: str = "Approved") -> dict[str, Any]:
+    """Build the Notion query for publish-ready review rows."""
+    return {
+        "filter": {"property": "Status", "select": {"equals": status}},
+        "sorts": [{"timestamp": "last_edited_time", "direction": "descending"}],
+        "page_size": max(1, min(limit, 100)),
+    }
 
 
 def review_page_to_content(page: dict[str, Any]) -> dict[str, Any]:

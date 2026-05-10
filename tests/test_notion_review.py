@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from notion_review import build_published_update_payload, build_review_payload, review_page_to_content
+from notion_review import build_approved_query_payload, build_published_update_payload, build_review_payload, review_page_to_content
 
 
 @dataclass(frozen=True)
@@ -113,3 +113,11 @@ def test_build_published_update_payload_sets_status_and_post_id():
     assert props["Post ID"]["rich_text"][0]["text"]["content"] == "threads-post-id"
     assert props["Threads URL"]["url"] == "https://threads.net/post/threads-post-id"
     assert props["Publish Date"]["date"]["start"] == "2026-05-10"
+
+
+def test_build_approved_query_payload_sorts_recently_approved_first():
+    payload = build_approved_query_payload(limit=150)
+
+    assert payload["filter"] == {"property": "Status", "select": {"equals": "Approved"}}
+    assert payload["sorts"] == [{"timestamp": "last_edited_time", "direction": "descending"}]
+    assert payload["page_size"] == 100
