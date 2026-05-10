@@ -158,7 +158,7 @@ def _request_via_codex_cli(
     with tempfile.TemporaryDirectory() as tmpdir:
         schema_path = Path(tmpdir) / "schema.json"
         output_path = Path(tmpdir) / "last_message.txt"
-        schema_path.write_text(json.dumps(schema, ensure_ascii=False), encoding="utf-8")
+        schema_path.write_text(json.dumps(_codex_output_schema(schema), ensure_ascii=False), encoding="utf-8")
 
         cmd = [
             codex_cmd,
@@ -183,6 +183,29 @@ def _request_via_codex_cli(
         if result.returncode != 0:
             raise RuntimeError(f"Codex CLI failed: {result.stderr[:500] or result.stdout[:500]}")
         return _parse_json_object(output_path.read_text(encoding="utf-8"))
+
+
+def _codex_output_schema(schema: dict[str, Any]) -> dict[str, Any]:
+    """Convert permissive JSON schemas into Codex CLI strict output schemas."""
+    if not isinstance(schema, dict):
+        return schema
+
+    converted = dict(schema)
+    if converted.get("type") == "object":
+        properties = converted.get("properties")
+        if isinstance(properties, dict):
+            converted["properties"] = {
+                key: _codex_output_schema(value) if isinstance(value, dict) else value
+                for key, value in properties.items()
+            }
+            converted["required"] = list(properties.keys())
+        converted["additionalProperties"] = False
+    elif converted.get("type") == "array":
+        items = converted.get("items")
+        if isinstance(items, dict):
+            converted["items"] = _codex_output_schema(items)
+
+    return converted
 
 
 def request_structured_json(

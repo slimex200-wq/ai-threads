@@ -1,4 +1,4 @@
-from llm_backend import build_backend_order, build_prompt_transcript, is_overloaded_error
+from llm_backend import _codex_output_schema, build_backend_order, build_prompt_transcript, is_overloaded_error
 
 
 def test_build_backend_order_prefers_api_then_clis():
@@ -62,3 +62,30 @@ def test_build_prompt_transcript_keeps_message_roles():
     assert "[USER]" in transcript
     assert "[ASSISTANT]" in transcript
     assert "Try again" in transcript
+
+
+def test_codex_output_schema_makes_nested_objects_strict():
+    schema = {
+        "type": "object",
+        "properties": {
+            "title": {"type": "string"},
+            "brief": {
+                "type": "object",
+                "properties": {
+                    "topic": {"type": "string"},
+                    "evidence": {"type": "string"},
+                },
+                "required": ["topic"],
+                "additionalProperties": True,
+            },
+        },
+        "required": ["title"],
+        "additionalProperties": True,
+    }
+
+    strict_schema = _codex_output_schema(schema)
+
+    assert strict_schema["additionalProperties"] is False
+    assert strict_schema["required"] == ["title", "brief"]
+    assert strict_schema["properties"]["brief"]["additionalProperties"] is False
+    assert strict_schema["properties"]["brief"]["required"] == ["topic", "evidence"]
