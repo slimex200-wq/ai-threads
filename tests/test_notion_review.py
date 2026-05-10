@@ -69,7 +69,7 @@ def test_review_page_to_content_converts_approved_row():
             "Source Title": {"type": "rich_text", "rich_text": [{"plain_text": "Source title"}]},
             "Article URL": {"type": "url", "url": "https://example.com/article"},
             "Post Main": {"type": "rich_text", "rich_text": [{"plain_text": "Main post"}]},
-            "Replies": {"type": "rich_text", "rich_text": [{"plain_text": "1. First\n2. Second"}]},
+            "Replies": {"type": "rich_text", "rich_text": [{"plain_text": "1. First line\nstill first\n\n2. Second"}]},
             "Media Type": {"type": "select", "select": {"name": "video"}},
             "Media Publish URL": {"type": "url", "url": "https://cdn.example.com/demo.mp4"},
             "Media Approved": {"type": "checkbox", "checkbox": True},
@@ -80,7 +80,7 @@ def test_review_page_to_content_converts_approved_row():
     content = review_page_to_content(page)
 
     assert content["post_main"] == "Main post"
-    assert content["replies"] == ["First", "Second"]
+    assert content["replies"] == ["First line\nstill first", "Second"]
     assert content["selected_article"]["link"] == "https://example.com/article"
     assert content["content_brief"]["target_reader"] == "developers"
     assert content["video_url"] == "https://cdn.example.com/demo.mp4"

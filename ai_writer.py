@@ -50,6 +50,7 @@ GENERATION_SCHEMA = {
                 "original_title": {"type": "string"},
                 "link": {"type": "string"},
                 "reason": {"type": "string"},
+                "evidence": {"type": "string"},
             },
             "required": ["original_title", "link", "reason"],
             "additionalProperties": True,
@@ -114,20 +115,21 @@ Voice:
 {style_block}
 
 # TASK
-Pick exactly one article, create a short content brief, then write a freeform thread.
+Pick exactly one article, create a short content brief, then write a long, freeform Threads essay.
 
-Think like a Ship 30-style digital writer:
-1. Choose a niche reader before writing.
-2. Name the reader's current problem or confusion.
-3. Promise one useful idea, not a broad news recap.
-4. Use the article as proof, then turn it into a practical takeaway.
+Think like a calm technical essayist in the style of unclejobs.ai:
+1. Choose one strong thesis.
+2. Turn the article into a broader idea about how AI work changes.
+3. Explain the idea through short, sparse Korean lines.
+4. Use the article as proof, not as the whole post.
+5. End with a practical criterion the reader can use.
 
 What "good" means:
-1. The post has a clear reader and a clear promise.
-2. The main post opens with the strongest concrete fact or tension.
-3. The replies flow from fact -> interpretation -> practical takeaway.
-4. The last reply gives a clear "so what / what to try next" point that a reader can apply.
-5. The thread is interesting enough that someone would save, share, or follow.
+1. The main post states a clean thesis in 2~4 short lines.
+2. Replies read like a connected essay, not a list of news bullets.
+3. Each reply develops exactly one move: problem, contrast, example, caveat, criterion, or close.
+4. The article supplies proof points, but the thread teaches a reusable lens.
+5. The thread is interesting enough that someone would save it as a way to think.
 
 Avoid:
 - bland news summaries
@@ -136,8 +138,30 @@ Avoid:
 - hashtags
 - raw links in the prose
 - "card news" framing
+- opening with "X announced Y" unless it is immediately turned into a thesis
+- dense paragraphs that look like a blog post pasted into Threads
 - do not invent facts. Stay grounded in the candidate article's Title, Summary, or Details fields below. If a fact is not in any of those fields, leave it out.
 - if a detail would require guessing, leave it out
+
+Style target:
+- Korean only, except proper nouns and product names
+- short declarative sentences
+- line breaks between sentences
+- one idea per line
+- calm, precise, slightly opinionated
+- no forced jokes
+- no generic "AI 시대가 왔다" endings
+- no more than one emoji, preferably none
+- write like this rhythm:
+  "차이는 실제로 읽을 때 크게 납니다.
+
+  마크다운은 위에서 아래로 읽어야 합니다.
+
+  HTML은 다르게 만들 수 있습니다.
+
+  탭을 넣을 수 있습니다.
+  섹션을 접었다 펼칠 수 있습니다.
+  비교안을 카드 형태로 놓을 수 있습니다."
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -145,6 +169,9 @@ Use what's there:
 
 # OUTPUT FORMAT
 Return JSON only.
+Important JSON safety rule: when post_main or a reply needs line breaks, use the literal token `<br>` inside the JSON string.
+Do not put raw newline characters inside JSON string values.
+The pipeline will convert `<br>` into real line breaks after parsing.
 
 {{
   "content_brief": {{
@@ -157,9 +184,10 @@ Return JSON only.
     "takeaway": "the practical final takeaway"
   }},
   "selected_article": {{
-    "original_title": "exact title from candidate list",
+    "original_title": "title from candidate list, with any double quotation marks replaced by single quotation marks",
     "link": "exact link from candidate list",
-    "reason": "why this article is the best choice for a practical, shareable Threads post"
+    "reason": "why this article is the best choice for a practical, shareable Threads post",
+    "evidence": "exact article facts used in the thread; no guesses"
   }},
   "post_main": "main post in Korean",
   "replies": [
@@ -175,14 +203,19 @@ Return JSON only.
 }}
 
 # STRUCTURE RULES
-- `post_main`: 180~420 Korean characters, usually 3~4 sentences. Aim for 190~320; do not write near the lower bound.
-- `replies`: 2~4 items
-- each reply: 80~280 characters
-- replies do NOT need fixed keys, but they must have jobs:
-  - reply 1: explain the mechanism or missing context
-  - middle replies: show implication, contrast, or caveat
+- `post_main`: 60~260 Korean characters, usually 2~4 short lines
+- `replies`: 12~18 items
+- each reply: 45~360 Korean characters
+- use `<br>` inside post_main and replies to mark the sparse line-by-line rhythm
+- every reply must be readable as its own post in the chain
+- suggested reply arc:
+  - replies 1~2: name the reader's problem
+  - replies 3~5: introduce the bigger idea
+  - replies 6~9: give concrete examples or use cases
+  - replies 10~12: show tradeoffs, limits, or counterpoints
+  - replies 13~16: give decision criteria
   - final reply: practical takeaway for the target reader, framed as a concrete decision rule, next step, or check to run
-- the thread must naturally flow from fact -> interpretation -> practical takeaway
+- the thread must naturally flow from thesis -> problem -> examples -> tradeoff -> criterion -> takeaway
 - the content_brief.takeaway and final reply must point in the same direction
 - if there is a strong practical angle, prioritize it over generic commentary
 - if a useful comparison helps, include it naturally
@@ -223,16 +256,21 @@ def _format_articles(articles: list[dict[str, Any]]) -> str:
             "\n".join(
                 [
                     f"## Article {index}",
-                    f"Title: {article.get('title', '')}",
-                    f"Summary: {article.get('summary', '')}",
-                    f"Details: {article.get('details', '')}",
-                    f"Source: {article.get('source', '')}",
-                    f"Link: {article.get('link', '')}",
+                    f"Title: {_safe_prompt_text(article.get('title', ''))}",
+                    f"Summary: {_safe_prompt_text(article.get('summary', ''))}",
+                    f"Details: {_safe_prompt_text(article.get('details', ''))}",
+                    f"Source: {_safe_prompt_text(article.get('source', ''))}",
+                    f"Link: {_safe_prompt_text(article.get('link', ''))}",
                     f"Engagement: {article.get('engagement', 0)}",
                 ]
             )
         )
     return "\n\n".join(chunks)
+
+
+def _safe_prompt_text(value: Any) -> str:
+    text = str(value or "")
+    return text.replace('"', "'")
 
 
 def _build_history_instruction(used_titles: list[str] | None) -> str:
@@ -349,11 +387,19 @@ def _ensure_required_fields(content: dict[str, Any], mode: str = "informational"
     if not isinstance(replies, list):
         replies = _legacy_replies_from_content(content, mode)
 
-    cleaned_replies = [str(item).strip() for item in replies if str(item).strip()]
+    cleaned_replies = [_normalize_line_break_tokens(item) for item in replies if str(item).strip()]
 
     media_plan = content.get("media_plan")
     if not isinstance(media_plan, dict):
         media_plan = {}
+
+    takeaway = str(content_brief.get("takeaway", "")).strip()
+    promise = str(
+        content_brief.get("promise", "")
+        or content_brief.get("content_goal", "")
+        or content_brief.get("goal", "")
+        or takeaway
+    ).strip()
 
     normalized = {
         **content,
@@ -361,17 +407,20 @@ def _ensure_required_fields(content: dict[str, Any], mode: str = "informational"
             "topic": str(content_brief.get("topic", "")).strip(),
             "target_reader": str(content_brief.get("target_reader", "")).strip(),
             "reader_problem": str(content_brief.get("reader_problem", "")).strip(),
-            "promise": str(content_brief.get("promise", "")).strip(),
+            "promise": promise,
             "angle": str(content_brief.get("angle", "")).strip(),
             "why_now": str(content_brief.get("why_now", "")).strip(),
-            "takeaway": str(content_brief.get("takeaway", "")).strip(),
+            "takeaway": takeaway,
         },
         "selected_article": {
             "original_title": str(selected_article.get("original_title", "")).strip(),
             "link": str(selected_article.get("link", "")).strip(),
             "reason": str(selected_article.get("reason", "")).strip(),
+            "evidence": _normalize_line_break_tokens(selected_article.get("evidence", "")),
+            "summary": str(selected_article.get("summary", "")).strip(),
+            "details": str(selected_article.get("details", "")).strip(),
         },
-        "post_main": str(content.get("post_main", "")).strip(),
+        "post_main": _normalize_line_break_tokens(content.get("post_main", "")),
         "replies": cleaned_replies,
         "media_plan": {
             "preferred_type": str(media_plan.get("preferred_type", "none")).strip() or "none",
@@ -381,6 +430,13 @@ def _ensure_required_fields(content: dict[str, Any], mode: str = "informational"
         "topic_tag": str(content.get("topic_tag", "ai.threads")).strip() or "ai.threads",
     }
     return normalized
+
+
+def _normalize_line_break_tokens(value: Any) -> str:
+    text = str(value or "").strip()
+    text = re.sub(r"\s*<br\s*/?>\s*", "\n", text, flags=re.IGNORECASE)
+    lines = [line.strip() for line in text.splitlines()]
+    return "\n".join(line for line in lines if line)
 
 
 def _legacy_replies_from_content(content: dict[str, Any], mode: str) -> list[str]:
@@ -469,7 +525,7 @@ def generate_post(
         result = request_structured_json(
             messages,
             schema=GENERATION_SCHEMA,
-            max_tokens=2200,
+            max_tokens=4200,
         )
         return _ensure_required_fields(result, mode=mode)
     except Exception:
@@ -480,7 +536,7 @@ def generate_post(
         result = request_structured_json(
             retry_messages,
             schema=GENERATION_SCHEMA,
-            max_tokens=2200,
+            max_tokens=4200,
         )
         return _ensure_required_fields(result, mode=mode)
 
@@ -508,7 +564,9 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             f"Previous score: {qa_feedback.get('score', 0):.2f}",
             "Keep the same article only if it is still the best choice.",
             "You may change the article if another candidate is clearly more useful and shareable.",
-            "Make post_main comfortably longer than the minimum: target 190~320 Korean characters.",
+            "Make the thread match the unclejobs.ai short-line essay rhythm.",
+            "Use 12~18 replies, each with one clear essay move.",
+            "Make post_main a clean thesis in 2~4 short lines.",
             "Make the final reply actionable: a concrete decision rule, next step, or check to run.",
             "If grounding was criticized, remove any fact that is not explicit in the candidate Title, Summary, or Details.",
             "Return JSON only.",

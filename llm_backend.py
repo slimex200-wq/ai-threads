@@ -1,13 +1,13 @@
 """LLM backend abstraction for AI Threads.
 
-Default policy is CLI-first:
+Default policy is CLI-only for local/manual runs:
 - Claude CLI first
-- Anthropic API fallback
-- Codex CLI last fallback
+- Codex CLI fallback
+- Anthropic API only when explicitly requested
 
 This matches the project's goals better than API-first:
-- lower direct API cost when a local subscription-backed CLI exists
-- resilience against transient Anthropic API overloads
+- avoid surprise API spend during local experimentation
+- keep scheduled GitHub Actions able to opt into API mode explicitly
 """
 
 from __future__ import annotations
@@ -49,14 +49,18 @@ def build_backend_order(
         "codex_cli": has_codex_cli,
     }
 
-    if preferred == "auto":
+    if preferred in {"cli_only", "local_cli"}:
+        preferred_order = ["claude_cli", "codex_cli"]
+    elif preferred == "auto":
         preferred_order = ["anthropic_api", "claude_cli", "codex_cli"]
     elif preferred == "anthropic_api":
-        preferred_order = ["anthropic_api", "claude_cli", "codex_cli"]
-    elif preferred == "codex_cli":
-        preferred_order = ["codex_cli", "claude_cli", "anthropic_api"]
-    else:
+        preferred_order = ["anthropic_api"]
+    elif preferred == "claude_cli_with_api_fallback":
         preferred_order = ["claude_cli", "anthropic_api", "codex_cli"]
+    elif preferred == "codex_cli":
+        preferred_order = ["codex_cli", "claude_cli"]
+    else:
+        preferred_order = ["claude_cli", "codex_cli"]
 
     return [backend for backend in preferred_order if available.get(backend)]
 
@@ -164,10 +168,11 @@ def _request_via_codex_cli(
             str(schema_path),
             "-o",
             str(output_path),
-            prompt,
+            "-",
         ]
         result = subprocess.run(
             cmd,
+            input=prompt,
             capture_output=True,
             text=True,
             encoding="utf-8",

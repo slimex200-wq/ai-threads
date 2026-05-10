@@ -36,7 +36,7 @@ RSS_FEEDS = [
 # Claude API
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = "claude-sonnet-4-20250514"
-THREADS_LLM_BACKEND = os.environ.get("THREADS_LLM_BACKEND", "claude_cli")  # claude_cli | anthropic_api | codex_cli | auto
+THREADS_LLM_BACKEND = os.environ.get("THREADS_LLM_BACKEND", "claude_cli")  # claude_cli | codex_cli | cli_only | anthropic_api | auto
 
 # Threads API
 THREADS_ACCESS_TOKEN = os.environ.get("THREADS_ACCESS_TOKEN", "")

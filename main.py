@@ -23,6 +23,7 @@ import sys
 import tempfile
 from datetime import date, datetime
 from pathlib import Path
+from typing import Any
 
 import httpx
 
@@ -231,6 +232,44 @@ def search_promo_video(search_query: str) -> str | None:
     except Exception as exc:
         print(f"  related video search failed: {exc}")
         return None
+
+
+def attach_selected_article_context(content: dict[str, Any], candidates: list[dict[str, Any]]) -> dict[str, Any]:
+    """Attach the source summary/details for QA grounding after article selection."""
+    selected = content.get("selected_article", {})
+    if not isinstance(selected, dict):
+        return content
+
+    selected_link = normalize_source_link(str(selected.get("link", "")))
+    selected_title = _title_key(selected.get("original_title", ""))
+
+    matched: dict[str, Any] | None = None
+    for candidate in candidates:
+        candidate_link = normalize_source_link(str(candidate.get("link", "")))
+        if selected_link and candidate_link and selected_link == candidate_link:
+            matched = candidate
+            break
+        if selected_title and selected_title == _title_key(candidate.get("title", "")):
+            matched = candidate
+            break
+
+    if not matched:
+        return content
+
+    content = dict(content)
+    selected = dict(selected)
+    if not selected.get("summary"):
+        selected["summary"] = str(matched.get("summary", "")).strip()
+    if not selected.get("details"):
+        selected["details"] = str(matched.get("details", "")).strip()
+    if not selected.get("source"):
+        selected["source"] = str(matched.get("source", "")).strip()
+    content["selected_article"] = selected
+    return content
+
+
+def _title_key(value: Any) -> str:
+    return re.sub(r"[\s\"'“”‘’]+", "", str(value or "")).lower()
 
 
 def fetch_og_image(url: str | None) -> str | None:
@@ -602,6 +641,7 @@ def main() -> None:
             qa_feedback=qa_feedback,
             mode=mode,
         )
+        content = attach_selected_article_context(content, filtered)
         article = content.get("selected_article", {})
         print(f"  selected: {article.get('original_title', '?')}")
 

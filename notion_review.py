@@ -168,7 +168,7 @@ def build_review_payload(content: dict[str, Any], qa_result: Any, *, database_id
     title = str(article.get("original_title") or brief.get("topic") or "AI Threads draft").strip()
     post_main = str(content.get("post_main", "")).strip()
     replies = content.get("replies")
-    reply_text = "\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1)) if isinstance(replies, list) else ""
+    reply_text = "\n\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1)) if isinstance(replies, list) else ""
     media_type = _media_type(content, media_plan)
 
     properties = {
@@ -184,7 +184,7 @@ def build_review_payload(content: dict[str, Any], qa_result: Any, *, database_id
         "Article URL": _url_property(article.get("link") or content.get("source_link", "")),
         "Source Title": {"rich_text": _rich_text(article.get("original_title", ""), max_total=800)},
         "Post Main": {"rich_text": _rich_text(post_main, max_total=1800)},
-        "Replies": {"rich_text": _rich_text(reply_text, max_total=1800)},
+        "Replies": {"rich_text": _rich_text(reply_text, max_total=12000)},
         "Media Type": {"select": {"name": media_type}},
         "Media Candidate URL": _url_property(content.get("video_url") or content.get("og_image") or ""),
         "Media Publish URL": _url_property(content.get("video_url") or content.get("og_image") or ""),
@@ -254,7 +254,7 @@ def _review_blocks(content: dict[str, Any], qa: dict[str, Any]) -> list[dict[str
         ("Content brief", _format_key_values(brief)),
         ("Selected article", _format_key_values(article)),
         ("Main post", str(content.get("post_main", ""))),
-        ("Replies", "\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1))),
+        ("Replies", "\n\n".join(f"{index}. {reply}" for index, reply in enumerate(replies, start=1))),
         ("QA", _format_key_values(qa)),
     ]
 
@@ -363,8 +363,13 @@ def _property_checkbox(prop: dict[str, Any] | None) -> bool:
 
 def _split_replies(value: str) -> list[str]:
     replies = []
-    for line in value.splitlines():
-        text = re.sub(r"^\s*\d+[\.\)]\s*", "", line).strip()
+    pattern = re.compile(r"(?ms)^\s*\d+[\.\)]\s*(.*?)(?=^\s*\d+[\.\)]\s*|\Z)")
+    matches = pattern.findall(value)
+    if matches:
+        return [text.strip() for text in matches if text.strip()]
+
+    for block in re.split(r"\n\s*\n", value):
+        text = block.strip()
         if text:
             replies.append(text)
     return replies

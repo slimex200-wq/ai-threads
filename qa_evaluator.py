@@ -41,12 +41,17 @@ _LEGACY_REPLY_KEYS = {
 
 _POST_MAIN_LIMITS = {
     "viral": (180, 380),
-    "informational": (160, 450),
+    "informational": (60, 320),
 }
 
 _REPLY_LIMITS = {
     "viral": (40, 180),
-    "informational": (50, 220),
+    "informational": (45, 360),
+}
+
+_FREEFORM_REPLY_COUNT_LIMITS = {
+    "viral": (5, 12),
+    "informational": (12, 18),
 }
 
 _CONTENT_BRIEF_FIELDS = (
@@ -102,12 +107,18 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
         elif len(post_main) > post_hi:
             issues.append(f"post_main too long ({len(post_main)} > {post_hi})")
 
+    uses_freeform_replies = isinstance(content.get("replies"), list)
+
     if not replies:
         issues.append("replies must contain at least two non-empty items")
+    elif uses_freeform_replies:
+        reply_min, reply_max = _FREEFORM_REPLY_COUNT_LIMITS.get(mode, _FREEFORM_REPLY_COUNT_LIMITS["informational"])
+        if len(replies) < reply_min:
+            issues.append(f"replies must contain at least {reply_min} items for the essay thread style")
+        elif len(replies) > reply_max:
+            issues.append(f"replies must contain at most {reply_max} items for the essay thread style")
     elif len(replies) < 2:
         issues.append("replies must contain at least two non-empty items")
-    elif len(replies) > 5:
-        issues.append("replies must contain at most five items")
 
     reply_lo, reply_hi = _REPLY_LIMITS.get(mode, _REPLY_LIMITS["informational"])
     for index, reply in enumerate(replies, start=1):
@@ -168,18 +179,21 @@ Rubric:
 - clarity: easy to follow, no jargon wall
 - usefulness: gives a practical takeaway
 - accuracy: grounded in the selected article, not exaggerated
-- shareability: makes someone want to share or follow
-- thread_flow: replies feel like a coherent chain, not random fragments
-- hook_clarity: main post quickly makes the reader stop and understand the point
+- shareability: makes someone want to save, share, or follow because the idea is reusable
+- thread_flow: replies feel like a coherent long essay, not random fragments or a short news recap
+- hook_clarity: main post states one clean thesis in short lines
 - reader_fit: it is obvious who this helps and why they should care
 - specificity: uses concrete numbers, mechanisms, names, or contrasts from the article
-- actionable_takeaway: final reply gives a useful "so what / what to try next"
+- actionable_takeaway: final reply gives a useful decision rule, next step, or check to run
 - grounding: claims stay inside the selected article title, summary, details, and source context
 
 Fail aggressively when:
 - the draft is only a bland news recap
 - the final reply has no practical takeaway
 - background context appears abruptly and breaks the thread
+- it does not use the short-line essay rhythm
+- it has dense paragraphs instead of one idea per line
+- it has fewer than 12 replies for the main essay thread
 - a critical issue remains even if the numeric score is decent
 
 Return JSON only:
@@ -210,6 +224,9 @@ Takeaway: {brief_takeaway}
 Selected article:
 Title: {article_title}
 Reason: {article_reason}
+Evidence: {article_evidence}
+Summary: {article_summary}
+Details: {article_details}
 
 Main post:
 {post_main}
@@ -279,6 +296,9 @@ def _evaluate_with_ai(content: dict[str, Any], mode: str = "informational") -> d
         brief_takeaway=brief.get("takeaway", ""),
         article_title=article.get("original_title", ""),
         article_reason=article.get("reason", ""),
+        article_evidence=_truncate(article.get("evidence", ""), 1200),
+        article_summary=_truncate(article.get("summary", ""), 1200),
+        article_details=_truncate(article.get("details", ""), 2400),
         post_main=content.get("post_main", ""),
         replies_text=replies_text or "(no replies)",
     )
@@ -288,6 +308,13 @@ def _evaluate_with_ai(content: dict[str, Any], mode: str = "informational") -> d
         schema=EVAL_SCHEMA,
         max_tokens=900,
     )
+
+
+def _truncate(value: Any, limit: int) -> str:
+    text = str(value or "").strip()
+    if len(text) <= limit:
+        return text
+    return text[:limit].rstrip() + "..."
 
 
 def evaluate(content: dict[str, Any], *, skip_ai: bool = False, mode: str = "informational") -> QAResult:

@@ -43,8 +43,10 @@ AI/개발 관련 뉴스와 커뮤니티 신호를 모아서, **한국어 Threads
 백엔드 우선순위:
 
 1. `claude_cli`
-2. `anthropic_api`
-3. `codex_cli`
+2. `codex_cli`
+
+`claude_cli` is intentionally CLI-only for local runs. It does not fall back to `anthropic_api`.
+Use `claude_cli_with_api_fallback` only when you explicitly accept API spend.
 
 ### GitHub Actions 스케줄 실행
 워크플로에서는 명시적으로:
@@ -93,7 +95,7 @@ python -m pytest tests -v
 | 변수 | 설명 |
 |---|---|
 | `CONTENT_MODE` | `informational` 또는 `viral` |
-| `THREADS_LLM_BACKEND` | `claude_cli`, `anthropic_api`, `codex_cli`, `auto` |
+| `THREADS_LLM_BACKEND` | `claude_cli`, `codex_cli`, `cli_only`, `anthropic_api`, `auto` |
 
 ### LLM
 

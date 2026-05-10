@@ -1,4 +1,4 @@
-from ai_writer import build_prompt
+from ai_writer import _ensure_required_fields, build_prompt
 
 
 def test_build_prompt_includes_grounding_rules():
@@ -10,7 +10,8 @@ def test_build_prompt_includes_grounding_rules():
     assert "do not" in prompt.lower()
     assert "do not invent facts" in prompt
     assert "Title, Summary, or Details" in prompt
-    assert "180~420" in prompt
+    assert "60~260" in prompt
+    assert "<br>" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():
@@ -22,6 +23,28 @@ def test_build_prompt_requires_ship30_content_brief():
     assert '"content_brief"' in prompt
     assert '"target_reader"' in prompt
     assert '"reader_problem"' in prompt
-    assert "fact -> interpretation -> practical takeaway" in prompt
+    assert "thesis -> problem -> examples -> tradeoff -> criterion -> takeaway" in prompt
     assert "concrete decision rule" in prompt
-    assert "Ship 30-style" in prompt
+    assert "unclejobs.ai" in prompt
+
+
+def test_line_break_tokens_are_normalized():
+    content = _ensure_required_fields(
+        {
+            "post_main": "첫 줄<br>둘째 줄",
+            "replies": ["하나<br>둘"],
+        }
+    )
+
+    assert content["post_main"] == "첫 줄\n둘째 줄"
+    assert content["replies"] == ["하나\n둘"]
+
+
+def test_prompt_uses_json_safe_candidate_titles():
+    prompt = build_prompt(
+        articles=[{"title": 'A launch with "quoted" text', "summary": "Summary"}],
+        mode="informational",
+    )
+
+    assert "A launch with 'quoted' text" in prompt
+    assert 'Title: A launch with "quoted" text' not in prompt

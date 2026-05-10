@@ -15,12 +15,8 @@ def _make_freeform_content() -> dict:
             "why_now": "Teams are adopting agent tooling right now.",
             "takeaway": "Test the workflow on one bounded task before broad rollout.",
         },
-        "post_main": "A" * 240,
-        "replies": [
-            "B" * 100,
-            "C" * 120,
-            "D" * 90,
-        ],
+        "post_main": "A" * 180,
+        "replies": [chr(66 + index) * 90 for index in range(12)],
         "selected_article": {
             "original_title": "Test Article",
             "link": "https://example.com",
@@ -93,11 +89,11 @@ def test_freeform_valid():
 
 def test_freeform_requires_replies():
     content = _make_freeform_content()
-    content["replies"] = ["Only one reply is not enough for a thread"]
+    content["replies"] = ["Only one reply is not enough for a thread"] * 3
 
     issues = _check_rules(content, mode="informational")
 
-    assert any("at least two" in issue for issue in issues)
+    assert any("at least 12" in issue for issue in issues)
 
 
 def test_freeform_banned_pattern_detected():
@@ -111,7 +107,7 @@ def test_freeform_banned_pattern_detected():
 
 def test_freeform_allows_compact_but_valid_main_post():
     content = _make_freeform_content()
-    content["post_main"] = "A" * 165
+    content["post_main"] = "A" * 90
 
     issues = _check_rules(content, mode="informational")
 
@@ -148,6 +144,9 @@ def test_eval_prompt_template_formats_cleanly():
         brief_takeaway="Takeaway",
         article_title="Title",
         article_reason="Reason",
+        article_evidence="Evidence",
+        article_summary="Summary",
+        article_details="Details",
         post_main="Main body",
         replies_text="1. Reply",
     )
@@ -155,6 +154,7 @@ def test_eval_prompt_template_formats_cleanly():
     assert '"clarity"' in rendered
     assert '"actionable_takeaway"' in rendered
     assert "Content brief" in rendered
+    assert "short-line essay rhythm" in rendered
     assert "{article_title}" not in rendered
 
 

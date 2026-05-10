@@ -12,6 +12,17 @@ def test_build_backend_order_prefers_api_then_clis():
     assert order == ["anthropic_api", "claude_cli", "codex_cli"]
 
 
+def test_build_backend_order_claude_cli_is_cli_only():
+    order = build_backend_order(
+        preferred="claude_cli",
+        has_anthropic_api=True,
+        has_claude_cli=True,
+        has_codex_cli=True,
+    )
+
+    assert order == ["claude_cli", "codex_cli"]
+
+
 def test_build_backend_order_without_api_uses_clis():
     order = build_backend_order(
         preferred="auto",
@@ -21,6 +32,17 @@ def test_build_backend_order_without_api_uses_clis():
     )
 
     assert order == ["claude_cli", "codex_cli"]
+
+
+def test_build_backend_order_api_mode_is_explicit_api_only():
+    order = build_backend_order(
+        preferred="anthropic_api",
+        has_anthropic_api=True,
+        has_claude_cli=True,
+        has_codex_cli=True,
+    )
+
+    assert order == ["anthropic_api"]
 
 
 def test_is_overloaded_error_matches_529_message():
