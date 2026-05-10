@@ -1,0 +1,33 @@
+{
+  "notion_page_id": "35cea344-dcf8-81ff-acbb-ebaa35b3a98f",
+  "content": {
+    "content_brief": {
+      "topic": "ai.threads",
+      "target_reader": "",
+      "reader_problem": "",
+      "promise": "",
+      "angle": "Backfilled from output/2026-05-10/post.json because this post was generated before the Notion review gate was deployed.\nQA passed: True\nIssues:\n- [AI] 투자자 압박과 '느린 모델 출시 속도' 관련 내용이 원문에 명시되지 않아 정확성 우려\n- [AI] 기업가치 75조원과 투자 비율 계산이 원문 근거 부족\n- [AI] MCP 지원 향상 등 구체적 기술 내용이 원문에서 확인되지 않음\nSuggestions:\n- 원문에서 확인되지 않는 세부사항들을 제거하고 확실한 정보만 포함\n- 4조원 투자 결정의 배경을 추측보다는 공개된 사실 위주로 서술\n- V4.1 출시 정보를 더 간결하게 정리하되 원문 근거 명확히 할 것\n- 개발자 타겟 독자를 위해 기술적 의미나 업계 영향을 더 구체적으로 설명",
+      "why_now": "",
+      "takeaway": ""
+    },
+    "selected_article": {
+      "original_title": "딥시크 창립자 량문펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210296"
+    },
+    "post_main": "딥시크 창립자 량문펑이 자사 투자 라운드에 개인 자금 4조3천억원을 투자한다고 발표했다. 총 투자금의 40%를 혼자 감당하겠다는 것이다. 기업가치는 75조원을 넘을 전망이며, 이는 중국 AI 기업 사상 최대 규모다. 외부 투자 비중을 줄여서 연구의 자율성을 지키면서도 인재 확보 경쟁에서 뒤처지지 않겠다는 전략이다.",
+    "replies": [
+      "이번 대규모 투자의 배경에는 투자자들의 압박이 있었다. 딥시크의 '느린 모델 출시 속도'와 수익 창출 능력에 대한 우려가 제기되자, 회사는 업계 평균에 맞춰 출시를 가속화하기로 했다.",
+      "출시 가속화의 첫 결과로 V4.1이 6월 출시된다. 기업용 도구 추가, MCP(모델 컨텍스트 프로토콜) 지원 향상이 핵심이다. 초기엔 텍스트 생성만 지원하고, 이후 이미지/오디오 처리까지 확장할 예정이다.",
+      "이런 변화는 량 창립자의 경영 철학 전환을 보여준다. 기술 이상주의자로 알려진 그가 상업적 현실을 받아들이기 시작한 것이다. 직원 보상을 위한 주식 옵션 발행도 검토 중이라고 한다."
+    ],
+    "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210296",
+    "og_image": "https://cdn.aitimes.com/news/photo/202605/210296_212923_043.jpg"
+  },
+  "posting_result": {
+    "post_id": "18049026119766716",
+    "reply_1": "18025821359645243",
+    "reply_2": "18322593109256326",
+    "reply_3": "18091055276258343"
+  },
+  "posted_at": "2026-05-10T13:10:34.516723"
+}
