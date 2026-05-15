@@ -1,56 +1,5 @@
 [
   {
-    "date": "2026-05-04",
-    "titles": [
-      "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors"
-    ],
-    "urls": [
-      "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/"
-    ]
-  },
-  {
-    "date": "2026-05-05",
-    "titles": [
-      "Image AI models now drive app growth, beating chatbot upgrades",
-      "메타, '더 오래 생각'하며 고품질 데이터 생성하는 '오토데이터' 공개",
-      "\"통제 불능 섀도우 AI 막는다\"...MS, 사내 거버넌스 플랫폼 '에이전트 365' 출시",
-      "\"CEO들의 '신 콤플렉스' 경계해야\"...젠슨 황, AI 비관론에 쓴소리"
-    ],
-    "urls": [
-      "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
-      "https://www.aitimes.com/news/articleView.html?idxno=210084",
-      "https://www.aitimes.com/news/articleView.html?idxno=210095",
-      "https://www.aitimes.com/news/articleView.html?idxno=210099"
-    ]
-  },
-  {
-    "date": "2026-05-06",
-    "titles": [
-      "Apple plans to make iOS 27 a Choose Your Own Adventure of AI models"
-    ],
-    "urls": [
-      "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-AI-models/"
-    ]
-  },
-  {
-    "date": "2026-05-07",
-    "titles": [
-      "아모데이 \"미소스 유효 기간은 6~12개월...중국이 곧 따라잡을 것\""
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=210157"
-    ]
-  },
-  {
-    "date": "2026-05-08",
-    "titles": [
-      "[5월7일] \"분당 제작비 30달러\"...하루 500편씩 쏟아내는 중국의 AI 드라마 공장"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=210186"
-    ]
-  },
-  {
     "date": "2026-05-09",
     "titles": [
       "파이어폭스, '미소스' 투입 한달 만에 보안 버그 271개 수정"
@@ -76,10 +25,12 @@
     "date": "2026-05-15",
     "titles": [
       "30개월 만에 IQ 60 급등... GPT-5.5, 'AI IQ' 테스트서 136으로 1위",
+      "xAI, 터미널 코딩 에이전트 '그록 빌드' 출시...AI 코딩 경쟁 합류",
       "xAI, 터미널 코딩 에이전트 '그록 빌드' 출시...AI 코딩 경쟁 합류"
     ],
     "urls": [
       "https://www.aitimes.com/news/articleView.html?idxno=210571",
+      "https://www.aitimes.com/news/articleView.html?idxno=210580",
       "https://www.aitimes.com/news/articleView.html?idxno=210580"
     ]
   }
