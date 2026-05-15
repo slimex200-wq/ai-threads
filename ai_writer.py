@@ -168,6 +168,7 @@ Style target:
 - optimize for the actual narrow Threads timeline, not a Markdown preview
 - avoid 3~4 consecutive non-empty lines with no blank line; it looks cramped on Threads
 - keep each visual line short enough that the final ending does not wrap alone on mobile
+- keep replies compact: one small point per reply, not a mini essay
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -214,16 +215,18 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 - first sentence: a CTA-like line that gives the reader an action or attention direction
 - use inverted pyramid order: payoff or criterion first, proof second, background later
 - `replies`: choose the count from the idea density, not from a fixed template
-- compact article: 3~6 replies
-- normal article: 7~10 replies
-- deep article with real mechanisms, tradeoffs, or examples: 11~16 replies
-- use 17~18 replies only when the article truly supports that much useful development
-- each reply: 45~360 Korean characters
+- compact article: 2~4 replies
+- normal article: 4~6 replies
+- deep article with real mechanisms, tradeoffs, or examples: 7~9 replies
+- use 10~12 replies only when the article truly has multiple useful mechanisms or examples
+- each reply: 40~200 Korean characters
 - use `<br><br>` inside post_main and replies to create actual breathing room on Threads
-- most replies should read as 2~4 short visual paragraphs, not one compact block
+- most replies should read as 1~2 short visual paragraphs, not one compact block
 - if one sentence is long, split it into two visual lines at a natural phrase boundary
 - every reply must be readable as its own post in the chain
 - each reply should explain, not just report; avoid turning the thread into a stack of verdict sentences
+- prefer fewer replies; if the idea is clear in 5 replies, stop there
+- do not expand one reply into background, caveat, and takeaway at once; keep one move and move on
 - suggested reply arc, scaled to length:
   - open: name the real problem or tension
   - middle: show proof, mechanism, example, or tradeoff
@@ -611,7 +614,8 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             "Keep the same article only if it is still the best choice.",
             "You may change the article if another candidate is clearly more useful and shareable.",
             "Make the thread match the unclejobs.ai short-line essay rhythm.",
-            "Choose the reply count from the idea density: 3~6 compact, 7~10 normal, 11~16 deep; never pad.",
+            "Choose the reply count from the idea density: 2~4 compact, 4~6 normal, 7~9 deep; never pad.",
+            "Keep replies compact: one small point per reply, not a mini essay.",
             "Rewrite from bulletin voice into explanatory voice: guide the reader through why each point matters.",
             "Do not stack '-다' endings line after line; mix claim, explanation, question, contrast, and small aside.",
             "Avoid repeating polite Korean endings like '-요', '-죠', '-습니다', and '-합니다' on every line.",

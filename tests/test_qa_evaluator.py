@@ -16,7 +16,7 @@ def _make_freeform_content() -> dict:
             "takeaway": "Test the workflow on one bounded task before broad rollout.",
         },
         "post_main": "A" * 180,
-        "replies": [chr(66 + index) * 90 for index in range(12)],
+        "replies": [chr(66 + index) * 90 for index in range(6)],
         "selected_article": {
             "original_title": "Test Article",
             "link": "https://example.com",
@@ -96,6 +96,15 @@ def test_freeform_requires_replies():
     assert any("at least 2" in issue for issue in issues)
 
 
+def test_freeform_rejects_too_many_replies():
+    content = _make_freeform_content()
+    content["replies"] = [chr(66 + index) * 90 for index in range(11)]
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("at most 10" in issue for issue in issues)
+
+
 def test_freeform_banned_pattern_detected():
     content = _make_freeform_content()
     content["replies"][1] = "Useful recap with #AI hashtag"
@@ -152,6 +161,22 @@ def test_freeform_rejects_overlong_visual_line():
     assert any("too long for Threads" in issue for issue in issues)
 
 
+def test_freeform_rejects_too_many_visual_lines_in_reply():
+    content = _make_freeform_content()
+    content["replies"][0] = (
+        "\uccab \uc904\uc740 \uae30\uc900\uc744 \ub9d0\ud569\ub2c8\ub2e4.\n\n"
+        "\ub450 \uc904\uc740 \uadfc\uac70\ub97c \ubd99\uc785\ub2c8\ub2e4.\n\n"
+        "\uc138 \uc904\uc740 \ube44\uc6a9\uc744 \ubd05\ub2c8\ub2e4.\n\n"
+        "\ub124 \uc904\uc740 \ubc18\ubcf5\uc744 \ubd05\ub2c8\ub2e4.\n\n"
+        "\ub2e4\uc12f \uc904\uc740 \uc704\ud5d8\uc744 \ubd05\ub2c8\ub2e4.\n\n"
+        "\uc5ec\uc12f \uc904\uc740 \uacb0\ub860\uc744 \ubd99\uc785\ub2c8\ub2e4."
+    )
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("too many visual lines" in issue for issue in issues)
+
+
 def test_legacy_informational_still_works():
     issues = _check_rules(_make_legacy_informational_content(), mode="informational")
     assert issues == []
@@ -193,6 +218,7 @@ def test_eval_prompt_template_formats_cleanly():
     assert '"actionable_takeaway"' in rendered
     assert "Content brief" in rendered
     assert "short-line essay rhythm" in rendered
+    assert "not a mini essay" in rendered
     assert "direction of attention" in rendered
     assert "inverted pyramid" in rendered
     assert "{article_title}" not in rendered

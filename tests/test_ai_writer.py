@@ -21,6 +21,10 @@ def test_build_prompt_includes_grounding_rules():
     assert "not bulletin voice" in prompt
     assert "<br><br>" in prompt
     assert "actual narrow Threads timeline" in prompt
+    assert "one small point per reply" in prompt
+    assert "compact article: 2~4 replies" in prompt
+    assert "normal article: 4~6 replies" in prompt
+    assert "deep article with real mechanisms, tradeoffs, or examples: 7~9 replies" in prompt
 
 
 def test_build_prompt_requires_ship30_content_brief():
@@ -35,6 +39,7 @@ def test_build_prompt_requires_ship30_content_brief():
     assert "first-line CTA -> thesis -> proof -> tradeoff -> criterion -> takeaway" in prompt
     assert "concrete decision rule" in prompt
     assert "unclejobs.ai" in prompt
+    assert "prefer fewer replies" in prompt
 
 
 def test_line_break_tokens_are_normalized():

@@ -46,12 +46,12 @@ _POST_MAIN_LIMITS = {
 
 _REPLY_LIMITS = {
     "viral": (40, 180),
-    "informational": (45, 360),
+    "informational": (35, 220),
 }
 
 _FREEFORM_REPLY_COUNT_LIMITS = {
-    "viral": (2, 12),
-    "informational": (2, 18),
+    "viral": (2, 8),
+    "informational": (2, 10),
 }
 
 _CONTENT_BRIEF_FIELDS = (
@@ -133,6 +133,17 @@ def _has_long_threads_visual_line(text: str, limit: int = 38) -> bool:
     return False
 
 
+def _has_too_many_threads_visual_lines(text: str, limit: int = 5) -> bool:
+    if not _has_korean(text):
+        return False
+    non_empty_lines = [
+        line.strip()
+        for line in str(text or "").replace("\r\n", "\n").replace("\r", "\n").split("\n")
+        if line.strip()
+    ]
+    return len(non_empty_lines) > limit
+
+
 def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[str]:
     issues: list[str] = []
 
@@ -203,6 +214,10 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
             issues.append(
                 f"{text_name} has a visual line that is too long for Threads; split it before the ending wraps alone"
             )
+        if text_name.startswith("reply ") and _has_too_many_threads_visual_lines(text):
+            issues.append(
+                f"{text_name} has too many visual lines for one reply; keep replies to one small point"
+            )
 
     da_ratio = _monotone_da_ratio(_non_empty_lines(texts_to_check))
     if da_ratio >= 0.72:
@@ -239,6 +254,7 @@ Rubric:
 - accuracy: grounded in the selected article, not exaggerated
 - shareability: makes someone want to save, share, or follow because the idea is reusable
 - thread_flow: replies feel coherent and right-sized for the idea, not random fragments, a short news recap, or padded filler
+- reply_brevity: each reply is compact enough to scan in the Threads timeline, not a mini essay
 - hook_clarity: first sentence works as a strong CTA or direction of attention, then the main post states one clean thesis in short lines
 - reader_fit: it is obvious who this helps and why they should care
 - specificity: uses concrete numbers, mechanisms, names, or contrasts from the article
@@ -254,6 +270,7 @@ Fail aggressively when:
 - background context appears abruptly and breaks the thread
 - it does not use the short-line essay rhythm
 - it has dense paragraphs instead of one idea per line
+- individual replies try to explain too many points at once
 - it is padded to an arbitrary reply count instead of stopping when the idea is complete
 - Korean endings feel monotonous because every line leans on the same polite ending
 - too many lines end with "-다", making the draft feel like a bulletin or report instead of an explanation
