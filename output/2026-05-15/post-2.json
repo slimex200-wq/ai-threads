@@ -1,0 +1,142 @@
+{
+  "content_brief": {
+    "topic": "terminal coding agents and Grok Build",
+    "target_reader": "developers, vibe coders, and solo builders choosing AI coding tools",
+    "reader_problem": "They see another coding agent launch but do not know what actually matters in daily work.",
+    "promise": "Show the practical criteria for judging a coding CLI agent.",
+    "angle": "The important signal is not that xAI launched a coding agent, but that plan review, diffs, and isolated parallel work are becoming the baseline.",
+    "why_now": "xAI entered the AI coding agent race with Grok Build while Claude Code and Codex are competing for developer workflows.",
+    "takeaway": "Prioritize plan visibility and diff review first, then project-context awareness, worktree isolation, and automation features."
+  },
+  "selected_article": {
+    "original_title": "xAI, 터미널 코딩 에이전트 '그록 빌드' 출시...AI 코딩 경쟁 합류",
+    "link": "https://www.aitimes.com/news/articleView.html?idxno=210580",
+    "reason": "Grok Build makes the coding-agent competition concrete through CLI, plan mode, diff review, AGENTS.md, MCP, subagents, worktree support, headless mode, and ACP.",
+    "evidence": "xAI released an early beta of Grok Build for SuperGrok Heavy users. The article says Grok Build is a coding agent and CLI for professional software engineering. It includes plan mode, diff display, AGENTS.md/plugin/hooks/MCP recognition, subagents, worktree parallelism, headless mode, and ACP support. The article frames the launch against Claude Code and Codex competition.",
+    "summary": "xAI가 전문 소프트웨어 개발을 위한 첫 AI 코딩 에이전트 ‘그록 빌드(Grok Build)’를 공개하며 AI 코딩 시장 공략에 나섰다. xAI는 14일(현지시간) ‘그록 빌드’의 초기 베타 버전을 출시했다. 우선 유료 요금제인 ‘슈퍼그록 헤비(SuperGrok Heavy)’ 가입자에게 제공된다.xAI는 “전문 소프트웨어 엔지니어링과 복잡한 코딩 작업을 위한 강력한 코딩 에이전트 및 CLI(Command Line Interface)”라고 설명했다.그록 빌드는 사용자의 자연어 지시에 따라 복잡한 개발 작업을 수행할 수 있으며, 대규",
+    "details": "xAI가 전문 소프트웨어 개발을 위한 첫 AI 코딩 에이전트 ‘그록 빌드(Grok Build)’를 공개하며 AI 코딩 시장 공략에 나섰다. xAI는 14일(현지시간) ‘그록 빌드’의 초기 베타 버전을 출시했다. 우선 유료 요금제인 ‘슈퍼그록 헤비(SuperGrok Heavy)’ 가입자에게 제공된다. xAI는 “전문 소프트웨어 엔지니어링과 복잡한 코딩 작업을 위한 강력한 코딩 에이전트 및 CLI(Command Line Interface)”라고 설명했다. 그록 빌드는 사용자의 자연어 지시에 따라 복잡한 개발 작업을 수행할 수 있으며, 대규모 프로젝트를 단계별로 계획하고 실행하는 기능을 제공한다. 특히, ‘플랜 모드(plan mode)’에서는 AI가 작업 계획을 먼저 제안하고, 사용자가 이를 승인하거나 수정한 뒤 실행하도록 설계됐다. 모든 변경 사항은 코드 차이(diff) 형태로 표시돼 개발자가 수정 내역을 쉽게 검토할 수 있다. 또 AGENTS.md, 플러그인, 후크(hooks), MCP 서버 등을 자동으로 인식하며, 대규모 작업은 여러 전문 서브에이전트(subagents)가 병렬로 수행한다. 별도 워크트리(worktree) 환경에서 병렬 작업도 가능하다. 헤드리스(headless) 모드와 ACP 지원 기능도 포함돼 자동화 스크립트나 에이전트 오케스트레이션 애플리케이션 구축에도 활용할 수 있다. Grok Build https://t.co/uWixUwweB3 이번 출시는 AI 업계에서 가장 빠르게 성장 중인 AI 코딩 시장을 겨냥한 것이다. 최근 앤트로픽의 ‘클로드 코드’와 오픈AI의 ‘코덱스’가 기업 고객을 빠르게 확보하고 있다. xAI 내부에서도 코딩 역량 강화가 핵심 과제로 떠오른 것으로 알려졌다. xAI 사장이자 스타링크 임원인 마이클 니콜스는 직원들에게 클로드 수준의 성능 달성을 “단기 목표”라고 강조한 것으로 전해졌다. 머스크도 xAI 모델이 코딩 부문에서 경쟁사에 비해 뒤처져 있다는 점을 인정한 바 있다. xAI는 최근 AI 코딩 스타트업 커서와 협력 계약을 체결하고 코딩 및 컴퓨팅 자원을 공동 활용하기 시작했다. 커서 엔지니어들은 최근 몇주 동안 xAI 사무실에서 협업을 진행한 것으로 알려졌다."
+  },
+  "post_main": "코딩 에이전트는\n채팅창보다 실행 흐름을 먼저 보세요.\n\nxAI 그록 빌드의 핵심은\n새 모델 이름이 아니라,\n계획-검토-실행을 터미널에 묶는 방식입니다.",
+  "replies": [
+    "기사의 맥락은 단순합니다.\n\n클로드 코드와 코덱스가\n개발자 화면을 먼저 잡았고,\nxAI가 CLI로 뒤따라온 흐름.\n\n경쟁 지점은 작업 통제권입니다.",
+    "그록 빌드에서 먼저 볼 건\n플랜 모드입니다.\n\nAI가 작업 계획을 내고,\n사람이 승인하거나 고친 뒤 실행.\n\n속도보다 먼저 생기는 건 통제 지점입니다.",
+    "또 AGENTS.md와 MCP 서버를 읽고\n플러그인과 hooks도 인식합니다.\n\n에이전트가 프로젝트 규칙을 읽어야\n매번 처음부터 설명하지 않아도 됩니다.",
+    "변경 사항은 diff로 보입니다.\n\n이게 실무에서 큽니다.\n\nAI가 코드를 바꿔도\n사람은 바뀐 줄을 보고\n판단할 수 있어야 하니까요.",
+    "우선순위는 이렇게 보면 됩니다.\n\n1순위: plan과 diff.\n2순위: AGENTS.md/MCP.\n3순위: worktree 격리.\n\nheadless/ACP는 자동화가 필요할 때."
+  ],
+  "media_plan": {
+    "preferred_type": "image",
+    "search_query": "Grok Build xAI coding agent CLI plan mode diff",
+    "reason": "The article is about a coding CLI, so the source preview image is enough context for review."
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.aitimes.com/news/articleView.html?idxno=210580",
+  "og_image": "https://cdn.aitimes.com/news/photo/202605/210580_213275_4612.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "Osaurus brings both local and cloud AI models to your Mac",
+      "summary": "Osaurus￼ combines local and cloud AI models in a Mac app that keeps users’ memory, files, and tools on their own hardware.",
+      "link": "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Fri, 15 May 2026 12:19:48 +0000",
+      "date": "2026-05-15",
+      "candidate_score": 12.033,
+      "details": "As AI models increasingly become commoditized, startups are racing to build the software layer that sits on top of them. One interesting entrant into this space is Osaurus , an open source, Apple-only LLM server that lets users move between different local AI models, either locally or in the cloud, while keeping their files and tools all on their own hardware. Osaurus evolved out of the idea for a desktop AI companion , Dinoki, which Osaurus co-founder Terence Pae described as a sort of “AI-powered Clippy.” Dinoki’s customers had asked him why they should buy the app if they still had to pay for tokens — the usage units AI companies charge for processing prompts and generating responses. That got Pae thinking more deeply about running AI locally. “That’s how Osaurus started,” Pae, previously a software engineer at Tesla and Netflix, told TechCrunch over a call. The idea, he explained, was to try to run an AI assistant locally. “You can do pretty much everything on your Mac locally, like browsing your files, accessing your browser, accessing your system configurations. I figured this would be a great way to position Osaurus as a personal AI for individuals.” Pae began building the tool in public as an open-source project , adding features and fixing bugs along the way. Today, Osaurus can flexibly connect with locally hosted AI models or cloud providers like OpenAI and Anthropic. Users can freely choose which AI models they’re using, and keep other aspects of the AI experience on their own hardware, like the models’ own memory, or their files and tools. Given that different A"
+    },
+    {
+      "title": "MS, 사내 '클로드 코드' 퇴출…\"코파일럿 강화 포석\"",
+      "summary": "마이크로소프트(MS)가 사내 개발자들에게 제공해 온 앤트로픽의 ‘클로드 코드’ 라이선스를 대거 철회하고, 자체 개발한 ‘깃허브 코파일럿 CLI’ 중심 체제로 전환하는 것으로 알려졌다. 반년 전까지만 해도 사내 전반에 적극 도입했던 외부 AI 코딩 도구를 축소하는 것으로, 업계의 관심이 쏠리고 있다.더 버지에 따르면, MS는 지난해 12월부터 수천명 규모의 사내 개발자와 프로젝트 매니저, 디자이너 등에게 클로드 코드 사용 권한을 제공해 왔다. 이는 비개발 직군까지 AI 기반 코딩 실험에 참여시키려는 전략이었다.이때부터 클로드 코드는",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210582",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-15 18:37:17",
+      "date": "2026-05-15",
+      "candidate_score": 9.233,
+      "details": "마이크로소프트(MS)가 사내 개발자들에게 제공해 온 앤트로픽의 ‘클로드 코드’ 라이선스를 대거 철회하고, 자체 개발한 ‘깃허브 코파일럿 CLI’ 중심 체제로 전환하는 것으로 알려졌다. 반년 전까지만 해도 사내 전반에 적극 도입했던 외부 AI 코딩 도구를 축소하는 것으로, 업계의 관심이 쏠리고 있다. 더 버지에 따르면, MS는 지난해 12월부터 수천명 규모의 사내 개발자와 프로젝트 매니저, 디자이너 등에게 클로드 코드 사용 권한을 제공해 왔다. 이는 비개발 직군까지 AI 기반 코딩 실험에 참여시키려는 전략이었다. 이때부터 클로드 코드는 내부에서 높은 인기를 끌었으며, 개발 경험이 적은 직원들도 프로토타입 제작과 업무 자동화에 활용한 것으로 전해졌다. 하지만, MS는 최근 방향을 바꿨다. 6월 말까지 윈도우, MS365, 아웃룩, 팀즈, 서피스 등을 담당하는 ‘경험 + 장치(Experiences + Devices)’ 조직에서 클로드 코드 사용을 단계적으로 종료하고, 개발자들을 자체 도구인 깃허브 코파일럿 CLI로 이전시키고 있다. MS는 내부에 “에이전트형(agentic) CLI를 코파일럿 CLI로 통합하기 위한 전략”이라고 설명했다. 그러나, 업계에서는 비용 절감과 플랫폼 주도권 확보가 핵심 배경이라는 분석이 나온다. 6월30일이 MS 회계연도 마감일인 만큼, 대규모 클로드 코드 라이선스 비용을 줄이는 것이 운영비 절감에 도움이 된다는 것이다. 클로드 코드의 높은 완성도가 오히려 MS 자체 제품 전략과 충돌했다는 평가도 나온다. 최근 몇달간 내부 개발자들 사이에서는 깃허브 코파일럿 CLI보다 클로드 코드 선호도가 높았던 것으로 알려졌다. 이에 따라 MS는 자체 AI 개발 생태계를 강화하기 위해 코파일럿 중심 전략으로 회귀한다는 분석이다. MS는 최근 AI 코딩 스타트업 커서 인수까지 검토했던 것으로 전해졌다. 다만 규제 리스크와 전략 변화 등을 고려해 이를 포기하고, 다른 AI 스타트업들과의 협력 가능성도 모색 중인 것으로 알려졌다. 이번 전환은 개발자들에게 적지 않은 혼란을 줄 가능성도 있다. 그동안 클로드 코드 기반 워크플로우를 구축했던 팀들은 새로운 도구로 이전해야 하며, 기능 격차 문제도 해결해야 한다. MS는 개발자들에게 코파일럿 CLI 관련 버그 리포트와 피드백 제출을 적극 독려하고 있다. 앤트로픽과의 협력 자체가 완전히 종료되는 것은 아니다. MS는 여전히 앤트로픽의 클로드를 애저 플랫폼과 서비스 전반에 활용하고 있다. 지난해 체결한 계약에 따라 애저 AI 파운드리 고객들은 '클로드 소네트 4.5' '클로드 오퍼스 4.1' '클로드 하이쿠 4.5' 등에 접근할 수 있다. 또 MS는 일부 작업에서 오픈AI 모델보다 클로드 모델이 더 뛰어난 성능을 보인다고 판단하고 있으며, MS 365 코파일럿에도 앤트로픽 기술을 적극 통합 중이다. 최근에는 '클로드 코워크' 기술을 MS 365 코파일럿에 접목하기 위해 긴밀하게 협력한 것으로 알려졌다."
+    },
+    {
+      "title": "xAI, 터미널 코딩 에이전트 '그록 빌드' 출시...AI 코딩 경쟁 합류",
+      "summary": "xAI가 전문 소프트웨어 개발을 위한 첫 AI 코딩 에이전트 ‘그록 빌드(Grok Build)’를 공개하며 AI 코딩 시장 공략에 나섰다. xAI는 14일(현지시간) ‘그록 빌드’의 초기 베타 버전을 출시했다. 우선 유료 요금제인 ‘슈퍼그록 헤비(SuperGrok Heavy)’ 가입자에게 제공된다.xAI는 “전문 소프트웨어 엔지니어링과 복잡한 코딩 작업을 위한 강력한 코딩 에이전트 및 CLI(Command Line Interface)”라고 설명했다.그록 빌드는 사용자의 자연어 지시에 따라 복잡한 개발 작업을 수행할 수 있으며, 대규",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210580",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-15 18:26:55",
+      "date": "2026-05-15",
+      "candidate_score": 9.233,
+      "details": "xAI가 전문 소프트웨어 개발을 위한 첫 AI 코딩 에이전트 ‘그록 빌드(Grok Build)’를 공개하며 AI 코딩 시장 공략에 나섰다. xAI는 14일(현지시간) ‘그록 빌드’의 초기 베타 버전을 출시했다. 우선 유료 요금제인 ‘슈퍼그록 헤비(SuperGrok Heavy)’ 가입자에게 제공된다. xAI는 “전문 소프트웨어 엔지니어링과 복잡한 코딩 작업을 위한 강력한 코딩 에이전트 및 CLI(Command Line Interface)”라고 설명했다. 그록 빌드는 사용자의 자연어 지시에 따라 복잡한 개발 작업을 수행할 수 있으며, 대규모 프로젝트를 단계별로 계획하고 실행하는 기능을 제공한다. 특히, ‘플랜 모드(plan mode)’에서는 AI가 작업 계획을 먼저 제안하고, 사용자가 이를 승인하거나 수정한 뒤 실행하도록 설계됐다. 모든 변경 사항은 코드 차이(diff) 형태로 표시돼 개발자가 수정 내역을 쉽게 검토할 수 있다. 또 AGENTS.md, 플러그인, 후크(hooks), MCP 서버 등을 자동으로 인식하며, 대규모 작업은 여러 전문 서브에이전트(subagents)가 병렬로 수행한다. 별도 워크트리(worktree) 환경에서 병렬 작업도 가능하다. 헤드리스(headless) 모드와 ACP 지원 기능도 포함돼 자동화 스크립트나 에이전트 오케스트레이션 애플리케이션 구축에도 활용할 수 있다. Grok Build https://t.co/uWixUwweB3 이번 출시는 AI 업계에서 가장 빠르게 성장 중인 AI 코딩 시장을 겨냥한 것이다. 최근 앤트로픽의 ‘클로드 코드’와 오픈AI의 ‘코덱스’가 기업 고객을 빠르게 확보하고 있다. xAI 내부에서도 코딩 역량 강화가 핵심 과제로 떠오른 것으로 알려졌다. xAI 사장이자 스타링크 임원인 마이클 니콜스는 직원들에게 클로드 수준의 성능 달성을 “단기 목표”라고 강조한 것으로 전해졌다. 머스크도 xAI 모델이 코딩 부문에서 경쟁사에 비해 뒤처져 있다는 점을 인정한 바 있다. xAI는 최근 AI 코딩 스타트업 커서와 협력 계약을 체결하고 코딩 및 컴퓨팅 자원을 공동 활용하기 시작했다. 커서 엔지니어들은 최근 몇주 동안 xAI 사무실에서 협업을 진행한 것으로 알려졌다."
+    },
+    {
+      "title": "OpenAI says Codex is coming to your phone",
+      "summary": "The update gives users enhanced flexibility over how they can manage their workflows.",
+      "link": "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 14 May 2026 20:58:55 +0000",
+      "date": "2026-05-14",
+      "candidate_score": 9.233,
+      "details": "Codex is going mobile. The coding tool — which OpenAI launched approximately a year ago — has now been integrated into the ChatGPT app, allowing users to monitor and manage their development workflows remotely. The new function allows users to see their Codex live environments in any devices where it is running. The company announced the changes Thursday; the update, which is currently in preview, is now available to all plans on iOS and Android. “This is more than the ability to remotely control a single task or dispatch new tasks to your computer,” OpenAI said in a statement. “From your phone, you can work across all of your threads, review outputs, approve commands, change models, or start something new.” Last month, OpenAI also gave Codex the ability to run in the background in desktop environments — empowering the tool to take care of various tasks autonomously. Earlier this month, the company also introduced a Chrome extension that allows the agent to work in live browser sessions. In February, Anthropic released a similar feature — Remote Control — which allows users to remotely monitor Claude Code’s work from afar. The flurry of feature releases from both OpenAI and Anthropic speaks to the tense competition between the two over whose agentic coding tool will become the most widely used. Over the past year, Anthropic’s Claude Code has gained in popularity among businesses and tech professionals alike, although both tools continue to be widely used. StrictlyVC Athens is up next. Hear unfiltered insights straight from Europe’s tech leaders and connect with the people s"
+    },
+    {
+      "title": "What happens when AI starts building itself?",
+      "summary": "Richard Socher's new $650 million startup wants to build an AI that can research and improve itself indefinitely — and he insists it will actually ship products.",
+      "link": "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/",
+      "source": "AI News & Artificial Intelligence | TechCrunch",
+      "published": "Thu, 14 May 2026 19:57:20 +0000",
+      "date": "2026-05-14",
+      "candidate_score": 9.233,
+      "details": "Richard Socher has been a major figure in AI for some time, best known for founding the early chatbot startup You.com and, before that, his work on ImageNet. Now he’s joining the current generation of research-focused AI startups with Recursive Superintelligence, a San Francisco-based startup that came out of stealth on Wednesday with $650 million in funding. Socher is joined in the new venture by a cohort of prominent AI researchers, including Peter Norvig and Cresta co-founder Tim Shi. Together, they’re working to create a recursively self-improving AI model, one that can autonomously identify its own weaknesses and redesign itself to fix them, without human involvement — a long-held holy grail of contemporary AI research. I spoke with him on Zoom after the launch, digging into Recursive’s unique technical approach and why he doesn’t think of this new project as a neolab, the informal term for a new generation of AI startups that prioritize research over building products. This interview has been edited for length and clarity. We hear a lot about recursion these days! It feels like a very common goal across different labs. What do you see as your unique approach? Our unique approach is to use open-endedness to get to recursive self-improvement, which no one has yet achieved. It’s an elusive goal for a lot of people. A lot of people already assume it happens when you just do auto-research. You know, you can take AI and ask it to make some other thing better, which could be a machine learning system, or just a letter that you write, or, you know, whatever it might be, right"
+    },
+    {
+      "title": "AI research papers are getting better, and it’s a big problem for scientists",
+      "summary": "Last summer, Peter Degen's postdoctoral supervisor came to him with an unusual problem: One of his papers was being cited too much. Citations are the currency of academia, but there was something unusual about these. Published in 2017, the paper had assessed the accuracy of a particular type of statistical analysis on epidemiological data and [&#8230;]",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem",
+      "source": "AI | The Verge",
+      "published": "2026-05-15T07:00:00-04:00",
+      "date": "2026-05-15",
+      "candidate_score": 8.433
+    },
+    {
+      "title": "애플이 5년 공들인 맥OS 보안 체계, '미소스'로 5일 만에 무너져",
+      "summary": "미국 보안 연구진이 애플의 최첨단 맥OS 보안 기술을 우회하는 새로운 공격 기법을 발견했는데, 이 과정에서 앤트로픽의 AI 모델 ‘미소스(Mythos)’가 활용된 것으로 알려졌다. 애플이 5년간 개발했다고 자랑한 기술이 불과 5일 만에 뚫린 것으로 알려지며, 충격을 안겼다. 14일(현지시간) 월스트리트저널(WSJ)에 따르면, 미국 보안 연구기업 칼리프(Calif)는 지난 4월 앤트로픽의 초기 버전 미소스를 테스트하던 중 맥OS의 보안 체계를 무력화할 수 있는 새로운 취약점 조합을 발견했다.칼리프 연구진에 따르면, 이 공격은 2개의",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210563",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-15 18:51:02",
+      "date": "2026-05-15",
+      "candidate_score": 7.433
+    },
+    {
+      "title": "“인플루언서 마케팅 뜬다는데, AI로 해결 가능할까”…17년 경력 더에스엠씨의 해법은",
+      "summary": "디지털 마케팅 17년 업력의 더에스엠씨가 AI 크리에이터 서비스형 소프트웨어(SaaS)를 출시했다. 더에스엠씨(대표 김용태)는 소셜-브랜드-크리에이터를 연결하는 자체 개발 AI 솔루션 '렌즈 바이 더 에스엠씨(Lens by The SMC)'를 15일 공개했다. 최근 인플루언서 마케팅 시장 규모는 급성장 추세다. 시장조사 전문 비즈니스 리서치 컴퍼니의 자료에 따르면, 2025년 인플루언서 마케팅 시장은 325억 달러(약 48조6800억원)에서 2027년 449억7000만달러(약 67조4000억원) 규모로 성장할 전망이다.더애스엠씨는",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210569",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-15 18:00:46",
+      "date": "2026-05-15",
+      "candidate_score": 7.433
+    },
+    {
+      "title": "[게시판] 제논-링크알파, ‘글로벌 금융 특화 AI 사업 확대’ MOU 등 단신",
+      "summary": "■ 제논(대표 고석태)은 금융 AI 전문 링크알파와 금융 특화 AI 플랫폼 개발 및 사업 개발 협력을 위한 MOU를 체결했다고 밝혔다. 제논의 생성 AI 기술과 금융 사업 레퍼런스와 링크알파의 금융 특화 AI 솔루션 역량을 결합, 국내와 동남아시아 금융 시장 공동 진출을 본격화할 예정이다.■ 바이브컴퍼니는 기업정보 플랫폼 나이스디앤비의 '크레포트(Creport)'에 생성 AI 리서치 기술을 적용했다고 밝혔다. 크레포트 이용자들은 기존 기업 정보 조회와 더불어, 새롭게 도입된 AI 리서치 기능을 활용할 수 있게 됐다. 금융감독원 전자",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210589",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-15 17:50:00",
+      "date": "2026-05-15",
+      "candidate_score": 7.433
+    },
+    {
+      "title": "[게시판] 원티드랩, 1분기 매출 89억원 등 단신",
+      "summary": "■ 원티드랩(대표 이복기)은 1분기 매출이 전년 동기 대비 12.1% 증가한 89억원, 영업손실은 전년 동기 대비 18.7% 개선된 9억원을 기록했다고 밝혔다. AX 사업이 전체 매출의 23%를 차지하며 실적을 견인했다. 원티드랩은 기업 AI 에이전트 생성 및 운영 솔루션 브랜드 ‘엔노이아’를 중심으로 임직원 교육부터 사내 AI 구축, 인재 관리까지 ‘AX 통합 패키지’를 제공한다.■ 한컴위드(대표 송상엽)는 과학기술정보통신부와 한국인터넷진흥원(KISA)이 공동 추진하는 ‘2026년 제로트러스트 도입 시범사업’에 참여한다고 밝혔다.",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210568",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-15 17:50:00",
+      "date": "2026-05-15",
+      "candidate_score": 7.433
+    }
+  ],
+  "engagement_patterns": {},
+  "qa": {
+    "passed": true,
+    "score": 1.0,
+    "issues": [],
+    "suggestions": []
+  },
+  "notion_review_url": "https://www.notion.so/xAI-AI-361ea344dcf881099931f45ccf90150a"
+}
