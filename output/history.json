@@ -1,27 +1,5 @@
 [
   {
-    "date": "2026-05-09",
-    "titles": [
-      "파이어폭스, '미소스' 투입 한달 만에 보안 버그 271개 수정"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=210268"
-    ]
-  },
-  {
-    "date": "2026-05-10",
-    "titles": [
-      "딥시크 창립자 량문펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
-      "딥시크 창립자 량문펑, 사재 4조 투자 예정...'V4.1'은 6월 출시",
-      "피규어 AI, 휴머노이드 2대가 '눈치'로 2분 만에 침실 정리...'로봇 협업 새 지평'"
-    ],
-    "urls": [
-      "https://www.aitimes.com/news/articleView.html?idxno=210296",
-      "https://www.aitimes.com/news/articleView.html?idxno=210296",
-      "https://www.aitimes.com/news/articleView.html?idxno=210299"
-    ]
-  },
-  {
     "date": "2026-05-15",
     "titles": [
       "30개월 만에 IQ 60 급등... GPT-5.5, 'AI IQ' 테스트서 136으로 1위",
@@ -32,6 +10,15 @@
       "https://www.aitimes.com/news/articleView.html?idxno=210571",
       "https://www.aitimes.com/news/articleView.html?idxno=210580",
       "https://www.aitimes.com/news/articleView.html?idxno=210580"
+    ]
+  },
+  {
+    "date": "2026-05-17",
+    "titles": [
+      "Maryland citizens hit with $2B power grid upgrade for out-of-state AI"
+    ],
+    "urls": [
+      "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises"
     ]
   }
 ]
