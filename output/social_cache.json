@@ -1,32 +1,32 @@
 {
   "sources": {
     "Bluesky": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": []
     },
     "TruthSocial": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": []
     },
     "Reddit": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": []
     },
     "Instagram": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": []
     },
     "TikTok": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": []
     },
     "HN": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": [
         {
@@ -45,7 +45,7 @@
           "link": "",
           "date": "",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
@@ -54,12 +54,12 @@
           "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises",
           "date": "",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         }
       ]
     },
     "Polymarket": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": [
         {
@@ -67,114 +67,132 @@
           "summary": "This market will resolve to \"Yes\" if OpenAI or an official representative of the company announces that it has created an artificial general intelligence (AGI) by December 31, 2026 ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from OpenAI and/or its official representative, however a consensus of credible reporting will",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/67081",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "FISA Section 702 reauthorized before it expires?",
           "summary": "This market will resolve to \"Yes\" if legislation that reauthorizes FISA Title VII, including Section 702, is passed by both chambers of the U.S. Congress and signed into law by April 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nQualifying legislation includes Public Law 118-49.\n\nQualifying legislation may include joint resolutions and must pass both the House and the Senate",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/400288",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "AI data center moratorium passed before 2027?",
           "summary": "This market will resolve to “Yes” if a bill erecting a qualifying moratorium that prohibits or suspends approvals for new AI data center construction or major expansions anywhere in the United States is passed into law by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying moratorium go into effect against the construction of any facility described in the leg",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/108522",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "What will Trump say during bilateral events with Xi Jinping? ",
           "summary": "Donald Trump is scheduled to meet with Xi Jinping from May 14 to May 15, 2026 (https://www.cnn.com/2026/05/04/china/china-us-talks-iran-intl-hnk). \n\nThis market will resolve to \"Yes\" if Donald Trump says the listed term during his appearance at events featuring Xi Jinping from May 14 through May 15, 2026 (Beijing Time). Otherwise, the market will resolve to \"No\".\n\nPlural and possessive forms of th",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/449201",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "What will be said on ICEMAN?",
           "summary": "Drake is expected to release his new album \"ICEMAN\" in 2026.\n\nThis market will resolve to \"Yes\" if the listed term is mentioned by anyone on the specified transcript for any track on the officially released full \"ICEMAN\" album. Otherwise, the market will resolve to \"No\".\n\nOfficially released means that Iceman is officially available for download or streaming (not including live events) by the reso",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/407521",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Which company has the best AI model end of May?",
           "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will b",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/376520",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Which company has best AI model end of June?",
           "summary": "This market will resolve according to the company which owns the model which has the highest arena rank based off the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text with the style control off will be used to resolve",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/57705",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Tech Layoffs Up or Down in 20​26?",
           "summary": "This market will resolve to \"Up\" if, according to Federal Reserve Economic Data (FRED), there are more layoffs in the information sector in 2026 than in 2025 (447,000 layoffs).\n\nThis market will resolve to \"Down\" if there are more layoffs in the information sector in 2025 than in 2026.\n\nThis market will resolve to 50-50 if the totals are the same in 2025 and 2026.\n\nIf not all relevant data points ",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/290152",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Largest Company end of May?",
           "summary": "This market will resolve to the largest company in the world by market cap on May 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting.",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/385557",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Largest Company end of June?",
           "summary": "This market will resolve to the largest company in the world by market cap on June 30, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting.",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/57711",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Which company has the second best AI model end of May?",
           "summary": "This market will resolve according to the company that owns the model that has the second-highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/376512",
-          "date": "2026-05-15",
+          "date": "2026-05-17",
           "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
-        },
-        {
-          "title": "Gemini 3.2 released by...?",
-          "summary": "This market will resolve to \"Yes\" if Google's Gemini 3.2 model is made available to the general public by the specified date (ET). Otherwise, this market will resolve to \"No.\"\n\nGemini 3.2 refers to a product explicitly named Gemini 3.2, or a variant that is recognized as a direct successor to Gemini 3.1, similar to the progression from Gemini 3 to Gemini 3.1. (e.g., Gemini 3.2 GA, Gemini 3.2/3.3/3",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/425315",
-          "date": "2026-05-15",
-          "_score": 0,
-          "cached_at": "2026-05-15T12:46:02.939827+00:00"
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
         },
         {
           "title": "Which company has the #1 AI model end of May? (Style Control On)",
           "summary": "This market will resolve according to the company that owns the model that has the highest arena rank (Style Control On) based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style",
           "source": "Polymarket",
           "link": "https://polymarket.com/event/376442",
+          "date": "2026-05-17",
+          "_score": 0,
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
+        },
+        {
+          "title": "Which company has the third best AI model end of May?",
+          "summary": "This market will resolve according to the company that owns the model that has the third-highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off ",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/376503",
+          "date": "2026-05-17",
+          "_score": 0,
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
+        },
+        {
+          "title": "What will SpaceX's public ticker be?",
+          "summary": "This market will resolve according to the public ticker symbol used by SpaceX in an IPO (Initial Public Offering) by December 31, 2027, 11:59 PM ET.\n\nAn official announcement from SpaceX that they will IPO under a specific ticker symbol will be sufficient to resolve this market.\n\nIf a ticker used by SpaceX in a qualifying IPO is a variant of a ticker symbol listed in this market group with additio",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/104392",
+          "date": "2026-05-17",
+          "_score": 0,
+          "cached_at": "2026-05-17T04:03:59.626077+00:00"
+        },
+        {
+          "title": "Gemini 3.2 released by...?",
+          "summary": "This market will resolve to \"Yes\" if Google's Gemini 3.2 model is made available to the general public by the specified date (ET). Otherwise, this market will resolve to \"No.\"\n\nGemini 3.2 refers to a product explicitly named Gemini 3.2, or a variant that is recognized as a direct successor to Gemini 3.1, similar to the progression from Gemini 3 to Gemini 3.1. (e.g., Gemini 3.2 GA, Gemini 3.2/3.3/3",
+          "source": "Polymarket",
+          "link": "https://polymarket.com/event/425315",
           "date": "2026-05-15",
           "_score": 0,
           "cached_at": "2026-05-15T12:46:02.939827+00:00"
@@ -223,29 +241,11 @@
           "date": "2026-05-10",
           "_score": 0,
           "cached_at": "2026-05-10T04:28:59.726053+00:00"
-        },
-        {
-          "title": "Which AI company will have the second-highest revenue May 11-17?",
-          "summary": "This market will resolve according to the model family that has the second-highest total estimated inference revenue based on Anera's data published at https://anera.markets/intelligence/model-family for the specified week.\n\nThe week’s values will be determined by summing the respective companies' estimated revenue figures for each day within the specified period. If data for all specified days is",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/462466",
-          "date": "2026-05-10",
-          "_score": 0,
-          "cached_at": "2026-05-10T04:28:59.726053+00:00"
-        },
-        {
-          "title": "Best AI model on May 16? (Style Control Off)",
-          "summary": "This market will resolve according to the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on the specified date, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will be used to resolv",
-          "source": "Polymarket",
-          "link": "https://polymarket.com/event/462458",
-          "date": "2026-05-10",
-          "_score": 0,
-          "cached_at": "2026-05-10T04:28:59.726053+00:00"
         }
       ]
     },
     "YouTube": {
-      "last_refresh_at": "2026-05-15T12:46:02.939827+00:00",
+      "last_refresh_at": "2026-05-17T04:03:59.626077+00:00",
       "last_mode": "cold",
       "items": []
     }

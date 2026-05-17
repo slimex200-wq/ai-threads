@@ -1,0 +1,242 @@
+{
+  "content_brief": {
+    "topic": "AI 데이터센터 전력망 비용 배분 논란",
+    "target_reader": "개발자 / 초보자 / vibe coders / AI 서비스를 쓰거나 만드는 사람",
+    "reader_problem": "AI 인프라 뉴스를 볼 때 모델 성능과 데이터센터 규모만 보고, 전력망 비용이 누구에게 청구되는지 놓치기 쉽다",
+    "promise": "데이터센터와 전력망 뉴스를 읽을 때 비용 전가 여부를 판단하는 간단한 기준을 준다",
+    "angle": "AI 데이터센터의 진짜 쟁점은 전기 사용량만이 아니라, 여러 지역을 묶은 전력망에서 비용을 누가 떠안느냐다",
+    "why_now": "메릴랜드 소비자 보호기관이 데이터센터 수요로 생긴 전력망 업그레이드 비용 20억달러 배분 문제를 FERC에 제기했다",
+    "takeaway": "AI 인프라 뉴스는 성능이나 투자 규모보다 '수요를 만든 쪽과 청구서를 받는 쪽이 같은가'부터 확인해야 한다"
+  },
+  "selected_article": {
+    "original_title": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises",
+    "reason": "AI 인프라를 추상적인 모델 경쟁이 아니라 전력망 비용 배분 문제로 보여준다. 220억달러 업그레이드, 메릴랜드 20억달러 부담, 10년간 16억달러 소비자 비용 같은 숫자가 있어 실용적인 판단 기준으로 풀기 좋다.",
+    "evidence": "메릴랜드 Office of People’s Counsel이 FERC에 PJM의 비용 배분에 대해 complaint를 냈다. PJM은 데이터센터 수요 증가에 맞춰 220억달러 전력망 업그레이드를 추진했고, 그중 20억달러가 메릴랜드에 부과될 수 있다. OPC는 이로 인해 향후 10년간 메릴랜드 소비자에게 16억달러 추가 비용이 생긴다고 주장했다. 주거 고객은 약 345달러, 상업 고객은 약 673달러, 산업 고객은 약 1만5074달러 부담으로 제시됐다. PJM은 13개 주와 워싱턴 D.C.를 포함해 약 6500만명을 커버하는 미국 최대 전력 송전 회사다.",
+    "summary": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
+    "details": "Aren't AI hyperscalers supposed to pay for these upgrades? When you purchase through links on our site, we may earn an affiliate commission. Here’s how it works . The Maryland Office of People’s Counsel (OPC), a state agency that represents its utility consumers, filed a complaint before the Federal Energy Regulatory Commission (FERC) regarding PJM Interconnection, LLC’s plans to charge it $2 billion of the $22 billion it spent to upgrade its grid to accommodate increasing demand from data centers. According to the OPC’s press release , this $2 billion bill will cost the state’s consumers an extra $1.6 billion in the next ten years alone — that means an extra $823 million for residential (approx. $345 per customer), $146 million for commercial (approx. $673 per customer), and $629 million for industrial customers (approx. $15,074 per customer). “Without FERC action, Maryland customers face paying billions for transmission infrastructure that PJM is advancing to benefit data centers,” said Maryland People’s Counsel David S. Lapp. “PJM’s cost allocation rules are broken. Maryland customers have neither caused the need for these billions in new transmission projects nor will they meaningfully benefit from them.” PJM Interconnection, LLC is the United States’ largest electricity transmission company, and covers 13 states plus Washington, D.C. This includes Delaware, Illinois, Indiana, Kentucky, Maryland, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee, Virginia, and West Virginia, covering about 65 million people, or about 20% of the entire U.S. population.",
+    "source": "HN"
+  },
+  "post_main": "AI 데이터센터 뉴스는 전기요금표부터 보자.\n\n모델이 얼마나 빨라졌는지보다\n전력망 청구서가 어디로 가는지가 먼저다.",
+  "replies": [
+    "메릴랜드 소비자 보호기관이 FERC에 문제를 냈다.\n\nPJM이 데이터센터 수요에 맞춰 추진한\n220억달러 전력망 업그레이드 때문이다.",
+    "여기서 PJM 구조를 봐야 한다.\n\n한 주짜리 전력회사가 아니다.\n13개 주와 워싱턴 D.C.를 묶고\n약 6500만명을 커버한다.",
+    "그래서 비용 배분 문제가 생긴다.\n\nOPC 주장에 따르면 메릴랜드는\n그중 20억달러를 떠안을 수 있다.\n\n그 데이터센터가 메릴랜드 고객에게\n의미 있는 이익을 주느냐는 별개 문제고.",
+    "숫자는 생활비로 내려온다.\n\nOPC는 향후 10년간 소비자 부담이\n16억달러 늘 수 있다고 봤다.\n\n주거 고객 기준으로는 약 345달러.",
+    "이건 “AI가 전기를 많이 쓴다”에서\n끝나는 얘기가 아니다.\n\n수요를 만든 곳과\n전력망 비용을 내는 곳이\n갈라질 수 있다는 신호에 가깝다.",
+    "다음에 데이터센터 투자를 보면\n이 질문 하나만 먼저 던지면 된다.\n\n전기를 쓰는 쪽,\n망을 증설하는 쪽,\n청구서를 받는 쪽이 같은가?"
+  ],
+  "media_plan": {
+    "preferred_type": "none",
+    "search_query": "AI data center power grid cost Maryland PJM",
+    "reason": "핵심은 시각 자료보다 비용 배분 구조와 숫자다. 텍스트 스레드만으로 메시지가 가장 선명하다."
+  },
+  "topic_tag": "ai.threads",
+  "source_link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises",
+  "og_image": "https://cdn.mos.cms.futurecdn.net/KHUetaXQbsmm6z9m5g5Pne-2560-80.jpg",
+  "video_url": "",
+  "mode": "informational",
+  "candidate_articles": [
+    {
+      "title": "오픈AI, '유명인 음성 복제' 스타트업 인수해 폐쇄...\"상장 전  논란 제거 의도\"",
+      "summary": "오픈AI가 유명인 음성 복제 기능으로 잘 알려진 AI 스타트업 웨이트닷지지(Weights.gg)를 비공개로 인수한 사실이 뒤늦게 드러났다. 뉴욕타임스(NYT)는 15일(현지시간) 오픈AI가 올해 초 웨이트닷지지의 인력과 지식재산권(IP)을 함께 인수했다고 보도했다. 거래 금액은 공개되지 않았다.이 회사는 직원 6명의 소규모 스타트업으로, 400만달러(약 60억원)의 투자를 유치한 바 있다. 지난 3월 인수와 동시에 서비스를 종료했으며, 이후 구성원들은 오픈AI의 여러 조직으로 흩어져 배치된 것으로 알려졌다.웨이트닷지지는 AI 음성",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210607",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-17 12:21:23",
+      "date": "2026-05-17",
+      "candidate_score": 7.83,
+      "details": "오픈AI가 유명인 음성 복제 기능으로 잘 알려진 AI 스타트업 웨이트닷지지(Weights.gg)를 비공개로 인수한 사실이 뒤늦게 드러났다. 뉴욕타임스(NYT)는 15일(현지시간) 오픈AI가 올해 초 웨이트닷지지의 인력과 지식재산권(IP)을 함께 인수했다고 보도했다. 거래 금액은 공개되지 않았다. 이 회사는 직원 6명의 소규모 스타트업으로, 400만달러(약 60억원)의 투자를 유치한 바 있다. 지난 3월 인수와 동시에 서비스를 종료했으며, 이후 구성원들은 오픈AI의 여러 조직으로 흩어져 배치된 것으로 알려졌다. 웨이트닷지지는 AI 음성 복제 모델을 만들고 공유할 수 있는 일종의 소셜 플랫폼 형태로 운영됐다. 소비자용 앱 ‘리플레이(Replay)’를 통해 사용자는 특정 인물의 목소리를 학습시켜 음성을 복제할 수 있었다. 플랫폼에는 테일러 스위프트, 사무엘 L. 잭슨, 도널드 트럼프, 조 바이든뿐 아니라 블랙핑크 멤버들의 음성 모델까지 등록돼 있었다. 이 밖에도 벅스 버니와 대피 덕 같은 유명 캐릭터 음성도 포함돼 있어, 저작권과 퍼블리시티권 침해 논란이 지속적으로 제기돼 왔다. 실제로 사무엘 L. 잭슨은 자신의 목소리가 AI로 복제되는 것에 공개적으로 반대 입장을 밝혔으며, 테일러 스위프트는 최근 미국 특허상표청에 자신의 음성과 초상에 대한 상표 등록을 신청했다. 오픈AI는 이미 자체 음성 복제 기술을 보유하고 있다. 2024년 ‘보이스 엔진(Voice Engine)’을 공개하며 짧은 음성 샘플만으로 인간의 목소리를 정교하게 재현할 수 있다고 소개했다. 그러나 악용 가능성을 이유로 일반에 이를 공개하지 않았고, 지금도 일부 제한된 파트너에게만 기술 접근을 허용하고 있다. 업계에서는 이번 인수가 기술 확보 자체보다 유명인 음성 복제 파일이 공개적으로 공유되던 서비스를 없애는 데 더 큰 목적이 있었던 것으로 보고 있다. 정부와 엔터테인먼트 업계의 AI 규제 압박이 거세지는 상황에서, 책임감 있는 AI 기업이라는 것을 증명해야 할 필요에 따른 행동으로 분석됐다. 특히 2024년 스칼렛 요한슨 목소리 모방 논란에 휩싸였던 오픈AI가 이번에는 반대로 유명인 권리를 보호하는 쪽으로 움직이며 대외 이미지를 개선하려는 의도로 풀이됐다. 또 오픈AI는 올해 초 인스타그램의 전 유명인 파트너십 책임자 찰스 포치를 영입해 할리우드 및 연예계와의 관계 회복에 나섰으며, 영상 공유 앱 '소라'도 전략 재조정 차원에서 종료했다. 실제로 최근에는 음성 복제 기술이 빠르게 대중화되고 있다. 일레븐랩스를 비롯한 여러 기업들은 상용 서비스를 제공 중이며, 오픈소스 계열 모델인 '복스트랄(Voxtral)'이나 'F5-TTS'는 일반 소비자용 GPU 환경에서도 5~15초 분량의 음성만으로 복제가 가능한 수준에 도달했다. 오픈AI는 대신 음성 기술을 자체 플랫폼 전반에 통합하는 방향으로 전략을 조정하고 있다. 최근 개발자들이 외부 앱과 서비스에 음성 AI를 적용할 수 있도록 실시간 음성 API를 공개했다. 여기에는 실시간 음성 번역, 스트리밍 자막 생성, 음성 기반 AI 에이전트 제어 기능 등이 포함된다. 또 챗GPT는 최근 애플 카플레이(Apple CarPlay) 지원 기능도 추가하며 차량 내 음성 명령 기능을 강화하고 있다. 오픈AI는 이러한 음성"
+    },
+    {
+      "title": "오픈AI, 몰타 전 국민에 '챗GPT 플러스' 무료 개방...\"1년 간 AI 교육 이수가 조건\"",
+      "summary": "오픈AI가 지중해 섬나라 몰타 전 국민을 대상으로 '챗GPT 플러스'를 무료 제공한다. 오픈AI와 몰타 정부는 16일(현지시간) 공동 발표를 통해 ‘모두를 위한 AI(AI for All)’ 이니셔티브를 출범한다고 밝혔다.이번 프로그램은 몰타 국민과 해외 거주 몰타 시민들에게 AI 교육 과정을 제공하고, 이를 이수한 참가자들에게 1년 동안 챗GPT 플러스 이용권을 무상 제공하는 것이 핵심이다.이에 앞서 오픈AI는 2025년 '스타게이트' 투자의 대가로 아랍에미리트(UAE) 전 국민이 국가 포털을 통해 챗GPT 플러스에 접근할 수 있도",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=210606",
+      "source": "AI타임스 - 전체기사",
+      "published": "2026-05-17 12:03:14",
+      "date": "2026-05-17",
+      "candidate_score": 7.83,
+      "details": "오픈AI가 지중해 섬나라 몰타 전 국민을 대상으로 '챗GPT 플러스'를 무료 제공한다. 오픈AI와 몰타 정부는 16일(현지시간) 공동 발표를 통해 ‘모두를 위한 AI(AI for All)’ 이니셔티브를 출범한다고 밝혔다. 이번 프로그램은 몰타 국민과 해외 거주 몰타 시민들에게 AI 교육 과정을 제공하고, 이를 이수한 참가자들에게 1년 동안 챗GPT 플러스 이용권을 무상 제공하는 것이 핵심이다. 이에 앞서 오픈AI는 2025년 '스타게이트' 투자의 대가로 아랍에미리트(UAE) 전 국민이 국가 포털을 통해 챗GPT 플러스에 접근할 수 있도록 무료 개방했다. 또 지난해에는 영국 정부와도 비슷한 방안을 논의했으나, 컴퓨팅과 비용 문제 등으로 인해 성사되지는 않았다. 교육 연계형 무료 개방은 이번이 최초다. 이번 프로그램은 5월부터 시작되며, 몰타 디지털 혁신청이 참가자 관리와 서비스 배포를 맡는다. 오픈AI는 구체적인 계약 금액이나 재정 조건은 공개하지 않았다. 이번 교육 과정은 몰타 대학이 개발했다. 강의는 AI의 기본 개념과 활용법, 한계, 책임 있는 사용 방식 등을 다루며, 가정과 직장 등 일상생활에서 AI를 실질적으로 활용할 수 있도록 설계됐다. 다양한 연령과 직업군을 대상으로 하며, AI 경험이 없는 시민도 쉽게 접근할 수 있도록 구성된 것이 특징이다. 오픈AI는 이번 협력이 \"AI를 전기처럼 누구나 필요할 때 사용할 수 있는 글로벌 공공 인프라로 만드는 과정”이라고 설명했다. 조지 오스본 오픈AI 국가 협력 부문 책임자는 “지능은 새로운 국가적 공공재가 되고 있다”라며 “정부는 시민들이 AI에 접근하고 이를 활용할 역량을 갖추도록 지원해야 한다”라고 밝혔다. 또 “몰타는 유럽과 세계를 선도하고 있으며, 다른 국가들도 이를 참고하게 될 것”이라고 평가했다. 실비오 쉠브리 몰타 경제·기업·전략프로젝트 장관은 성명을 통해 “모든 시민이 디지털 시대에서 성공할 수 있도록 자신감과 기술을 갖추게 하는 것이 목표”라며 “가족, 학생, 노동자들에게 AI를 낯선 개념이 아니라 실질적인 도움으로 바꾸고 있다”라고 말했다. 이어 “몰타는 시민들이 디지털 전환에서 뒤처지지 않도록 하기 위해 이 같은 대규모 협력을 세계 최초로 추진했다”라고 강조했다. 이번 프로젝트는 오픈AI의 글로벌 공공 협력 프로그램인 ‘국가를 위한 오픈AI(OpenAI for Countries)’의 일부다. 이 프로그램은 각국 정부와 교육기관, 공공기관이 AI를 국가 전략에 통합할 수 있도록 지원하는 것이 목표다. 이미 에스토니아와 그리스 등과 협력해 교육 시스템 내 AI 활용 확대를 추진하고 있다."
+    },
+    {
+      "title": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "summary": "Time to add option in Hacker News \"AI excluded Show HN\"",
+      "source": "HN",
+      "link": "",
+      "date": "",
+      "engagement": 0,
+      "candidate_score": 1.0
+    },
+    {
+      "title": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
+      "summary": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
+      "source": "HN",
+      "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises",
+      "date": "",
+      "engagement": 0,
+      "candidate_score": 1.0,
+      "details": "Aren't AI hyperscalers supposed to pay for these upgrades? When you purchase through links on our site, we may earn an affiliate commission. Here’s how it works . The Maryland Office of People’s Counsel (OPC), a state agency that represents its utility consumers, filed a complaint before the Federal Energy Regulatory Commission (FERC) regarding PJM Interconnection, LLC’s plans to charge it $2 billion of the $22 billion it spent to upgrade its grid to accommodate increasing demand from data centers. According to the OPC’s press release , this $2 billion bill will cost the state’s consumers an extra $1.6 billion in the next ten years alone — that means an extra $823 million for residential (approx. $345 per customer), $146 million for commercial (approx. $673 per customer), and $629 million for industrial customers (approx. $15,074 per customer). “Without FERC action, Maryland customers face paying billions for transmission infrastructure that PJM is advancing to benefit data centers,” said Maryland People’s Counsel David S. Lapp. “PJM’s cost allocation rules are broken. Maryland customers have neither caused the need for these billions in new transmission projects nor will they meaningfully benefit from them.” PJM Interconnection, LLC is the United States’ largest electricity transmission company, and covers 13 states plus Washington, D.C. This includes Delaware, Illinois, Indiana, Kentucky, Maryland, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee, Virginia, and West Virginia, covering about 65 million people, or about 20% of the entire U.S. population."
+    },
+    {
+      "title": "Gemini 3.5 released by...?",
+      "summary": "This market will resolve to \"Yes\" if Google's Gemini 3.5 model is made available to the general public by June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No.\"\n\nFor this market to resolve to \"Yes,\" Gemini 3.5 must be launched and publicly accessible, including via open beta or open rolling waitlist signups. A closed beta or any form of private access will not suffice. The releas",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/198615",
+      "date": "2026-05-15",
+      "engagement": 0,
+      "candidate_score": -13.17
+    },
+    {
+      "title": "Gemini 3.2 released by...?",
+      "summary": "This market will resolve to \"Yes\" if Google's Gemini 3.2 model is made available to the general public by the specified date (ET). Otherwise, this market will resolve to \"No.\"\n\nGemini 3.2 refers to a product explicitly named Gemini 3.2, or a variant that is recognized as a direct successor to Gemini 3.1, similar to the progression from Gemini 3 to Gemini 3.1. (e.g., Gemini 3.2 GA, Gemini 3.2/3.3/3",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/425315",
+      "date": "2026-05-15",
+      "engagement": 0,
+      "candidate_score": -14.97
+    },
+    {
+      "title": "Which company has the best AI model end of May?",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off will b",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/376520",
+      "date": "2026-05-17",
+      "engagement": 0,
+      "candidate_score": -26.37
+    },
+    {
+      "title": "Which company has best AI model end of June?",
+      "summary": "This market will resolve according to the company which owns the model which has the highest arena rank based off the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on June 30, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" section on the Leaderboard tab of https://lmarena.ai/leaderboard/text with the style control off will be used to resolve",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/57705",
+      "date": "2026-05-17",
+      "engagement": 0,
+      "candidate_score": -26.37
+    },
+    {
+      "title": "Which company has the second best AI model end of May?",
+      "summary": "This market will resolve according to the company that owns the model that has the second-highest arena rank based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style control off",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/376512",
+      "date": "2026-05-17",
+      "engagement": 0,
+      "candidate_score": -26.37
+    },
+    {
+      "title": "Which company has the #1 AI model end of May? (Style Control On)",
+      "summary": "This market will resolve according to the company that owns the model that has the highest arena rank (Style Control On) based on the Chatbot Arena LLM Leaderboard (https://lmarena.ai/) when the table under the \"Leaderboard\" tab is checked on May 31, 2026, 12:00 PM ET.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://lmarena.ai/leaderboard/text with style",
+      "source": "Polymarket",
+      "link": "https://polymarket.com/event/376442",
+      "date": "2026-05-17",
+      "engagement": 0,
+      "candidate_score": -26.37
+    }
+  ],
+  "engagement_patterns": {
+    "top": [
+      {
+        "date": "2026-05-05",
+        "mode": "informational",
+        "title": "\"CEO들의 '신 콤플렉스' 경계해야\"...젠슨 황, AI 비관론에 쓴소리",
+        "post_main": "젠슨 황이 앤트로픽 다리오 아모데이 CEO를 겨냥해 강하게 비판했다. \"신입 대졸자 일자리의 50%를 휩쓸어버릴 것이라는 말은 터무니없다\"며 \"CEO가 되면 '신 콤플렉스'에 빠져",
+        "reply_preview": "황 CEO는 \"AI가 타자를 대신 쳐주니 일자리가 사라질 것이라고 결론내리는 것은 근본적으로 틀린 생각\"이라고 지적했다. 직업의 과업(Task)",
+        "reply_count": 3,
+        "views": 15908,
+        "likes": 63,
+        "replies": 13,
+        "reposts": 0,
+        "quotes": 1,
+        "score": 2043.8
+      },
+      {
+        "date": "2026-05-01",
+        "mode": "informational",
+        "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+        "post_main": "머스크가 OpenAI 소송 법정에서 인정했다. xAI가 OpenAI 모델로 그록을 훈련했다는 것이다. 이게 바로 '모델 디스틸레이션' 기법인데, 큰 모델(선생)이 작은 모델(학생)",
+        "reply_preview": "디스틸레이션은 단순 API 호출이 아니라 복잡한 지식 전달 과정이다. 큰 모델의 내부 표현과 출력 분포를 학습해서 작은 모델이 비슷한 추론 능력",
+        "reply_count": 3,
+        "views": 5886,
+        "likes": 9,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 673.6
+      },
+      {
+        "date": "2026-05-04",
+        "mode": "informational",
+        "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+        "post_main": "하버드 의대가 실제 응급실 환자 76명으로 AI vs 의사 진단 정확도를 테스트했다. OpenAI의 o1 모델(추론 특화 AI)이 내과 전문의 2명을 앞섰다. 특히 정보가 가장 적",
+        "reply_preview": "연구진은 AI에게 의사와 똑같은 전자차트 정보만 줬다. 별도 전처리나 추가 데이터 없이 말이다.",
+        "reply_count": 3,
+        "views": 3690,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 429.0
+      }
+    ],
+    "bottom": [
+      {
+        "date": "2026-04-15",
+        "mode": "informational",
+        "title": "구글, 크롬에 사용자 반복 프롬프트 저장하는 'AI 스킬' 추가",
+        "post_main": "구글 크롬에 'AI 스킬' 기능이 추가됐다. 자주 쓰는 AI 프롬프트를 저장해서 여러 웹페이지에서 재사용할 수 있다.\n\n기존 제미나이는 웹페이지를 요약하거나 질문하는 정도였다면, ",
+        "reply_preview": "사용법은 간단하다. 크롬에서 제미나이를 열고 프롬프트를 입력한 다음, '스킬로 저장' 버튼을 누르면 끝.",
+        "reply_count": 3,
+        "views": 73,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 52.3
+      },
+      {
+        "date": "2026-05-07",
+        "mode": "informational",
+        "title": "아모데이 \"미소스 유효 기간은 6~12개월...중국이 곧 따라잡을 것\"",
+        "post_main": "앤트로픽 '미소스' AI가 소프트웨어 취약점 발견 능력을 획기적으로 향상시켰다. 이전 모델은 20여개 찾던 것을, 이제는 단일 소프트웨어에서 수백 건씩 발견한다. 전체적으로는 수만",
+        "reply_preview": "아모데이 CEO는 \"취약점이 급증하면서 해킹, 랜섬웨어 피해, 금융 손실이 폭발적으로 늘어날 위험이 있다\"고 경고했다. 학교, 병원, 은행 등 ",
+        "reply_count": 3,
+        "views": 46,
+        "likes": 3,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 49.6
+      },
+      {
+        "date": "2026-04-09",
+        "mode": "informational",
+        "title": "오픈AI, 앤트로픽 '300억달러 매출'에 코덱스로 맞불...\"기업 매출 비중 40% 돌파\"",
+        "post_main": "OpenAI 코덱스가 주간 활성 사용자 300만명을 돌파했다. 기업 매출 비중도 40%까지 올랐고.\n\n이게 중요한 이유는 앤트로픽 Claude가 코딩 시장을 리드하고 있는데, Op",
+        "reply_casual": "",
+        "views": 36,
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "score": 48.6
+      }
+    ],
+    "avg": {
+      "views": 1638.8,
+      "likes": 5.9,
+      "replies": 5.3,
+      "reposts": 0.3,
+      "quotes": 0.1,
+      "score": 249.3
+    }
+  },
+  "qa": {
+    "passed": true,
+    "score": 0.94,
+    "issues": [],
+    "suggestions": [
+      "마지막 질문은 좋지만 'AI 서비스를 쓰거나 만드는 사람'에게 왜 중요한지 한 줄만 더 연결하면 reader_fit이 더 강해진다.",
+      "'전기요금표'는 훅으로는 좋지만 실제 쟁점이 송전망 비용 배분이라는 점을 본문 초반에 한 번 더 명확히 하면 정확도가 올라간다.",
+      "상업/산업 고객 부담 수치까지 넣기보다는 현재처럼 주거 고객 345달러만 남긴 선택이 좋다. 다만 '소비자 부담'이 가정만 뜻하는 게 아니라는 표현은 살짝 보완할 수 있다."
+    ]
+  },
+  "notion_review_url": "https://www.notion.so/Maryland-citizens-hit-with-2B-power-grid-upgrade-for-out-of-state-AI-363ea344dcf881c9ace2ebfce941193e"
+}
