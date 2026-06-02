@@ -176,6 +176,48 @@ def test_review_page_to_content_requires_media_approval_for_media_url():
     assert "og_image" not in content
 
 
+def test_review_page_to_content_rejects_question_mark_corrupted_korean():
+    page = {
+        "properties": {
+            "Post Main": {
+                "type": "rich_text",
+                "rich_text": [{"plain_text": "AI ?? ??? ????? ???.\n\n??? ??? ????."}],
+            },
+            "Replies": {
+                "type": "rich_text",
+                "rich_text": [{"plain_text": "1. ? ??? ? ??????.\n\nAI? ?? ??? 90% ???"}],
+            },
+            "Media Type": {"type": "select", "select": {"name": "none"}},
+            "Media Approved": {"type": "checkbox", "checkbox": False},
+        },
+    }
+
+    with pytest.raises(NotionReviewError, match="encoding"):
+        review_page_to_content(page)
+
+
+def test_review_page_to_content_allows_real_korean_questions():
+    page = {
+        "properties": {
+            "Post Main": {
+                "type": "rich_text",
+                "rich_text": [{"plain_text": "AI 해고 뉴스는 진짜일까요?\n\n도입률부터 보면 됩니다."}],
+            },
+            "Replies": {
+                "type": "rich_text",
+                "rich_text": [{"plain_text": "1. 왜 지금 봐야 할까요?\n\n숫자가 답입니다."}],
+            },
+            "Media Type": {"type": "select", "select": {"name": "none"}},
+            "Media Approved": {"type": "checkbox", "checkbox": False},
+        },
+    }
+
+    content = review_page_to_content(page)
+
+    assert content["post_main"].startswith("AI 해고 뉴스")
+    assert content["replies"] == ["왜 지금 봐야 할까요?\n\n숫자가 답입니다."]
+
+
 def test_build_published_update_payload_sets_status_and_post_id():
     payload = build_published_update_payload(
         {"post_id": "threads-post-id", "permalink": "https://threads.net/post/threads-post-id"},

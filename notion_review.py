@@ -11,6 +11,7 @@ from urllib.parse import parse_qs, urlparse
 import httpx
 
 from config import NOTION_API_KEY, NOTION_CONTENT_DATABASE_ID, NOTION_VERSION
+from publish_text_guard import find_encoding_loss_field
 
 NOTION_API_BASE = "https://api.notion.com/v1"
 TEXT_CHUNK_LIMIT = 1900
@@ -135,6 +136,12 @@ def review_page_to_content(page: dict[str, Any]) -> dict[str, Any]:
         raise NotionReviewError("Approved Notion row is missing Post Main")
     if not content["replies"]:
         raise NotionReviewError("Approved Notion row is missing Replies")
+    corrupted_field = find_encoding_loss_field(content["post_main"], content["replies"])
+    if corrupted_field:
+        raise NotionReviewError(
+            f"Approved Notion row has likely text encoding corruption in {corrupted_field}. "
+            "Recreate the row with UTF-8-safe input before publishing."
+        )
     return content
 
 
