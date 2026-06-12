@@ -81,6 +81,18 @@ _GENERIC_AI_HYPE_PATTERNS = (
     "게임 체인저다",
 )
 
+_BAIT_PATTERNS = (
+    "아무도 말하지 않는",
+    "당신이 몰랐던",
+    "충격적인",
+    "소름 돋는",
+    "무조건 봐야",
+    "절대 놓치면 안",
+    "동의하면 댓글",
+    "공감하면 댓글",
+    "댓글로 알려",
+)
+
 QA_PASS_THRESHOLD = 0.72
 QA_MIN_DIMENSION = 6.5
 
@@ -218,6 +230,9 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
         for pattern in _GENERIC_AI_HYPE_PATTERNS:
             if pattern in text:
                 issues.append(f"{text_name} contains generic AI hype: {pattern}")
+        for pattern in _BAIT_PATTERNS:
+            if pattern in text:
+                issues.append(f"{text_name} contains bait pattern: {pattern}")
         if _is_dense_threads_block(text):
             issues.append(
                 f"{text_name} is visually dense for Threads; use blank lines between short sentence blocks"
@@ -288,6 +303,7 @@ Fail aggressively when:
 - too many lines end with "-다", making the draft feel like a bulletin or report instead of an explanation
 - the draft reports facts accurately but does not guide the reader through the meaning
 - it leans on generic AI hype like "AI 시대가 왔다" instead of a concrete mechanism or criterion
+- it uses clickbait or engagement bait instead of concrete, credible curiosity
 - a critical issue remains even if the numeric score is decent
 
 Return JSON only:

@@ -145,6 +145,8 @@ Avoid:
 - hashtags
 - raw links in the prose
 - "card news" framing
+- engagement bait such as empty questions, "comment if you agree", or bait designed only to collect replies
+- clickbait curiosity gaps that hide the point instead of making the value concrete
 - opening with "X announced Y" unless it is immediately turned into a thesis
 - dense paragraphs that look like a blog post pasted into Threads
 - do not invent facts. Stay grounded in the candidate article's Title, Summary, or Details fields below. If a fact is not in any of those fields, leave it out.
@@ -164,6 +166,7 @@ Style target:
 - use polite endings only when they are the cleanest sentence; otherwise vary with compact written Korean
 - do not make every line end the same way
 - no generic "AI 시대가 왔다" endings
+- build concrete, credible curiosity: reveal the useful lens early, then make the reader want the proof
 - no more than one emoji, preferably none
 - write with sparse rhythm: thesis, pause, concrete proof, implication, criterion
 - optimize for the actual narrow Threads timeline, not a Markdown preview
@@ -171,6 +174,7 @@ Style target:
 - keep each visual line short enough that the final ending does not wrap alone on mobile
 - keep replies compact: one small point per reply, not a mini essay
 - before returning, run a line-level rewrite pass: if a sentence feels like a 보고서, rewrite it into what the reader should notice, why it matters, or what changes in practice
+- use useful tension, not outrage: old way vs new way, demo vs real use, promise vs limit, speed vs control
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -239,6 +243,7 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 - the content_brief.takeaway and final reply must point in the same direction
 - if there is a strong practical angle, prioritize it over generic commentary
 - if a useful comparison helps, include it naturally
+- if media is used, the text must give the media context; explain what the viewer should notice before or beside the media
 - if there is no good media angle, set preferred_type to "none"
 - if the article uses technical jargon or an acronym like VLM, explain it once in simple Korean
 - include at least one concrete use case, workflow implication, or "what to try next" point across the thread

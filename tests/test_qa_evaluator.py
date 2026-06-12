@@ -155,6 +155,18 @@ def test_freeform_rejects_generic_ai_hype():
     assert any("generic AI hype" in issue for issue in issues)
 
 
+def test_freeform_rejects_clickbait_and_engagement_bait():
+    content = _make_freeform_content()
+    content["post_main"] = (
+        "아무도 말하지 않는 AI 자동화의 충격적인 진실.\n\n"
+        "동의하면 댓글로 알려주세요."
+    )
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("bait pattern" in issue for issue in issues)
+
+
 def test_freeform_allows_compact_but_valid_main_post():
     content = _make_freeform_content()
     content["post_main"] = "A" * 90
