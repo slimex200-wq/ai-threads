@@ -127,6 +127,34 @@ def test_freeform_rejects_monotone_da_endings():
     assert any("too many Korean lines end with '-다'" in issue for issue in issues)
 
 
+def test_freeform_rejects_short_report_tone_stack():
+    content = _make_freeform_content()
+    content["post_main"] = (
+        "AI 데모는 결과보다 사람이 어디서 개입했는지를 먼저 봐야 한다.\n\n"
+        "그 지점이 실제 도입 가능성을 가른다."
+    )
+    content["replies"] = [
+        "첫 번째 답글은 기능 설명으로 시작한다.\n\n두 번째 줄도 같은 리듬으로 닫힌다.",
+        "다음 답글 역시 정보를 전달한다.\n\n마지막 문장도 보고서처럼 끝난다.",
+    ]
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("too many Korean lines end with '-다'" in issue for issue in issues)
+
+
+def test_freeform_rejects_generic_ai_hype():
+    content = _make_freeform_content()
+    content["post_main"] = (
+        "AI 시대가 왔다.\n\n"
+        "이제 모든 사람이 큰 변화에 주목해야 한다."
+    )
+
+    issues = _check_rules(content, mode="informational")
+
+    assert any("generic AI hype" in issue for issue in issues)
+
+
 def test_freeform_allows_compact_but_valid_main_post():
     content = _make_freeform_content()
     content["post_main"] = "A" * 90

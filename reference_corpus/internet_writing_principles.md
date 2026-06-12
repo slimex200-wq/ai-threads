@@ -194,6 +194,34 @@ Avoid:
 - "엄청난 혁신이다."
 - "게임 체인저다."
 
+## Line-Level Rewrite Pass
+
+Before accepting a draft, read each line as if it appeared alone in the
+Threads timeline.
+
+If a line only reports a fact, rewrite it into one of these moves:
+
+- what the reader should notice
+- why the fact matters
+- what changed in the workflow
+- what would prove the claim wrong
+- what to check next
+
+Useful rewrite questions:
+
+- "So what?"
+- "What should the reader look at first?"
+- "Is this a mechanism, a criterion, or just a description?"
+- "Would this still be useful if the news link disappeared?"
+
+Report-like line:
+
+- "The company announced a new AI model."
+
+Better line:
+
+- "모델 이름보다 먼저 볼 건 입력 방식이다."
+
 ## Draft Checklist
 
 Before accepting a draft:

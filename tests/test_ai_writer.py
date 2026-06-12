@@ -42,6 +42,17 @@ def test_build_prompt_requires_ship30_content_brief():
     assert "prefer fewer replies" in prompt
 
 
+def test_build_prompt_requires_line_level_rewrite_pass():
+    prompt = build_prompt(
+        articles=[{"title": "Agent marketplace", "summary": "Agents trade with each other"}],
+        mode="informational",
+    )
+
+    assert "line-level rewrite pass" in prompt
+    assert "so what" in prompt
+    assert "보고서" in prompt
+
+
 def test_line_break_tokens_are_normalized():
     content = _ensure_required_fields(
         {

@@ -136,6 +136,7 @@ What "good" means:
 4. Each reply develops exactly one move: problem, contrast, example, caveat, criterion, or close.
 5. The article supplies proof points, but the thread teaches a reusable lens.
 6. The thread is interesting enough that someone would save it as a way to think.
+7. Each reply answers "so what?" before it adds another fact.
 
 Avoid:
 - bland news summaries
@@ -169,6 +170,7 @@ Style target:
 - avoid 3~4 consecutive non-empty lines with no blank line; it looks cramped on Threads
 - keep each visual line short enough that the final ending does not wrap alone on mobile
 - keep replies compact: one small point per reply, not a mini essay
+- before returning, run a line-level rewrite pass: if a sentence feels like a 보고서, rewrite it into what the reader should notice, why it matters, or what changes in practice
 
 Use what's there:
 - When Details contains specific numbers, mechanisms, before/after comparisons, quotes, or named components, surface them in the thread instead of paraphrasing them into generic claims.
@@ -225,6 +227,7 @@ The pipeline will convert `<br>` into real line breaks after parsing.
 - if one sentence is long, split it into two visual lines at a natural phrase boundary
 - every reply must be readable as its own post in the chain
 - each reply should explain, not just report; avoid turning the thread into a stack of verdict sentences
+- every reply should answer one of these questions: what changed, why it matters, how to recognize it, or what to try next
 - prefer fewer replies; if the idea is clear in 5 replies, stop there
 - do not expand one reply into background, caveat, and takeaway at once; keep one move and move on
 - suggested reply arc, scaled to length:
@@ -619,6 +622,8 @@ def _build_qa_feedback(qa_feedback: dict[str, Any]) -> str:
             "Rewrite from bulletin voice into explanatory voice: guide the reader through why each point matters.",
             "Do not stack '-다' endings line after line; mix claim, explanation, question, contrast, and small aside.",
             "Avoid repeating polite Korean endings like '-요', '-죠', '-습니다', and '-합니다' on every line.",
+            "Run a line-level rewrite pass: if a sentence feels like a 보고서, rewrite it into what the reader should notice, why it matters, or what changes in practice.",
+            "Make each reply answer 'so what?' before adding another fact.",
             "Make the first sentence a CTA-like line: tell the reader what to notice, rethink, check, stop doing, or try.",
             "Use inverted pyramid order in post_main: payoff or criterion first, proof second, background later.",
             "Make post_main a clean thesis in 2~4 short lines.",

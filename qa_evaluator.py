@@ -72,6 +72,15 @@ _BANNED_PATTERNS = (
     "자세한 내용은",
 )
 
+_GENERIC_AI_HYPE_PATTERNS = (
+    "AI 시대가 왔다",
+    "AI 시대가 온다",
+    "큰 변화가 예상된다",
+    "우리 모두 주목해야 한다",
+    "엄청난 혁신이다",
+    "게임 체인저다",
+)
+
 QA_PASS_THRESHOLD = 0.72
 QA_MIN_DIMENSION = 6.5
 
@@ -110,7 +119,7 @@ def _ends_with_da_family(line: str) -> bool:
 
 def _monotone_da_ratio(lines: list[str]) -> float:
     korean_lines = [line for line in lines if _has_korean(line)]
-    if len(korean_lines) < 8:
+    if len(korean_lines) < 6:
         return 0.0
     return sum(1 for line in korean_lines if _ends_with_da_family(line)) / len(korean_lines)
 
@@ -206,6 +215,9 @@ def _check_rules(content: dict[str, Any], mode: str = "informational") -> list[s
         for pattern in _BANNED_PATTERNS:
             if pattern and pattern in text:
                 issues.append(f"{text_name} contains banned pattern: {pattern}")
+        for pattern in _GENERIC_AI_HYPE_PATTERNS:
+            if pattern in text:
+                issues.append(f"{text_name} contains generic AI hype: {pattern}")
         if _is_dense_threads_block(text):
             issues.append(
                 f"{text_name} is visually dense for Threads; use blank lines between short sentence blocks"
@@ -275,6 +287,7 @@ Fail aggressively when:
 - Korean endings feel monotonous because every line leans on the same polite ending
 - too many lines end with "-다", making the draft feel like a bulletin or report instead of an explanation
 - the draft reports facts accurately but does not guide the reader through the meaning
+- it leans on generic AI hype like "AI 시대가 왔다" instead of a concrete mechanism or criterion
 - a critical issue remains even if the numeric score is decent
 
 Return JSON only:
